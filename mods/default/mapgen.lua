@@ -24,7 +24,7 @@ minetest.register_alias("mapgen_ice", "default:ice")
 
 minetest.register_alias("mapgen_tree", "default:tree")
 minetest.register_alias("mapgen_leaves", "default:leaves")
-minetest.register_alias("mapgen_apple", "default:apple")
+minetest.register_alias("mapgen_jogan", "default:joganfruit")
 minetest.register_alias("mapgen_jungletree", "default:jungletree")
 minetest.register_alias("mapgen_jungleleaves", "default:jungleleaves")
 minetest.register_alias("mapgen_junglegrass", "default:junglegrass")
@@ -349,7 +349,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
@@ -360,7 +360,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 17 * 17 * 17,
 		clust_num_ores = 4,
@@ -371,7 +371,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
@@ -379,31 +379,6 @@ function default.register_mgv6_ores()
 		y_max          = -256,
 		y_min          = -31000,
 	})
-
-	-- Mese block
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -1024,
-		y_min          = -31000,
-	})
-end
 
 
 -- All mapgens except mgv6
@@ -816,7 +791,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
@@ -827,7 +802,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 17 * 17 * 17,
 		clust_num_ores = 4,
@@ -838,7 +813,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_diamond",
+		ore            = "default:stone_with_beskar",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
 		clust_num_ores = 4,
@@ -846,42 +821,6 @@ function default.register_ores()
 		y_max          = -2048,
 		y_min          = -31000,
 	})
-
-	-- Mese block
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -2048,
-		y_min          = -4095,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 28 * 28 * 28,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -4096,
-		y_min          = -31000,
-	})
-end
 
 
 --
@@ -1863,10 +1802,10 @@ function default.register_decorations()
 		flags = "force_placement",
 	})
 
-	-- Apple tree and log
+	-- Jogan tree and log
 
 	minetest.register_decoration({
-		name = "default:apple_tree",
+		name = "default:jogan_tree",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
@@ -1881,13 +1820,13 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/apple_tree.mts",
+		schematic = minetest.get_modpath("default") .. "/schematics/jogan_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
 	minetest.register_decoration({
-		name = "default:apple_log",
+		name = "default:jogan_log",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_grass"},
 		place_offset_y = 1,
@@ -1903,7 +1842,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/apple_log.mts",
+		schematic = minetest.get_modpath("default") .. "/schematics/jogan_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_grass",
