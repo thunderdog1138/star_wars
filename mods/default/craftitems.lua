@@ -202,9 +202,9 @@ minetest.register_on_craft(function(itemstack, player, old_craft_grid, craft_inv
 	craft_inv:set_stack("craft", index, original)
 end)
 
-minetest.register_craftitem("default:skeleton_key", {
-	description = S("Skeleton Key"),
-	inventory_image = "default_key_skeleton.png",
+minetest.register_craftitem("default:skeleton_keycard", {
+	description = S("Skeleton Keycard"),
+	inventory_image = "default_keycard_skeleton.png",
 	groups = {key = 1},
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
@@ -239,7 +239,7 @@ minetest.register_craftitem("default:skeleton_key", {
 			itemstack:take_item()
 
 			-- finish and return the new key
-			local new_stack = ItemStack("default:key")
+			local new_stack = ItemStack("default:keycard")
 			local meta = new_stack:get_meta()
 			meta:set_string("secret", secret)
 			meta:set_string("description", S("Key to @1's @2", user:get_player_name(),
