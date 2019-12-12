@@ -675,7 +675,7 @@ minetest.register_node("default:cave_ice", {
 --
 
 minetest.register_node("default:tree", {
-	description = S("Apple Tree"),
+	description = S("Jogan Tree"),
 	tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -686,7 +686,7 @@ minetest.register_node("default:tree", {
 })
 
 minetest.register_node("default:wood", {
-	description = S("Apple Wood Planks"),
+	description = S("Jogan Wood Planks"),
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"default_wood.png"},
@@ -696,7 +696,7 @@ minetest.register_node("default:wood", {
 })
 
 minetest.register_node("default:sapling", {
-	description = S("Apple Tree Sapling"),
+	description = S("Jogan Tree Sapling"),
 	drawtype = "plantlike",
 	tiles = {"default_sapling.png"},
 	inventory_image = "default_sapling.png",
@@ -732,7 +732,7 @@ minetest.register_node("default:sapling", {
 })
 
 minetest.register_node("default:leaves", {
-	description = S("Apple Tree Leaves"),
+	description = S("Jogan Tree Leaves"),
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"default_leaves.png"},
@@ -760,11 +760,11 @@ minetest.register_node("default:leaves", {
 	after_place_node = after_place_leaves,
 })
 
-minetest.register_node("default:apple", {
-	description = S("Apple"),
+minetest.register_node("default:joganfruit", {
+	description = S("Jogan Fruit"),
 	drawtype = "plantlike",
-	tiles = {"default_apple.png"},
-	inventory_image = "default_apple.png",
+	tiles = {"default_joganfruit.png"},
+	inventory_image = "default_joganfruit.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -779,19 +779,19 @@ minetest.register_node("default:apple", {
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_place_node = function(pos, placer, itemstack)
-		minetest.set_node(pos, {name = "default:apple", param2 = 1})
+		minetest.set_node(pos, {name = "default:joganfruit", param2 = 1})
 	end,
 
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		if oldnode.param2 == 0 then
-			minetest.set_node(pos, {name = "default:apple_mark"})
+			minetest.set_node(pos, {name = "default:joganfruit_mark"})
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end
 	end,
 })
 
-minetest.register_node("default:apple_mark", {
-	description = S("Apple Marker"),
+minetest.register_node("default:joganfruit_mark", {
+	description = S("Jogan Fruit Marker"),
 	drawtype = "airlike",
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -807,7 +807,7 @@ minetest.register_node("default:apple_mark", {
 		elseif minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "default:apple"})
+			minetest.set_node(pos, {name = "default:joganfruit"})
 		end
 	end
 })
@@ -1193,9 +1193,9 @@ minetest.register_node("default:stone_with_iron", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:steelblock", {
-	description = S("Steel Block"),
-	tiles = {"default_steel_block.png"},
+minetest.register_node("default:durasteelblock", {
+	description = S("Durasteel Block"),
+	tiles = {"default_durasteel_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_metal_defaults(),
@@ -1280,17 +1280,17 @@ minetest.register_node("default:goldblock", {
 })
 
 
-minetest.register_node("default:stone_with_diamond", {
-	description = S("Diamond Ore"),
-	tiles = {"default_stone.png^default_mineral_diamond.png"},
+minetest.register_node("default:stone_with_beskar", {
+	description = S("Beskar Ore"),
+	tiles = {"default_stone.png^default_mineral_beskar.png"},
 	groups = {cracky = 1},
-	drop = "default:diamond",
+	drop = "default:beskar_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:diamondblock", {
-	description = S("Diamond Block"),
-	tiles = {"default_diamond_block.png"},
+minetest.register_node("default:beskarblock", {
+	description = S("Beskar Block"),
+	tiles = {"default_beskar_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 3},
 	sounds = default.node_sound_stone_defaults(),
@@ -2617,7 +2617,7 @@ register_sign("wood", S("Wooden Sign"), {
 	groups = {choppy = 2, attached_node = 1, flammable = 2, oddly_breakable_by_hand = 3}
 })
 
-register_sign("steel", S("Steel Sign"), {
+register_sign("durasteel", S("Durasteel Sign"), {
 	sounds = default.node_sound_metal_defaults(),
 	groups = {cracky = 2, attached_node = 1}
 })
@@ -2645,12 +2645,12 @@ minetest.register_node("default:ladder_wood", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("default:ladder_steel", {
-	description = S("Steel Ladder"),
+minetest.register_node("default:ladder_durasteel", {
+	description = S("Durateel Ladder"),
 	drawtype = "signlike",
-	tiles = {"default_ladder_steel.png"},
-	inventory_image = "default_ladder_steel.png",
-	wield_image = "default_ladder_steel.png",
+	tiles = {"default_ladder_durasteel.png"},
+	inventory_image = "default_ladder_durasteel.png",
+	wield_image = "default_ladder_durasteel.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	sunlight_propagates = true,
@@ -2668,7 +2668,7 @@ minetest.register_node("default:ladder_steel", {
 })
 
 default.register_fence("default:fence_wood", {
-	description = S("Apple Wood Fence"),
+	description = S("Jogan Wood Fence"),
 	texture = "default_fence_wood.png",
 	inventory_image = "default_fence_overlay.png^default_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
@@ -2728,7 +2728,7 @@ default.register_fence("default:fence_aspen_wood", {
 })
 
 default.register_fence_rail("default:fence_rail_wood", {
-	description = S("Apple Wood Fence Rail"),
+	description = S("Jogan Wood Fence Rail"),
 	texture = "default_fence_rail_wood.png",
 	inventory_image = "default_fence_rail_overlay.png^default_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
@@ -2875,7 +2875,7 @@ minetest.register_node("default:cloud", {
 if minetest.get_mapgen_setting("mg_name") == "v6" then
 	default.register_leafdecay({
 		trunks = {"default:tree"},
-		leaves = {"default:apple", "default:leaves"},
+		leaves = {"default:joganfruit", "default:leaves"},
 		radius = 2,
 	})
 
@@ -2887,7 +2887,7 @@ if minetest.get_mapgen_setting("mg_name") == "v6" then
 else
 	default.register_leafdecay({
 		trunks = {"default:tree"},
-		leaves = {"default:apple", "default:leaves"},
+		leaves = {"default:joganfruit", "default:leaves"},
 		radius = 3,
 	})
 
