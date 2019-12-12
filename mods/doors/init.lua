@@ -465,19 +465,19 @@ doors.register("door_wood", {
 		}
 })
 
-doors.register("door_steel", {
-		tiles = {{name = "doors_door_steel.png", backface_culling = true}},
-		description = S("Steel Door"),
-		inventory_image = "doors_item_steel.png",
+doors.register("door_durasteel", {
+		tiles = {{name = "doors_door_durasteel.png", backface_culling = true}},
+		description = S("Durasteel Door"),
+		inventory_image = "doors_item_durasteel.png",
 		protected = true,
 		groups = {cracky = 1, level = 2},
 		sounds = default.node_sound_metal_defaults(),
 		sound_open = "doors_steel_door_open",
 		sound_close = "doors_steel_door_close",
 		recipe = {
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
+			{"default:durasteel_ingot", "duradefault:steel_ingot"},
+			{"default:durasteel_ingot", "duradefault:steel_ingot"},
+			{"default:durasteel_ingot", "duradefault:steel_ingot"},
 		}
 })
 
@@ -522,7 +522,7 @@ function doors.register_door(name, def)
 	local modname = name:sub(1, i - 1)
 	if not def.tiles then
 		if def.protected then
-			def.tiles = {{name = "doors_door_steel.png", backface_culling = true}}
+			def.tiles = {{name = "doors_door_durasteel.png", backface_culling = true}}
 		else
 			def.tiles = {{name = "doors_door_wood.png", backface_culling = true}}
 		end
@@ -693,12 +693,12 @@ doors.register_trapdoor("doors:trapdoor", {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, door = 1},
 })
 
-doors.register_trapdoor("doors:trapdoor_steel", {
-	description = S("Steel Trapdoor"),
-	inventory_image = "doors_trapdoor_steel.png",
-	wield_image = "doors_trapdoor_steel.png",
-	tile_front = "doors_trapdoor_steel.png",
-	tile_side = "doors_trapdoor_steel_side.png",
+doors.register_trapdoor("doors:trapdoor_durasteel", {
+	description = S("Durasteel Trapdoor"),
+	inventory_image = "doors_trapdoor_durasteel.png",
+	wield_image = "doors_trapdoor_durasteel.png",
+	tile_front = "doors_trapdoor_durasteel.png",
+	tile_side = "doors_trapdoor_durasteel_side.png",
 	protected = true,
 	sounds = default.node_sound_metal_defaults(),
 	sound_open = "doors_steel_door_open",
@@ -716,10 +716,10 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "doors:trapdoor_steel",
+	output = "doors:trapdoor_durasteel",
 	recipe = {
-		{"default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot"},
 	}
 })
 
