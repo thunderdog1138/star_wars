@@ -289,9 +289,9 @@ minetest.register_craftitem("default:gold_lump", {
 	inventory_image = "default_gold_lump.png"
 })
 
-minetest.register_craftitem("default:diamond", {
-	description = S("Diamond"),
-	inventory_image = "default_diamond.png",
+minetest.register_craftitem("default:beskar_lump", {
+	description = S("Beskar Lump"),
+	inventory_image = "default_beskar_lump.png",
 })
 
 minetest.register_craftitem("default:clay_lump", {
@@ -299,9 +299,9 @@ minetest.register_craftitem("default:clay_lump", {
 	inventory_image = "default_clay_lump.png",
 })
 
-minetest.register_craftitem("default:steel_ingot", {
-	description = S("Steel Ingot"),
-	inventory_image = "default_steel_ingot.png"
+minetest.register_craftitem("default:durasteel_ingot", {
+	description = S("Durasteel Ingot"),
+	inventory_image = "default_durasteel_ingot.png"
 })
 
 minetest.register_craftitem("default:copper_ingot", {
@@ -322,6 +322,11 @@ minetest.register_craftitem("default:bronze_ingot", {
 minetest.register_craftitem("default:gold_ingot", {
 	description = S("Gold Ingot"),
 	inventory_image = "default_gold_ingot.png"
+})
+
+minetest.register_craftitem("default:beskar_ingot", {
+	description = S("Beskar Ingot"),
+	inventory_image = "default_beskar_ingot.png"
 })
 
 minetest.register_craftitem("default:mese_crystal_fragment", {
