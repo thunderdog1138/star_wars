@@ -10,10 +10,10 @@ minetest.register_alias("bucket_water", "bucket:bucket_water")
 minetest.register_alias("bucket_lava", "bucket:bucket_lava")
 
 minetest.register_craft({
-	output = "bucket:bucket_empty 1",
+	output = "bucket:bucket_empty",
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"", "default:steel_ingot", ""},
+		{"default:durasteel_ingot", "", "default:durasteel_ingot"},
+		{"", "default:durasteel_ingot", ""},
 	}
 })
 
@@ -225,3 +225,8 @@ minetest.register_craft({
 	replacements = {{"bucket:bucket_lava", "bucket:bucket_empty"}},
 })
 
+minetest.register_craft({
+	type = "cooking",
+	output = "default:beskarblock",
+	recipe = "bucket:bucket_lava",
+})
