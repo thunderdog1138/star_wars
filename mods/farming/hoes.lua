@@ -19,11 +19,11 @@ farming.register_hoe(":farming:hoe_stone", {
 	groups = {hoe = 1}
 })
 
-farming.register_hoe(":farming:hoe_steel", {
-	description = S("Steel Hoe"),
-	inventory_image = "farming_tool_steelhoe.png",
+farming.register_hoe(":farming:hoe_durasteel", {
+	description = S("Durateel Hoe"),
+	inventory_image = "farming_tool_durasteelhoe.png",
 	max_uses = 500,
-	material = "default:steel_ingot",
+	material = "default:durasteel_ingot",
 	groups = {hoe = 1}
 })
 
