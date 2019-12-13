@@ -793,12 +793,12 @@ my_register_stair_and_slab(
 )
 
 my_register_stair_and_slab(
-	"steelblock",
-	"default:steelblock",
+	"durasteelblock",
+	"default:durasteelblock",
 	{cracky = 1, level = 2},
-	{"default_steel_block.png"},
-	"Steel Block Stair",
-	"Steel Block Slab",
+	{"default_durasteel_block.png"},
+	"Durasteel Block Stair",
+	"Durasteel Block Slab",
 	default.node_sound_metal_defaults(),
 	true
 )
