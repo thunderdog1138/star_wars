@@ -186,15 +186,15 @@ xpanes.register_pane("obsidian_pane", {
 })
 
 xpanes.register_pane("bar", {
-	description = S("Steel Bars"),
+	description = S("Durasteel Bars"),
 	textures = {"xpanes_bar.png","xpanes_bar.png","xpanes_bar_top.png"},
 	inventory_image = "xpanes_bar.png",
 	wield_image = "xpanes_bar.png",
 	groups = {cracky=2},
 	sounds = default.node_sound_metal_defaults(),
 	recipe = {
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}
+		{"default:durasteel_ingot", "default:durasteel_ingot", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot", "default:durasteel_ingot"}
 	}
 })
 
@@ -214,10 +214,10 @@ minetest.register_lbm({
 
 if minetest.get_modpath("doors") then
 
-	doors.register("xpanes:door_steel_bar", {
-		tiles = {{name = "xpanes_door_steel_bar.png", backface_culling = true}},
-		description = S("Steel Bar Door"),
-		inventory_image = "xpanes_item_steel_bar.png",
+	doors.register("xpanes:door_durasteel_bar", {
+		tiles = {{name = "xpanes_door_durasteel_bar.png", backface_culling = true}},
+		description = S("Durasteel Bar Door"),
+		inventory_image = "xpanes_item_durasteel_bar.png",
 		protected = true,
 		groups = {cracky = 1, level = 2},
 		sounds = default.node_sound_metal_defaults(),
@@ -230,12 +230,12 @@ if minetest.get_modpath("doors") then
 		},
 	})
 
-	doors.register_trapdoor("xpanes:trapdoor_steel_bar", {
-		description = S("Steel Bar Trapdoor"),
-		inventory_image = "xpanes_trapdoor_steel_bar.png",
-		wield_image = "xpanes_trapdoor_steel_bar.png",
-		tile_front = "xpanes_trapdoor_steel_bar.png",
-		tile_side = "xpanes_trapdoor_steel_bar_side.png",
+	doors.register_trapdoor("xpanes:trapdoor_durasteel_bar", {
+		description = S("Durasteel Bar Trapdoor"),
+		inventory_image = "xpanes_trapdoor_durasteel_bar.png",
+		wield_image = "xpanes_trapdoor_durasteel_bar.png",
+		tile_front = "xpanes_trapdoor_durasteel_bar.png",
+		tile_side = "xpanes_trapdoor_durasteel_bar_side.png",
 		protected = true,
 		groups = {cracky = 1, level = 2, door = 1},
 		sounds = default.node_sound_metal_defaults(),
@@ -244,7 +244,7 @@ if minetest.get_modpath("doors") then
 	})
 
 	minetest.register_craft({
-		output = "xpanes:trapdoor_steel_bar",
+		output = "xpanes:trapdoor_durasteel_bar",
 		recipe = {
 			{"xpanes:bar_flat", "xpanes:bar_flat"},
 			{"xpanes:bar_flat", "xpanes:bar_flat"},
