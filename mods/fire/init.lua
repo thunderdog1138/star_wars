@@ -118,9 +118,9 @@ minetest.register_node("fire:permanent_flame", {
 
 -- Flint and steel
 
-minetest.register_tool("fire:flint_and_steel", {
-	description = S("Flint and Steel"),
-	inventory_image = "fire_flint_steel.png",
+minetest.register_tool("fire:lighter", {
+	description = S("Lighter"),
+	inventory_image = "fire_lighter.png",
 	sound = {breaks = "default_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -162,9 +162,18 @@ minetest.register_tool("fire:flint_and_steel", {
 })
 
 minetest.register_craft({
-	output = "fire:flint_and_steel",
+	output = "fire:lighter",
 	recipe = {
-		{"default:flint", "default:steel_ingot"}
+		{"default:durasteel_ingot", "tnt:gunpowder"},
+		{"default:durasteel_ingot", "default:durasteel_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = "fire:lighter",
+	recipe = {
+		{"tnt:gunpowder", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot"},
 	}
 })
 
