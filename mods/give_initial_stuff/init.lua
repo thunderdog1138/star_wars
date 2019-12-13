@@ -1,7 +1,7 @@
 -- gave_initial_stuff/init.lua
 
 local stuff_string = minetest.settings:get("initial_stuff") or
-		"default:pick_steel,default:axe_steel,default:shovel_steel," ..
+		"default:pick_durasteel,default:axe_durasteel,default:shovel_durasteel," ..
 		"default:torch 99,default:cobble 99"
 
 give_initial_stuff = {
