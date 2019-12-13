@@ -159,12 +159,12 @@ minetest.register_craft( {
 	}
 })
 
-minetest.register_node("vessels:steel_bottle", {
-	description = S("Empty Heavy Steel Bottle"),
+minetest.register_node("vessels:durasteel_bottle", {
+	description = S("Empty Canteen"),
 	drawtype = "plantlike",
-	tiles = {"vessels_steel_bottle.png"},
-	inventory_image = "vessels_steel_bottle.png",
-	wield_image = "vessels_steel_bottle.png",
+	tiles = {"vessels_durasteel_bottle.png"},
+	inventory_image = "vessels_durasteel_bottle.png",
+	wield_image = "vessels_durasteel_bottle.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -177,11 +177,11 @@ minetest.register_node("vessels:steel_bottle", {
 })
 
 minetest.register_craft( {
-	output = "vessels:steel_bottle 5",
+	output = "vessels:durasteel_bottle 5",
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"", "default:steel_ingot", ""}
+		{"default:durasteel_ingot", "", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "", "default:durasteel_ingot"},
+		{"", "default:durasteel_ingot", ""}
 	}
 })
 
@@ -219,8 +219,8 @@ minetest.register_craft({
 
 minetest.register_craft( {
 	type = "cooking",
-	output = "default:steel_ingot",
-	recipe = "vessels:steel_bottle",
+	output = "default:durasteel_ingot",
+	recipe = "vessels:durasteel_bottle",
 })
 
 minetest.register_craft({
