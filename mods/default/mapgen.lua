@@ -379,6 +379,7 @@ function default.register_mgv6_ores()
 		y_max          = -256,
 		y_min          = -31000,
 	})
+end
 
 
 -- All mapgens except mgv6
