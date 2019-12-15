@@ -1,1 +1,0 @@
-Pova gives mod makers a set of functions to safely apply overrides for player speed, jump height and gravity.
