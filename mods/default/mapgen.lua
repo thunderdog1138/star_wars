@@ -821,6 +821,7 @@ function default.register_ores()
 		y_max          = -2048,
 		y_min          = -31000,
 	})
+end
 
 
 --
@@ -2482,5 +2483,4 @@ else
 	default.register_biomes(31000)
 	default.register_ores()
 	default.register_decorations()
-end
 end
