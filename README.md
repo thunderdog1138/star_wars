@@ -1,11 +1,6 @@
-# Minetest Game
+# Minetest: Star Wars
 
-The default game bundled in the Minetest engine.  
-
-For further information, check 
-[this forum topic](https://forum.minetest.net/viewtopic.php?f=15&t=9724).   
-Also see the [Minetest Wiki](https://wiki.minetest.net/Subgames/Minetest_Game) 
-for more information.
+A Star Wars themed version of the Minetest game.
 
 ## Installation
 
