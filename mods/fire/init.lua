@@ -169,14 +169,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "fire:lighter",
-	recipe = {
-		{"tnt:gunpowder", "default:durasteel_ingot"},
-		{"default:durasteel_ingot", "default:durasteel_ingot"},
-	}
-})
-
 
 -- Override coalblock to enable permanent flame above
 -- Coalblock is non-flammable to avoid unwanted basic_flame nodes
