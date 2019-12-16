@@ -341,13 +341,14 @@ minetest.register_craft({
 	recipe = {
 		{"", "group:fence", ""},
 		{"", "group:fence", ""},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot", "default:durasteel_ingot"},
 	}
 })
 
 minetest.register_craft({
+	type = "shapeless",
 	output = "3d_armor_stand:locked_armor_stand",
 	recipe = {
-		{"3d_armor_stand:armor_stand", "default:steel_ingot"},
+		{"3d_armor_stand:armor_stand", "default:durasteel_ingot"},
 	}
 })
