@@ -71,49 +71,10 @@ if armor.materials.wood then
 	})
 end
 
-if armor.materials.cactus then
-	armor:register_armor("shields:shield_cactus", {
-		description = S("Cactus Shield"),
-		inventory_image = "shields_inv_shield_cactus.png",
-		groups = {armor_shield=1, armor_heal=0, armor_use=1000},
-		armor_groups = {fleshy=5},
-		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_wood_footstep")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_wood_footstep")
-		end,
-	})
-	armor:register_armor("shields:shield_enhanced_cactus", {
-		description = S("Enhanced Cactus Shield"),
-		inventory_image = "shields_inv_shield_enhanced_cactus.png",
-		groups = {armor_shield=1, armor_heal=0, armor_use=1000},
-		armor_groups = {fleshy=8},
-		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=2},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_dig_metal")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_dug_metal")
-		end,
-	})
-	minetest.register_craft({
-		output = "shields:shield_enhanced_cactus",
-		recipe = {
-			{"default:steel_ingot"},
-			{"shields:shield_cactus"},
-			{"default:steel_ingot"},
-		},
-	})
-end
-
-if armor.materials.steel then
-	armor:register_armor("shields:shield_steel", {
-		description = S("Steel Shield"),
-		inventory_image = "shields_inv_shield_steel.png",
+if armor.materials.durasteel then
+	armor:register_armor("shields:shield_durasteel", {
+		description = S("Durasteel Shield"),
+		inventory_image = "shields_inv_shield_durasteel.png",
 		groups = {armor_shield=1, armor_heal=0, armor_use=800,
 			physics_speed=-0.03, physics_gravity=0.03},
 		armor_groups = {fleshy=10},
@@ -146,10 +107,10 @@ if armor.materials.bronze then
 	})
 end
 
-if armor.materials.diamond then
-	armor:register_armor("shields:shield_diamond", {
+if armor.materials.beskar then
+	armor:register_armor("shields:shield_mandalorian", {
 		description = S("Diamond Shield"),
-		inventory_image = "shields_inv_shield_diamond.png",
+		inventory_image = "shields_inv_shield_mandalorian.png",
 		groups = {armor_shield=1, armor_heal=12, armor_use=200},
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, choppy=1, level=3},
@@ -177,40 +138,6 @@ if armor.materials.gold then
 		end,
 		on_destroy = function(player, index, stack)
 			play_sound_effect(player, "default_dug_metal")
-		end,
-	})
-end
-
-if armor.materials.mithril then
-	armor:register_armor("shields:shield_mithril", {
-		description = S("Mithril Shield"),
-		inventory_image = "shields_inv_shield_mithril.png",
-		groups = {armor_shield=1, armor_heal=12, armor_use=100},
-		armor_groups = {fleshy=15},
-		damage_groups = {cracky=2, snappy=1, level=3},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_glass_footstep")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_break_glass")
-		end,
-	})
-end
-
-if armor.materials.crystal then
-	armor:register_armor("shields:shield_crystal", {
-		description = S("Crystal Shield"),
-		inventory_image = "shields_inv_shield_crystal.png",
-		groups = {armor_shield=1, armor_heal=12, armor_use=100, armor_fire=1},
-		armor_groups = {fleshy=15},
-		damage_groups = {cracky=2, snappy=1, level=3},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_glass_footstep")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_break_glass")
 		end,
 	})
 end
