@@ -45,9 +45,9 @@ mobs:register_mob("mobs_monster:tusken_raider", {
 	armor = 100,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
 	visual = "mesh",
-	mesh = "mobs_sand_monster.b3d",
+	mesh = "mobs_character.b3d",
 	textures = {
-		{"mobs_sand_monster.png"},
+		{"mobs_tusken_raider.png"},
 	},
 	blood_texture = "default_desert_sand.png",
 	makes_footstep_sound = true,
