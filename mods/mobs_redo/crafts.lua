@@ -58,7 +58,7 @@ if minetest.get_modpath("farming") then
 		output = "mobs:lasso",
 		recipe = {
 			{"farming:string", "", "farming:string"},
-			{"", "default:diamond", ""},
+			{"", "default:beskar", ""},
 			{"farming:string", "", "farming:string"}
 		}
 	})
@@ -94,8 +94,8 @@ minetest.register_tool("mobs:shears", {
 minetest.register_craft({
 	output = "mobs:shears",
 	recipe = {
-		{"", "default:steel_ingot", ""},
-		{"", "group:stick", "default:steel_ingot"}
+		{"", "default:durasteel_ingot", ""},
+		{"", "group:stick", "default:durasteel_ingot"}
 	}
 })
 
@@ -126,8 +126,8 @@ minetest.register_craft({
 	output = "mobs:saddle",
 	recipe = {
 		{"mobs:leather", "mobs:leather", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"}
+		{"mobs:leather", "default:durasteel_ingot", "mobs:leather"},
+		{"mobs:leather", "default:durasteel_ingot", "mobs:leather"}
 	}
 })
 
