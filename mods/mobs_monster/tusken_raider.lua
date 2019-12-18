@@ -32,7 +32,7 @@ end
 
 -- Sand Monster by PilzAdam
 
-mobs:register_mob("mobs_monster:sand_monster", {
+mobs:register_mob("mobs_monster:tusken_raider", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -78,14 +78,6 @@ mobs:register_mob("mobs_monster:sand_monster", {
 		punch_start = 74,
 		punch_end = 105,
 	},
-	immune_to = {
-		{"default:shovel_wood", 3}, -- shovels deal more damage to sand monster
-		{"default:shovel_stone", 3},
-		{"default:shovel_bronze", 4},
-		{"default:shovel_steel", 4},
-		{"default:shovel_mese", 5},
-		{"default:shovel_diamond", 7},
-	},
 --[[
 	custom_attack = function(self, p)
 		local pos = self.object:get_pos()
@@ -117,7 +109,7 @@ mobs:register_mob("mobs_monster:sand_monster", {
 
 
 mobs:spawn({
-	name = "mobs_monster:sand_monster",
+	name = "mobs_monster:tusken_raider",
 	nodes = {"default:desert_sand"},
 	chance = 7000,
 	active_object_count = 2,
@@ -125,7 +117,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:sand_monster", S("Sand Monster"), "default_desert_sand.png", 1)
+mobs:register_egg("mobs_monster:tusken_raider", S("Tusken Raider"), "default_desert_sand.png", 1)
 
 
-mobs:alias_mob("mobs:sand_monster", "mobs_monster:sand_monster") -- compatibility
+mobs:alias_mob("mobs:tusken_raider", "mobs_monster:tusken_raider") -- compatibility
