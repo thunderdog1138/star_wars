@@ -1,2 +1,0 @@
-#    POVA recalc loop in seconds (0 to disable)
-pova_loop (POVA loop number in seconds) float 1.0
