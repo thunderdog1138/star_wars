@@ -790,7 +790,7 @@ minetest.register_node("default:joganfruit", {
 	end,
 })
 
-minetest.register_alias("default:joganfruit", "default:apple")
+minetest.register_alias("default:apple", "default:joganfruit")
 
 minetest.register_node("default:joganfruit_mark", {
 	description = S("Jogan Fruit Marker"),
@@ -814,7 +814,7 @@ minetest.register_node("default:joganfruit_mark", {
 	end
 })
 
-minetest.register_alias("default:joganfruit_mark", "default:apple_mark")
+minetest.register_alias("default:apple_mark", "default:joganfruit_mark")
 
 minetest.register_node("default:jungletree", {
 	description = S("Jungle Tree"),
