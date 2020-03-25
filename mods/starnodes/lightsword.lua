@@ -20,19 +20,131 @@ function atk(cor)
 	end
 end
 for n,cor in ipairs(cores) do
-	minetest.register_tool("starsnodes:lightsaberoff"..cor, {
+	minetest.register_tool("starsnodes:lightsaberoffgreen", {
 		description = "Lightsaber",
-		inventory_image = "starsnodes_lightsaberon"..cor..".png",
+		inventory_image = "starsnodes_lightsaberongreen.png",
 		wield_image = "starsnodes_lightsaberoff.png",
 		tool_capabilities = {
 			full_punch_interval = 1.0,
 			max_drop_level=0,
 		},
 	})
-	minetest.register_tool("starsnodes:lightsaberon"..cor, {
+  	minetest.register_tool("starsnodes:lightsaberoffblue", {
 		description = "Lightsaber",
-		inventory_image = "starsnodes_lightsaberon"..cor..".png",
-		wield_image = "starsnodes_lightsaberon"..cor..".png",
+		inventory_image = "starsnodes_lightsaberonblue.png",
+		wield_image = "starsnodes_lightsaberoff.png",
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=0,
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberoffyellow", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberonyellow.png",
+		wield_image = "starsnodes_lightsaberoff.png",
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=0,
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberoffpurple", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberonpurple.png",
+		wield_image = "starsnodes_lightsaberoff.png",
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=0,
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberoffred", {
+		description = "Sith Lightsaber",
+		inventory_image = "starsnodes_lightsaberonred.png",
+		wield_image = "starsnodes_lightsaberoff.png",
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=0,
+		},
+	})
+	minetest.register_tool("starsnodes:lightsaberongreen", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberongreen.png",
+		wield_image = "starsnodes_lightsaberongreen.png",
+		groups = {
+			not_in_creative_inventory=1,
+		},
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=10,
+			groupcaps={
+				cracky={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				crumbly={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				snappy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				choppy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+			},
+			damage_groups = {fleshy=8}
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberonblue", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberonblue.png",
+		wield_image = "starsnodes_lightsaberonblue.png",
+		groups = {
+			not_in_creative_inventory=1,
+		},
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=10,
+			groupcaps={
+				cracky={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				crumbly={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				snappy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				choppy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+			},
+			damage_groups = {fleshy=8}
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberonyellow", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberonyellow.png",
+		wield_image = "starsnodes_lightsaberonyellow.png",
+		groups = {
+			not_in_creative_inventory=1,
+		},
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=10,
+			groupcaps={
+				cracky={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				crumbly={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				snappy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				choppy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+			},
+			damage_groups = {fleshy=8}
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberonpurple", {
+		description = "Lightsaber",
+		inventory_image = "starsnodes_lightsaberonpurple.png",
+		wield_image = "starsnodes_lightsaberonpurple.png",
+		groups = {
+			not_in_creative_inventory=1,
+		},
+		tool_capabilities = {
+			full_punch_interval = 1.0,
+			max_drop_level=10,
+			groupcaps={
+				cracky={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				crumbly={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				snappy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+				choppy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
+			},
+			damage_groups = {fleshy=8}
+		},
+	})
+  	minetest.register_tool("starsnodes:lightsaberonred", {
+		description = "Sith Lightsaber",
+		inventory_image = "starsnodes_lightsaberonred.png",
+		wield_image = "starsnodes_lightsaberonred.png",
 		groups = {
 			not_in_creative_inventory=1,
 		},
