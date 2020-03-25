@@ -1,20 +1,20 @@
-cores={"green","blue","yellow"}
+cores={"green","blue","yellow","purple"}
 for n,cor in ipairs(cores) do
-	minetest.register_node("starsnodes:stone_with_adegan_"..cor, {
-		description = "Adegan "..cor.." Crystal in Stone",
-		tiles = {"default_stone.png^starsnodes_adegan"..cor..".png"},
+	minetest.register_node("starsnodes:stone_with_kyber_"..cor, {
+		description = "Kyber Crystal in Stone",
+		tiles = {"default_stone.png^starsnodes_kyber"..cor..".png"},
 		is_ground_content = true,
 		groups = {cracky=18},
-		drop = "starsnodes:adegan"..cor,
+		drop = "starsnodes:kyber"..cor,
 		sounds = default.node_sound_stone_defaults(),
 	})
-	minetest.register_craftitem("starsnodes:adegan"..cor, {
-		description = "Adegan "..cor.." Crystal",
-		inventory_image = "starsnodes_adegan"..cor.."crystal.png",
+	minetest.register_craftitem("starsnodes:kyber"..cor, {
+		description = "Kyber Crystal",
+		inventory_image = "starsnodes_kyber"..cor.."crystal.png",
 	})
 	minetest.register_ore({
 		ore_type = "scatter",
-		ore = "starsnodes:stone_with_adegan_"..cor,
+		ore = "starsnodes:stone_with_kyber_"..cor,
 		wherein = "default:stone",
 		clust_scarcity = 5000,
 		clust_num_ores = 4,
@@ -24,7 +24,7 @@ for n,cor in ipairs(cores) do
 	})
 	minetest.register_ore({
 		ore_type = "scatter",
-		ore = "starsnodes:stone_with_adegan_"..cor,
+		ore = "starsnodes:stone_with_kyber_"..cor,
 		wherein = "default:stone",
 		clust_scarcity = 10000,
 		clust_num_ores = 3,
@@ -33,7 +33,7 @@ for n,cor in ipairs(cores) do
 		height_max = -53,
 	})
 end
-minetest.register_craftitem("starsnodes:adeganred", {
-	description = "Adegan Red Crystal",
-	inventory_image = "starsnodes_adeganredcrystal.png",
+minetest.register_craftitem("starsnodes:kyberred", {
+	description = "Bleeding Kyber Crystal",
+	inventory_image = "starsnodes_kyberredcrystal.png",
 })
