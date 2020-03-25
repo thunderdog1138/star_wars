@@ -70,6 +70,7 @@ for n,cor in ipairs(cores) do
 		inventory_image = "starsnodes_lightsaberongreen.png",
 		wield_image = "starsnodes_lightsaberongreen.png",
 		groups = {
+        	lightsaber= 1,
 			not_in_creative_inventory=1,
 		},
 		tool_capabilities = {
@@ -89,6 +90,7 @@ for n,cor in ipairs(cores) do
 		inventory_image = "starsnodes_lightsaberonblue.png",
 		wield_image = "starsnodes_lightsaberonblue.png",
 		groups = {
+        	lightsaber= 1,
 			not_in_creative_inventory=1,
 		},
 		tool_capabilities = {
@@ -108,6 +110,7 @@ for n,cor in ipairs(cores) do
 		inventory_image = "starsnodes_lightsaberonyellow.png",
 		wield_image = "starsnodes_lightsaberonyellow.png",
 		groups = {
+        	lightsaber= 1,
 			not_in_creative_inventory=1,
 		},
 		tool_capabilities = {
@@ -127,6 +130,7 @@ for n,cor in ipairs(cores) do
 		inventory_image = "starsnodes_lightsaberonpurple.png",
 		wield_image = "starsnodes_lightsaberonpurple.png",
 		groups = {
+        	lightsaber= 1,
 			not_in_creative_inventory=1,
 		},
 		tool_capabilities = {
@@ -146,6 +150,7 @@ for n,cor in ipairs(cores) do
 		inventory_image = "starsnodes_lightsaberonred.png",
 		wield_image = "starsnodes_lightsaberonred.png",
 		groups = {
+        	lightsaber= 1,
 			not_in_creative_inventory=1,
 		},
 		tool_capabilities = {
