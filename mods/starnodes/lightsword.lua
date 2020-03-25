@@ -1,4 +1,4 @@
-cores={"green","blue","red", "yellow"}
+cores={"green","blue","red","yellow","purple"}
 function on_off(cor)
 	for _,player in ipairs(minetest.get_connected_players()) do
 		if player:get_player_control().RMB == true then
@@ -21,7 +21,7 @@ function atk(cor)
 end
 for n,cor in ipairs(cores) do
 	minetest.register_tool("starsnodes:lightsaberoff"..cor, {
-		description = "Light Saber "..cor,
+		description = "Lightsaber",
 		inventory_image = "starsnodes_lightsaberon"..cor..".png",
 		wield_image = "starsnodes_lightsaberoff.png",
 		tool_capabilities = {
@@ -30,7 +30,7 @@ for n,cor in ipairs(cores) do
 		},
 	})
 	minetest.register_tool("starsnodes:lightsaberon"..cor, {
-		description = "Light Saber "..cor,
+		description = "Lightsaber",
 		inventory_image = "starsnodes_lightsaberon"..cor..".png",
 		wield_image = "starsnodes_lightsaberon"..cor..".png",
 		groups = {
@@ -51,9 +51,9 @@ for n,cor in ipairs(cores) do
 	minetest.register_craft({
 		output = "starsnodes:lightsaberoff"..cor,
 		recipe = {
-			{"default:steel_ingot"},
-			{"starsnodes:adegan"..cor},
-			{"default:steel_ingot"},
+			{"default:durasteel_ingot"},
+			{"starsnodes:kyber"..cor},
+			{"default:durasteel_ingot"},
 		}
 	})
 end
