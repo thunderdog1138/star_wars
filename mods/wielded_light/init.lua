@@ -135,4 +135,8 @@ minetest.register_entity(":__builtin:item", item)
 ---TEST
 --wielded_light.register_item_light('default:dirt', 14)
 
-wielded_light.register_item_light('group:lightsaber', 14)
+wielded_light.register_item_light('starsnodes:lightsaberongreen', 14)
+wielded_light.register_item_light('starsnodes:lightsaberonblue', 14)
+wielded_light.register_item_light('starsnodes:lightsaberonyellow', 14)
+wielded_light.register_item_light('starsnodes:lightsaberonpurple', 14)
+wielded_light.register_item_light('starsnodes:lightsaberonred', 14)
