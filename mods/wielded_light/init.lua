@@ -135,3 +135,4 @@ minetest.register_entity(":__builtin:item", item)
 ---TEST
 --wielded_light.register_item_light('default:dirt', 14)
 
+wielded_light.register_item_light('group:lightsaber', 14)
