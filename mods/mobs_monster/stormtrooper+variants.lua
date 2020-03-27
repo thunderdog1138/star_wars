@@ -5,7 +5,7 @@
 -- Stormtrooper
 -- TODO: Attack players if they are holding a Jedi Lightsaber
 mobs:register_mob("mobs_monster:stormtrooper", {
-	type = "npc",
+	type = "monster",
 	passive = true,
 	attack_type = "shoot",
     arrow = "mobs_monster:blaster_red",
