@@ -59,12 +59,14 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 		minetest.add_item(pos, "default:sand")
 	end,
 ]]
+--[[
 	on_die = function(self, pos)
 		pos.y = pos.y + 0.5
 		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
 		pos.y = pos.y + 0.25
 		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
 	end,
+]]
 --[[
 	on_rightclick = function(self, clicker)
 
