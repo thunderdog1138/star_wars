@@ -5,9 +5,10 @@
 -- Stormtrooper
 -- TODO: Attack players if they are holding a Jedi Lightsaber
 mobs:register_mob("mobs_monster:stormtrooper", {
-	type = "monster",
+	type = "npc",
 	passive = true,
 	attack_type = "shoot",
+    attack_players = true,
     arrow = "mobs_monster:blaster_red",
     shoot_interval = 2,
     shoot_offset = 1.5,
@@ -15,7 +16,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	pathfinding = true,
 	hp_min = 4,
 	hp_max = 20,
-	armor = 100,
+	armor = 70,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
 	visual = "mesh",
 	mesh = "mobs_character.b3d",
