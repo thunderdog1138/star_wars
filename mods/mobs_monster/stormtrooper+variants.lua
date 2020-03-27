@@ -151,7 +151,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 
 
 -- spawn eggs
-mobs:register_egg("mobs_monster:stormtrooper", S("Stormtrooper"), "default_durasteel_block.png", 1)
+mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "default_durasteel_block.png", 1)
 
 
 -- aliases
