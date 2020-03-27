@@ -20,6 +20,8 @@ mobs.intllib = S
 
 dofile(path .. "/tusken_raider.lua")
 
+dofile(path .. "/stormtrooper+variants.lua")
+
 dofile(path .. "/lucky_block.lua")
 
 print ("[MOD] Mobs Redo Monsters loaded")
