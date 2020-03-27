@@ -30,7 +30,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	},
 	walk_velocity = 1.5,
 	run_velocity = 4,
-	view_range = 15
+	view_range = 15,
 	jump = true,
 	floats = 0,
     -- TODO: Drop Stormtrooper Armor and a blaster
