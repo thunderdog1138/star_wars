@@ -88,7 +88,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 mobs:register_arrow("mobs_monster:blaster_red", {
 	visual = "sprite",
 	visual_size = {x = 1, y = 1},
-	textures = {"mobs_monster:blaster_red.png"},
+	textures = {"mobs_blaster_red.png"},
 	velocity = 15,
 
 	-- direct hit, pain
