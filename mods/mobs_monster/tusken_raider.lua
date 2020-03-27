@@ -1,7 +1,3 @@
-
-local S = mobs.intllib
-
-
 -- custom particle effects
 local effect = function(pos, amount, texture, min_size, max_size, radius, gravity, glow)
 
