@@ -97,20 +97,15 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 1},
+			damage_groups = {fleshy = 3},
 		}, nil)
 	end,
 
 	hit_mob = function(self, mob)
 		mob:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 1},
+			damage_groups = {fleshy = 3},
 		}, nil)
-	end,
-
-	-- node hit, explode
-	hit_node = function(self, pos, node)
-		mobs:boom(self, pos, 1)
 	end
 })
 
