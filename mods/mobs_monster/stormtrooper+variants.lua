@@ -5,16 +5,18 @@
 -- Stormtrooper
 -- TODO: Attack players if they are holding a Jedi Lightsaber
 mobs:register_mob("mobs_monster:stormtrooper", {
-	type = "npc",
-	passive = true,
-	attack_type = "shoot",
+	type = "animal",
+	passive = false,
+	attack_type = "dogshoot",
     attack_players = true,
     arrow = "mobs_monster:blaster_red",
     shoot_interval = 2,
     shoot_offset = 1.5,
     group_attack = true,
 	pathfinding = true,
-	hp_min = 4,
+    damage = 6,
+	reach = 2,
+	hp_min = 20,
 	hp_max = 20,
 	armor = 70,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
@@ -31,7 +33,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	},
 	walk_velocity = 1.5,
 	run_velocity = 4,
-	view_range = 15,
+	view_range = 16,
 	jump = true,
 	floats = 0,
     -- TODO: Drop Stormtrooper Armor and a blaster
@@ -113,7 +115,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 
 	-- node hit, explode
 	hit_node = function(self, pos, node)
-		mobs:boom(self, pos, 3)
+		mobs:boom(self, pos, 1)
 	end
 })
 
