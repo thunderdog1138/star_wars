@@ -7,14 +7,12 @@
 mobs:register_mob("mobs_monster:stormtrooper", {
 	type = "monster",
 	passive = false,
-	attack_type = "dogshoot",
+	attack_type = "shoot",
     arrow = "mobs_monster:blaster_red",
     shoot_interval = 2,
     shoot_offset = 1.5,
     group_attack = true,
 	pathfinding = true,
-    damage = 6,
-	reach = 2,
 	hp_min = 20,
 	hp_max = 20,
 	armor = 70,
@@ -99,7 +97,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 6},
+			damage_groups = {fleshy = 1},
 		}, nil)
 		mobs:boom(self, self.object:get_pos(), 3)
 	end,
@@ -107,7 +105,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 	hit_mob = function(self, mob)
 		mob:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 6},
+			damage_groups = {fleshy = 1},
 		}, nil)
 		mobs:boom(self, self.object:get_pos(), 3)
 	end,
