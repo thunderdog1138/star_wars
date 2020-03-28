@@ -102,7 +102,7 @@ for n,cor in ipairs(cores) do
 				snappy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
 				choppy={times={[1]=1.0, [2]=0.5, [3]=0.5}, uses=30, maxlevel=10},
 			},
-			damage_groups = {fleshy=8}
+			damage_groups = {fleshy=15}
 		},
 	})
   	minetest.register_tool("starsnodes:lightsaberonyellow", {
