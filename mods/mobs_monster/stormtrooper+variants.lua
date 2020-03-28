@@ -33,9 +33,12 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	view_range = 16,
 	jump = true,
 	floats = 0,
-    -- TODO: Drop Stormtrooper Armor and a blaster
+    -- TODO: Drop a blaster
 	drops = {
-		{name = "default:desert_sand", chance = 1, min = 3, max = 5},
+		{name = "3d_armor:helmet_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:chestplate_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:leggings_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:boots_stormtrooper", chance = 2, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
