@@ -22,6 +22,22 @@ minetest.register_craft({
 	cooktime = 3,
 })
 
+-- charred dirt
+minetest.register_node("ethereal:charred_dirt", {
+	description = S("Charred Dirt"),
+	tiles = {"ethereal_charred_dirt.png"},
+	is_ground_content = ethereal.cavedirt,
+	groups = {crumbly = 3},
+	sounds = default.node_sound_dirt_defaults()
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "ethereal:charred_dirt",
+	recipe = "ethereal:dry_dirt",
+	cooktime = 3,
+})
+
 local dirts = {
 	"Bamboo", "Jungle", "Grove", "Prairie", "Cold",
 	"Crystal", "Mushroom", "Fiery", "Gray"
