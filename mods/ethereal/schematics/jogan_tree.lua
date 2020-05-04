@@ -1,11 +1,11 @@
 
 local _ = {name = "air", param1 = 0}
-local L = {name = "ethereal:orange_leaves", param1 = 255}
-local l = {name = "ethereal:orange_leaves", param1 = 200}
+local L = {name = "default:leaves", param1 = 255}
+local l = {name = "default:leaves", param1 = 200}
 local T = {name = "default:tree", param1 = 255}
-local o = {name = "ethereal:orange", param1 = 200}
+local j = {name = "default:joganfruit", param1 = 200}
 
-ethereal.orangetree = {
+ethereal.jogantree = {
 
 	size = {x = 3, y = 6, z = 3},
 
@@ -19,9 +19,9 @@ ethereal.orangetree = {
 	_,_,_,
 	_,_,_,
 	_,_,_,
-	l,l,o,
+	l,l,j,
 	L,L,L,
-	l,o,l,
+	l,j,l,
 
 	_,T,_,
 	_,T,_,
@@ -33,7 +33,7 @@ ethereal.orangetree = {
 	_,_,_,
 	_,_,_,
 	_,_,_,
-	o,l,l,
+	j,l,l,
 	L,L,L,
 	l,l,l,
 
