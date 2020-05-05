@@ -4,8 +4,6 @@ local S = ethereal.intllib
 -- override default dirt (to stop caves cutting away dirt)
 minetest.override_item("default:dirt", {is_ground_content = ethereal.cavedirt})
 
-minetest.register_alias("ethereal:green_dirt", "default:dirt_with_grass")
-
 -- dry dirt
 minetest.register_node("ethereal:dry_dirt", {
 	description = S("Dried Dirt"),
@@ -39,8 +37,7 @@ minetest.register_craft({
 })
 
 local dirts = {
-	"Bamboo", "Jungle", "Grove", "Prairie", "Cold",
-	"Crystal", "Mushroom", "Fiery", "Gray"
+	"Bamboo", "Jungle", "Grove", "Prairie", "Cold", "Fungus"
 }
 
 for n = 1, #dirts do
@@ -89,56 +86,6 @@ local flower_spread = function(pos, node)
 
 	-- stop flowers spreading too much just below top of map block
 	if minetest.find_node_near(pos, 2, "ignore") then
-		return
-	end
-
-	if num > 3
-	and node.name == "ethereal:crystalgrass" then
-
-		local grass = minetest.find_nodes_in_area_under_air(
-			pos0, pos1, {"ethereal:crystalgrass"})
-
-		if #grass > 4
-		and not minetest.find_node_near(pos, 4, {"ethereal:crystal_spike"}) then
-
-			pos = grass[math.random(#grass)]
-
-			pos.y = pos.y - 1
-
-			if minetest.get_node(pos).name == "ethereal:crystal_dirt" then
-
-				pos.y = pos.y + 1
-
-				minetest.swap_node(pos, {name = "ethereal:crystal_spike"})
-			end
-		end
-
-		return
-
-	elseif num > 3
-	and node.name == "ethereal:dry_shrub" then
-
-		local grass = minetest.find_nodes_in_area_under_air(
-			pos0, pos1, {"ethereal:dry_shrub"})
-
-		if #grass > 8
-		and not minetest.find_node_near(pos, 4, {"ethereal:fire_flower"}) then
-
-			pos = grass[math.random(#grass)]
-
-			pos.y = pos.y - 1
-
-			if minetest.get_node(pos).name == "ethereal:fiery_dirt" then
-
-				pos.y = pos.y + 1
-
-				minetest.swap_node(pos, {name = "ethereal:fire_flower"})
-			end
-		end
-
-		return
-
-	elseif num > 3 then
 		return
 	end
 
@@ -269,11 +216,12 @@ if not minetest.get_modpath("bakedclay") then
 
 end
 
--- Quicksand (old style, sinking inside shows black instead of yellow effect,
--- works ok with noclip enabled though)
+-- Quicksand
 minetest.register_node("ethereal:quicksand", {
 	description = S("Quicksand"),
 	tiles = {"default_sand.png"},
+	drawtype = "glasslike",
+	paramtype = "light",
 	drop = "default:sand",
 	liquid_viscosity = 15,
 	liquidtype = "source",
@@ -289,31 +237,9 @@ minetest.register_node("ethereal:quicksand", {
 	sounds = default.node_sound_sand_defaults(),
 })
 
--- Quicksand (new style, sinking inside shows yellow effect with or without noclip,
--- but old quicksand is shown as black until block placed nearby to update light)
-minetest.register_node("ethereal:quicksand2", {
-	description = S("Quicksand"),
-	tiles = {"default_sand.png"},
-	drawtype = "glasslike",
-	paramtype = "light",
-	drop = "default:sand",
-	liquid_viscosity = 15,
-	liquidtype = "source",
-	liquid_alternative_flowing = "ethereal:quicksand2",
-	liquid_alternative_source = "ethereal:quicksand2",
-	liquid_renewable = false,
-	liquid_range = 0,
-	drowning = 1,
-	walkable = false,
-	climbable = false,
-	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
-	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
-	sounds = default.node_sound_sand_defaults(),
-})
-
 -- craft quicksand
 minetest.register_craft({
-	output = "ethereal:quicksand2",
+	output = "ethereal:quicksand",
 	recipe = {
 		{"group:sand", "group:sand", "group:sand"},
 		{"group:sand", "bucket:bucket_water", "group:sand"},
