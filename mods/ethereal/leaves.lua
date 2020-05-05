@@ -187,6 +187,21 @@ minetest.register_craft({
 	burntime = 3,
 })
 
+-- bush
+minetest.register_node("ethereal:bush", {
+	description = S("Bush"),
+	tiles = {"ethereal_bush.png"},
+	walkable = true,
+	groups = {snappy = 3, flammable = 2},
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "ethereal:bush",
+	burntime = 1,
+})
+
 -- compatibility check for new mt version with leafdecay function
 if minetest.registered_nodes["default:dirt_with_rainforest_litter"] then
 
