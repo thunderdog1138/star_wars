@@ -5,7 +5,7 @@ local l = {name = "default:leaves", param1 = 200}
 local T = {name = "default:tree", param1 = 255}
 local j = {name = "default:joganfruit", param1 = 200}
 
-ethereal.jogantree = {
+ethereal.jogan_tree = {
 
 	size = {x = 3, y = 6, z = 3},
 
