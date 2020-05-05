@@ -104,7 +104,7 @@ minetest.register_node("ethereal:wroshyr_leaves", {
 })
 
 -- palm tree leaves
-minetest.register_node("ethereal:palmleaves", {
+minetest.register_node("ethereal:palm_leaves", {
 	description = S("Palm Leaves"),
 	drawtype = leaftype,
 	visual_scale = 1.4,
@@ -119,7 +119,7 @@ minetest.register_node("ethereal:palmleaves", {
 		max_items = 1,
 		items = {
 			{items = {"ethereal:palm_sapling"}, rarity = 10},
-			{items = {"ethereal:palmleaves"}}
+			{items = {"ethereal:palm_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
@@ -231,7 +231,7 @@ default.register_leafdecay({
 
 default.register_leafdecay({
 	trunks = {"ethereal:palm_trunk"},
-	leaves = {"ethereal:palmleaves", "ethereal:coconut"},
+	leaves = {"ethereal:palm_leaves", "ethereal:coconut"},
 	radius = 3
 })
 
