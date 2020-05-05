@@ -1,12 +1,12 @@
 
 local _ = {name = "air", param = 0}
-local L = {name = "ethereal:palmleaves", param = 255}
-local l = {name = "ethereal:palmleaves", param = 191}
+local L = {name = "ethereal:palm_leaves", param = 255}
+local l = {name = "ethereal:palm_leaves", param = 191}
 local T = {name = "ethereal:palm_trunk", param = 255}
 local t = {name = "ethereal:palm_trunk", param = 191}
 local C = {name = "ethereal:coconut", param = 127}
 
-ethereal.palmtree = {
+ethereal.palm_tree = {
 
 	size = {x = 9, y = 9, z = 9},
 
