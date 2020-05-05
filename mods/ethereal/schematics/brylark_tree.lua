@@ -1,9 +1,9 @@
 
 local _ = {name = "air", prob = 0}
-local l = {name = "ethereal:frost_leaves", prob = 255}
-local t = {name = "ethereal:frost_tree", prob = 255}
+local l = {name = "ethereal:brylark_leaves", prob = 255}
+local t = {name = "ethereal:brylark_trunk", prob = 255}
 
-ethereal.frosttrees = {
+ethereal.brylark_tree = {
 
 	size = {x = 8, y = 19, z = 8},
 
