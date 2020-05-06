@@ -4,7 +4,7 @@ local B = {name = "ethereal:bamboo", param1 = 255}
 local L = {name = "ethereal:bamboo_leaves", param1 = 255}
 local l = {name = "ethereal:bamboo_leaves", param1 = 100}
 
-ethereal.bambootree = {
+ethereal.bamboo_tree = {
 
 	size = {x = 3, y = 18, z = 3},
 
