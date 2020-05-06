@@ -279,11 +279,6 @@ minetest.register_craftitem("default:tin_lump", {
 	inventory_image = "default_tin_lump.png"
 })
 
-minetest.register_craftitem("default:mese_crystal", {
-	description = S("Mese Crystal"),
-	inventory_image = "default_mese_crystal.png",
-})
-
 minetest.register_craftitem("default:gold_lump", {
 	description = S("Gold Lump"),
 	inventory_image = "default_gold_lump.png"
@@ -329,11 +324,6 @@ minetest.register_craftitem("default:beskar_ingot", {
 	inventory_image = "default_beskar_ingot.png"
 })
 
-minetest.register_craftitem("default:mese_crystal_fragment", {
-	description = S("Mese Crystal Fragment"),
-	inventory_image = "default_mese_crystal_fragment.png",
-})
-
 minetest.register_craftitem("default:clay_brick", {
 	description = S("Clay Brick"),
 	inventory_image = "default_clay_brick.png",
@@ -342,16 +332,4 @@ minetest.register_craftitem("default:clay_brick", {
 minetest.register_craftitem("default:obsidian_shard", {
 	description = S("Obsidian Shard"),
 	inventory_image = "default_obsidian_shard.png",
-})
-
-minetest.register_craftitem("default:flint", {
-	description = S("Flint"),
-	inventory_image = "default_flint.png"
-})
-
-minetest.register_craftitem("default:blueberries", {
-	description = S("Blueberries"),
-	inventory_image = "default_blueberries.png",
-	groups = {food_blueberries = 1, food_berry = 1},
-	on_use = minetest.item_eat(2),
 })
