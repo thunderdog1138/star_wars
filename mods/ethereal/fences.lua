@@ -9,34 +9,26 @@ default.register_fence("ethereal:fence_scorched", {
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence("ethereal:fence_frostwood", {
-	description = S("Frost Fence"),
-	texture = "frost_wood.png",
-	material = "ethereal:frost_wood",
+default.register_fence("ethereal:fence_uneti_wood", {
+	description = S("Uneti Fence"),
+	texture = "uneti_wood.png",
+	material = "ethereal:uneti_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence("ethereal:fence_redwood", {
-	description = S("Redwood Fence"),
-	texture = "redwood_wood.png",
-	material = "ethereal:redwood_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+default.register_fence("ethereal:fence_brylar_wood", {
+	description = S("Brylar Fence"),
+	texture = "brylar_wood.png",
+	material = "ethereal:brylar_wood",
+	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence("ethereal:fence_willow", {
-	description = S("Willow Fence"),
-	texture = "willow_wood.png",
-	material = "ethereal:willow_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_yellowwood", {
-	description = S("Healing Wood Fence"),
-	texture = "yellow_wood.png",
-	material = "ethereal:yellow_wood",
+default.register_fence("ethereal:fence_wroshyr_wood", {
+	description = S("Wroshyr Wood Fence"),
+	texture = "wroshyr_wood.png",
+	material = "ethereal:wroshyr_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
@@ -49,26 +41,10 @@ default.register_fence("ethereal:fence_palm", {
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence("ethereal:fence_banana", {
-	description = S("Banana Wood Fence"),
-	texture = "banana_wood.png",
-	material = "ethereal:banana_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
 default.register_fence("ethereal:fence_mushroom", {
 	description = S("Mushroom Fence"),
 	texture = "mushroom_trunk.png",
 	material = "ethereal:mushroom_trunk",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_birch", {
-	description = S("Birch Fence"),
-	texture = "moretrees_birch_wood.png",
-	material = "ethereal:birch_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
