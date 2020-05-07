@@ -58,31 +58,6 @@ stepheight = 0.6,
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
 
-		-- Monty Python tribute
-		local item = clicker:get_wielded_item()
-
-		if item:get_name() == "mobs:lava_orb" then
-
-			if not mobs.is_creative(clicker:get_player_name()) then
-				item:take_item()
-				clicker:set_wielded_item(item)
-			end
-
-			self.object:set_properties({
-				textures = {"mobs_bunny_evil.png"},
-			})
-
-			self.type = "monster"
-			self.health = 20
-			self.passive = false
-
-			return
-		end
-	end,
-	on_spawn = function(self)
-
-		local pos = self.object:get_pos() ; pos.y = pos.y - 1
-
 		-- white snowy bunny
 		if minetest.find_node_near(pos, 1,
 				{"default:snow", "default:snowblock", "default:dirt_with_snow"}) then
@@ -107,11 +82,7 @@ stepheight = 0.6,
 })
 
 
-local spawn_on = "default:dirt_with_grass"
-
-if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:prairie_dirt"
-end
+local spawn_on = {"ethereal:grove_dirt","ethereal:prairie_dirt"}
 
 mobs:spawn({
 	name = "mobs_animal:bunny",
@@ -126,7 +97,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
+mobs:register_egg("mobs_animal:bunny", S("Ash-Rabbit"), "mobs_bunny_inv.png", 0)
 
 
 mobs:alias_mob("mobs:bunny", "mobs_animal:bunny") -- compatibility
@@ -134,7 +105,7 @@ mobs:alias_mob("mobs:bunny", "mobs_animal:bunny") -- compatibility
 
 -- raw rabbit
 minetest.register_craftitem(":mobs:rabbit_raw", {
-	description = S("Raw Rabbit"),
+	description = S("Raw Ash-Rabbit"),
 	inventory_image = "mobs_rabbit_raw.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, food_rabbit_raw = 1, flammable = 2},
@@ -142,7 +113,7 @@ minetest.register_craftitem(":mobs:rabbit_raw", {
 
 -- cooked rabbit
 minetest.register_craftitem(":mobs:rabbit_cooked", {
-	description = S("Cooked Rabbit"),
+	description = S("Cooked Ash-Rabbit"),
 	inventory_image = "mobs_rabbit_cooked.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, food_rabbit = 1, flammable = 2},
@@ -157,7 +128,7 @@ minetest.register_craft({
 
 -- rabbit hide
 minetest.register_craftitem(":mobs:rabbit_hide", {
-	description = S("Rabbit Hide"),
+	description = S("Ash-Rabbit Hide"),
 	inventory_image = "mobs_rabbit_hide.png",
 	groups = {flammable = 2},
 })
