@@ -210,7 +210,7 @@ end
 function default.grow_papyrus(pos, node)
 	pos.y = pos.y - 1
 	local name = minetest.get_node(pos).name
-	if name ~= "default:dirt_with_grass" and name ~= "default:dirt" then
+	if name ~= "ethereal:grove_dirt" and name ~= "default:dirt" then
 		return
 	end
 	if not minetest.find_node_near(pos, 3, {"group:water"}) then
@@ -247,7 +247,7 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "Grow papyrus",
 	nodenames = {"default:papyrus"},
-	neighbors = {"default:dirt", "default:dirt_with_grass"},
+	neighbors = {"default:dirt", "ethereal:grove_dirt"},
 	interval = 14,
 	chance = 71,
 	action = function(...)
@@ -519,7 +519,7 @@ minetest.register_abm({
 		if name == "default:snow" then
 			minetest.set_node(pos, {name = "default:dirt_with_snow"})
 		elseif minetest.get_item_group(name, "grass") ~= 0 then
-			minetest.set_node(pos, {name = "default:dirt_with_grass"})
+			minetest.set_node(pos, {name = "ethereal:grove_dirt"})
 		end
 	end
 })
@@ -531,7 +531,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	label = "Grass covered",
-	nodenames = {"group:spreading_dirt_type", "default:dry_dirt_with_dry_grass"},
+	nodenames = {"group:spreading_dirt_type", "default:dirt_with_dry_grass"},
 	interval = 8,
 	chance = 50,
 	catch_up = false,
@@ -542,7 +542,7 @@ minetest.register_abm({
 		if name ~= "ignore" and nodedef and not ((nodedef.sunlight_propagates or
 				nodedef.paramtype == "light") and
 				nodedef.liquidtype == "none") then
-			if node.name == "default:dry_dirt_with_dry_grass" then
+			if node.name == "default:dirt_with_dry_grass" then
 				minetest.set_node(pos, {name = "default:dry_dirt"})
 			else
 				minetest.set_node(pos, {name = "default:dirt"})
