@@ -2,9 +2,9 @@
 local S = mobs.intllib
 
 
--- Cow by sirrobzeroone
+-- Bantha
 
-mobs:register_mob("mobs_animal:cow", {
+mobs:register_mob("mobs_animal:bantha", {
 	type = "animal",
 	passive = false,
 	attack_type = "dogfight",
@@ -18,8 +18,8 @@ mobs:register_mob("mobs_animal:cow", {
 	visual = "mesh",
 	mesh = "mobs_cow.b3d",
 	textures = {
-		{"mobs_cow.png"},
-		{"mobs_cow2.png"},
+		{"mobs_bantha.png"},
+		{"mobs_bantha2.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -31,7 +31,7 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
+		{name = "mobs:bantha_raw", chance = 1, min = 1, max = 3},
 		{name = "mobs:leather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 0,
@@ -63,7 +63,7 @@ mobs:register_mob("mobs_animal:cow", {
 	replace_rate = 10,
 	replace_what = {
 		{"group:grass", "air", 0},
-		{"default:dirt_with_grass", "default:dirt", -1}
+		{"default:dirt_with_dry_grass", "default:dirt", -1}
 	},
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
@@ -95,7 +95,7 @@ mobs:register_mob("mobs_animal:cow", {
 
 			if self.gotten == true then
 				minetest.chat_send_player(name,
-					S("Cow already milked!"))
+					S("Bantha already milked!"))
 				return
 			end
 
@@ -104,12 +104,12 @@ mobs:register_mob("mobs_animal:cow", {
 			tool:take_item()
 			clicker:set_wielded_item(tool)
 
-			if inv:room_for_item("main", {name = "mobs:bucket_milk"}) then
-				clicker:get_inventory():add_item("main", "mobs:bucket_milk")
+			if inv:room_for_item("main", {name = "mobs:bucket_milk_blue"}) then
+				clicker:get_inventory():add_item("main", "mobs:bucket_milk_blue")
 			else
 				local pos = self.object:get_pos()
 				pos.y = pos.y + 0.5
-				minetest.add_item(pos, {name = "mobs:bucket_milk"})
+				minetest.add_item(pos, {name = "mobs:bucket_milk_blue"})
 			end
 
 			self.gotten = true -- milked
@@ -132,8 +132,8 @@ mobs:register_mob("mobs_animal:cow", {
 
 
 mobs:spawn({
-	name = "mobs_animal:cow",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
+	name = "mobs_animal:bantha",
+	nodes = {"default:dirt_with_dry_grass", "default:desert_sand"},
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
@@ -144,75 +144,66 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:cow", S("Cow"), "mobs_cow_inv.png")
+mobs:register_egg("mobs_animal:cow", S("Bantha"), "mobs_cow_inv.png")
 
 
-mobs:alias_mob("mobs:cow", "mobs_animal:cow") -- compatibility
+mobs:alias_mob("mobs:bantha", "mobs_animal:bantha") -- compatibility
 
 
 -- bucket of milk
-minetest.register_craftitem(":mobs:bucket_milk", {
-	description = S("Bucket of Milk"),
-	inventory_image = "mobs_bucket_milk.png",
+minetest.register_craftitem(":mobs:bucket_milk_blue", {
+	description = S("Bucket of Blue Milk"),
+	inventory_image = "mobs_bucket_milk_blue.png",
 	stack_max = 1,
 	on_use = minetest.item_eat(8, "bucket:bucket_empty"),
 	groups = {food_milk = 1, flammable = 3},
 })
 
 -- glass of milk
-minetest.register_craftitem(":mobs:glass_milk", {
-	description = S("Glass of Milk"),
-	inventory_image = "mobs_glass_milk.png",
+minetest.register_craftitem(":mobs:glass_milk_blue", {
+	description = S("Glass of Blue Milk"),
+	inventory_image = "mobs_glass_milk_blue.png",
 	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1},
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "mobs:glass_milk 4",
+	output = "mobs:glass_milk_blue 4",
 	recipe = {
 		"vessels:drinking_glass", "vessels:drinking_glass",
 		"vessels:drinking_glass", "vessels:drinking_glass",
-		"mobs:bucket_milk"
+		"mobs:bucket_milk_blue"
 	},
 	replacements = { {"mobs:bucket_milk", "bucket:bucket_empty"} }
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "mobs:bucket_milk",
+	output = "mobs:bucket_milk_blue",
 	recipe = {
-		"mobs:glass_milk", "mobs:glass_milk",
-		"mobs:glass_milk", "mobs:glass_milk",
+		"mobs:glass_milk_blue", "mobs:glass_milk_blue",
+		"mobs:glass_milk_blue", "mobs:glass_milk_blue",
 		"bucket:bucket_empty"
 	},
-	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
+	replacements = { {"mobs:glass_milk_blue", "vessels:drinking_glass 4"} }
 })
 
 
 -- butter
-minetest.register_craftitem(":mobs:butter", {
-	description = S("Butter"),
-	inventory_image = "mobs_butter.png",
+minetest.register_craftitem(":mobs:butter_blue", {
+	description = S("Blue Butter"),
+	inventory_image = "mobs_butter_blue.png",
 	on_use = minetest.item_eat(1),
 	groups = {food_butter = 1, flammable = 2},
 })
 
-if minetest.get_modpath("farming") and farming and farming.mod then
 minetest.register_craft({
 	type = "shapeless",
-	output = "mobs:butter",
-	recipe = {"mobs:bucket_milk", "farming:salt"},
-	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
+	output = "mobs:butter_blue",
+	recipe = {"mobs:bucket_milk_blue", "farming:salt"},
+	replacements = {{ "mobs:bucket_milk_blue", "bucket:bucket_empty"}}
 })
-else -- some saplings are high in sodium so makes a good replacement item
-minetest.register_craft({
-	type = "shapeless",
-	output = "mobs:butter",
-	recipe = {"mobs:bucket_milk", "default:sapling"},
-	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
-})
-end
 
 -- cheese wedge
 minetest.register_craftitem(":mobs:cheese", {
@@ -225,9 +216,9 @@ minetest.register_craftitem(":mobs:cheese", {
 minetest.register_craft({
 	type = "cooking",
 	output = "mobs:cheese",
-	recipe = "mobs:bucket_milk",
+	recipe = "mobs:bucket_milk_blue",
 	cooktime = 5,
-	replacements = {{ "mobs:bucket_milk", "bucket:bucket_empty"}}
+	replacements = {{ "mobs:bucket_milk_blue", "bucket:bucket_empty"}}
 })
 
 -- cheese block
