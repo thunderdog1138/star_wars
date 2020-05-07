@@ -4,13 +4,13 @@ local hairball = minetest.settings:get("mobs_hairball")
 
 -- Kitten by Jordach / BFD
 
-mobs:register_mob("mobs_animal:kitten", {
+mobs:register_mob("mobs_animal:tooka", {
 stepheight = 0.6,
 	type = "animal",
-specific_attack = {"mobs_animal:rat"},
+specific_attack = {"mobs_animal:tatoo_rat"},
 damage = 1,
 attack_type = "dogfight",
-attack_animals = true, -- so it can attack rat
+attack_animals = true, -- so it can attack tatoo-rat
 attack_players = false,
 reach = 1,
 stepheight = 1.1,
@@ -23,10 +23,10 @@ stepheight = 1.1,
 	visual_size = {x = 0.5, y = 0.5},
 	mesh = "mobs_kitten.b3d",
 	textures = {
-		{"mobs_kitten_striped.png"},
-		{"mobs_kitten_splotchy.png"},
-		{"mobs_kitten_ginger.png"},
-		{"mobs_kitten_sandy.png"},
+		{"mobs_tooka_striped.png"},
+		{"mobs_tooka_splotchy.png"},
+		{"mobs_tooka_ginger.png"},
+		{"mobs_tooka_sandy.png"},
 	},
 	makes_footstep_sound = false,
 	sounds = {
@@ -52,7 +52,7 @@ stepheight = 1.1,
 		stoodup_start = 0,
 		stoodup_end = 0,
 	},
-	follow = {"mobs_animal:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
+	follow = {"mobs_animal:tatoo_rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
 	view_range = 8,
 
 	on_rightclick = function(self, clicker)
@@ -106,11 +106,7 @@ stepheight = 1.1,
 })
 
 
-local spawn_on = "default:dirt_with_grass"
-
-if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:grove_dirt"
-end
+local spawn_on = "ethereal:grove_dirt"
 
 mobs:spawn({
 	name = "mobs_animal:kitten",
@@ -125,18 +121,18 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:kitten", S("Kitten"), "mobs_kitten_inv.png", 0)
+mobs:register_egg("mobs_animal:tooka", S("Tooka"), "mobs_tooka_inv.png", 0)
 
 
-mobs:alias_mob("mobs:kitten", "mobs_animal:kitten") -- compatibility
+mobs:alias_mob("mobs:tooka", "mobs_animal:tooka") -- compatibility
 
 
 local hairball_items = {
 	"default:stick", "default:coal_lump", "default:dry_shrub", "flowers:rose",
-	"mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
-	"farming:seed_cotton", "default:flint", "default:sapling", "dye:white", "",
+	"mobs_animal:tatoo_rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
+	"farming:seed_cotton", "default:sapling", "dye:white", "",
 	"default:clay_lump", "default:paper", "default:dry_grass_1", "dye:red", "",
-	"farming:string", "mobs:chicken_feather", "default:acacia_bush_sapling", "",
+	"farming:string", "mobs:chicken_feather", "",
 	"default:bush_sapling", "default:copper_lump", "default:iron_lump", "",
 	"dye:black", "dye:brown", "default:obsidian_shard", "default:tin_lump"
 }
