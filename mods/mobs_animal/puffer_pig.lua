@@ -2,9 +2,9 @@
 local S = mobs.intllib
 
 
--- Warthog originally by KrupnoPavel, B3D model by sirrobzeroone
+-- Puffer Pig
 
-mobs:register_mob("mobs_animal:pumba", {
+mobs:register_mob("mobs_animal:puffer_pig", {
 	stepheight = 0.6,
 	type = "animal",
 	passive = false,
@@ -21,7 +21,7 @@ mobs:register_mob("mobs_animal:pumba", {
 	visual = "mesh",
 	mesh = "mobs_pumba.b3d",
 	textures = {
-		{"mobs_pumba.png"},
+		{"mobs_puffer_pig.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -36,7 +36,7 @@ mobs:register_mob("mobs_animal:pumba", {
 	follow = {"default:apple", "farming:potato"},
 	view_range = 10,
 	drops = {
-		{name = "mobs:pork_raw", chance = 1, min = 1, max = 3},
+		{name = "mobs:puffer_pork_raw", chance = 1, min = 1, max = 3},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -59,21 +59,14 @@ mobs:register_mob("mobs_animal:pumba", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_grass"}
+local spawn_on = {"ethereal:grove_dirt"}
 local spawn_by = {"group:grass"}
 
-if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_dry_grass"}
-	spawn_by = {"group:dry_grass"}
-end
-
-if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:mushroom_dirt"}
-	spawn_by = {"flowers:mushroom_brown", "flowers:mushroom_brown"}
-end
+spawn_on = {"ethereal:fungus_dirt"}
+spawn_by = {"flowers:mushroom_brown", "flowers:mushroom_brown"}
 
 mobs:spawn({
-	name = "mobs_animal:pumba",
+	name = "mobs_animal:puffer_pig",
 	nodes = spawn_on,
 	neighbors = spawn_by,
 	min_light = 14,
@@ -85,31 +78,31 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:pumba", S("Warthog"), "mobs_pumba_inv.png")
+mobs:register_egg("mobs_animal:puffer_pig", S("Puffer Pig"), "mobs_puffer_pig_inv.png")
 
 
-mobs:alias_mob("mobs:pumba", "mobs_animal:pumba") -- compatibility
+mobs:alias_mob("mobs:puffer_pig", "mobs_animal:puffer_pig") -- compatibility
 
 
 -- raw porkchop
-minetest.register_craftitem(":mobs:pork_raw", {
-	description = S("Raw Porkchop"),
-	inventory_image = "mobs_pork_raw.png",
+minetest.register_craftitem(":mobs:puffer_pork_raw", {
+	description = S("Raw Puffer Pork"),
+	inventory_image = "mobs_puffer_pork_raw.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
 })
 
 -- cooked porkchop
 minetest.register_craftitem(":mobs:pork_cooked", {
-	description = S("Cooked Porkchop"),
-	inventory_image = "mobs_pork_cooked.png",
+	description = S("Cooked Puffer Pork"),
+	inventory_image = "mobs_puffer_pork_cooked.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, food_pork = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "mobs:pork_cooked",
-	recipe = "mobs:pork_raw",
+	output = "mobs:puffer_pork_cooked",
+	recipe = "mobs:puffer_pork_raw",
 	cooktime = 5,
 })
