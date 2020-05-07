@@ -138,6 +138,143 @@ mobs:register_spawn("scifi_mobs:bb8", {"default:desert_sand","default:ice"}, 20,
 
 mobs:register_egg("scifi_mobs:bb8", "BB Unit", "scifi_metroid_inv.png", 0)
 
+-- Stormtrooper
+-- TODO: Attack players if they are holding a Jedi Lightsaber
+mobs:register_mob("mobs_monster:stormtrooper", {
+	type = "monster",
+	passive = false,
+	attack_type = "shoot",
+    arrow = "scifi_mobs:blaser",
+    shoot_interval = 2,
+    shoot_offset = 1.5,
+    group_attack = true,
+	pathfinding = true,
+	hp_min = 20,
+	hp_max = 20,
+	armor = 70,
+	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
+	visual = "mesh",
+	mesh = "mobs_character.b3d",
+	textures = {
+		{"mobs_stormtrooper.png"},
+	},
+	blood_texture = "mobs_blood.png",
+	makes_footstep_sound = true,
+    -- TODO: Create stormtrooper sounds
+	sounds = {
+		random = "mobs_sandmonster",
+	},
+	walk_velocity = 1.5,
+	run_velocity = 4,
+	view_range = 16,
+	jump = true,
+	floats = 0,
+    -- TODO: Drop a blaster
+	drops = {
+		{name = "3d_armor:helmet_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:chestplate_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:leggings_stormtrooper", chance = 2, min = 0, max = 1},
+      	{name = "3d_armor:boots_stormtrooper", chance = 2, min = 0, max = 1},
+	},
+	water_damage = 0,
+	lava_damage = 4,
+	light_damage = 0,
+	fear_height = 4,
+	animation = {
+		speed_normal = 30,
+		speed_run = 30,
+		stand_start = 0,
+		stand_end = 79,
+		walk_start = 168,
+		walk_end = 187,
+		run_start = 168,
+		run_end = 187,
+		punch_start = 200,
+		punch_end = 219,
+	},
+--[[
+	custom_attack = function(self, p)
+		local pos = self.object:get_pos()
+		minetest.add_item(pos, "default:sand")
+	end,
+]]
+--[[
+	on_die = function(self, pos)
+		pos.y = pos.y + 0.5
+		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
+		pos.y = pos.y + 0.25
+		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
+	end,
+]]
+--[[
+	on_rightclick = function(self, clicker)
+
+		local tool = clicker:get_wielded_item()
+		local name = clicker:get_player_name()
+
+		if tool:get_name() == "default:sand" then
+
+			self.owner = name
+			self.type = "npc"
+
+			mobs:force_capture(self, clicker)
+		end
+	end,
+]]
+})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"default:dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"ethereal:grove_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"ethereal:prairie_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"ethereal:fungus_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"default:dry_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"default:dirt_with_dry_grass"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "default_durasteel_block.png", 1)
+
+
+
 
 --lasers and stuff
 
