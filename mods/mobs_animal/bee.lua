@@ -57,7 +57,7 @@ mobs:spawn({
 	day_toggle = true,
 })
 
-mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png")
+mobs:register_egg("mobs_animal:bee", S("Naboo Bee"), "mobs_bee_inv.png")
 
 -- compatibility
 mobs:alias_mob("mobs:bee", "mobs_animal:bee")
@@ -72,7 +72,7 @@ minetest.register_craftitem(":mobs:honey", {
 
 -- beehive (when placed spawns bee)
 minetest.register_node(":mobs:beehive", {
-	description = S("Beehive"),
+	description = S("Naboo Beehive"),
 	drawtype = "plantlike",
 	tiles = {"mobs_beehive.png"},
 	inventory_image = "mobs_beehive.png",
