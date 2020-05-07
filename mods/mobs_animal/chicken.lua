@@ -91,11 +91,7 @@ stepheight = 0.6,
 })
 
 
-local spawn_on = {"default:dirt_with_grass"}
-
-if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
-end
+local spawn_on = {"default:dirt_with_grass", "ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
 
 mobs:spawn({
 	name = "mobs_animal:chicken",
@@ -110,7 +106,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
+mobs:register_egg("mobs_animal:chicken", S("Endorian Chicken"), "mobs_chicken_inv.png", 0)
 
 
 mobs:alias_mob("mobs:chicken", "mobs_animal:chicken") -- compatibility
@@ -232,7 +228,7 @@ end
 
 -- egg
 minetest.register_node(":mobs:egg", {
-	description = S("Chicken Egg"),
+	description = S("Endorian Chicken Egg"),
 	tiles = {"mobs_chicken_egg.png"},
 	inventory_image  = "mobs_chicken_egg.png",
 	visual_scale = 0.7,
@@ -272,7 +268,7 @@ minetest.register_craft({
 
 -- raw chicken
 minetest.register_craftitem(":mobs:chicken_raw", {
-description = S("Raw Chicken"),
+description = S("Raw Endorian Chicken"),
 	inventory_image = "mobs_chicken_raw.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, food_chicken_raw = 1, flammable = 2},
@@ -280,7 +276,7 @@ description = S("Raw Chicken"),
 
 -- cooked chicken
 minetest.register_craftitem(":mobs:chicken_cooked", {
-description = S("Cooked Chicken"),
+description = S("Cooked Endorian Chicken"),
 	inventory_image = "mobs_chicken_cooked.png",
 	on_use = minetest.item_eat(6),
 	groups = {food_meat = 1, food_chicken = 1, flammable = 2},
