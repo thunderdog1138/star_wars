@@ -458,25 +458,6 @@ minetest.register_node("default:dirt_with_snow", {
 	}),
 })
 
-minetest.register_node("default:dry_dirt", {
-	description = S("Dry Dirt"),
-	tiles = {"default_dry_dirt.png"},
-	groups = {crumbly = 3, soil = 1},
-	sounds = default.node_sound_dirt_defaults(),
-})
-
-minetest.register_node("default:dry_dirt_with_dry_grass", {
-	description = S("Dry Dirt with Dry Grass"),
-	tiles = {"default_dry_grass.png", "default_dry_dirt.png",
-		{name = "default_dry_dirt.png^default_dry_grass_side.png",
-			tileable_vertical = false}},
-	groups = {crumbly = 3, soil = 1},
-	drop = "default:dry_dirt",
-	sounds = default.node_sound_dirt_defaults({
-		footstep = {name = "default_grass_footstep", gain = 0.4},
-	}),
-})
-
 minetest.register_node("default:permafrost", {
 	description = S("Permafrost"),
 	tiles = {"default_permafrost.png"},
@@ -575,7 +556,7 @@ minetest.register_node("default:snow", {
 
 	on_construct = function(pos)
 		pos.y = pos.y - 1
-		if minetest.get_node(pos).name == "default:dirt_with_grass" then
+		if minetest.get_node(pos).name == "ethereal:grove_dirt" then
 			minetest.set_node(pos, {name = "default:dirt_with_snow"})
 		end
 	end,
@@ -589,7 +570,7 @@ minetest.register_node("default:snowblock", {
 
 	on_construct = function(pos)
 		pos.y = pos.y - 1
-		if minetest.get_node(pos).name == "default:dirt_with_grass" then
+		if minetest.get_node(pos).name == "ethereal:grove_dirt" then
 			minetest.set_node(pos, {name = "default:dirt_with_snow"})
 		end
 	end,
