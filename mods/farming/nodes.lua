@@ -11,51 +11,11 @@ minetest.override_item("default:dirt", {
 	}
 })
 
-minetest.override_item("default:dirt_with_grass", {
-	soil = {
-		base = "default:dirt_with_grass",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
 minetest.override_item("default:dirt_with_dry_grass", {
 	soil = {
 		base = "default:dirt_with_dry_grass",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dirt_with_rainforest_litter", {
-	soil = {
-		base = "default:dirt_with_rainforest_litter",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dirt_with_coniferous_litter", {
-	soil = {
-		base = "default:dirt_with_coniferous_litter",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dry_dirt", {
-	soil = {
-		base = "default:dry_dirt",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
-	}
-})
-
-minetest.override_item("default:dry_dirt_with_dry_grass", {
-	soil = {
-		base = "default:dry_dirt_with_dry_grass",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
 	}
 })
 
