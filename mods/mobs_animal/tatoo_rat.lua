@@ -2,9 +2,9 @@
 local S = mobs.intllib
 
 
--- Rat by PilzAdam (B3D model by sirrobzeroone)
+-- Tatoo Rat by PilzAdam
 
-mobs:register_mob("mobs_animal:rat", {
+mobs:register_mob("mobs_animal:tatoo_rat", {
 stepheight = 0.6,
 	type = "animal",
 	passive = true,
@@ -15,8 +15,8 @@ stepheight = 0.6,
 	visual = "mesh",
 	mesh = "mobs_rat.b3d",
 	textures = {
-		{"mobs_rat.png"},
-		{"mobs_rat2.png"},
+		{"mobs_tatoo_rat.png"},
+		{"mobs_tatoo_rat2.png"},
 	},
 	makes_footstep_sound = false,
 	sounds = {
@@ -31,7 +31,7 @@ stepheight = 0.6,
 	light_damage = 0,
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
-		mobs:capture_mob(self, clicker, 50, 90, 0, true, "mobs_animal:rat")
+		mobs:capture_mob(self, clicker, 50, 90, 0, true, "mobs_tatoo_animal:rat")
 	end,
 --[[
 	do_custom = function(self, dtime)
@@ -68,7 +68,7 @@ local function rat_spawn(self, pos)
 end
 
 mobs:spawn({
-	name = "mobs_animal:rat",
+	name = "mobs_animal:tatoo_rat",
 	nodes = {"default:stone"},
 	min_light = 3,
 	max_light = 9,
@@ -79,23 +79,23 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inv.png")
+mobs:register_egg("mobs_animal:tatoo_rat", S("Tatoo-Rat"), "mobs_tatoo_rat_inv.png")
 
 
-mobs:alias_mob("mobs:rat", "mobs_animal:rat") -- compatibility
+mobs:alias_mob("mobs:tatoo_rat", "mobs_animal:tatoo_rat") -- compatibility
 
 
 -- cooked rat, yummy!
-minetest.register_craftitem(":mobs:rat_cooked", {
-	description = S("Cooked Rat"),
-	inventory_image = "mobs_cooked_rat.png",
+minetest.register_craftitem(":mobs:tatoo_rat_cooked", {
+	description = S("Cooked Tatoo-Rat"),
+	inventory_image = "mobs_cooked_tatoo_rat.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_rat = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "mobs:rat_cooked",
-	recipe = "mobs_animal:rat",
+	output = "mobs:tatoo_rat_cooked",
+	recipe = "mobs_animal:tatoo_rat",
 	cooktime = 5,
 })
