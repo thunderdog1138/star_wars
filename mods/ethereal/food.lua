@@ -29,23 +29,31 @@ minetest.register_node("ethereal:banana", {
 	end,
 })
 
--- Banana Dough
-minetest.register_craftitem("ethereal:banana_dough", {
-	description = S("Banana Dough"),
-	inventory_image = "banana_dough.png",
+-- Ration Pack
+minetest.register_craftitem("ethereal:ration_pack", {
+	description = S("Ration Pack"),
+	inventory_image = "ration_pack.png",
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "ethereal:banana_dough",
-	recipe = {"group:food_flour", "group:food_banana"}
+	output = "ethereal:polystarch_bread",
+	recipe = {
+		"ethereal:ration_pack",
+		"bucket:bucket_water",
+	},
+	replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"},
+	},
 })
 
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 14,
-	output = "ethereal:banana_bread",
-	recipe = "ethereal:banana_dough"
+-- Polystarch Bread (Heals 2 hearts when eaten)
+minetest.register_craftitem("ethereal:polystarch_bread", {
+	description = S("Polystarch Bread"),
+	inventory_image = "polystarch_bread.png",
+	wield_image = "polystarch_bread.png",
+	groups = {food_bread = 1, flammable = 3},
+	on_use = minetest.item_eat(4),
 })
 
 -- Orange (Heals 2 hearts when eaten)
