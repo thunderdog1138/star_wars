@@ -70,7 +70,7 @@ for _, col in ipairs(all_colours) do
 		replace_rate = 10,
 		replace_what = {
 			{"group:grass", "air", -1},
-			{"default:dirt_with_grass", "default:dirt", -2}
+			{"ethereal:grove_grass", "default:dirt", -2}
 		},
 		fear_height = 3,
 		on_replace = function(self, pos, oldnode, newnode)
@@ -112,7 +112,7 @@ for _, col in ipairs(all_colours) do
 			local itemname = item:get_name()
 			local name = clicker:get_player_name()
 
-			--are we giving a haircut>
+			--are we giving a haircut?
 			if itemname == "mobs:shears" then
 
 				if self.gotten ~= false
@@ -196,7 +196,7 @@ for _, col in ipairs(all_colours) do
 		end
 	})
 
-mobs:register_egg("mobs_animal:sheep_"..col[1], S("@1 Sheep", col[2]), "wool_"..col[1]..".png^mobs_sheep_inv.png")
+mobs:register_egg("mobs_animal:sheep_"..col[1], S("@1 Endorian Sheep", col[2]), "wool_"..col[1]..".png^mobs_sheep_inv.png")
 
 	-- compatibility
 	mobs:alias_mob("mobs:sheep_" .. col[1], "mobs_animal:sheep_" .. col[1])
@@ -206,7 +206,7 @@ end
 
 mobs:spawn({
 	name = "mobs_animal:sheep_white",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
+	nodes = {"ethereal:grove_dirt"},
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
