@@ -125,7 +125,23 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 
 	mobs:spawn({
 		name = "mobs_monster:stormtrooper",
-		nodes = {"default:dirt_with_grass"},
+		nodes = {"ethereal:grove_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"ethereal:prairie_dirt"},
+		chance = 7000,
+		active_object_count = 2,
+		min_height = 0,
+	})
+
+	mobs:spawn({
+		name = "mobs_monster:stormtrooper",
+		nodes = {"ethereal:fungus_dirt"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
@@ -141,7 +157,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 
 	mobs:spawn({
 		name = "mobs_monster:stormtrooper",
-		nodes = {"default:dry_dirt_with_grass"},
+		nodes = {"default:dirt_with_dry_grass"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
