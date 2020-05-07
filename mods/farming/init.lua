@@ -16,11 +16,11 @@ dofile(farming.path .. "/nodes.lua")
 dofile(farming.path .. "/hoes.lua")
 
 
--- WHEAT
+-- LOTHAL WHEAT
 
 farming.register_plant("farming:wheat", {
-	description = S("Wheat Seed"),
-	harvest_description = S("Wheat"),
+	description = S("Lothal Wheat Seed"),
+	harvest_description = S("Lothal Wheat"),
 	paramtype2 = "meshoptions",
 	inventory_image = "farming_wheat_seed.png",
 	steps = 8,
