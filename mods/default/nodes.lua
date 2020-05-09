@@ -1,5 +1,5 @@
 -- mods/default/nodes.lua
-
+ma
 -- support for MT game translation.
 local S = default.get_translator
 
@@ -1212,13 +1212,13 @@ for i = 2, 3 do
 end
 
 
-minetest.register_node("default:marram_grass_1", {
-	description = S("Marram Grass"),
+minetest.register_node("default:saago_grass_1", {
+	description = S("Saago Grass"),
 	drawtype = "plantlike",
 	waving = 1,
-	tiles = {"default_marram_grass_1.png"},
-	inventory_image = "default_marram_grass_1.png",
-	wield_image = "default_marram_grass_1.png",
+	tiles = {"default_saago_grass_1.png"},
+	inventory_image = "default_saago_grass_1.png",
+	wield_image = "default_saago_grass_1.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1231,29 +1231,29 @@ minetest.register_node("default:marram_grass_1", {
 	},
 
 	on_place = function(itemstack, placer, pointed_thing)
-		-- place a random marram grass node
-		local stack = ItemStack("default:marram_grass_" .. math.random(1, 3))
+		-- place a random saago grass node
+		local stack = ItemStack("default:saago_grass_" .. math.random(1, 3))
 		local ret = minetest.item_place(stack, placer, pointed_thing)
-		return ItemStack("default:marram_grass_1 " ..
+		return ItemStack("default:saago_grass_1 " ..
 			itemstack:get_count() - (1 - ret:get_count()))
 	end,
 })
 
 for i = 2, 3 do
-	minetest.register_node("default:marram_grass_" .. i, {
-		description = S("Marram Grass"),
+	minetest.register_node("default:saago_grass_" .. i, {
+		description = S("Saago Grass"),
 		drawtype = "plantlike",
 		waving = 1,
-		tiles = {"default_marram_grass_" .. i .. ".png"},
-		inventory_image = "default_marram_grass_" .. i .. ".png",
-		wield_image = "default_marram_grass_" .. i .. ".png",
+		tiles = {"default_saago_grass_" .. i .. ".png"},
+		inventory_image = "default_saago_grass_" .. i .. ".png",
+		wield_image = "default_saago_grass_" .. i .. ".png",
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
 		groups = {snappy = 3, flammable = 3, attached_node = 1,
 			not_in_creative_inventory=1},
-		drop = "default:marram_grass_1",
+		drop = "default:saago_grass_1",
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
