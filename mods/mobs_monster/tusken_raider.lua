@@ -113,7 +113,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:tusken_raider", S("Tusken Raider"), "default_desert_sand.png", 1)
+mobs:register_egg("mobs_monster:tusken_raider", "Tusken Raider", "default_desert_sand.png", 1)
 
 
 mobs:alias_mob("mobs:tusken_raider", "mobs_monster:tusken_raider") -- compatibility
