@@ -3,42 +3,42 @@
 minetest.register_craft({
 	output = "default:jogan_wood 4",
 	recipe = {
-		{"default:jogan_tree"},
+		{"default:jogan_trunk"},
 	}
 })
 
 minetest.register_craft({
 	output = "default:pine_wood 4",
 	recipe = {
-		{"default:pine_tree"},
+		{"default:pine_trunk"},
 	}
 })
 
 minetest.register_craft({
 	output = "default:uneti_wood 4",
 	recipe = {
-		{"default:uneti_tree"},
+		{"default:uneti_trunk"},
 	}
 })
 
 minetest.register_craft({
 	output = "default:brylark_wood 4",
 	recipe = {
-		{"default:brylark_tree"},
+		{"default:brylark_trunk"},
 	}
 })
 
 minetest.register_craft({
 	output = "default:wroshyr_wood 4",
 	recipe = {
-		{"default:wroshyr_tree"},
+		{"default:wroshyr_trunk"},
 	}
 })
 
 minetest.register_craft({
 	output = "default:palm_wood 4",
 	recipe = {
-		{"default:palm_tree"},
+		{"default:palm_trunk"},
 	}
 })
 
