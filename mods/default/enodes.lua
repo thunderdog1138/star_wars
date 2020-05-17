@@ -258,7 +258,7 @@ for n = 1, #dirts do
 				tileable_vertical = false
 			}
 		},
-		is_ground_content = ethereal.cavedirt,
+		is_ground_content = true,
 		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
 		soil = {
 			base = "dirt:"..name.."_dirt",
@@ -472,8 +472,7 @@ local register_sapling = function(name, desc, texture, height)
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 		},
 		groups = {
-			snappy = 2, dig_immediate = 3, flammable = 2,
-			ethereal_sapling = 1, attached_node = 1, sapling = 1
+			snappy = 2, dig_immediate = 3, flammable = 2, attached_node = 1, sapling = 1
 		},
 		sounds = default.node_sound_leaves_defaults(),
 		grown_height = height,
@@ -500,7 +499,7 @@ minetest.register_node("default:bamboo_sprout", {
 	walkable = false,
 	groups = {
 		food_bamboo_sprout = 1, snappy = 3, attached_node = 1, flammable = 2,
-		dig_immediate = 3, ethereal_sapling = 1, sapling = 1,
+		dig_immediate = 3, sapling = 1,
 	},
 	sounds = default.node_sound_defaults(),
 	selection_box = {
