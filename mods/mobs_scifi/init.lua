@@ -140,7 +140,7 @@ mobs:register_egg("scifi_mobs:bb8", "BB Unit", "scifi_metroid_inv.png", 0)
 
 -- Stormtrooper
 -- TODO: Attack players if they are holding a Jedi Lightsaber
-mobs:register_mob("mobs_monster:stormtrooper", {
+mobs:register_mob("scifi_mobs:stormtrooper", {
 	type = "monster",
 	passive = false,
 	attack_type = "shoot",
@@ -224,7 +224,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 })
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
+		name = "scifi_mobs:stormtrooper",
 		nodes = {"default:dirt"},
 		chance = 7000,
 		active_object_count = 2,
@@ -232,31 +232,31 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	})
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
-		nodes = {"ethereal:grove_dirt"},
+		name = "scifi_mobs:stormtrooper",
+		nodes = {"default:grass_dirt"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
 	})
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
-		nodes = {"ethereal:prairie_dirt"},
+		name = "scifi_mobs:stormtrooper",
+		nodes = {"default:prairie_dirt"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
 	})
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
-		nodes = {"ethereal:fungus_dirt"},
+		name = "scifi_mobs:stormtrooper",
+		nodes = {"default:fungus_dirt"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
 	})
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
+		name = "scifi_mobs:stormtrooper",
 		nodes = {"default:dry_dirt"},
 		chance = 7000,
 		active_object_count = 2,
@@ -264,14 +264,14 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	})
 
 	mobs:spawn({
-		name = "mobs_monster:stormtrooper",
-		nodes = {"default:dirt_with_dry_grass"},
+		name = "scifi_mobs:stormtrooper",
+		nodes = {"default:savanna_dirt"},
 		chance = 7000,
 		active_object_count = 2,
 		min_height = 0,
 	})
 
-mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "default_durasteel_block.png", 1)
+mobs:register_egg("scifi_mobs:stormtrooper", "Stormtrooper", "default_durasteel_block.png", 1)
 
 
 
