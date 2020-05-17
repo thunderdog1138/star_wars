@@ -1,78 +1,7 @@
 
 local S = ethereal.intllib
 
--- override default dirt (to stop caves cutting away dirt)
-minetest.override_item("default:dirt", {is_ground_content = ethereal.cavedirt})
-
--- dry dirt
-minetest.register_node("ethereal:dry_dirt", {
-	description = S("Dried Dirt"),
-	tiles = {"ethereal_dry_dirt.png"},
-	is_ground_content = ethereal.cavedirt,
-	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "ethereal:dry_dirt",
-	recipe = "default:dirt",
-	cooktime = 3,
-})
-
--- charred dirt
-minetest.register_node("ethereal:charred_dirt", {
-	description = S("Charred Dirt"),
-	tiles = {"ethereal_charred_dirt.png"},
-	is_ground_content = ethereal.cavedirt,
-	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "ethereal:charred_dirt",
-	recipe = "ethereal:dry_dirt",
-	cooktime = 3,
-})
-
-local dirts = {
-	"Bamboo", "Jungle", "Grove", "Prairie", "Cold", "Fungus"
-}
-
-for n = 1, #dirts do
-
-	local desc = dirts[n]
-	local name = desc:lower()
-
-	minetest.register_node("ethereal:"..name.."_dirt", {
-		description = S(desc.." Dirt"),
-		tiles = {
-			"ethereal_grass_"..name.."_top.png",
-			"default_dirt.png",
-			{
-				name = "default_dirt.png^ethereal_grass_"
-				.. name .."_side.png",
-				tileable_vertical = false
-			}
-		},
-		is_ground_content = ethereal.cavedirt,
-		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-		soil = {
-			base = "ethereal:"..name.."_dirt",
-			dry = "farming:soil",
-			wet = "farming:soil_wet"
-		},
-		drop = "default:dirt",
-		sounds = default.node_sound_dirt_defaults({
-			footstep = {name = "default_grass_footstep", gain = 0.25},
-		}),
-	})
-
-end
-
-
--- flower spread, also crystal and fire flower regeneration
+-- flower spread
 local flower_spread = function(pos, node)
 
 	if (minetest.get_node_light(pos) or 0) < 13 then
@@ -111,8 +40,8 @@ local flower_spread = function(pos, node)
 	end
 end
 
--- grow papyrus up to 4 high and bamboo up to 8 high
-local grow_papyrus = function(pos, node)
+-- grow reeds up to 4 high and bamboo up to 8 high
+local grow_reeds = function(pos, node)
 
 	local oripos = pos.y
 	local high = 4
@@ -127,7 +56,7 @@ local grow_papyrus = function(pos, node)
 		return
 	end
 
-	if node.name == "ethereal:bamboo" then
+	if node.name == "default:bamboo" then
 		high = 8
 	end
 
@@ -147,7 +76,7 @@ local grow_papyrus = function(pos, node)
 	and nod.name == "air"
 	and height < high then
 
-		if node.name == "ethereal:bamboo"
+		if node.name == "default:bamboo"
 		and height == (high - 1) then
 
 			ethereal.grow_bamboo_tree({x = pos.x, y = oripos, z = pos.z})
@@ -176,14 +105,14 @@ for _, ab in pairs(minetest.registered_abms) do
 		ab.action = flower_spread
 
 	-- find grow papyrus abm and change to grow_papyrus function
-	elseif label == "Grow papyrus"
-	or node1 == "default:papyrus" then
+	elseif label == "Grow reeds"
+	or node1 == "default:reeds" then
 
 		--ab.interval = 2
 		--ab.chance = 1
-		ab.nodenames = {"default:papyrus", "ethereal:bamboo"}
+		ab.nodenames = {"default:reeds", "default:bamboo"}
 		ab.neighbors = {"group:soil"}
-		ab.action = grow_papyrus
+		ab.action = grow_reeds
 	end
 end
 
@@ -215,37 +144,3 @@ if not minetest.get_modpath("bakedclay") then
 	})
 
 end
-
--- Quicksand
-minetest.register_node("ethereal:quicksand", {
-	description = S("Quicksand"),
-	tiles = {"default_sand.png"},
-	drawtype = "glasslike",
-	paramtype = "light",
-	drop = "default:sand",
-	liquid_viscosity = 15,
-	liquidtype = "source",
-	liquid_alternative_flowing = "ethereal:quicksand",
-	liquid_alternative_source = "ethereal:quicksand",
-	liquid_renewable = false,
-	liquid_range = 0,
-	drowning = 1,
-	walkable = false,
-	climbable = false,
-	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
-	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
-	sounds = default.node_sound_sand_defaults(),
-})
-
--- craft quicksand
-minetest.register_craft({
-	output = "ethereal:quicksand",
-	recipe = {
-		{"group:sand", "group:sand", "group:sand"},
-		{"group:sand", "bucket:bucket_water", "group:sand"},
-		{"group:sand", "group:sand", "group:sand"},
-	},
-	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
-	}
-})
