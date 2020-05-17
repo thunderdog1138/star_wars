@@ -10,38 +10,6 @@ minetest.override_item("default:dirt", {
 	}
 })
 
-minetest.override_item("default:dirt_with_grass", {
-	soil = {
-		base = "default:dirt_with_grass",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dirt_with_dry_grass", {
-	soil = {
-		base = "default:dirt_with_dry_grass",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dirt_with_rainforest_litter", {
-	soil = {
-		base = "default:dirt_with_rainforest_litter",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("default:dirt_with_coniferous_litter", {
-	soil = {
-		base = "default:dirt_with_coniferous_litter",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
 minetest.override_item("default:dry_dirt", {
 	soil = {
 		base = "default:dry_dirt",
@@ -50,18 +18,10 @@ minetest.override_item("default:dry_dirt", {
 	}
 })
 
-minetest.override_item("default:dry_dirt_with_dry_grass", {
-	soil = {
-		base = "default:dry_dirt_with_dry_grass",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
-	}
-})
-
 -- normal soil
 minetest.register_node("farming:soil", {
 	description = S("Soil"),
-	tiles = {"default_dirt.png^farming_soil.png", "default_dirt.png"},
+	tiles = {"dirt.png^soil.png", "dirt.png"},
 	drop = "default:dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 2, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -76,8 +36,8 @@ minetest.register_node("farming:soil", {
 minetest.register_node("farming:soil_wet", {
 	description = S("Wet Soil"),
 	tiles = {
-		"default_dirt.png^farming_soil_wet.png",
-		"default_dirt.png^farming_soil_wet_side.png"},
+		"dirt.png^soil_wet.png",
+		"dirt.png^soil_wet_side.png"},
 	drop = "default:dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 3, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -93,8 +53,8 @@ if minetest.registered_nodes["default:dry_dirt"] then
 minetest.register_node("farming:dry_soil", {
 	description = S("Savanna Soil"),
 	tiles = {
-		"default_dry_dirt.png^farming_soil.png",
-		"default_dry_dirt.png"},
+		"dry_dirt.png^soil.png",
+		"dry_dirt.png"},
 	drop = "default:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 2, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -108,8 +68,8 @@ minetest.register_node("farming:dry_soil", {
 minetest.register_node("farming:dry_soil_wet", {
 	description = S("Wet Savanna Soil"),
 	tiles = {
-		"default_dry_dirt.png^farming_soil_wet.png",
-		"default_dry_dirt.png^farming_soil_wet_side.png"},
+		"dry_dirt.png^soil_wet.png",
+		"dry_dirt.png^soil_wet_side.png"},
 	drop = "default:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 3, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -120,10 +80,6 @@ minetest.register_node("farming:dry_soil_wet", {
 	}
 })
 end
-
--- sand is not soil, change existing sand-soil to use dry soil
-minetest.register_alias("farming:desert_sand_soil", "farming:dry_soil")
-minetest.register_alias("farming:desert_sand_soil_wet", "farming:dry_soil_wet")
 
 -- if water near soil then change to wet soil
 minetest.register_abm({
