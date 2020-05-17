@@ -10,9 +10,9 @@ mobs.intllib = S
 
 dofile(path .. "/chicken.lua") -- JKmurray
 dofile(path .. "/bantha.lua") -- KrupnoPavel
-dofile(path .. "/rat.lua") -- PilzAdam
+dofile(path .. "/tatoo_rat.lua") -- PilzAdam
 dofile(path .. "/sheep.lua") -- PilzAdam
-dofile(path .. "/warthog.lua") -- KrupnoPavel
+dofile(path .. "/puffer_pig.lua") -- KrupnoPavel
 dofile(path .. "/bee.lua") -- KrupnoPavel
 dofile(path .. "/bunny.lua") -- ExeterDad
 dofile(path .. "/tooka.lua") -- Jordach/BFD
