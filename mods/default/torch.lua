@@ -22,10 +22,10 @@ minetest.register_node("default:torch", {
 	description = S("Torch"),
 	drawtype = "mesh",
 	mesh = "torch_floor.obj",
-	inventory_image = "torch_on_floor.png",
-	wield_image = "torch_on_floor.png",
+	inventory_image = "torch.png",
+	wield_image = "torch.png",
 	tiles = {{
-		    name = "torch_on_floor_animated.png",
+		    name = "torch_animated.png",
 		    animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 3.3}
 	}},
 	paramtype = "light",
@@ -76,7 +76,7 @@ minetest.register_node("default:torch_wall", {
 	drawtype = "mesh",
 	mesh = "torch_wall.obj",
 	tiles = {{
-		    name = "torch_on_floor_animated.png",
+		    name = "torch_animated.png",
 		    animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 3.3}
 	}},
 	paramtype = "light",
@@ -99,7 +99,7 @@ minetest.register_node("default:torch_ceiling", {
 	drawtype = "mesh",
 	mesh = "torch_ceiling.obj",
 	tiles = {{
-		    name = "torch_on_floor_animated.png",
+		    name = "torch_animated.png",
 		    animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 3.3}
 	}},
 	paramtype = "light",
