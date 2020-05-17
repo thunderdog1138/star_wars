@@ -44,7 +44,7 @@ local function add_simple_flower(name, desc, box, f_groups)
 		description = desc,
 		drawtype = "plantlike",
 		waving = 1,
-		tiles = {.. name .. ".png"},
+		tiles = {name .. ".png"},
 		inventory_image = .. name .. ".png",
 		wield_image = .. name .. ".png",
 		sunlight_propagates = true,
