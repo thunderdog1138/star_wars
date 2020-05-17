@@ -10,7 +10,7 @@ local cart_entity = {
 		visual = "mesh",
 		mesh = "carts_cart.b3d",
 		visual_size = {x=1, y=1},
-		textures = {"carts_cart.png"},
+		textures = {"cart.png"},
 	},
 
 	driver = nil,
