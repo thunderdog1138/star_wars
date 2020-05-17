@@ -1,7 +1,7 @@
 
 local _ = {name = "air", param1 = 0}
-local B = {name = "ethereal:bush", param1 = 255}
-local b = {name = "ethereal:bush", param1 = 100}
+local B = {name = "default:bush", param1 = 255}
+local b = {name = "default:bush", param1 = 100}
 
 ethereal.bush = {
 
