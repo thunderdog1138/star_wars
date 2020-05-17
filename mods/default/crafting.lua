@@ -678,6 +678,18 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "default:quicksand",
+	recipe = {
+		{"group:sand", "group:sand", "group:sand"},
+		{"group:sand", "bucket:bucket_water", "group:sand"},
+		{"group:sand", "group:sand", "group:sand"},
+	},
+	replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
 
 --
 -- Crafting (tool repair)
