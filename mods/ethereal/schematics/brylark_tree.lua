@@ -1,7 +1,7 @@
 
 local _ = {name = "air", prob = 0}
-local l = {name = "ethereal:brylark_leaves", prob = 255}
-local t = {name = "ethereal:brylark_trunk", prob = 255}
+local l = {name = "default:brylark_leaves", prob = 255}
+local t = {name = "default:brylark_trunk", prob = 255}
 
 ethereal.brylark_tree = {
 
