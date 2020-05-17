@@ -1,5 +1,5 @@
 -- mods/default/nodes.lua
-ma
+
 -- support for MT game translation.
 local S = default.get_translator
 
