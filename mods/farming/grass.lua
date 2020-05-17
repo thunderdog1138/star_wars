@@ -34,7 +34,7 @@ end
 
 -- Override default Jungle Grass and have it drop Cotton Seeds
 
-minetest.override_item("default:junglegrass", {
+minetest.override_item("default:jungle_grass", {
 	drop = {
 		max_items = 1,
 		items = {
