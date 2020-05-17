@@ -660,7 +660,7 @@ minetest.register_node("default:jogan_wood", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("defaultl:uneti_wood", {
+minetest.register_node("default:uneti_wood", {
 	description = S("Uneti Wood Planks"),
 	tiles = {"uneti_wood.png"},
 	is_ground_content = false,
