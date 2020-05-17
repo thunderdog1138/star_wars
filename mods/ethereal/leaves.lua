@@ -4,13 +4,13 @@ local S = ethereal.intllib
 -- leaf decay
 
 default.register_leafdecay({
-	trunks = {"default:jogan_tree"},
+	trunks = {"default:jogan_trunk"},
 	leaves = {"default:jogan_fruit", "default:jogan_leaves"},
 	radius = 3
 })
 
 default.register_leafdecay({
-	trunks = {"default:pine_tree"},
+	trunks = {"default:pine_trunk"},
 	leaves = {"default:pine_needles"},
 	radius = 3
 })
