@@ -657,7 +657,7 @@ minetest.register_node("default:jogan_wood", {
 	place_param2 = 0,
 	tiles = {"jogan_wood.png"},
 	is_ground_content = false,
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1, soft_wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -665,7 +665,7 @@ minetest.register_node("defaultl:uneti_wood", {
 	description = S("Uneti Wood Planks"),
 	tiles = {"uneti_wood.png"},
 	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3, soft_wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -681,7 +681,7 @@ minetest.register_node("default:wroshyr_wood", {
 	description = S("Wroshyr Wood Planks"),
 	tiles = {"wroshyr_wood.png"},
 	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3, soft_wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -689,7 +689,7 @@ minetest.register_node("default:palm_wood", {
 	description = S("Palm Wood Planks"),
 	tiles = {"palm_wood.png"},
 	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3, soft_wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -699,7 +699,7 @@ minetest.register_node("default:pine_wood", {
 	place_param2 = 0,
 	tiles = {"pine_wood.png"},
 	is_ground_content = false,
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1, soft_wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
