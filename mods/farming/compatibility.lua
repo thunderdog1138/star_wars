@@ -8,20 +8,6 @@ local alias = function(orig, new)
 	minetest.register_alias(orig, new)
 end
 
---= Overrides (add food_* group to apple and brown mushroom)
-
-minetest.override_item("default:apple", {
-	groups = {food_apple = 1, fleshy = 3, dig_immediate = 3, flammable = 2,
-		leafdecay = 3, leafdecay_drop = 1},
-})
-
-if minetest.registered_nodes["flowers:mushroom_brown"] then
-minetest.override_item("flowers:mushroom_brown", {
-	light_source = 1,
-	groups = {food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 2},
-})
-end
-
 --= Aliases
 
 -- Banana
@@ -136,31 +122,6 @@ alias("farming_plus:rhubarb_1", "farming:rhubarb_1")
 alias("farming_plus:rhubarb_2", "farming:rhubarb_2")
 alias("farming_plus:rhubarb", "farming:rhubarb_3")
 alias("farming_plus:rhubarb_item", "farming:rhubarb")
-
--- Strawberry
-if eth then
-	alias("farming_plus:strawberry_item", "ethereal:strawberry")
-	alias("farming_plus:strawberry_seed", "ethereal:strawberry")
-	alias("farming_plus:strawberry_1", "ethereal:strawberry_1")
-	alias("farming_plus:strawberry_2", "ethereal:strawberry_3")
-	alias("farming_plus:strawberry_3", "ethereal:strawberry_5")
-	alias("farming_plus:strawberry", "ethereal:strawberry_7")
-else
-	minetest.register_craftitem(":ethereal:strawberry", {
-		description = S("Strawberry"),
-		inventory_image = "strawberry.png",
-		wield_image = "strawberry.png",
-		groups = {food_strawberry = 1, flammable = 2},
-		on_use = minetest.item_eat(1),
-	})
-
-	alias("farming_plus:strawberry_item", "ethereal:strawberry")
-	alias("farming_plus:strawberry_seed", "ethereal:strawberry")
-	alias("farming_plus:strawberry_1", "farming:raspberry_1")
-	alias("farming_plus:strawberry_2", "farming:raspberry_2")
-	alias("farming_plus:strawberry_3", "farming:raspberry_3")
-	alias("farming_plus:strawberry", "farming:raspberry_4")
-end
 
 -- Tomato
 alias("farming_plus:tomato_seed", "farming:tomato")
