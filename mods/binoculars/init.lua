@@ -60,7 +60,7 @@ minetest.after(4.7, cyclic_update)
 
 minetest.register_craftitem("binoculars:binoculars", {
 	description = S("Binoculars") .. "\n" .. S("Use with 'Zoom' key"),
-	inventory_image = "binoculars_binoculars.png",
+	inventory_image = "binoculars.png",
 	stack_max = 1,
 
 	on_use = function(itemstack, user, pointed_thing)
