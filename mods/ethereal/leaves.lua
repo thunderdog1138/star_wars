@@ -48,5 +48,5 @@ default.register_leafdecay({
 default.register_leafdecay({
 	trunks = {"default:bush_stem"},
 	leaves = {"default:bush_leaves"},
-	radius = 2
+	radius = 1
 })
