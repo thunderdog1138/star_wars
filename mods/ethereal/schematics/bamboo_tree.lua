@@ -1,8 +1,8 @@
 
 local _ = {name = "air", param1 = 000}
-local B = {name = "ethereal:bamboo", param1 = 255}
-local L = {name = "ethereal:bamboo_leaves", param1 = 255}
-local l = {name = "ethereal:bamboo_leaves", param1 = 100}
+local B = {name = "default:bamboo", param1 = 255}
+local L = {name = "default:bamboo_leaves", param1 = 255}
+local l = {name = "default:bamboo_leaves", param1 = 100}
 
 ethereal.bamboo_tree = {
 
