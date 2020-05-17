@@ -650,10 +650,6 @@ dofile(farming.path.."/hoes.lua")
 dofile(farming.path.."/grass.lua")
 dofile(farming.path.."/utensils.lua")
 
--- default crops
-dofile(farming.path.."/crops/wheat.lua")
-dofile(farming.path.."/crops/cotton.lua")
-
 
 -- helper function
 local function ddoo(file, check)
@@ -663,33 +659,6 @@ local function ddoo(file, check)
 	end
 end
 
--- add additional crops and food (if enabled)
-ddoo("carrot.lua", farming.carrot)
-ddoo("potato.lua", farming.potato)
-ddoo("tomato.lua", farming.tomato)
-ddoo("cucumber.lua", farming.cucumber)
-ddoo("corn.lua", farming.corn)
-ddoo("coffee.lua", farming.coffee)
-ddoo("melon.lua", farming.melon)
-ddoo("pumpkin.lua", farming.pumpkin)
-ddoo("cocoa.lua", farming.cocoa)
-ddoo("raspberry.lua", farming.raspberry)
-ddoo("blueberry.lua", farming.blueberry)
-ddoo("rhubarb.lua", farming.rhubarb)
-ddoo("beans.lua", farming.beans)
-ddoo("grapes.lua", farming.grapes)
-ddoo("barley.lua", farming.barley)
-ddoo("hemp.lua", farming.hemp)
-ddoo("garlic.lua", farming.garlic)
-ddoo("onion.lua", farming.onion)
-ddoo("pepper.lua", farming.pepper)
-ddoo("pineapple.lua", farming.pineapple)
-ddoo("peas.lua", farming.peas)
-ddoo("beetroot.lua", farming.beetroot)
-ddoo("chili.lua", farming.chili)
-ddoo("ryeoatrice.lua", farming.grains)
-
 dofile(farming.path.."/food.lua")
 dofile(farming.path.."/mapgen.lua")
-dofile(farming.path.."/compatibility.lua") -- Farming Plus compatibility
 dofile(farming.path.."/lucky_block.lua")
