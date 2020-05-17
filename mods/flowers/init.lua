@@ -44,9 +44,9 @@ local function add_simple_flower(name, desc, box, f_groups)
 		description = desc,
 		drawtype = "plantlike",
 		waving = 1,
-		tiles = {"flowers_" .. name .. ".png"},
-		inventory_image = "flowers_" .. name .. ".png",
-		wield_image = "flowers_" .. name .. ".png",
+		tiles = {.. name .. ".png"},
+		inventory_image = .. name .. ".png",
+		wield_image = .. name .. ".png",
 		sunlight_propagates = true,
 		paramtype = "light",
 		walkable = false,
@@ -62,50 +62,50 @@ end
 
 flowers.datas = {
 	{
-		"rose",
-		S("Red Rose"),
+		"plom_bloom",
+		S("Plom Bloom"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
 		{color_red = 1, flammable = 1}
 	},
 	{
-		"tulip",
-		S("Orange Tulip"),
+		"hai-ka_flower",
+		S("Hai-ka flower"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 		{color_orange = 1, flammable = 1}
 	},
 	{
-		"dandelion_yellow",
-		S("Yellow Dandelion"),
+		"delia_pavorum",
+		S("Delia Pavorum"),
 		{-4 / 16, -0.5, -4 / 16, 4 / 16, -2 / 16, 4 / 16},
 		{color_yellow = 1, flammable = 1}
 	},
 	{
-		"chrysanthemum_green",
-		S("Green Chrysanthemum"),
+		"jade_rose",
+		S("Jade Rose"),
 		{-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
 		{color_green = 1, flammable = 1}
 	},
 	{
-		"geranium",
-		S("Blue Geranium"),
+		"starflower",
+		S("Starflower"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
 		{color_blue = 1, flammable = 1}
 	},
 	{
-		"viola",
-		S("Viola"),
+		"purple_passion",
+		S("Purple passion"),
 		{-5 / 16, -0.5, -5 / 16, 5 / 16, -1 / 16, 5 / 16},
 		{color_violet = 1, flammable = 1}
 	},
 	{
-		"dandelion_white",
-		S("White Dandelion"),
+		"lily_white",
+		S("White Lily"),
 		{-5 / 16, -0.5, -5 / 16, 5 / 16, -2 / 16, 5 / 16},
 		{color_white = 1, flammable = 1}
 	},
 	{
-		"tulip_black",
-		S("Black Tulip"),
+		"zinthorn",
+		S("Zinthorn"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 		{color_black = 1, flammable = 1}
 	},
@@ -186,9 +186,9 @@ minetest.register_abm({
 
 minetest.register_node("flowers:mushroom_red", {
 	description = S("Red Mushroom"),
-	tiles = {"flowers_mushroom_red.png"},
-	inventory_image = "flowers_mushroom_red.png",
-	wield_image = "flowers_mushroom_red.png",
+	tiles = {"mushroom_red.png"},
+	inventory_image = "mushroom_red.png",
+	wield_image = "mushroom_red.png",
 	drawtype = "plantlike",
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -205,9 +205,9 @@ minetest.register_node("flowers:mushroom_red", {
 
 minetest.register_node("flowers:mushroom_brown", {
 	description = S("Brown Mushroom"),
-	tiles = {"flowers_mushroom_brown.png"},
-	inventory_image = "flowers_mushroom_brown.png",
-	wield_image = "flowers_mushroom_brown.png",
+	tiles = {"mushroom_brown.png"},
+	inventory_image = "mushroom_brown.png",
+	wield_image = "mushroom_brown.png",
 	drawtype = "plantlike",
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -257,16 +257,6 @@ minetest.register_abm({
 })
 
 
--- These old mushroom related nodes can be simplified now
-
-minetest.register_alias("flowers:mushroom_spores_brown", "flowers:mushroom_brown")
-minetest.register_alias("flowers:mushroom_spores_red", "flowers:mushroom_red")
-minetest.register_alias("flowers:mushroom_fertile_brown", "flowers:mushroom_brown")
-minetest.register_alias("flowers:mushroom_fertile_red", "flowers:mushroom_red")
-minetest.register_alias("mushroom:brown_natural", "flowers:mushroom_brown")
-minetest.register_alias("mushroom:red_natural", "flowers:mushroom_red")
-
-
 --
 -- Waterlily
 --
@@ -276,9 +266,9 @@ local waterlily_def = {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"flowers_waterlily.png", "flowers_waterlily_bottom.png"},
-	inventory_image = "flowers_waterlily.png",
-	wield_image = "flowers_waterlily.png",
+	tiles = {"waterlily.png", "waterlily_bottom.png"},
+	inventory_image = "waterlily.png",
+	wield_image = "waterlily.png",
 	liquids_pointable = true,
 	walkable = false,
 	buildable_to = true,
