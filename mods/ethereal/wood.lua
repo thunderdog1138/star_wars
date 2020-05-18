@@ -114,7 +114,7 @@ minetest.register_craft({
 })
 
 -- brylark trunk
-minetest.register_node("ethereal:brylark_tree", {
+minetest.register_node("ethereal:brylark_trunk", {
 	description = S("Brylark Trunk"),
 	tiles = {
 		"ethereal_brylark_trunk_top.png",
