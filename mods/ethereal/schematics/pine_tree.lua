@@ -1,7 +1,7 @@
 
 local _ = {name = "air", prob = 0}
 local L = {name = "default:pine_needles", prob = 255}
-local T = {name = "default:pinetree", prob = 255}
+local T = {name = "default:pine_trunk", prob = 255}
 
 ethereal.pine_tree = {
 
