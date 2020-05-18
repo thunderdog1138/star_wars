@@ -72,14 +72,14 @@ minetest.register_craftitem("ethereal:fishing_rod", {
 	on_secondary_use = rod_use
 })
 
-minetest.register_craft({
-	output = "ethereal:fishing_rod",
-	recipe = {
-			{"","","group:stick"},
-			{"", "group:stick", "farming:string"},
-			{"group:stick", "", "farming:string"},
-		}
-})
+--minetest.register_craft({
+--	output = "ethereal:fishing_rod",
+--	recipe = {
+--			{"","","group:stick"},
+--			{"", "group:stick", "farming:string"},
+--			{"group:stick", "", "farming:string"},
+--		}
+--})
 
 -- Sift through 2 Dirt Blocks to find Worm
 minetest.register_craft({
