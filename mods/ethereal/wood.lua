@@ -1,13 +1,13 @@
 
 local S = ethereal.intllib
 
--- sakura trunk
-minetest.register_node("ethereal:sakura_trunk", {
-	description = S("Sakura Trunk"),
+-- jogan trunk
+minetest.register_node("ethereal:jogan_trunk", {
+	description = S("Jogan Trunk"),
 	tiles = {
-		"ethereal_sakura_trunk_top.png",
-		"ethereal_sakura_trunk_top.png",
-		"ethereal_sakura_trunk.png"
+		"ethereal_jogan_trunk_top.png",
+		"ethereal_jogan_trunk_top.png",
+		"ethereal_jogan_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -15,27 +15,27 @@ minetest.register_node("ethereal:sakura_trunk", {
 	on_place = minetest.rotate_node,
 })
 
--- sakura wood
-minetest.register_node("ethereal:sakura_wood", {
-	description = S("Sakura Wood"),
-	tiles = {"ethereal_sakura_wood.png"},
+-- jogan wood
+minetest.register_node("ethereal:jogan_wood", {
+	description = S("Jogan Wood"),
+	tiles = {"ethereal_jogan_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_craft({
-	output = "ethereal:sakura_wood 4",
-	recipe = {{"ethereal:sakura_trunk"}}
+	output = "ethereal:jogan_wood 4",
+	recipe = {{"ethereal:jogan_trunk"}}
 })
 
--- willow trunk
-minetest.register_node("ethereal:willow_trunk", {
-	description = S("Willow Trunk"),
+-- pine trunk
+minetest.register_node("ethereal:pine_trunk", {
+	description = S("pine Trunk"),
 	tiles = {
-		"willow_trunk_top.png",
-		"willow_trunk_top.png",
-		"willow_trunk.png"
+		"pine_trunk_top.png",
+		"pine_trunk_top.png",
+		"pine_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -43,105 +43,21 @@ minetest.register_node("ethereal:willow_trunk", {
 	on_place = minetest.rotate_node,
 })
 
--- willow wood
-minetest.register_node("ethereal:willow_wood", {
-	description = S("Willow Wood"),
-	tiles = {"willow_wood.png"},
+-- pine wood
+minetest.register_node("ethereal:pine_wood", {
+	description = S("Pine Wood"),
+	tiles = {"pine_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_craft({
-	output = "ethereal:willow_wood 4",
-	recipe = {{"ethereal:willow_trunk"}}
+	output = "ethereal:pine_wood 4",
+	recipe = {{"ethereal:pine_trunk"}}
 })
 
--- redwood trunk
-minetest.register_node("ethereal:redwood_trunk", {
-	description = S("Redwood Trunk"),
-	tiles = {
-		"redwood_trunk_top.png",
-		"redwood_trunk_top.png",
-		"redwood_trunk.png"
-	},
-	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	paramtype2 = "facedir",
-	on_place = minetest.rotate_node,
-})
-
--- redwood wood
-minetest.register_node("ethereal:redwood_wood", {
-	description = S("Redwood Wood"),
-	tiles = {"redwood_wood.png"},
-	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:redwood_wood 4",
-	recipe = {{"ethereal:redwood_trunk"}},
-})
-
--- frost trunk
-minetest.register_node("ethereal:frost_tree", {
-	description = S("Frost Tree"),
-	tiles = {
-		"ethereal_frost_tree_top.png",
-		"ethereal_frost_tree_top.png",
-		"ethereal_frost_tree.png"
-	},
-	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	sounds = default.node_sound_wood_defaults(),
-	paramtype2 = "facedir",
-	on_place = minetest.rotate_node,
-})
-
--- frost wood
-minetest.register_node("ethereal:frost_wood", {
-	description = S("Frost Wood"),
-	tiles = {"frost_wood.png"},
-	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	sounds = default.node_sound_wood_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:frost_wood 4",
-	recipe = {{"ethereal:frost_tree"}}
-})
-
--- healing trunk
-minetest.register_node("ethereal:yellow_trunk", {
-	description = S("Healing Tree Trunk"),
-	tiles = {
-		"yellow_tree_top.png",
-		"yellow_tree_top.png",
-		"yellow_tree.png"
-	},
-	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	sounds = default.node_sound_wood_defaults(),
-	paramtype2 = "facedir",
-	on_place = minetest.rotate_node,
-})
-
--- healing wood
-minetest.register_node("ethereal:yellow_wood", {
-	description = S("Healing Tree Wood"),
-	tiles = {"yellow_wood.png"},
-	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	sounds = default.node_sound_wood_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:yellow_wood 4",
-	recipe = {{"ethereal:yellow_trunk"}}
-})
-
--- palm trunk (thanks to VanessaE for palm textures)
+-- palm trunk
 minetest.register_node("ethereal:palm_trunk", {
 	description = S("Palm Trunk"),
 	tiles = {
@@ -169,13 +85,13 @@ minetest.register_craft({
 	recipe = {{"ethereal:palm_trunk"}}
 })
 
--- banana trunk
-minetest.register_node("ethereal:banana_trunk", {
-	description = S("Banana Trunk"),
+-- wroshyr trunk
+minetest.register_node("ethereal:wroshyr_trunk", {
+	description = S("Wroshyr Trunk"),
 	tiles = {
-		"banana_trunk_top.png",
-		"banana_trunk_top.png",
-		"banana_trunk.png"
+		"wroshyr_trunk_top.png",
+		"wroshyr_trunk_top.png",
+		"wroshyr_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -183,18 +99,104 @@ minetest.register_node("ethereal:banana_trunk", {
 	on_place = minetest.rotate_node,
 })
 
--- banana wood
-minetest.register_node("ethereal:banana_wood", {
-	description = S("Banana Wood"),
-	tiles = {"banana_wood.png"},
+-- wroshyr wood
+minetest.register_node("ethereal:wroshyr_wood", {
+	description = S("Wroshyr Wood"),
+	tiles = {"wroshyr_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_craft({
-	output = "ethereal:banana_wood 4",
-	recipe = {{"ethereal:banana_trunk"}}
+	output = "ethereal:wroshyr_wood 4",
+	recipe = {{"ethereal:wroshyr_trunk"}},
+})
+
+-- brylark trunk
+minetest.register_node("ethereal:brylark_tree", {
+	description = S("Brylark Trunk"),
+	tiles = {
+		"ethereal_brylark_trunk_top.png",
+		"ethereal_brylark_trunk_top.png",
+		"ethereal_brylark_trunk.png"
+	},
+	-- TODO: make brylark trunk as strong as metal
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
+})
+
+-- brylark wood
+minetest.register_node("ethereal:brylark_wood", {
+	description = S("Brylark Wood"),
+	tiles = {"brylark_wood.png"},
+	is_ground_content = false,
+	-- TODO: make brylark trunk as strong as metal
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "ethereal:brylark_wood 4",
+	recipe = {{"ethereal:brylark_trunk"}}
+})
+
+-- uneti trunk
+minetest.register_node("ethereal:uneti_trunk", {
+	description = S("Uneti Trunk"),
+	tiles = {
+		"uneti_trunk_top.png",
+		"uneti_trunk_top.png",
+		"uneti_trunk.png"
+	},
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
+})
+
+-- uneti wood
+minetest.register_node("ethereal:uneti_wood", {
+	description = S("Uneti Wood"),
+	tiles = {"uneti_wood.png"},
+	is_ground_content = false,
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "ethereal:uneti_wood 4",
+	recipe = {{"ethereal:uneti_trunk"}}
+})
+
+-- gnarltree trunk
+minetest.register_node("ethereal:gnarltree_trunk", {
+	description = S("Gnarltree Trunk"),
+	tiles = {
+		"gnarltree_trunk_top.png",
+		"gnarltree_trunk_top.png",
+		"gnarltree_trunk.png"
+	},
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
+})
+
+-- gnarltree wood
+minetest.register_node("ethereal:gnarltree_wood", {
+	description = S("Gnarltree Wood"),
+	tiles = {"gnarltree_wood.png"},
+	is_ground_content = false,
+	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "ethereal:gnarltree_wood 4",
+	recipe = {{"ethereal:gnarltree_trunk"}}
 })
 
 -- scorched trunk
@@ -222,7 +224,7 @@ minetest.register_craft({
 
 -- mushroom trunk
 minetest.register_node("ethereal:mushroom_trunk", {
-	description = S("Mushroom"),
+	description = S("Giant Mushroom Trunk"),
 	tiles = {
 		"mushroom_trunk_top.png",
 		"mushroom_trunk_top.png",
@@ -232,34 +234,6 @@ minetest.register_node("ethereal:mushroom_trunk", {
 	sounds = default.node_sound_wood_defaults(),
 	paramtype2 = "facedir",
 	on_place = minetest.rotate_node,
-})
-
--- birch trunk (thanks to VanessaE for birch textures)
-minetest.register_node("ethereal:birch_trunk", {
-	description = S("Birch Trunk"),
-	tiles = {
-		"moretrees_birch_trunk_top.png",
-		"moretrees_birch_trunk_top.png",
-		"moretrees_birch_trunk.png"
-	},
-	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	paramtype2 = "facedir",
-	on_place = minetest.rotate_node,
-})
-
--- birch wood
-minetest.register_node("ethereal:birch_wood", {
-	description = S("Birch Wood"),
-	tiles = {"moretrees_birch_wood.png"},
-	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:birch_wood 4",
-	recipe = {{"ethereal:birch_trunk"}}
 })
 
 -- Bamboo (thanks to Nelo-slay on DeviantArt for the free Bamboo base image)
@@ -276,6 +250,7 @@ minetest.register_node("ethereal:bamboo", {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
+	-- TODO: add to group:stick
 	groups = {choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},--tree = 1
 	sounds = default.node_sound_leaves_defaults(),
 	after_dig_node = function(pos, node, metadata, digger)
