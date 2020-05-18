@@ -8,72 +8,13 @@ if ethereal.leaftype ~= 0 then
 	leaftype = "allfaces_optional"
 end
 
--- default apple tree leaves
-minetest.override_item("default:leaves", {
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	inventory_image = "default_leaves.png",
-	wield_image = "default_leaves.png",
-	walkable = ethereal.leafwalk,
-})
-
--- ability to craft big tree sapling
-minetest.register_craft({
-	recipe = {{"default:sapling", "default:sapling",  "default:sapling"}},
-	output = "ethereal:big_tree_sapling"
-})
-
--- default jungle tree leaves
-minetest.override_item("default:jungleleaves", {
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	inventory_image = "default_jungleleaves.png",
-	wield_image = "default_jungleleaves.png",
-	walkable = ethereal.leafwalk,
-})
-
--- default pine tree leaves
-minetest.override_item("default:pine_needles", {
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	inventory_image = "default_pine_needles.png",
-	wield_image = "default_pine_needles.png",
-	walkable = ethereal.leafwalk,
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:pine_sapling"}, rarity = 20},
-			{items = {"ethereal:pine_nuts"}, rarity = 5},
-			{items = {"default:pine_needles"}}
-		}
-	},
-})
-
--- default acacia tree leaves
-minetest.override_item("default:acacia_leaves", {
-	drawtype = leaftype,
-	inventory_image = "default_acacia_leaves.png",
-	wield_image = "default_acacia_leaves.png",
-	visual_scale = 1.4,
-	walkable = ethereal.leafwalk,
-})
-
--- default aspen tree leaves
-minetest.override_item("default:aspen_leaves", {
-	drawtype = leaftype,
-	inventory_image = "default_aspen_leaves.png",
-	wield_image = "default_aspen_leaves.png",
-	visual_scale = 1.4,
-	walkable = ethereal.leafwalk,
-})
-
--- willow twig
-minetest.register_node("ethereal:willow_twig", {
-	description = S("Willow Twig"),
+-- jogan leaves
+minetest.register_node("ethereal:jogan_leaves", {
+	description = S("Jogan Leaves"),
 	drawtype = "plantlike",
-	tiles = {"willow_twig.png"},
-	inventory_image = "willow_twig.png",
-	wield_image = "willow_twig.png",
+	tiles = {"jogan_leaves.png"},
+	inventory_image = "jogan_leaves.png",
+	wield_image = "jogan_leaves.png",
 	paramtype = "light",
 	walkable = ethereal.leafwalk,
 	visual_scale = 1.4,
@@ -82,111 +23,39 @@ minetest.register_node("ethereal:willow_twig", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:willow_sapling"}, rarity = 50},
-			{items = {"ethereal:willow_twig"}}
+--			{items = {"ethereal:jogan_sapling"}, rarity = 15},
+			{items = {"ethereal:jogan_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
--- redwood leaves
-minetest.register_node("ethereal:redwood_leaves", {
-	description = S("Redwood Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"redwood_leaves.png"},
-	inventory_image = "redwood_leaves.png",
-	wield_image = "redwood_leaves.png",
+-- pine needles
+minetest.register_node("ethereal:pine_needles", {
+	description = S("Pine Needles"),
+	drawtype = "plantlike",
+	tiles = {"pine_needles.png"},
+	inventory_image = "pine_needles.png",
+	wield_image = "pine_needles.png",
 	paramtype = "light",
 	walkable = ethereal.leafwalk,
+	visual_scale = 1.4,
 	waving = 1,
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:redwood_sapling"}, rarity = 50},
-			{items = {"ethereal:redwood_leaves"}}
+--			{items = {"ethereal:pine_sapling"}, rarity = 20},
+			{items = {"ethereal:pine_needles"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
--- orange tree leaves
-minetest.register_node("ethereal:orange_leaves", {
-	description = S("Orange Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"orange_leaves.png"},
-	inventory_image = "orange_leaves.png",
-	wield_image = "orange_leaves.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
-	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ethereal:orange_tree_sapling"}, rarity = 15},
-			{items = {"ethereal:orange_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-})
-
--- banana tree leaves
-minetest.register_node("ethereal:bananaleaves", {
-	description = S("Banana Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"banana_leaf.png"},
-	inventory_image = "banana_leaf.png",
-	wield_image = "banana_leaf.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
-	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ethereal:banana_tree_sapling"}, rarity = 10},
-			{items = {"ethereal:bananaleaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-})
-
--- healing tree leaves
-minetest.register_node("ethereal:yellowleaves", {
-	description = S("Healing Tree Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"yellow_leaves.png"},
-	inventory_image = "yellow_leaves.png",
-	wield_image = "yellow_leaves.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
-	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ethereal:yellow_tree_sapling"}, rarity = 50},
-			{items = {"ethereal:yellowleaves"}}
-		}
-	},
-	-- one leaf heals half a heart when eaten
-	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-	light_source = 9,
-})
-
--- palm tree leaves
-minetest.register_node("ethereal:palmleaves", {
+-- palm leaves
+minetest.register_node("ethereal:palm_leaves", {
 	description = S("Palm Leaves"),
 	drawtype = leaftype,
 	visual_scale = 1.4,
@@ -200,22 +69,45 @@ minetest.register_node("ethereal:palmleaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:palm_sapling"}, rarity = 10},
-			{items = {"ethereal:palmleaves"}}
+--			{items = {"ethereal:palm_sapling"}, rarity = 10},
+			{items = {"ethereal:palm_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
--- birch tree leaves
-minetest.register_node("ethereal:birch_leaves", {
-	description = S("Birch Leaves"),
+-- wroshyr leaves
+minetest.register_node("ethereal:wroshyr_leaves", {
+	description = S("Wroshyr Leaves"),
+	drawtype = "plantlike",
+	tiles = {"wroshyr_leaves.png"},
+	inventory_image = "wroshyr_leaves.png",
+	wield_image = "wroshyr_leaves.png",
+	paramtype = "light",
+	walkable = ethereal.leafwalk,
+	visual_scale = 1.4,
+	waving = 1,
+	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
+	drop = {
+		max_items = 1,
+		items = {
+--			{items = {"ethereal:wroshyr_sapling"}, rarity = 50},
+			{items = {"ethereal:wroshyr_leaves"}}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+-- gnarltree leaves
+minetest.register_node("ethereal:gnarltree_leaves", {
+	description = S("Gnarltree Leaves"),
 	drawtype = leaftype,
 	visual_scale = 1.4,
-	tiles = {"moretrees_birch_leaves.png"},
-	inventory_image = "moretrees_birch_leaves.png",
-	wield_image = "moretrees_birch_leaves.png",
+	tiles = {"gnarltree_leaves.png"},
+	inventory_image = "gnarltree_leaves.png",
+	wield_image = "gnarltree_leaves.png",
 	paramtype = "light",
 	walkable = ethereal.leafwalk,
 	waving = 1,
@@ -223,39 +115,61 @@ minetest.register_node("ethereal:birch_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:birch_sapling"}, rarity = 20},
-			{items = {"ethereal:birch_leaves"}}
+--			{items = {"ethereal:gnarltree_sapling"}, rarity = 20},
+			{items = {"ethereal:gnarltree_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
--- frost tree leaves
-minetest.register_node("ethereal:frost_leaves", {
-	description = S("Frost Leaves"),
+-- uneti leaves
+minetest.register_node("ethereal:uneti_leaves", {
+	description = S("Uneti Leaves"),
 	drawtype = leaftype,
 	visual_scale = 1.4,
-	tiles = {"ethereal_frost_leaves.png"},
-	inventory_image = "ethereal_frost_leaves.png",
-	wield_image = "ethereal_frost_leaves.png",
+	tiles = {"uneti_leaves.png"},
+	inventory_image = "uneti_leaves.png",
+	wield_image = "uneti_leaves.png",
 	paramtype = "light",
 	walkable = ethereal.leafwalk,
 	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, puts_out_fire = 1},
+	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:frost_tree_sapling"}, rarity = 15},
-			{items = {"ethereal:frost_leaves"}}
+--			{items = {"ethereal:uneti_sapling"}, rarity = 50},
+			{items = {"ethereal:uneti_leaves"}}
 		}
 	},
-	light_source = 9,
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
--- bamboo stalk leaves
+-- brylark leaves
+minetest.register_node("ethereal:brylark_leaves", {
+	description = S("Brylark Leaves"),
+	drawtype = leaftype,
+	visual_scale = 1.4,
+	tiles = {"brylark_leaves.png"},
+	inventory_image = "brylark_leaves.png",
+	wield_image = "brylark_leaves.png",
+	paramtype = "light",
+	walkable = ethereal.leafwalk,
+	waving = 1,
+	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
+	drop = {
+		max_items = 1,
+		items = {
+--			{items = {"ethereal:brylark_sapling"}, rarity = 50},
+			{items = {"ethereal:brylark_leaves"}}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+-- bamboo leaves
 minetest.register_node("ethereal:bamboo_leaves", {
 	description = S("Bamboo Leaves"),
 	drawtype = leaftype,
@@ -270,7 +184,7 @@ minetest.register_node("ethereal:bamboo_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:bamboo_sprout"}, rarity = 10},
+--			{items = {"ethereal:bamboo_sprout"}, rarity = 10},
 			{items = {"ethereal:bamboo_leaves"}}
 		}
 	},
@@ -278,61 +192,16 @@ minetest.register_node("ethereal:bamboo_leaves", {
 	after_place_node = default.after_place_leaves,
 })
 
--- sakura leaves
-minetest.register_node("ethereal:sakura_leaves", {
-	description = S("Sakura Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"ethereal_sakura_leaves.png"},
-	inventory_image = "ethereal_sakura_leaves.png",
-	wield_image = "ethereal_sakura_leaves.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
-	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ethereal:sakura_sapling"}, rarity = 30},
-			{items = {"ethereal:sakura_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-})
-
-minetest.register_node("ethereal:sakura_leaves2", {
-	description = S("Sakura Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"ethereal_sakura_leaves2.png"},
-	inventory_image = "ethereal_sakura_leaves2.png",
-	wield_image = "ethereal_sakura_leaves2.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
-	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"ethereal:sakura_sapling"}, rarity = 30},
-			{items = {"ethereal:sakura_leaves2"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-})
-
--- mushroom tops
-minetest.register_node("ethereal:mushroom", {
+-- mushroom cap
+minetest.register_node("ethereal:mushroom_cap", {
 	description = S("Mushroom Cap"),
-	tiles = {"mushroom_block.png"},
+	tiles = {"mushroom_cap.png"},
 	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"ethereal:mushroom_sapling"}, rarity = 20},
-			{items = {"ethereal:mushroom"}}
+--			{items = {"ethereal:mushroom_sapling"}, rarity = 20},
+			{items = {"ethereal:mushroom_cap"}}
 		}
 	},
 	sounds = default.node_sound_wood_defaults(),
@@ -340,7 +209,7 @@ minetest.register_node("ethereal:mushroom", {
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "ethereal:mushroom",
+	recipe = "ethereal:mushroom_cap",
 	burntime = 10,
 })
 
@@ -385,108 +254,47 @@ minetest.register_craft({
 	burntime = 1,
 })
 
--- bush block #2
-minetest.register_node("ethereal:bush2", {
-	drawtype = "allfaces_optional",
-	description = S("Bush #2"),
-	tiles = {"default_aspen_leaves.png"},
-	paramtype = "light",
-	walkable = true,
-	groups = {snappy = 3, flammable = 2},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:bush2",
-	recipe = {
-		{"group:leaves", "group:leaves", "group:leaves"},
-		{"group:leaves", "default:aspen_leaves", "group:leaves"},
-		{"group:leaves", "group:leaves", "group:leaves"},
-	}
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "ethereal:bush2",
-	burntime = 1,
-})
-
--- bush block #3
-minetest.register_node("ethereal:bush3", {
-	drawtype = "allfaces_optional",
-	description = S("Bush #3"),
-	tiles = {"default_pine_needles.png"},
-	paramtype = "light",
-	walkable = true,
-	groups = {snappy = 3, flammable = 2},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft({
-	output = "ethereal:bush3",
-	recipe = {
-		{"group:leaves", "group:leaves", "group:leaves"},
-		{"group:leaves", "default:pine_needles", "group:leaves"},
-		{"group:leaves", "group:leaves", "group:leaves"},
-	}
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "ethereal:bush3",
-	burntime = 1,
-})
-
--- compatibility check for new mt version with leafdecay function
-if minetest.registered_nodes["default:dirt_with_rainforest_litter"] then
-
+-- leaf decay
 default.register_leafdecay({
-	trunks = {"default:tree"},
+	trunks = {"ethereal:jogan_trunk"},
 	leaves = {
-		"default:joganfruit", "default:leaves", "ethereal:orange",
-		"ethereal:orange_leaves", "ethereal:vine"},
+		"default:joganfruit", "ethereal:jogan_leaves"},
 	radius = 3
 })
 
 default.register_leafdecay({
-	trunks = {"ethereal:willow_trunk"},
-	leaves = {"ethereal:willow_twig"},
-	radius = 3
-})
-
-default.register_leafdecay({
-	trunks = {"ethereal:redwood_trunk"},
-	leaves = {"ethereal:redwood_leaves"},
-	radius = 3
-})
-
-default.register_leafdecay({
-	trunks = {"ethereal:frost_tree"},
-	leaves = {"ethereal:frost_leaves"},
-	radius = 3
-})
-
-default.register_leafdecay({
-	trunks = {"ethereal:yellow_trunk"},
-	leaves = {"ethereal:yellowleaves", "ethereal:golden_apple"},
+	trunks = {"ethereal:pine_trunk"},
+	leaves = {"ethereal:pine_needles"},
 	radius = 3
 })
 
 default.register_leafdecay({
 	trunks = {"ethereal:palm_trunk"},
-	leaves = {"ethereal:palmleaves", "ethereal:coconut"},
+	leaves = {"ethereal:palm_leaves", "ethereal:coconut"},
 	radius = 3
 })
 
 default.register_leafdecay({
-	trunks = {"ethereal:banana_trunk"},
-	leaves = {"ethereal:bananaleaves", "ethereal:banana"},
+	trunks = {"ethereal:gnarltree_trunk"},
+	leaves = {"ethereal:gnarltree_leaves", "ethereal:vine"},
 	radius = 3
 })
 
 default.register_leafdecay({
-	trunks = {"ethereal:birch_trunk"},
-	leaves = {"ethereal:birch_leaves"},
+	trunks = {"ethereal:wroshyr_trunk"},
+	leaves = {"ethereal:wroshyr_leaves"},
+	radius = 3
+})
+
+default.register_leafdecay({
+	trunks = {"ethereal:uneti_trunk"},
+	leaves = {"ethereal:uneti_leaves"},
+	radius = 3
+})
+
+default.register_leafdecay({
+	trunks = {"ethereal:brylark_trunk"},
+	leaves = {"ethereal:brylark_leaves"},
 	radius = 3
 })
 
@@ -495,11 +303,3 @@ default.register_leafdecay({
 	leaves = {"ethereal:bamboo_leaves"},
 	radius = 2
 })
-
-default.register_leafdecay({
-	trunks = {"ethereal:sakura_trunk"},
-	leaves = {"ethereal:sakura_leaves", "ethereal:sakura_leaves2"},
-	radius = 3
-})
-
-end
