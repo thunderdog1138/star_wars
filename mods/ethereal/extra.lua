@@ -26,8 +26,8 @@ minetest.register_node("ethereal:bamboo_floor", {
 minetest.register_craft({
 	output = "ethereal:bamboo_floor 2",
 	recipe = {
-		{"ethereal:bamboo", "ethereal:bamboo"},
-		{"ethereal:bamboo", "ethereal:bamboo"},
+		{"default:bamboo", "default:bamboo"},
+		{"default:bamboo", "default:bamboo"},
 	}
 })
 
@@ -51,9 +51,9 @@ minetest.register_node("ethereal:bamboo_block", {
 minetest.register_craft({
 	output = "ethereal:bamboo_block",
 	recipe = {
-		{"ethereal:bamboo", "ethereal:bamboo", "ethereal:bamboo"},
-		{"ethereal:bamboo", "ethereal:bamboo", "ethereal:bamboo"},
-		{"ethereal:bamboo", "ethereal:bamboo", "ethereal:bamboo"},
+		{"default:bamboo", "default:bamboo", "default:bamboo"},
+		{"default:bamboo", "default:bamboo", "default:bamboo"},
+		{"default:bamboo", "default:bamboo", "default:bamboo"},
 	}
 })
 
@@ -61,9 +61,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "default:paper 6",
 	recipe = {
-		{"ethereal:bamboo", "ethereal:bamboo"},
-		{"ethereal:bamboo", "ethereal:bamboo"},
-		{"ethereal:bamboo", "ethereal:bamboo"},
+		{"default:bamboo", "default:bamboo"},
+		{"default:bamboo", "default:bamboo"},
+		{"default:bamboo", "default:bamboo"},
 	}
 })
 
@@ -93,14 +93,14 @@ end
 end -- END if
 
 -- Paper (2x3 string = 4 paper)
-minetest.register_craft({
-	output = "default:paper 4",
-	recipe = {
-		{"farming:string", "farming:string"},
-		{"farming:string", "farming:string"},
-		{"farming:string", "farming:string"},
-	}
-})
+--minetest.register_craft({
+--	output = "default:paper 4",
+--	recipe = {
+--		{"farming:string", "farming:string"},
+--		{"farming:string", "farming:string"},
+--		{"farming:string", "farming:string"},
+--	}
+--})
 
 -- Palm Wax
 minetest.register_craftitem("ethereal:palm_wax", {
@@ -113,7 +113,7 @@ minetest.register_craft({
 	type = "cooking",
 	cooktime = 10,
 	output = "ethereal:palm_wax",
-	recipe = "ethereal:palmleaves"
+	recipe = "default:palm_leaves"
 })
 
 -- Candle from Wax and String/Cotton
@@ -145,14 +145,14 @@ minetest.register_node("ethereal:candle", {
 	},
 })
 
-minetest.register_craft({
-	output = "ethereal:candle 2",
-	recipe = {
-		{"farming:cotton"},
-		{"ethereal:palm_wax"},
-		{"ethereal:palm_wax"},
-	}
-})
+--minetest.register_craft({
+--	output = "ethereal:candle 2",
+--	recipe = {
+--		{"farming:cotton"},
+--		{"ethereal:palm_wax"},
+--		{"ethereal:palm_wax"},
+--	}
+--})
 
 -- Wooden Bowl
 minetest.register_craftitem("ethereal:bowl", {
@@ -167,8 +167,8 @@ if not minetest.registered_items["farming:bowl"] then
 	minetest.register_craft({
 		output = "ethereal:bowl 4",
 		recipe = {
-			{"group:wood", "", "group:wood"},
-			{"", "group:wood", ""},
+			{"group:soft_wood", "", "group:soft_wood"},
+			{"", "group:soft_wood", ""},
 		}
 	})
 end
@@ -263,7 +263,7 @@ minetest.register_craftitem("ethereal:charcoal_lump", {
 minetest.register_craft({
 	output = "ethereal:charcoal_lump 2",
 	recipe = {
-		{"ethereal:scorched_tree"}
+		{"default:scorched_tree"}
 	}
 })
 
