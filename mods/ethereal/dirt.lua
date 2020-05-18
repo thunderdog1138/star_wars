@@ -1,11 +1,6 @@
 
 local S = ethereal.intllib
 
--- override default dirt (to stop caves cutting away dirt)
-minetest.override_item("default:dirt", {is_ground_content = ethereal.cavedirt})
-
-minetest.register_alias("ethereal:green_dirt", "default:dirt_with_grass")
-
 -- dry dirt
 minetest.register_node("ethereal:dry_dirt", {
 	description = S("Dried Dirt"),
@@ -22,9 +17,25 @@ minetest.register_craft({
 	cooktime = 3,
 })
 
+-- charred dirt
+minetest.register_node("ethereal:charred_dirt", {
+	description = S("Charred Dirt"),
+	tiles = {"ethereal_charred_dirt.png"},
+	is_ground_content = ethereal.cavedirt,
+	groups = {crumbly = 3},
+	sounds = default.node_sound_dirt_defaults()
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "ethereal:charred_dirt",
+	recipe = "ethereal:dry_dirt",
+	cooktime = 3,
+})
+
 local dirts = {
-	"Bamboo", "Jungle", "Grove", "Prairie", "Cold",
-	"Crystal", "Mushroom", "Fiery", "Gray"
+	"Bamboo", "Jungle", "Grass", "Prairie", "Cold",
+	"Swamp", "Fungus", "Savanna"
 }
 
 for n = 1, #dirts do
@@ -253,11 +264,12 @@ if not minetest.get_modpath("bakedclay") then
 
 end
 
--- Quicksand (old style, sinking inside shows black instead of yellow effect,
--- works ok with noclip enabled though)
+-- Quicksand
 minetest.register_node("ethereal:quicksand", {
 	description = S("Quicksand"),
 	tiles = {"default_sand.png"},
+	drawtype = "glasslike",
+	paramtype = "light",
 	drop = "default:sand",
 	liquid_viscosity = 15,
 	liquidtype = "source",
@@ -273,31 +285,9 @@ minetest.register_node("ethereal:quicksand", {
 	sounds = default.node_sound_sand_defaults(),
 })
 
--- Quicksand (new style, sinking inside shows yellow effect with or without noclip,
--- but old quicksand is shown as black until block placed nearby to update light)
-minetest.register_node("ethereal:quicksand2", {
-	description = S("Quicksand"),
-	tiles = {"default_sand.png"},
-	drawtype = "glasslike",
-	paramtype = "light",
-	drop = "default:sand",
-	liquid_viscosity = 15,
-	liquidtype = "source",
-	liquid_alternative_flowing = "ethereal:quicksand2",
-	liquid_alternative_source = "ethereal:quicksand2",
-	liquid_renewable = false,
-	liquid_range = 0,
-	drowning = 1,
-	walkable = false,
-	climbable = false,
-	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
-	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
-	sounds = default.node_sound_sand_defaults(),
-})
-
 -- craft quicksand
 minetest.register_craft({
-	output = "ethereal:quicksand2",
+	output = "ethereal:quicksand",
 	recipe = {
 		{"group:sand", "group:sand", "group:sand"},
 		{"group:sand", "bucket:bucket_water", "group:sand"},
