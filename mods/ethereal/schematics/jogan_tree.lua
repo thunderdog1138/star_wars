@@ -2,7 +2,7 @@
 local _ = {name = "air", param1 = 0}
 local L = {name = "default:jogan_leaves", param1 = 255}
 local l = {name = "default:jogan_leaves", param1 = 200}
-local T = {name = "default:jogan_tree", param1 = 255}
+local T = {name = "default:jogan_trunk", param1 = 255}
 local j = {name = "default:jogan_fruit", param1 = 200}
 
 ethereal.jogan_tree = {
