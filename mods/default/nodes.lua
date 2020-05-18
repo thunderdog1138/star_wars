@@ -2254,64 +2254,21 @@ minetest.register_node("default:cloud", {
 -- register trees for leafdecay
 --
 
-if minetest.get_mapgen_setting("mg_name") == "v6" then
-	default.register_leafdecay({
-		trunks = {"default:tree"},
-		leaves = {"default:joganfruit", "default:leaves"},
-		radius = 2,
-	})
 
-	default.register_leafdecay({
-		trunks = {"default:jungletree"},
-		leaves = {"default:jungleleaves"},
-		radius = 3,
-	})
-else
-	default.register_leafdecay({
-		trunks = {"default:tree"},
-		leaves = {"default:joganfruit", "default:leaves"},
-		radius = 3,
-	})
+--default.register_leafdecay({
+--	trunks = {"default:jogan_tree"},
+--	leaves = {"default:joganfruit", "default:jogan_leaves"},
+--	radius = 3,
+--})
 
-	default.register_leafdecay({
-		trunks = {"default:jungletree"},
-		leaves = {"default:jungleleaves"},
-		radius = 2,
-	})
-end
+--default.register_leafdecay({
+--	trunks = {"default:pine_tree"},
+--	leaves = {"default:pine_needles"},
+--	radius = 3,
+--})
 
-default.register_leafdecay({
-	trunks = {"default:pine_tree"},
-	leaves = {"default:pine_needles"},
-	radius = 3,
-})
-
-default.register_leafdecay({
-	trunks = {"default:acacia_tree"},
-	leaves = {"default:acacia_leaves"},
-	radius = 2,
-})
-
-default.register_leafdecay({
-	trunks = {"default:aspen_tree"},
-	leaves = {"default:aspen_leaves"},
-	radius = 3,
-})
-
-default.register_leafdecay({
-	trunks = {"default:bush_stem"},
-	leaves = {"default:bush_leaves"},
-	radius = 1,
-})
-
-default.register_leafdecay({
-	trunks = {"default:acacia_bush_stem"},
-	leaves = {"default:acacia_bush_leaves"},
-	radius = 1,
-})
-
-default.register_leafdecay({
-	trunks = {"default:pine_bush_stem"},
-	leaves = {"default:pine_bush_needles"},
-	radius = 1,
-})
+--default.register_leafdecay({
+--	trunks = {"default:bush_stem"},
+--	leaves = {"default:bush_leaves"},
+--	radius = 1,
+--})
