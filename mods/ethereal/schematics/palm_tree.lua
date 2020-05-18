@@ -4,7 +4,7 @@ local L = {name = "default:palm_leaves", param = 255}
 local l = {name = "default:palm_leaves", param = 191}
 local T = {name = "default:palm_trunk", param = 255}
 local t = {name = "default:palm_trunk", param = 191}
-local C = {name = "default:coconut", param = 127}
+local C = {name = "ethereal:coconut", param = 127}
 
 ethereal.palm_tree = {
 
