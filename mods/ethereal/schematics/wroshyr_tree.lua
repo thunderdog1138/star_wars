@@ -1,7 +1,7 @@
 
 local _ = {name = "air", prob = 0}
-local T = {name = "ethereal:wroshyr_trunk", prob = 255}
-local L = {name = "ethereal:wroshyr_leaves", prob = 255}
+local T = {name = "default:wroshyr_trunk", prob = 255}
+local L = {name = "default:wroshyr_leaves", prob = 255}
 
 ethereal.wroshyr_tree = {
 
