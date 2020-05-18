@@ -11,46 +11,6 @@ minetest.override_item("default:dirt", {
 	}
 })
 
-minetest.override_item("ethereal:grass_dirt", {
-	soil = {
-		base = "ethereal:grass_dirt",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("ethereal:savanna_dirt", {
-	soil = {
-		base = "ethereal:savanna_dirt",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("ethereal:jungle_dirt", {
-	soil = {
-		base = "ethereal:jungle_dirt",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("ethereal:cold_dirt", {
-	soil = {
-		base = "ethereal:cold_dirt",
-		dry = "farming:soil",
-		wet = "farming:soil_wet"
-	}
-})
-
-minetest.override_item("ethereal:dry_dirt", {
-	soil = {
-		base = "ethereal:dry_dirt",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
-	}
-})
-
 minetest.register_node("farming:soil", {
 	description = S("Soil"),
 	tiles = {"default_dirt.png^farming_soil.png", "default_dirt.png"},
