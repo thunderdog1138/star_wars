@@ -1,8 +1,8 @@
 
 local _ = {name = "air", prob = 0}
-local M = {name = "ethereal:mushroom", prob = 255}
-local T = {name = "ethereal:mushroom_trunk", prob = 255}
-local P = {name = "ethereal:mushroom_pore", prob = 255}
+local M = {name = "default:mushroom_cap", prob = 255}
+local T = {name = "default:mushroom_trunk", prob = 255}
+local P = {name = "default:mushroom_pore", prob = 255}
 
 ethereal.mushroomone = {
 
