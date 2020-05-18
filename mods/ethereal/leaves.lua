@@ -443,7 +443,7 @@ if minetest.registered_nodes["default:dirt_with_rainforest_litter"] then
 default.register_leafdecay({
 	trunks = {"default:tree"},
 	leaves = {
-		"default:apple", "default:leaves", "ethereal:orange",
+		"default:joganfruit", "default:leaves", "ethereal:orange",
 		"ethereal:orange_leaves", "ethereal:vine"},
 	radius = 3
 })
