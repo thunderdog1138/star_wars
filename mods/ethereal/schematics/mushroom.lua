@@ -1,10 +1,10 @@
 
 local _ = {name = "air", prob = 0}
-local M = {name = "ethereal:mushroom", prob = 255}
+local M = {name = "ethereal:mushroom_cap", prob = 255}
 local T = {name = "ethereal:mushroom_trunk", prob = 255}
 local P = {name = "ethereal:mushroom_pore", prob = 255}
 
-ethereal.mushroomone = {
+ethereal.mushroom = {
 
 	size = {x = 8, y = 11, z = 8},
 
