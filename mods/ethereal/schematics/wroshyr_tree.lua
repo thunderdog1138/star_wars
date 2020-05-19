@@ -3,7 +3,7 @@ local _ = {name = "air", prob = 0}
 local T = {name = "ethereal:wroshyr_trunk", prob = 255}
 local L = {name = "ethereal:wroshyr_leaves", prob = 255}
 
-ethereal.redwood_tree = {
+ethereal.wroshyr_tree = {
 
 	size = {x = 15, y = 33, z = 15},
 
