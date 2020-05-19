@@ -1,7 +1,7 @@
 
 local _ = {name = "air", prob = 0}
-local T = {name = "default:tree", prob = 255}
-local L = {name = "default:leaves", prob = 255}
+local T = {name = "ethereal:gnarltree_trunk", prob = 255}
+local L = {name = "ethereal:gnarltree_leaves", prob = 255}
 local u = {name = "ethereal:vine", prob = 255, param2 = 2}
 local U = {name = "ethereal:vine", prob = 255, param2 = 3}
 local W = {name = "ethereal:vine", prob = 255, param2 = 4}
