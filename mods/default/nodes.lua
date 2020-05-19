@@ -763,12 +763,12 @@ minetest.register_node("default:large_cactus_seedling", {
 	end,
 })
 
-minetest.register_node("default:papyrus", {
-	description = S("Papyrus"),
+minetest.register_node("default:reeds", {
+	description = S("Reeds"),
 	drawtype = "plantlike",
-	tiles = {"default_papyrus.png"},
-	inventory_image = "default_papyrus.png",
-	wield_image = "default_papyrus.png",
+	tiles = {"reeds.png"},
+	inventory_image = "reeds.png",
+	wield_image = "reeds.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
