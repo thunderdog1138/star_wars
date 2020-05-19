@@ -231,16 +231,16 @@ minetest.register_craft({
 })
 
 -- hedge block
-minetest.register_node("ethereal:bush", {
-	description = S("Bush"),
-	tiles = {"ethereal_bush.png"},
+minetest.register_node("ethereal:bamboo_bush", {
+	description = S("Bamboo Bush"),
+	tiles = {"bamboo_bush.png"},
 	walkable = true,
 	groups = {snappy = 3, flammable = 2},
 	sounds = default.node_sound_leaves_defaults(),
 })
 
 minetest.register_craft({
-	output = "ethereal:bush",
+	output = "ethereal:bamboo_bush",
 	recipe = {
 		{"group:leaves", "group:leaves", "group:leaves"},
 		{"group:leaves", "ethereal:bamboo_leaves", "group:leaves"},
@@ -250,7 +250,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "ethereal:bush",
+	recipe = "ethereal:bamboo_bush",
 	burntime = 1,
 })
 
