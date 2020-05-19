@@ -771,7 +771,7 @@ minetest.register_node("default:reeds", {
 	wield_image = "reeds.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	walkable = false,
+	walkable = true,
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
