@@ -7,7 +7,7 @@ local U = {name = "ethereal:vine", prob = 255, param2 = 3}
 local W = {name = "ethereal:vine", prob = 255, param2 = 4}
 local w = {name = "ethereal:vine", prob = 255, param2 = 5}
 
-ethereal.vinetree = {
+ethereal.gnarltree = {
 
 	size = {x = 7, y = 7, z = 7},
 
