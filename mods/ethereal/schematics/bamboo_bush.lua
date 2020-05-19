@@ -1,9 +1,9 @@
 
 local _ = {name = "air", param1 = 0}
-local B = {name = "ethereal:bush", param1 = 255}
-local b = {name = "ethereal:bush", param1 = 100}
+local B = {name = "ethereal:bamboo_bush", param1 = 255}
+local b = {name = "ethereal:bamboo_bush", param1 = 100}
 
-ethereal.bush = {
+ethereal.bamboo_bush = {
 
 	size = {x = 5, y = 3, z = 5},
 
