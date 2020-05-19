@@ -1,9 +1,9 @@
 
 local _ = {name = "air", prob = 0}
-local L = {name = "ethereal:pineleaves", prob = 255}
-local T = {name = "default:pinetree", prob = 255}
+local L = {name = "ethereal:pine_leaves", prob = 255}
+local T = {name = "ethereal:pine_trunk", prob = 255}
 
-ethereal.pinetree = {
+ethereal.pine_tree = {
 
 	size = {x = 7, y = 8, z = 7},
 
