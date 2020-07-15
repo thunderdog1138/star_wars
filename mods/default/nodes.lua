@@ -558,7 +558,7 @@ minetest.register_node("default:stone_with_coal", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:coalblock", {
+minetest.register_node("default:coal_block", {
 	description = S("Coal Block"),
 	tiles = {"default_coal_block.png"},
 	is_ground_content = false,
@@ -567,15 +567,15 @@ minetest.register_node("default:coalblock", {
 })
 
 
-minetest.register_node("default:stone_with_iron", {
-	description = S("Iron Ore"),
-	tiles = {"default_stone.png^default_mineral_iron.png"},
+minetest.register_node("default:stone_with_zersium", {
+	description = S("Zersium Ore"),
+	tiles = {"default_stone.png^default_mineral_zersium.png"},
 	groups = {cracky = 2},
-	drop = "default:iron_lump",
+	drop = "default:zersium_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:durasteelblock", {
+minetest.register_node("default:durasteel_block", {
 	description = S("Durasteel Block"),
 	tiles = {"default_durasteel_block.png"},
 	is_ground_content = false,
@@ -592,7 +592,7 @@ minetest.register_node("default:stone_with_copper", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:copperblock", {
+minetest.register_node("default:copper_block", {
 	description = S("Copper Block"),
 	tiles = {"default_copper_block.png"},
 	is_ground_content = false,
@@ -609,7 +609,7 @@ minetest.register_node("default:stone_with_tin", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:tinblock", {
+minetest.register_node("default:tin_block", {
 	description = S("Tin Block"),
 	tiles = {"default_tin_block.png"},
 	is_ground_content = false,
@@ -618,30 +618,12 @@ minetest.register_node("default:tinblock", {
 })
 
 
-minetest.register_node("default:bronzeblock", {
+minetest.register_node("default:bronze_block", {
 	description = S("Bronze Block"),
 	tiles = {"default_bronze_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_metal_defaults(),
-})
-
-
-minetest.register_node("default:stone_with_mese", {
-	description = S("Mese Ore"),
-	tiles = {"default_stone.png^default_mineral_mese.png"},
-	groups = {cracky = 1},
-	drop = "default:mese_crystal",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:mese", {
-	description = S("Mese Block"),
-	tiles = {"default_mese_block.png"},
-	paramtype = "light",
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_stone_defaults(),
-	light_source = 3,
 })
 
 
@@ -653,7 +635,7 @@ minetest.register_node("default:stone_with_gold", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:goldblock", {
+minetest.register_node("default:gold_block", {
 	description = S("Gold Block"),
 	tiles = {"default_gold_block.png"},
 	is_ground_content = false,
@@ -670,7 +652,7 @@ minetest.register_node("default:stone_with_beskar", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:beskarblock", {
+minetest.register_node("default:beskar_block", {
 	description = S("Beskar Block"),
 	tiles = {"default_beskar_block.png"},
 	is_ground_content = false,
@@ -2204,40 +2186,6 @@ minetest.register_node("default:brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-
-minetest.register_node("default:meselamp", {
-	description = S("Mese Lamp"),
-	drawtype = "glasslike",
-	tiles = {"default_meselamp.png"},
-	paramtype = "light",
-	sunlight_propagates = true,
-	is_ground_content = false,
-	groups = {cracky = 3, oddly_breakable_by_hand = 3},
-	sounds = default.node_sound_glass_defaults(),
-	light_source = default.LIGHT_MAX,
-})
-
-minetest.register_node("default:mese_post_light", {
-	description = S("Mese Post Light"),
-	tiles = {"default_mese_post_light_top.png", "default_mese_post_light_top.png",
-		"default_mese_post_light_side_dark.png", "default_mese_post_light_side_dark.png",
-		"default_mese_post_light_side.png", "default_mese_post_light_side.png"},
-	wield_image = "default_mese_post_light_side.png",
-	drawtype = "nodebox",
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-2 / 16, -8 / 16, -2 / 16, 2 / 16, 8 / 16, 2 / 16},
-		},
-	},
-	paramtype = "light",
-	light_source = default.LIGHT_MAX,
-	sunlight_propagates = true,
-	is_ground_content = false,
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-})
-
 --
 -- Misc
 --
@@ -2249,26 +2197,3 @@ minetest.register_node("default:cloud", {
 	sounds = default.node_sound_defaults(),
 	groups = {not_in_creative_inventory = 1},
 })
-
---
--- register trees for leafdecay
---
-
-
---default.register_leafdecay({
---	trunks = {"default:jogan_tree"},
---	leaves = {"default:joganfruit", "default:jogan_leaves"},
---	radius = 3,
---})
-
---default.register_leafdecay({
---	trunks = {"default:pine_tree"},
---	leaves = {"default:pine_needles"},
---	radius = 3,
---})
-
---default.register_leafdecay({
---	trunks = {"default:bush_stem"},
---	leaves = {"default:bush_leaves"},
---	radius = 1,
---})
