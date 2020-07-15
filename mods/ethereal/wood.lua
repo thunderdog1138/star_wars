@@ -263,3 +263,24 @@ minetest.register_craft({
 	recipe = "ethereal:bamboo",
 	burntime = 1,
 })
+
+-- Bush stem
+minetest.register_node("ethereal:bush_stem", {
+	description = S("Bush Stem"),
+	drawtype = "plantlike",
+	tiles = {"bush_stem.png"},
+	inventory_image = "bush_stem.png",
+	wield_image = "bush_stem.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = true,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
+	},
+	groups = {choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},--tree = 1
+	sounds = default.node_sound_leaves_defaults(),
+	after_dig_node = function(pos, node, metadata, digger)
+		default.dig_up(pos, node, digger)
+	end,
+})
