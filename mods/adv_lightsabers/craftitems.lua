@@ -33,7 +33,7 @@ minetest.register_craftitem("adv_lightsabers:lightsaber_hilt_"..hilt, { -- Light
 minetest.register_craft({ -- Lightsaber Crafting Recipe
 	output = "adv_lightsabers:lightsaber_"..hilt.."_"..color.."_off",
 	recipe = {
-		{"adv_lightsabers:lightsaber_hilt_"..hilt,""}
+		{"adv_lightsabers:lightsaber_hilt_"..hilt,""},
 		{"adv_lightsabers:lightsaber_internals","adv_lightsabers:kyber_crystal_"..color}
 	}
 })
