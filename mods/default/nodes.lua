@@ -568,9 +568,9 @@ minetest.register_node("default:large_cactus_seedling", {
 minetest.register_node("default:reeds", {
 	description = S("Reeds"),
 	drawtype = "plantlike",
-	tiles = {"reeds.png"},
-	inventory_image = "reeds.png",
-	wield_image = "reeds.png",
+	tiles = {"default_reeds.png"},
+	inventory_image = "default_reeds.png",
+	wield_image = "default_reeds.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = true,
