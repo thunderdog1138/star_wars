@@ -33,9 +33,8 @@ minetest.register_craftitem("adv_lightsabers:lightsaber_hilt_"..hilt, { -- Light
 minetest.register_craft({ -- Lightsaber Crafting Recipe
 	output = "adv_lightsabers:lightsaber_"..hilt.."_"..color.."_off",
 	recipe = {
-		{"adv_lightsabers:lightsaber_hilt_"..hilt,"",""},
-		{"adv_lightsabers:lightsaber_internals","adv_lightsabers:kyber_crystal_"..color,""},
-		{"","",""}
+		{"adv_lightsabers:lightsaber_hilt_"..hilt,""}
+		{"adv_lightsabers:lightsaber_internals","adv_lightsabers:kyber_crystal_"..color}
 	}
 })
     end
@@ -44,35 +43,35 @@ end
 minetest.register_craft({ -- Lightsaber Internals Crafting Recipe
 	output = "adv_lightsabers:lightsaber_internals",
 	recipe = {
-		{"default:steelblock","default:steel_ingot","default:steel_ingot"},
-		{"default:diamondblock","default:mese_crystal","default:steel_ingot"},
-		{"default:steelblock","default:steel_ingot","default:steel_ingot"}
+		{"default:durasteel_block","default:durasteel_ingot","default:durasteel_ingot"},
+		{"default:diamondblock","default:mese_crystal","default:durasteel_ingot"},
+		{"default:durasteel_block","default:durasteel_ingot","default:durasteel_ingot"}
 	}
 })
 
 minetest.register_craft({ -- Lightsaber Hilt (Single) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_single",
 	recipe = {
-		{"default:steel_ingot"},
+		{"default:durasteel_ingot"},
 		{"default:diamond"},
-		{"default:steel_ingot"}
+		{"default:durasteel_ingot"}
 	}
 })
 
 minetest.register_craft({ -- Lightsaber Hilt (Cross) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_cross",
 	recipe = {
-		{"default:bronze_ingot","default:steel_ingot","default:bronze_ingot"},
+		{"default:bronze_ingot","default:durasteel_ingot","default:bronze_ingot"},
 		{"","default:diamond",""},
-		{"","default:steel_ingot",""}
+		{"","default:durasteel_ingot",""}
 	}
 })
 
 minetest.register_craft({ -- Lightsaber Hilt (Double) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_double",
 	recipe = {
-		{"default:steelblock"},
+		{"default:durasteel_block"},
 		{"default:diamond"},
-		{"default:steelblock"}
+		{"default:durasteel_block"}
 	}
 })
