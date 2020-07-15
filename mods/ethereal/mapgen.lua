@@ -263,22 +263,21 @@ minetest.register_decoration({
 	num_spawn_by = 8,
 })
 
-	-- large lava crater
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"ethereal:charred_dirt"},
-		sidelen = 80,
-		fill_ratio = 0.003,
-		biomes = {"volcanic"},
-		y_min = 1,
-		y_max = 100,
-		schematic = ethereal.volcanol,
-		flags = "place_center_x, place_center_z",
-		spawn_by = "ethereal:charred_dirt",
-		num_spawn_by = 8,
-		rotation = "random",
-	})
-end
+-- large lava crater
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"ethereal:charred_dirt"},
+	sidelen = 80,
+	fill_ratio = 0.003,
+	biomes = {"volcanic"},
+	y_min = 1,
+	y_max = 100,
+	schematic = ethereal.volcanol,
+	flags = "place_center_x, place_center_z",
+	spawn_by = "ethereal:charred_dirt",
+	num_spawn_by = 8,
+	rotation = "random",
+})
 
 -- pine tree
 add_schem({"ethereal:cold_dirt"}, 0.025, {"snowy"}, 10, 40, ethereal.pine_tree, 1)
