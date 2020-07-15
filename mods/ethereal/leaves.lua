@@ -195,24 +195,21 @@ minetest.register_node("ethereal:bamboo_leaves", {
 -- bush leaves
 minetest.register_node("ethereal:bush_leaves", {
 	description = S("Bush Leaves"),
-	drawtype = leaftype,
-	visual_scale = 1.4,
-	tiles = {"bush_leaves.png"},
-	inventory_image = "bush_leaves.png",
-	wield_image = "bush_leaves.png",
-	paramtype = "light",
-	walkable = ethereal.leafwalk,
+	drawtype = "allfaces_optional",
 	waving = 1,
-	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
+	tiles = {"ethereal_bush_leaves.png"},
+	paramtype = "light",
+	groups = {snappy = 3, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:bush_sapling"}, rarity = 10},
+			{items = {"ethereal:bush_sapling"}, rarity = 5},
 			{items = {"ethereal:bush_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
+
+	after_place_node = after_place_leaves,
 })
 
 -- mushroom cap
