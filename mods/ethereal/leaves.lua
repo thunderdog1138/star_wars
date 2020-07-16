@@ -278,7 +278,7 @@ minetest.register_craft({
 default.register_leafdecay({
 	trunks = {"ethereal:jogan_trunk"},
 	leaves = {
-		"default:joganfruit", "ethereal:jogan_leaves"},
+		"ethereal:jogan_fruit", "ethereal:jogan_leaves"},
 	radius = 3
 })
 
