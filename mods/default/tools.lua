@@ -26,7 +26,7 @@ minetest.register_item(":", {
 
 minetest.register_tool("default:pick_wood", {
 	description = S("Wooden Pickaxe"),
-	inventory_image = "default_tool_woodpick.png",
+	inventory_image = "default_tool_wood_pick.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
 		max_drop_level=0,
@@ -37,6 +37,21 @@ minetest.register_tool("default:pick_wood", {
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {pickaxe = 1, flammable = 2}
+})
+
+minetest.register_tool("default:pick_brylark", {
+	description = S("Brylark Wood Pickaxe"),
+	inventory_image = "default_tool_brylark_pick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			cracky = {times={[1]=4.50, [2]=1.80, [3]=0.90}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {pickaxe = 1}
 })
 
 minetest.register_tool("default:pick_stone", {
@@ -105,8 +120,8 @@ minetest.register_tool("default:pick_beskar", {
 
 minetest.register_tool("default:shovel_wood", {
 	description = S("Wooden Shovel"),
-	inventory_image = "default_tool_woodshovel.png",
-	wield_image = "default_tool_woodshovel.png^[transformR90",
+	inventory_image = "default_tool_wood_shovel.png",
+	wield_image = "default_tool_wood_shovel.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
 		max_drop_level=0,
@@ -117,6 +132,22 @@ minetest.register_tool("default:shovel_wood", {
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {shovel = 1, flammable = 2}
+})
+
+minetest.register_tool("default:shovel_brylark", {
+	description = S("Brylark Wood Shovel"),
+	inventory_image = "default_tool_brylark_shovel.png",
+	wield_image = "default_tool_brylark_shovel.png^[transformR90",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=1.65, [2]=1.05, [3]=0.45}, uses=25, maxlevel=2},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {shovel = 1}
 })
 
 minetest.register_tool("default:shovel_stone", {
@@ -189,7 +220,7 @@ minetest.register_tool("default:shovel_beskar", {
 
 minetest.register_tool("default:axe_wood", {
 	description = S("Wooden Axe"),
-	inventory_image = "default_tool_woodaxe.png",
+	inventory_image = "default_tool_wood_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -200,6 +231,21 @@ minetest.register_tool("default:axe_wood", {
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {axe = 1, flammable = 2}
+})
+
+minetest.register_tool("default:axe_brylark", {
+	description = S("Brylark Wood Axe"),
+	inventory_image = "default_tool_brylark_axe.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=0,
+		groupcaps={
+			choppy={times={[1]=2.75, [2]=1.70, [3]=1.15}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {axe = 1}
 })
 
 minetest.register_tool("default:axe_stone", {
@@ -268,7 +314,7 @@ minetest.register_tool("default:axe_beskar", {
 
 minetest.register_tool("default:sword_wood", {
 	description = S("Wooden Sword"),
-	inventory_image = "default_tool_woodsword.png",
+	inventory_image = "default_tool_wood_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 1,
 		max_drop_level=0,
@@ -279,6 +325,21 @@ minetest.register_tool("default:sword_wood", {
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {sword = 1, flammable = 2}
+})
+
+minetest.register_tool("default:sword_brylark", {
+	description = S("Brylark Wood Sword"),
+	inventory_image = "default_tool_brylark_sword.png",
+	tool_capabilities = {
+		full_punch_interval = 1,
+		max_drop_level=0,
+		groupcaps={
+			snappy={times={[1]=2.75, [2]=1.30, [3]=0.375}, uses=25, maxlevel=2},
+		},
+		damage_groups = {fleshy=6},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
 })
 
 minetest.register_tool("default:sword_stone", {
