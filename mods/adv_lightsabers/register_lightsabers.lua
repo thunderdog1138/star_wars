@@ -37,7 +37,7 @@ function adv_lightsabers.lightsaber_attack(player,pointed_thing,swing,clash)
     end
 end
 
-local colors={"green","blue","red"}
+local colors={"green","blue","yellow","purple","red","white","black"}
 
 local hilts={"single","cross","double"}
 
@@ -373,6 +373,30 @@ adv_lightsabers.register_lightsaber("single","green")
 
 adv_lightsabers.register_lightsaber("single","blue")
 
+-- Yellow Single Blade Lightsaber --
+
+adv_lightsabers.register_lightsaber("single","yellow")
+
+-- Purple Single Blade Lightsaber --
+
+adv_lightsabers.register_lightsaber("single","purple")
+
+-- White Single Blade Lightsaber --
+
+adv_lightsabers.register_lightsaber("single","white")
+
+-- Darksaber --
+
+adv_lightsabers.register_lightsaber("single","black")
+
+minetest.override_item("adv_lightsabers:lightsaber_single_black_off", {
+	description = "Darksaber"
+})
+
+minetest.override_item("adv_lightsabers:lightsaber_single_black_on", {
+	description = "Darksaber"
+})
+
 -- Red Crossguarded Lightsaber --
 
 adv_lightsabers.register_lightsaber("cross","red")
@@ -385,6 +409,18 @@ adv_lightsabers.register_lightsaber("cross","green")
 
 adv_lightsabers.register_lightsaber("cross","blue")
 
+-- Yellow Crossguarded Lightsaber --
+
+adv_lightsabers.register_lightsaber("cross","yellow")
+
+-- Purple Crossguarded Lightsaber --
+
+adv_lightsabers.register_lightsaber("cross","purple")
+
+-- White Crossguarded Lightsaber --
+
+adv_lightsabers.register_lightsaber("cross","white")
+
 -- Red Double Bladed Lightsaber --
 
 adv_lightsabers.register_lightsaber("double","red")
@@ -396,3 +432,15 @@ adv_lightsabers.register_lightsaber("double","green")
 -- Blue Double Bladed Lightsaber --
 
 adv_lightsabers.register_lightsaber("double","blue")
+
+-- Yellow Double Bladed Lightsaber --
+
+adv_lightsabers.register_lightsaber("double","yellow")
+
+-- Purple Double Bladed Lightsaber --
+
+adv_lightsabers.register_lightsaber("double","purple")
+
+-- White Double Bladed Lightsaber --
+
+adv_lightsabers.register_lightsaber("double","white")
