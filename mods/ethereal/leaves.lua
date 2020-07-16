@@ -31,6 +31,30 @@ minetest.register_node("ethereal:jogan_leaves", {
 	after_place_node = default.after_place_leaves,
 })
 
+--jogan fruit
+minetest.register_node("ethereal:jogan_fruit", {
+	description = S("Jogan Fruit"),
+	drawtype = "plantlike",
+	tiles = {"ethereal_jogan_fruit.png"},
+	inventory_image = "ethereal_jogan_fruit.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	is_ground_content = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
+	},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
+		leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
+	on_use = minetest.item_eat(2),
+	sounds = default.node_sound_leaves_defaults(),
+
+	after_place_node = function(pos, placer, itemstack)
+		minetest.set_node(pos, {name = "ethereal:jogan_fruit", param2 = 1})
+	end
+})
+
 -- pine needles
 minetest.register_node("ethereal:pine_needles", {
 	description = S("Pine Needles"),
