@@ -203,9 +203,7 @@ local function force_menu()
     for _,player in ipairs(minetest.get_connected_players()) do
         if minetest.check_player_privs(player:get_player_name(), {force_abilities = true}) then
             local playername = player:get_player_name()
-            if player:get_player_control().LMB == true
-            and player:get_player_control().up == true
-            and player:get_player_control().down == true then
+            if player:get_player_control() == F then
                 show_force_menu(player:get_player_name())
             end
             if force_ability[playername] == "force_jump" and ability_cooldown[playername] == 0.0 then
