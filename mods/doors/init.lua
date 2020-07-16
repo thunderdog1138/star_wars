@@ -801,39 +801,53 @@ function doors.register_fencegate(name, def)
 	})
 end
 
-doors.register_fencegate("doors:gate_wood", {
-	description = S("Apple Wood Fence Gate"),
-	texture = "default_wood.png",
-	material = "default:wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
-})
-
-doors.register_fencegate("doors:gate_acacia_wood", {
-	description = S("Acacia Wood Fence Gate"),
-	texture = "default_acacia_wood.png",
-	material = "default:acacia_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
-})
-
-doors.register_fencegate("doors:gate_junglewood", {
-	description = S("Jungle Wood Fence Gate"),
-	texture = "default_junglewood.png",
-	material = "default:junglewood",
+doors.register_fencegate("doors:gate_jogan_wood", {
+	description = S("Jogan Wood Fence Gate"),
+	texture = "ethereal_jogan_wood.png",
+	material = "ethereal:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_pine_wood", {
 	description = S("Pine Wood Fence Gate"),
-	texture = "default_pine_wood.png",
-	material = "default:pine_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+	texture = "ethereal_pine_wood.png",
+	material = "ethereal:pine_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
-doors.register_fencegate("doors:gate_aspen_wood", {
-	description = S("Aspen Wood Fence Gate"),
-	texture = "default_aspen_wood.png",
-	material = "default:aspen_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+doors.register_fencegate("doors:gate_palm_wood", {
+	description = S("Palm Wood Fence Gate"),
+	texture = "ethereal_palm_wood.png",
+	material = "ethereal:palm_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+})
+
+doors.register_fencegate("doors:gate_wroshyr_wood", {
+	description = S("Wroshyr Wood Fence Gate"),
+	texture = "ethereal_wroshyr_wood.png",
+	material = "ethereal:wroshyr_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+})
+
+doors.register_fencegate("doors:gate_brylark_wood", {
+	description = S("Brylark Wood Fence Gate"),
+	texture = "ethereal_brylark_wood.png",
+	material = "ethereal:brylark_wood",
+	groups = {cracky = 2}
+})
+
+doors.register_fencegate("doors:gate_uneti_wood", {
+	description = S("Uneti Wood Fence Gate"),
+	texture = "ethereal_uneti_wood.png",
+	material = "ethereal:uneti_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+})
+
+doors.register_fencegate("doors:gate_gnarltree_wood", {
+	description = S("Gnarltree Wood Fence Gate"),
+	texture = "ethereal_gnarltree_wood.png",
+	material = "ethereal:gnarltree_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 
@@ -853,30 +867,36 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "doors:gate_wood_closed",
+	recipe = "doors:gate_jogan_wood_closed",
 	burntime = 7,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "doors:gate_acacia_wood_closed",
-	burntime = 8,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_junglewood_closed",
-	burntime = 9,
-})
-
-minetest.register_craft({
-	type = "fuel",
 	recipe = "doors:gate_pine_wood_closed",
-	burntime = 6,
+	burntime = 7,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "doors:gate_aspen_wood_closed",
-	burntime = 5,
+	recipe = "doors:gate_palm_wood_closed",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "doors:gate_wroshyr_wood_closed",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "doors:gate_uneti_wood_closed",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "doors:gate_gnarltree_wood_closed",
+	burntime = 7,
 })
