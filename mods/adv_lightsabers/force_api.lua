@@ -292,7 +292,10 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     if fields.bleed then
         local playername = player:get_player_name()
         if player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_blue"
-        or player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_green" then
+        or player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_green"
+        or player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_yellow"
+        or player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_purple"
+        or player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_white" then
             minetest.chat_send_player(playername,"You have bled your Kyber Crystal")
             player:set_wielded_item("adv_lightsabers:kyber_crystal_red")
         end
