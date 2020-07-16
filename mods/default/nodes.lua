@@ -784,13 +784,13 @@ for i = 2, 3 do
 end
 
 
-minetest.register_node("default:marram_grass_1", {
-	description = S("Marram Grass"),
+minetest.register_node("default:saago_grass_1", {
+	description = S("Saago Grass"),
 	drawtype = "plantlike",
 	waving = 1,
-	tiles = {"default_marram_grass_1.png"},
-	inventory_image = "default_marram_grass_1.png",
-	wield_image = "default_marram_grass_1.png",
+	tiles = {"default_saago_grass_1.png"},
+	inventory_image = "default_saago_grass_1.png",
+	wield_image = "default_saago_grass_1.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -803,29 +803,29 @@ minetest.register_node("default:marram_grass_1", {
 	},
 
 	on_place = function(itemstack, placer, pointed_thing)
-		-- place a random marram grass node
-		local stack = ItemStack("default:marram_grass_" .. math.random(1, 3))
+		-- place a random saago grass node
+		local stack = ItemStack("default:saago_grass_" .. math.random(1, 3))
 		local ret = minetest.item_place(stack, placer, pointed_thing)
-		return ItemStack("default:marram_grass_1 " ..
+		return ItemStack("default:saago_grass_1 " ..
 			itemstack:get_count() - (1 - ret:get_count()))
 	end,
 })
 
 for i = 2, 3 do
-	minetest.register_node("default:marram_grass_" .. i, {
-		description = S("Marram Grass"),
+	minetest.register_node("default:saago_grass_" .. i, {
+		description = S("Saago Grass"),
 		drawtype = "plantlike",
 		waving = 1,
-		tiles = {"default_marram_grass_" .. i .. ".png"},
-		inventory_image = "default_marram_grass_" .. i .. ".png",
-		wield_image = "default_marram_grass_" .. i .. ".png",
+		tiles = {"default_saago_grass_" .. i .. ".png"},
+		inventory_image = "default_saago_grass_" .. i .. ".png",
+		wield_image = "default_saago_grass_" .. i .. ".png",
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
 		groups = {snappy = 3, flammable = 3, attached_node = 1,
 			not_in_creative_inventory=1},
-		drop = "default:marram_grass_1",
+		drop = "default:saago_grass_1",
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
@@ -833,299 +833,6 @@ for i = 2, 3 do
 		},
 	})
 end
-
-
-minetest.register_node("default:bush_stem", {
-	description = S("Bush Stem"),
-	drawtype = "plantlike",
-	visual_scale = 1.41,
-	tiles = {"default_bush_stem.png"},
-	inventory_image = "default_bush_stem.png",
-	wield_image = "default_bush_stem.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
-	},
-})
-
-minetest.register_node("default:bush_leaves", {
-	description = S("Bush Leaves"),
-	drawtype = "allfaces_optional",
-	waving = 1,
-	tiles = {"default_leaves_simple.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:bush_sapling"}, rarity = 5},
-			{items = {"default:bush_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-
-	after_place_node = after_place_leaves,
-})
-
-minetest.register_node("default:bush_sapling", {
-	description = S("Bush Sapling"),
-	drawtype = "plantlike",
-	tiles = {"default_bush_sapling.png"},
-	inventory_image = "default_bush_sapling.png",
-	wield_image = "default_bush_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	on_timer = grow_sapling,
-	selection_box = {
-		type = "fixed",
-		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
-	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_construct = function(pos)
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-
-	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"default:bush_sapling",
-			-- minp, maxp to be checked, relative to sapling pos
-			{x = -1, y = 0, z = -1},
-			{x = 1, y = 1, z = 1},
-			-- maximum interval of interior volume check
-			2)
-
-		return itemstack
-	end,
-})
-
-minetest.register_node("default:blueberry_bush_leaves_with_berries", {
-	description = S("Blueberry Bush Leaves with Berries"),
-	drawtype = "allfaces_optional",
-	waving = 1,
-	tiles = {"default_blueberry_bush_leaves.png^default_blueberry_overlay.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1, dig_immediate = 3},
-	drop = "default:blueberries",
-	sounds = default.node_sound_leaves_defaults(),
-	node_dig_prediction = "default:blueberry_bush_leaves",
-
-	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "default:blueberry_bush_leaves"})
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-})
-
-minetest.register_node("default:blueberry_bush_leaves", {
-	description = S("Blueberry Bush Leaves"),
-	drawtype = "allfaces_optional",
-	waving = 1,
-	tiles = {"default_blueberry_bush_leaves.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:blueberry_bush_sapling"}, rarity = 5},
-			{items = {"default:blueberry_bush_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_timer = function(pos, elapsed)
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "default:blueberry_bush_leaves_with_berries"})
-		end
-	end,
-
-	after_place_node = after_place_leaves,
-})
-
-minetest.register_node("default:blueberry_bush_sapling", {
-	description = S("Blueberry Bush Sapling"),
-	drawtype = "plantlike",
-	tiles = {"default_blueberry_bush_sapling.png"},
-	inventory_image = "default_blueberry_bush_sapling.png",
-	wield_image = "default_blueberry_bush_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	on_timer = grow_sapling,
-	selection_box = {
-		type = "fixed",
-		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
-	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_construct = function(pos)
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-
-	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"default:blueberry_bush_sapling",
-			-- minp, maxp to be checked, relative to sapling pos
-			{x = -1, y = 0, z = -1},
-			{x = 1, y = 1, z = 1},
-			-- maximum interval of interior volume check
-			2)
-
-		return itemstack
-	end,
-})
-
-minetest.register_node("default:acacia_bush_stem", {
-	description = S("Acacia Bush Stem"),
-	drawtype = "plantlike",
-	visual_scale = 1.41,
-	tiles = {"default_acacia_bush_stem.png"},
-	inventory_image = "default_acacia_bush_stem.png",
-	wield_image = "default_acacia_bush_stem.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
-	},
-})
-
-minetest.register_node("default:acacia_bush_leaves", {
-	description = S("Acacia Bush Leaves"),
-	drawtype = "allfaces_optional",
-	waving = 1,
-	tiles = {"default_acacia_leaves_simple.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:acacia_bush_sapling"}, rarity = 5},
-			{items = {"default:acacia_bush_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-
-	after_place_node = after_place_leaves,
-})
-
-minetest.register_node("default:acacia_bush_sapling", {
-	description = S("Acacia Bush Sapling"),
-	drawtype = "plantlike",
-	tiles = {"default_acacia_bush_sapling.png"},
-	inventory_image = "default_acacia_bush_sapling.png",
-	wield_image = "default_acacia_bush_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	on_timer = grow_sapling,
-	selection_box = {
-		type = "fixed",
-		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 2 / 16, 3 / 16}
-	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_construct = function(pos)
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-
-	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"default:acacia_bush_sapling",
-			-- minp, maxp to be checked, relative to sapling pos
-			{x = -1, y = 0, z = -1},
-			{x = 1, y = 1, z = 1},
-			-- maximum interval of interior volume check
-			2)
-
-		return itemstack
-	end,
-})
-
-minetest.register_node("default:pine_bush_stem", {
-	description = S("Pine Bush Stem"),
-	drawtype = "plantlike",
-	visual_scale = 1.41,
-	tiles = {"default_pine_bush_stem.png"},
-	inventory_image = "default_pine_bush_stem.png",
-	wield_image = "default_pine_bush_stem.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
-	},
-})
-
-minetest.register_node("default:pine_bush_needles", {
-	description = S("Pine Bush Needles"),
-	drawtype = "allfaces_optional",
-	waving = 1,
-	tiles = {"default_pine_needles.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:pine_bush_sapling"}, rarity = 5},
-			{items = {"default:pine_bush_needles"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-
-	after_place_node = after_place_leaves,
-})
-
-minetest.register_node("default:pine_bush_sapling", {
-	description = S("Pine Bush Sapling"),
-	drawtype = "plantlike",
-	tiles = {"default_pine_bush_sapling.png"},
-	inventory_image = "default_pine_bush_sapling.png",
-	wield_image = "default_pine_bush_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	on_timer = grow_sapling,
-	selection_box = {
-		type = "fixed",
-		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
-	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_construct = function(pos)
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-
-	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"default:pine_bush_sapling",
-			-- minp, maxp to be checked, relative to sapling pos
-			{x = -1, y = 0, z = -1},
-			{x = 1, y = 1, z = 1},
-			-- maximum interval of interior volume check
-			2)
-
-		return itemstack
-	end,
-})
 
 minetest.register_node("default:sand_with_kelp", {
 	description = S("Kelp"),
@@ -1197,165 +904,6 @@ minetest.register_node("default:sand_with_kelp", {
 		minetest.set_node(pos, {name = "default:sand"})
 	end
 })
-
-
---
--- Corals
---
-
-local function coral_on_place(itemstack, placer, pointed_thing)
-	if pointed_thing.type ~= "node" or not placer then
-		return itemstack
-	end
-
-	local player_name = placer:get_player_name()
-	local pos_under = pointed_thing.under
-	local pos_above = pointed_thing.above
-	local node_under = minetest.get_node(pos_under)
-	local def_under = minetest.registered_nodes[node_under.name]
-
-	if def_under and def_under.on_rightclick and not placer:get_player_control().sneak then
-		return def_under.on_rightclick(pos_under, node_under,
-				placer, itemstack, pointed_thing) or itemstack
-	end
-
-	if node_under.name ~= "default:coral_skeleton" or
-			minetest.get_node(pos_above).name ~= "default:water_source" then
-		return itemstack
-	end
-
-	if minetest.is_protected(pos_under, player_name) or
-			minetest.is_protected(pos_above, player_name) then
-		minetest.log("action", player_name
-			.. " tried to place " .. itemstack:get_name()
-			.. " at protected position "
-			.. minetest.pos_to_string(pos_under))
-		minetest.record_protection_violation(pos_under, player_name)
-		return itemstack
-	end
-
-	node_under.name = itemstack:get_name()
-	minetest.set_node(pos_under, node_under)
-	if not (creative and creative.is_enabled_for(player_name)) then
-		itemstack:take_item()
-	end
-
-	return itemstack
-end
-
-minetest.register_node("default:coral_green", {
-	description = S("Green Coral"),
-	drawtype = "plantlike_rooted",
-	waving = 1,
-	paramtype = "light",
-	tiles = {"default_coral_skeleton.png"},
-	special_tiles = {{name = "default_coral_green.png", tileable_vertical = true}},
-	inventory_image = "default_coral_green.png",
-	groups = {snappy = 3},
-	selection_box = {
-		type = "fixed",
-		fixed = {
-				{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-				{-4/16, 0.5, -4/16, 4/16, 1.5, 4/16},
-		},
-	},
-	node_dig_prediction = "default:coral_skeleton",
-	node_placement_prediction = "",
-	sounds = default.node_sound_stone_defaults({
-		dig = {name = "default_dig_snappy", gain = 0.2},
-		dug = {name = "default_grass_footstep", gain = 0.25},
-	}),
-
-	on_place = coral_on_place,
-
-	after_destruct  = function(pos, oldnode)
-		minetest.set_node(pos, {name = "default:coral_skeleton"})
-	end,
-})
-
-minetest.register_node("default:coral_pink", {
-	description = S("Pink Coral"),
-	drawtype = "plantlike_rooted",
-	waving = 1,
-	paramtype = "light",
-	tiles = {"default_coral_skeleton.png"},
-	special_tiles = {{name = "default_coral_pink.png", tileable_vertical = true}},
-	inventory_image = "default_coral_pink.png",
-	groups = {snappy = 3},
-	selection_box = {
-		type = "fixed",
-		fixed = {
-				{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-				{-4/16, 0.5, -4/16, 4/16, 1.5, 4/16},
-		},
-	},
-	node_dig_prediction = "default:coral_skeleton",
-	node_placement_prediction = "",
-	sounds = default.node_sound_stone_defaults({
-		dig = {name = "default_dig_snappy", gain = 0.2},
-		dug = {name = "default_grass_footstep", gain = 0.25},
-	}),
-
-	on_place = coral_on_place,
-
-	after_destruct  = function(pos, oldnode)
-		minetest.set_node(pos, {name = "default:coral_skeleton"})
-	end,
-})
-
-minetest.register_node("default:coral_cyan", {
-	description = S("Cyan Coral"),
-	drawtype = "plantlike_rooted",
-	waving = 1,
-	paramtype = "light",
-	tiles = {"default_coral_skeleton.png"},
-	special_tiles = {{name = "default_coral_cyan.png", tileable_vertical = true}},
-	inventory_image = "default_coral_cyan.png",
-	groups = {snappy = 3},
-	selection_box = {
-		type = "fixed",
-		fixed = {
-				{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-				{-4/16, 0.5, -4/16, 4/16, 1.5, 4/16},
-		},
-	},
-	node_dig_prediction = "default:coral_skeleton",
-	node_placement_prediction = "",
-	sounds = default.node_sound_stone_defaults({
-		dig = {name = "default_dig_snappy", gain = 0.2},
-		dug = {name = "default_grass_footstep", gain = 0.25},
-	}),
-
-	on_place = coral_on_place,
-
-	after_destruct  = function(pos, oldnode)
-		minetest.set_node(pos, {name = "default:coral_skeleton"})
-	end,
-})
-
-minetest.register_node("default:coral_brown", {
-	description = S("Brown Coral"),
-	tiles = {"default_coral_brown.png"},
-	groups = {cracky = 3},
-	drop = "default:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:coral_orange", {
-	description = S("Orange Coral"),
-	tiles = {"default_coral_orange.png"},
-	groups = {cracky = 3},
-	drop = "default:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:coral_skeleton", {
-	description = S("Coral Skeleton"),
-	tiles = {"default_coral_skeleton.png"},
-	groups = {cracky = 3},
-	sounds = default.node_sound_stone_defaults(),
-})
-
 
 --
 -- Liquids
@@ -1851,38 +1399,14 @@ minetest.register_node("default:ladder_durasteel", {
 	sounds = default.node_sound_metal_defaults(),
 })
 
-default.register_fence("default:fence_wood", {
+default.register_fence("default:fence_jogan_wood", {
 	description = S("Jogan Wood Fence"),
-	texture = "default_fence_wood.png",
-	inventory_image = "default_fence_overlay.png^default_wood.png^" ..
+	texture = "default_fence_jogan_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_jogan_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_overlay.png^default_wood.png^" ..
+	wield_image = "default_fence_overlay.png^ethereal_jogan_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("default:fence_acacia_wood", {
-	description = S("Acacia Wood Fence"),
-	texture = "default_fence_acacia_wood.png",
-	inventory_image = "default_fence_overlay.png^default_acacia_wood.png^" ..
-				"default_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_overlay.png^default_acacia_wood.png^" ..
-				"default_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:acacia_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("default:fence_junglewood", {
-	description = S("Jungle Wood Fence"),
-	texture = "default_fence_junglewood.png",
-	inventory_image = "default_fence_overlay.png^default_junglewood.png^" ..
-				"default_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_overlay.png^default_junglewood.png^" ..
-				"default_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:junglewood",
+	material = "ethereal:jogan_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
@@ -1890,59 +1414,83 @@ default.register_fence("default:fence_junglewood", {
 default.register_fence("default:fence_pine_wood", {
 	description = S("Pine Wood Fence"),
 	texture = "default_fence_pine_wood.png",
-	inventory_image = "default_fence_overlay.png^default_pine_wood.png^" ..
+	inventory_image = "default_fence_overlay.png^ethereal_pine_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_overlay.png^default_pine_wood.png^" ..
+	wield_image = "default_fence_overlay.png^ethereal_pine_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:pine_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+	material = "ethereal:pine_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence("default:fence_aspen_wood", {
-	description = S("Aspen Wood Fence"),
-	texture = "default_fence_aspen_wood.png",
-	inventory_image = "default_fence_overlay.png^default_aspen_wood.png^" ..
+default.register_fence("default:fence_palm_wood", {
+	description = S("Palm Wood Fence"),
+	texture = "default_fence_palm_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_palm_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_overlay.png^default_aspen_wood.png^" ..
+	wield_image = "default_fence_overlay.png^ethereal_palm_wood.png^" ..
 				"default_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:aspen_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+	material = "ethereal:palm_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence_rail("default:fence_rail_wood", {
+default.register_fence("default:fence_wroshyr_wood", {
+	description = S("Wroshyr Wood Fence"),
+	texture = "default_fence_wroshyr_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_wroshyr_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_overlay.png^ethereal_wroshyr_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:wroshyr_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence("default:fence_brylark_wood", {
+	description = S("Brylark Wood Fence"),
+	texture = "default_fence_brylark_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_brylark_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_overlay.png^ethereal_brylark_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:brylark_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence("default:fence_uneti_wood", {
+	description = S("Uneti Wood Fence"),
+	texture = "default_fence_uneti_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_uneti_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_overlay.png^ethereal_uneti_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:uneti_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence("default:fence_gnarltree_wood", {
+	description = S("Gnarltree Wood Fence"),
+	texture = "default_fence_gnarltree_wood.png",
+	inventory_image = "default_fence_overlay.png^ethereal_gnarltree_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_overlay.png^ethereal_gnarltree_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:gnarltree_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("default:fence_rail_jogan_wood", {
 	description = S("Jogan Wood Fence Rail"),
-	texture = "default_fence_rail_wood.png",
-	inventory_image = "default_fence_rail_overlay.png^default_wood.png^" ..
+	texture = "default_fence_rail_jogan_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_jogan_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_rail_overlay.png^default_wood.png^" ..
+	wield_image = "default_fence_rail_overlay.png^ethereal_jogan_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	material = "default:wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence_rail("default:fence_rail_acacia_wood", {
-	description = S("Acacia Wood Fence Rail"),
-	texture = "default_fence_rail_acacia_wood.png",
-	inventory_image = "default_fence_rail_overlay.png^default_acacia_wood.png^" ..
-				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_rail_overlay.png^default_acacia_wood.png^" ..
-				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	material = "default:acacia_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence_rail("default:fence_rail_junglewood", {
-	description = S("Jungle Wood Fence Rail"),
-	texture = "default_fence_rail_junglewood.png",
-	inventory_image = "default_fence_rail_overlay.png^default_junglewood.png^" ..
-				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_rail_overlay.png^default_junglewood.png^" ..
-				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	material = "default:junglewood",
+	material = "ethereal:jogan_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
 })
@@ -1950,24 +1498,72 @@ default.register_fence_rail("default:fence_rail_junglewood", {
 default.register_fence_rail("default:fence_rail_pine_wood", {
 	description = S("Pine Wood Fence Rail"),
 	texture = "default_fence_rail_pine_wood.png",
-	inventory_image = "default_fence_rail_overlay.png^default_pine_wood.png^" ..
+	inventory_image = "default_fence_rail_overlay.png^ethereal_pine_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_rail_overlay.png^default_pine_wood.png^" ..
+	wield_image = "default_fence_rail_overlay.png^ethereal_pine_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	material = "default:pine_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+	material = "ethereal:pine_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
 })
 
-default.register_fence_rail("default:fence_rail_aspen_wood", {
-	description = S("Aspen Wood Fence Rail"),
-	texture = "default_fence_rail_aspen_wood.png",
-	inventory_image = "default_fence_rail_overlay.png^default_aspen_wood.png^" ..
+default.register_fence_rail("default:fence_rail_palm_wood", {
+	description = S("Palm Wood Fence Rail"),
+	texture = "default_fence_rail_palm_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_palm_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "default_fence_rail_overlay.png^default_aspen_wood.png^" ..
+	wield_image = "default_fence_rail_overlay.png^ethereal_palm_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
-	material = "default:aspen_wood",
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 2},
+	material = "ethereal:palm_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("default:fence_rail_wroshyr_wood", {
+	description = S("Wroshyr Wood Fence Rail"),
+	texture = "default_fence_rail_wroshyr_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_wroshyr_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_rail_overlay.png^ethereal_wroshyr_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:wroshyr_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("default:fence_rail_brylark_wood", {
+	description = S("Brylark Wood Fence Rail"),
+	texture = "default_fence_rail_brylark_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_brylark_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_rail_overlay.png^ethereal_brylark_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:brylark_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("default:fence_rail_uneti_wood", {
+	description = S("Uneti Wood Fence Rail"),
+	texture = "default_fence_rail_uneti_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_uneti_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_rail_overlay.png^ethereal_uneti_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:uneti_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("default:fence_rail_gnarltree_wood", {
+	description = S("Gnarltree Wood Fence Rail"),
+	texture = "default_fence_rail_gnarltree_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^ethereal_gnarltree_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_rail_overlay.png^ethereal_gnarltree_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	material = "ethereal:gnarltree_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
 })
 
