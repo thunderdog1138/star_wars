@@ -121,8 +121,7 @@ minetest.register_node("ethereal:brylark_trunk", {
 		"ethereal_brylark_trunk_top.png",
 		"ethereal_brylark_trunk.png"
 	},
-	-- TODO: make brylark trunk as strong as metal
-	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	groups = {cracky = 2},
 	sounds = default.node_sound_wood_defaults(),
 	paramtype2 = "facedir",
 	on_place = minetest.rotate_node,
@@ -133,8 +132,7 @@ minetest.register_node("ethereal:brylark_wood", {
 	description = S("Brylark Wood"),
 	tiles = {"brylark_wood.png"},
 	is_ground_content = false,
-	-- TODO: make brylark trunk as strong as metal
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_wood_defaults(),
 })
 
