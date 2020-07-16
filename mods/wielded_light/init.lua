@@ -132,6 +132,36 @@ setmetatable(item, {__index = builtin_item})
 minetest.register_entity(":__builtin:item", item)
 
 
----TEST
---wielded_light.register_item_light('default:dirt', 14)
+--lightsabers
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_green_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_blue_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_red_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_yellow_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_purple_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_white_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_single_black_on', 5)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_green_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_blue_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_red_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_yellow_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_purple_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_double_white_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_green_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_blue_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_red_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_yellow_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_purple_on', 14)
+wielded_light.register_item_light('adv_lightsabers:lightsaber_cross_white_on', 14)
 
+--kyber crystals
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal', 4)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_green', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_blue', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_red', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_yellow', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_purple', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_white', 7)
+wielded_light.register_item_light('adv_lightsabers:kyber_crystal_black', 2)
+
+--torch
+wielded_light.register_item_light('default:torch', 12)
