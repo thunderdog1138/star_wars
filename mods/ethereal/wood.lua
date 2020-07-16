@@ -286,3 +286,9 @@ minetest.register_craft({
 		{"ethereal:bush_stem"},
 	}
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "ethereal:bush_stem",
+	burntime = 7,
+})
