@@ -279,3 +279,10 @@ minetest.register_node("ethereal:bush_stem", {
 		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
 	},
 })
+
+minetest.register_craft({
+	output = "default:stick 4",
+	recipe = {
+		{"ethereal:bush_stem"},
+	}
+})
