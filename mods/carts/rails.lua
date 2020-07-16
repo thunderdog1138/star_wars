@@ -39,7 +39,7 @@ minetest.register_craft({
 	output = "carts:powerrail 18",
 	recipe = {
 		{"default:durasteel_ingot", "group:wood", "default:durasteel_ingot"},
-		{"default:durasteel_ingot", "default:mese_crystal", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "default:gold_ingot", "default:durasteel_ingot"},
 		{"default:durasteel_ingot", "group:wood", "default:durasteel_ingot"},
 	}
 })
