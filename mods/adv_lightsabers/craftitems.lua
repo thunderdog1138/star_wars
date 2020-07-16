@@ -3,7 +3,7 @@
 --------------------------
 ------- Ver 1.1 ----------
 
-local colors={"green","blue","red"}
+local colors={"green","blue","yellow","purple","red","white","black"}
 
 local hilts={"single","cross","double"}
 
@@ -39,6 +39,10 @@ minetest.register_craft({ -- Lightsaber Crafting Recipe
 })
     end
 end
+
+minetest.override_item("adv_lightsabers:kyber_crystal_black", {
+	description = "Dark Kyber Crystal"
+})
 
 minetest.register_craft({ -- Lightsaber Internals Crafting Recipe
 	output = "adv_lightsabers:lightsaber_internals",
