@@ -253,11 +253,30 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
         local playername = player:get_player_name()
         if player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal" then
             minetest.chat_send_player(playername,"You have bonded with your Kyber Crystal")
-            if math.random(1,2) == 1 then
+            if math.random(1,10) == 1 then
                 player:set_wielded_item("adv_lightsabers:kyber_crystal_blue")
-            else
+            elseif math.random(1,10) == 2 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_blue")
+            elseif math.random(1,10) == 3 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_blue")
+            elseif math.random(1,10) == 4 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_blue")
+            elseif math.random(1,10) == 5 then
                 player:set_wielded_item("adv_lightsabers:kyber_crystal_green")
+            elseif math.random(1,10) == 6 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_green")
+            elseif math.random(1,10) == 7 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_green")
+            elseif math.random(1,10) == 8 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_green")
+            elseif math.random(1,10) == 9 then
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_yellow")
+            else
+                player:set_wielded_item("adv_lightsabers:kyber_crystal_purple")
             end
+        elseif player:get_wielded_item():get_name() == "adv_lightsabers:kyber_crystal_red" then
+            minetest.chat_send_player(playername,"You have healed your Kyber Crystal")
+            player:set_wielded_item("adv_lightsabers:kyber_crystal_white")
         end
     end
     if fields.dash then
