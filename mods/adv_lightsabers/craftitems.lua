@@ -44,7 +44,7 @@ minetest.register_craft({ -- Lightsaber Internals Crafting Recipe
 	output = "adv_lightsabers:lightsaber_internals",
 	recipe = {
 		{"default:durasteel_block","default:durasteel_ingot","default:durasteel_ingot"},
-		{"default:diamondblock","default:mese_crystal","default:durasteel_ingot"},
+		{"default:bronze_block","default:gold_ingot","default:durasteel_ingot"},
 		{"default:durasteel_block","default:durasteel_ingot","default:durasteel_ingot"}
 	}
 })
@@ -53,7 +53,7 @@ minetest.register_craft({ -- Lightsaber Hilt (Single) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_single",
 	recipe = {
 		{"default:durasteel_ingot"},
-		{"default:diamond"},
+		{"default:bronze_ingot"},
 		{"default:durasteel_ingot"}
 	}
 })
@@ -62,7 +62,7 @@ minetest.register_craft({ -- Lightsaber Hilt (Cross) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_cross",
 	recipe = {
 		{"default:bronze_ingot","default:durasteel_ingot","default:bronze_ingot"},
-		{"","default:diamond",""},
+		{"","default:bronze_ingot",""},
 		{"","default:durasteel_ingot",""}
 	}
 })
@@ -71,7 +71,7 @@ minetest.register_craft({ -- Lightsaber Hilt (Double) Crafting Recipe
 	output = "adv_lightsabers:lightsaber_hilt_double",
 	recipe = {
 		{"default:durasteel_block"},
-		{"default:diamond"},
+		{"default:bronze_block"},
 		{"default:durasteel_block"}
 	}
 })
