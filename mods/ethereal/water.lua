@@ -2,7 +2,7 @@
 local S = ethereal.intllib
 
 -- Ice Brick
-minetest.register_node("ethereal:icebrick", {
+minetest.register_node("ethereal:ice_brick", {
 	description = S("Ice Brick"),
 	tiles = {"brick_ice.png"},
 	paramtype = "light",
@@ -13,7 +13,7 @@ minetest.register_node("ethereal:icebrick", {
 })
 
 minetest.register_craft({
-	output = "ethereal:icebrick 4",
+	output = "ethereal:ice_brick 4",
 	recipe = {
 		{"default:ice", "default:ice"},
 		{"default:ice", "default:ice"},
@@ -21,7 +21,7 @@ minetest.register_craft({
 })
 
 -- Snow Brick
-minetest.register_node("ethereal:snowbrick", {
+minetest.register_node("ethereal:snow_brick", {
 	description = S("Snow Brick"),
 	tiles = {"brick_snow.png"},
 	paramtype = "light",
@@ -36,10 +36,10 @@ minetest.register_node("ethereal:snowbrick", {
 })
 
 minetest.register_craft({
-	output = "ethereal:snowbrick 4",
+	output = "ethereal:snow_brick 4",
 	recipe = {
-		{"default:snowblock", "default:snowblock"},
-		{"default:snowblock", "default:snowblock"},
+		{"default:snow_block", "default:snow_block"},
+		{"default:snow_block", "default:snow_block"},
 	}
 })
 
@@ -47,8 +47,8 @@ minetest.register_craft({
 minetest.register_abm({
 	label = "Ethereal freeze water",
 	nodenames = {
-		"ethereal:crystal_spike", "default:snow", "default:snowblock",
-		"ethereal:snowbrick"
+		"default:snow", "default:snow_block",
+		"ethereal:snow_brick"
 	},
 	neighbors = {"default:water_source", "default:river_water_source"},
 	interval = 15,
@@ -69,8 +69,8 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "Ethereal melt snow/ice",
 	nodenames = {
-		"default:ice", "default:snowblock", "default:snow",
-		"default:dirt_with_snow", "ethereal:snowbrick", "ethereal:icebrick"
+		"default:ice", "default:snow_block", "default:snow",
+		"default:snow_dirt", "ethereal:snow_brick", "ethereal:ice_brick"
 	},
 	neighbors = {
 		"fire:basic_fire", "default:lava_source", "default:lava_flowing",
@@ -89,16 +89,16 @@ minetest.register_abm({
 		end
 
 		if node.name == "default:ice"
-		or node.name == "default:snowblock"
-		or node.name == "ethereal:icebrick"
-		or node.name == "ethereal:snowbrick" then
+		or node.name == "default:snow_block"
+		or node.name == "ethereal:ice_brick"
+		or node.name == "ethereal:snow_brick" then
 			minetest.swap_node(pos, {name = water_node.."_source"})
 
 		elseif node.name == "default:snow" then
 			minetest.swap_node(pos, {name = water_node.."_flowing"})
 
-		elseif node.name == "default:dirt_with_snow" then
-			minetest.swap_node(pos, {name = "default:dirt_with_grass"})
+		elseif node.name == "default:snow_dirt" then
+			minetest.swap_node(pos, {name = "ethereal:grass_dirt"})
 		end
 
 		ethereal.check_falling(pos)
@@ -109,8 +109,7 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "Ethereal wet dry dirt",
 	nodenames = {
-		"ethereal:dry_dirt", "default:dirt_with_dry_grass",
-		"default:dry_dirt", "default:dry_dirt_with_dry_grass"
+		"ethereal:dry_dirt", "default:savanna_dirt"
 	},
 	neighbors = {"group:water"},
 	interval = 15,
@@ -118,11 +117,10 @@ minetest.register_abm({
 	catch_up = false,
 	action = function(pos, node)
 
-		if node.name == "ethereal:dry_dirt"
-		or node.name == "default:dry_dirt" then
+		if node.name == "ethereal:dry_dirt" then
 			minetest.swap_node(pos, {name = "default:dirt"})
 		else
-			minetest.swap_node(pos, {name = "default:dirt_with_dry_grass"})
+			minetest.swap_node(pos, {name = "default:savanna_dirt"})
 		end
 	end,
 })
