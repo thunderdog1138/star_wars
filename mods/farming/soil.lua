@@ -10,39 +10,39 @@ minetest.override_item("default:dirt", {
 	}
 })
 
-minetest.override_item("default:dirt_with_grass", {
+minetest.override_item("ethereal:grass_dirt", {
 	soil = {
-		base = "default:dirt_with_grass",
+		base = "ethereal:grass_dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("default:dirt_with_dry_grass", {
+minetest.override_item("ethereal:savanna_dirt", {
 	soil = {
-		base = "default:dirt_with_dry_grass",
+		base = "ethereal:savanna_dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("default:dirt_with_rainforest_litter", {
+minetest.override_item("ethereal:jungle_dirt", {
 	soil = {
-		base = "default:dirt_with_rainforest_litter",
+		base = "ethereal:jungle_dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("default:dirt_with_coniferous_litter", {
+minetest.override_item("ethereal:cold_dirt", {
 	soil = {
-		base = "default:dirt_with_coniferous_litter",
+		base = "ethereal:cold_dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("default:dry_dirt", {
+minetest.override_item("ethereal:dry_dirt", {
 	soil = {
 		base = "default:dry_dirt",
 		dry = "farming:dry_soil",
@@ -50,11 +50,35 @@ minetest.override_item("default:dry_dirt", {
 	}
 })
 
-minetest.override_item("default:dry_dirt_with_dry_grass", {
+minetest.override_item("ethereal:bamboo_dirt", {
 	soil = {
-		base = "default:dry_dirt_with_dry_grass",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
+		base = "ethereal:bamboo_dirt",
+		dry = "farming:soil",
+		wet = "farming:soil_wet"
+	}
+})
+
+minetest.override_item("ethereal:prairie_dirt", {
+	soil = {
+		base = "ethereal:prairie_dirt",
+		dry = "farming:soil",
+		wet = "farming:soil_wet"
+	}
+})
+
+minetest.override_item("ethereal:swamp_dirt", {
+	soil = {
+		base = "ethereal:swamp_dirt",
+		dry = "farming:soil",
+		wet = "farming:soil_wet"
+	}
+})
+
+minetest.override_item("ethereal:fungus_dirt", {
+	soil = {
+		base = "ethereal:fungus_dirt",
+		dry = "farming:soil",
+		wet = "farming:soil_wet"
 	}
 })
 
@@ -89,7 +113,7 @@ minetest.register_node("farming:soil_wet", {
 })
 
 -- savanna soil
-if minetest.registered_nodes["default:dry_dirt"] then
+if minetest.registered_nodes["ethereal:dry_dirt"] then
 minetest.register_node("farming:dry_soil", {
 	description = S("Savanna Soil"),
 	tiles = {
