@@ -226,14 +226,14 @@ stairsplus:register_all("ethereal", "sakura_wood", "ethereal:sakura_wood", {
 -- Default Stairs
 else
 
-stairs.register_stair_and_slab("icebrick", "ethereal:icebrick",
+stairs.register_stair_and_slab("ice_brick", "ethereal:ice_brick",
 	{cracky = 3, puts_out_fire = 1, cools_lava = 1},
 	{"brick_ice.png"},
 	S("Ice Brick Stair"),
 	S("Ice Brick Slab"),
 	default.node_sound_glass_defaults())
 		
-stairs.register_stair_and_slab("snowbrick", "ethereal:snowbrick",
+stairs.register_stair_and_slab("snow_brick", "ethereal:snow_brick",
 	{crumbly = 3, puts_out_fire = 1, cools_lava = 1},
 	{"brick_snow.png"},
 	S("Snow Brick Stair"),
