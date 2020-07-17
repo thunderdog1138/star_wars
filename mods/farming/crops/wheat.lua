@@ -1,12 +1,12 @@
 
 local S = farming.intllib
 
--- wheat seeds
-minetest.register_node("farming:seed_wheat", {
-	description = S("Wheat Seed"),
-	tiles = {"farming_wheat_seed.png"},
-	inventory_image = "farming_wheat_seed.png",
-	wield_image = "farming_wheat_seed.png",
+-- lothal wheat seeds
+minetest.register_node("farming:seed_lothal_wheat", {
+	description = S("Lothal Wheat Seed"),
+	tiles = {"farming_lothal_wheat_seed.png"},
+	inventory_image = "farming_lothal_wheat_seed.png",
+	wield_image = "farming_lothal_wheat_seed.png",
 	drawtype = "signlike",
 	groups = {seed = 1, snappy = 3, attached_node = 1, flammable = 4},
 	paramtype = "light",
@@ -15,14 +15,14 @@ minetest.register_node("farming:seed_wheat", {
 	sunlight_propagates = true,
 	selection_box = farming.select,
 	on_place = function(itemstack, placer, pointed_thing)
-		return farming.place_seed(itemstack, placer, pointed_thing, "farming:wheat_1")
+		return farming.place_seed(itemstack, placer, pointed_thing, "farming:lothal_wheat_1")
 	end
 })
 
 -- harvested wheat
-minetest.register_craftitem("farming:wheat", {
-	description = S("Wheat"),
-	inventory_image = "farming_wheat.png",
+minetest.register_craftitem("farming:lothal_wheat", {
+	description = S("Lothal Wheat"),
+	inventory_image = "farming_lothal_wheat.png",
 	groups = {food_wheat = 1, flammable = 4}
 })
 
@@ -38,14 +38,14 @@ minetest.register_node("farming:straw", {
 minetest.register_craft({
 	output = "farming:straw 3",
 	recipe = {
-		{"farming:wheat", "farming:wheat", "farming:wheat"},
-		{"farming:wheat", "farming:wheat", "farming:wheat"},
-		{"farming:wheat", "farming:wheat", "farming:wheat"}
+		{"farming:lothal_wheat", "farming:lothal_wheat", "farming:lothal_wheat"},
+		{"farming:lothal_wheat", "farming:lothal_wheat", "farming:lothal_wheat"},
+		{"farming:lothal_wheat", "farming:lothal_wheat", "farming:lothal_wheat"}
 	}
 })
 
 minetest.register_craft({
-	output = "farming:wheat 3",
+	output = "farming:lothal_wheat 3",
 	recipe = {
 		{"farming:straw"}
 	}
@@ -83,8 +83,8 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:flour",
 	recipe = {
-		"farming:wheat", "farming:wheat", "farming:wheat",
-		"farming:wheat", "farming:mortar_pestle"
+		"farming:lothal_wheat", "farming:lothal_wheat", "farming:lothal_wheat",
+		"farming:lothal_wheat", "farming:mortar_pestle"
 	},
 	replacements = {{"group:food_mortar_pestle", "farming:mortar_pestle"}}
 })
@@ -151,10 +151,10 @@ minetest.register_craft({
 	}
 })
 
--- wheat definition
+-- lothal wheat definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_wheat_1.png"},
+	tiles = {"farming_lothal_wheat_1.png"},
 	paramtype = "light",
 	paramtype2 = "meshoptions",
 	place_param2 = 3,
@@ -171,69 +171,69 @@ local def = {
 }
 
 -- stage 1
-minetest.register_node("farming:wheat_1", table.copy(def))
+minetest.register_node("farming:lothal_wheat_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_wheat_2.png"}
-minetest.register_node("farming:wheat_2", table.copy(def))
+def.tiles = {"farming_lothal_wheat_2.png"}
+minetest.register_node("farming:lothal_wheat_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_wheat_3.png"}
-minetest.register_node("farming:wheat_3", table.copy(def))
+def.tiles = {"farming_lothal_wheat_3.png"}
+minetest.register_node("farming:lothal_wheat_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_wheat_4.png"}
-minetest.register_node("farming:wheat_4", table.copy(def))
+def.tiles = {"farming_lothal_wheat_4.png"}
+minetest.register_node("farming:lothal_wheat_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_wheat_5.png"}
+def.tiles = {"farming_lothal_wheat_5.png"}
 def.drop = {
 	items = {
-		{items = {"farming:wheat"}, rarity = 2},
-		{items = {"farming:seed_wheat"}, rarity = 2}
+		{items = {"farming:lothal_wheat"}, rarity = 2},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 2}
 	}
 }
-minetest.register_node("farming:wheat_5", table.copy(def))
+minetest.register_node("farming:lothal_wheat_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_wheat_6.png"}
+def.tiles = {"farming_lothal_wheat_6.png"}
 def.drop = {
 	items = {
-		{items = {"farming:wheat"}, rarity = 2},
-		{items = {"farming:seed_wheat"}, rarity = 1}
+		{items = {"farming:lothal_wheat"}, rarity = 2},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 1}
 	}
 }
-minetest.register_node("farming:wheat_6", table.copy(def))
+minetest.register_node("farming:lothal_wheat_6", table.copy(def))
 
 -- stage 7
-def.tiles = {"farming_wheat_7.png"}
+def.tiles = {"farming_lothal_wheat_7.png"}
 def.drop = {
 	items = {
-		{items = {"farming:wheat"}, rarity = 1},
-		{items = {"farming:wheat"}, rarity = 3},
-		{items = {"farming:seed_wheat"}, rarity = 1},
-		{items = {"farming:seed_wheat"}, rarity = 3}
+		{items = {"farming:lothal_wheat"}, rarity = 1},
+		{items = {"farming:lothal_wheat"}, rarity = 3},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 1},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 3}
 	}
 }
-minetest.register_node("farming:wheat_7", table.copy(def))
+minetest.register_node("farming:lothal_wheat_7", table.copy(def))
 
 -- stage 8 (final)
-def.tiles = {"farming_wheat_8.png"}
+def.tiles = {"farming_lothal_wheat_8.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
-		{items = {"farming:wheat"}, rarity = 1},
-		{items = {"farming:wheat"}, rarity = 3},
-		{items = {"farming:seed_wheat"}, rarity = 1},
-		{items = {"farming:seed_wheat"}, rarity = 3}
+		{items = {"farming:lothal_wheat"}, rarity = 1},
+		{items = {"farming:lothal_wheat"}, rarity = 3},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 1},
+		{items = {"farming:seed_lothal_wheat"}, rarity = 3}
 	}
 }
-minetest.register_node("farming:wheat_8", table.copy(def))
+minetest.register_node("farming:lothal_wheat_8", table.copy(def))
 
 -- add to registered_plants
-farming.registered_plants["farming:wheat"] = {
-	crop = "farming:wheat",
-	seed = "farming:seed_wheat",
+farming.registered_plants["farming:lothal_wheat"] = {
+	crop = "farming:lothal_wheat",
+	seed = "farming:seed_lothal_wheat",
 	minlight = 13,
 	maxlight = 15,
 	steps = 8
@@ -248,6 +248,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "farming:wheat",
+	recipe = "farming:lothal_wheat",
 	burntime = 1
 })
