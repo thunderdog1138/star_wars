@@ -165,3 +165,6 @@ wielded_light.register_item_light('adv_lightsabers:kyber_crystal_black', 2)
 
 --torch
 wielded_light.register_item_light('default:torch', 12)
+
+--candle
+wielded_light.register_item_light('ethereal:candle', 12)
