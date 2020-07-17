@@ -7,6 +7,11 @@ minetest.register_node("ethereal:dry_dirt", {
 	tiles = {"ethereal_dry_dirt.png"},
 	is_ground_content = ethereal.cavedirt,
 	groups = {crumbly = 3},
+	soil = {
+		base = "ethereal:dry_dirt",
+		dry = "farming:dry_soil",
+		wet = "farming:dry_soil_wet"
+	},
 	sounds = default.node_sound_dirt_defaults()
 })
 
