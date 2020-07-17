@@ -26,16 +26,16 @@ minetest.register_craft({
 	cooktime = 2,
 })
 
--- Sashimi (Thanks to Natalia Grosner for letting me use the sashimi image)
-minetest.register_craftitem("ethereal:sashimi", {
-	description = S("Sashimi"),
-	inventory_image = "sashimi.png",
-	wield_image = "sashimi.png",
+-- Sashi (Thanks to Natalia Grosner for letting me use the sashi image)
+minetest.register_craftitem("ethereal:sashi", {
+	description = S("Sashi"),
+	inventory_image = "sashi.png",
+	wield_image = "sashi.png",
 	on_use = minetest.item_eat(4),
 })
 
 minetest.register_craft({
-	output = "ethereal:sashimi 2",
+	output = "ethereal:sashi 2",
 	recipe = {
 		{"group:food_seaweed", "group:food_fish_raw", "group:food_seaweed"},
 	}
