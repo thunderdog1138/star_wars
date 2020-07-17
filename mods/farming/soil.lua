@@ -41,17 +41,16 @@ minetest.register_node("farming:soil_wet", {
 })
 
 -- savanna soil
-if minetest.registered_nodes["ethereal:dry_dirt"] then
 minetest.register_node("farming:dry_soil", {
 	description = S("Savanna Soil"),
 	tiles = {
 		"default_dry_dirt.png^farming_soil.png",
 		"default_dry_dirt.png"},
-	drop = "default:dry_dirt",
+	drop = "ethereal:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 2, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
 	soil = {
-		base = "default:dry_dirt",
+		base = "ethereal:dry_dirt",
 		dry = "farming:dry_soil",
 		wet = "farming:dry_soil_wet"
 	}
@@ -62,16 +61,15 @@ minetest.register_node("farming:dry_soil_wet", {
 	tiles = {
 		"default_dry_dirt.png^farming_soil_wet.png",
 		"default_dry_dirt.png^farming_soil_wet_side.png"},
-	drop = "default:dry_dirt",
+	drop = "ethereal:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 3, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
 	soil = {
-		base = "default:dry_dirt",
+		base = "ethereal:dry_dirt",
 		dry = "farming:dry_soil",
 		wet = "farming:dry_soil_wet"
 	}
 })
-end
 
 -- sand is not soil, change existing sand-soil to use dry soil
 minetest.register_alias("farming:desert_sand_soil", "farming:dry_soil")
