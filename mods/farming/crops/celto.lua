@@ -1,6 +1,6 @@
 local S = farming.intllib
 
--- calarantrum
+-- celto
 minetest.register_craftitem("farming:celto", {
 	description = S("Celto"),
 	inventory_image = "farming_celto.png",
@@ -11,7 +11,7 @@ minetest.register_craftitem("farming:celto", {
 	on_use = minetest.item_eat(1)
 })
 
--- calarantrum definition
+-- celto
 local def = {
 	drawtype = "plantlike",
 	tiles = {"farming_celto_1.png"},
