@@ -53,7 +53,7 @@ local function place_grapes(itemstack, placer, pointed_thing, plantname)
 			minetest.after(0.20,
 				farming.refill_plant,
 				placer,
-				"farming:grapes",
+				"farming:emerald_grapes",
 				placer:get_wield_index()
 			)
 		end
@@ -62,14 +62,14 @@ local function place_grapes(itemstack, placer, pointed_thing, plantname)
 	return itemstack
 end
 
--- grapes
-minetest.register_craftitem("farming:grapes", {
-	description = S("Grapes"),
-	inventory_image = "farming_grapes.png",
+-- emerald grapes
+minetest.register_craftitem("farming:emerald_grapes", {
+	description = S("Emerald Grapes"),
+	inventory_image = "farming_emerald_grapes.png",
 	on_use = minetest.item_eat(2),
 	groups = {seed = 2, food_grapes = 1, flammable = 3},
 	on_place = function(itemstack, placer, pointed_thing)
-		return place_grapes(itemstack, placer, pointed_thing, "farming:grapes_1")
+		return place_grapes(itemstack, placer, pointed_thing, "farming:emerald_grapes_1")
 	end
 })
 
@@ -77,7 +77,7 @@ minetest.register_craftitem("farming:grapes", {
 minetest.register_craft({
 	output = "dye:violet",
 	recipe = {
-		{"farming:grapes"}
+		{"farming:emerald_grapes"}
 	}
 })
 
@@ -167,10 +167,10 @@ minetest.register_craft({
 	burntime = 15
 })
 
--- grapes definition
+-- emerald grapes definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_grapes_1.png"},
+	tiles = {"farming_emerald_grapes_1.png"},
 	visual_scale = 1.9,
 	paramtype = "light",
 	walkable = false,
@@ -190,58 +190,58 @@ local def = {
 }
 
 -- stage 1
-minetest.register_node("farming:grapes_1", table.copy(def))
+minetest.register_node("farming:emerald_grapes_1", table.copy(def))
 
 -- stage2
-def.tiles = {"farming_grapes_2.png"}
-minetest.register_node("farming:grapes_2", table.copy(def))
+def.tiles = {"farming_emerald_grapes_2.png"}
+minetest.register_node("farming:emerald_grapes_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_grapes_3.png"}
-minetest.register_node("farming:grapes_3", table.copy(def))
+def.tiles = {"farming_emerald_grapes_3.png"}
+minetest.register_node("farming:emerald_grapes_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_grapes_4.png"}
-minetest.register_node("farming:grapes_4", table.copy(def))
+def.tiles = {"farming_emerald_grapes_4.png"}
+minetest.register_node("farming:emerald_grapes_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_grapes_5.png"}
-minetest.register_node("farming:grapes_5", table.copy(def))
+def.tiles = {"farming_emerald_grapes_5.png"}
+minetest.register_node("farming:emerald_grapes_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_grapes_6.png"}
-minetest.register_node("farming:grapes_6", table.copy(def))
+def.tiles = {"farming_emerald_grapes_6.png"}
+minetest.register_node("farming:emerald_grapes_6", table.copy(def))
 
 -- stage 7
-def.tiles = {"farming_grapes_7.png"}
-minetest.register_node("farming:grapes_7", table.copy(def))
+def.tiles = {"farming_emerald_grapes_7.png"}
+minetest.register_node("farming:emerald_grapes_7", table.copy(def))
 
 -- stage 8 (final)
-def.tiles = {"farming_grapes_8.png"}
+def.tiles = {"farming_emerald_grapes_8.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
 		{items = {"farming:trellis"}, rarity = 1},
-		{items = {"farming:grapes 3"}, rarity = 1},
-		{items = {"farming:grapes 1"}, rarity = 2},
-		{items = {"farming:grapes 1"}, rarity = 3}
+		{items = {"farming:emerald_grapes 3"}, rarity = 1},
+		{items = {"farming:emerald_grapes 1"}, rarity = 2},
+		{items = {"farming:emerald_grapes 1"}, rarity = 3}
 	}
 }
-minetest.register_node("farming:grapes_8", table.copy(def))
+minetest.register_node("farming:emerald_grapes_8", table.copy(def))
 
 -- add to registered_plants
-farming.registered_plants["farming:grapes"] = {
-	crop = "farming:grapes",
-	seed = "farming:grapes",
+farming.registered_plants["farming:emerald_grapes"] = {
+	crop = "farming:emerald_grapes",
+	seed = "farming:emerald_grapes",
 	minlight = 13,
 	maxlight = 15,
 	steps = 8
 }
 
--- wild grape vine (this is what you find on the map)
-minetest.register_node("farming:grapebush", {
+-- wild emerald grape vine (this is what you find on the map)
+minetest.register_node("farming:emerald_grape_bush", {
 	drawtype = "plantlike",
-	tiles = {"farming_grapebush.png"},
+	tiles = {"farming_emerald_grape_bush.png"},
 	paramtype = "light",
 	waving = 1,
 	walkable = false,
@@ -249,9 +249,9 @@ minetest.register_node("farming:grapebush", {
 	sunlight_propagates = true,
 	drop = {
 		items = {
-			{items = {"farming:grapes 1"}, rarity = 1},
-			{items = {"farming:grapes 1"}, rarity = 2},
-			{items = {"farming:grapes 1"}, rarity = 3}
+			{items = {"farming:emerald_grapes 1"}, rarity = 1},
+			{items = {"farming:emerald_grapes 1"}, rarity = 2},
+			{items = {"farming:emerald_grapes 1"}, rarity = 3}
 		}
 	},
 	selection_box = farming.select,
