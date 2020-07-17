@@ -601,13 +601,17 @@ end
 
 
 -- default settings
-farming.rishi_corn = 0.001
+farming.blumfruit = 0.001
 farming.calarantrum = 0.001
-farming.grapes = 0.001
-farming.roti = true
+farming.celonslay = 0.001
+farming.celto = 0.001
 farming.doll_gourd = 0.001
+farming.grapes = 0.001
 farming.groundapple = 0.001
 farming.grains = true
+farming.rishi_corn = 0.001
+farming.roti = true
+farming.taba = 0.001
 farming.rarety = 0.002
 
 
@@ -646,13 +650,17 @@ local function ddoo(file, check)
 end
 
 -- add additional crops and food (if enabled)
+ddoo("blumfruit.lua", farming.blumfruit)
 ddoo("calarantrum.lua", farming.calarantrum)
+ddoo("celonslay.lua", farming.celonslay)
+ddoo("celto.lua", farming.celto)
 ddoo("doll_gourd.lua", farming.doll_gourd)
 ddoo("grains.lua", farming.grains)
 ddoo("grapes.lua", farming.grapes)
 ddoo("groundapple.lua", farming.groundapple)
 ddoo("rishi_corn.lua", farming.rishi_corn)
 ddoo("roti.lua", farming.roti)
+ddoo("taba.lua", farming.taba)
 
 dofile(farming.path .. "/food.lua")
 dofile(farming.path .. "/mapgen.lua")
