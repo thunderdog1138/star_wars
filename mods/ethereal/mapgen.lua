@@ -227,7 +227,7 @@ end
 -- wroshyr tree
 add_schem({"ethereal:jungle_dirt"}, 0.0025, {"junglee"}, 1, 100, ethereal.wroshyr_tree, 1)
 
--- healing tree
+-- uneti tree
 add_schem({"default:snow_dirt"}, 0.01, {"alpine"}, 120, 140, ethereal.uneti_tree, 1)
 
 -- brylark tree
@@ -303,8 +303,11 @@ add_schem({"ethereal:bamboo_dirt"}, 0.025, {"bamboo"}, 1, 100, ethereal.bamboo_t
 -- bamboo_bush
 add_schem({"ethereal:bamboo_dirt"}, 0.08, {"bamboo"}, 1, 100, ethereal.bamboo_bush, 1)
 
--- vine tree
+-- gnarltree
 add_schem({"ethereal:swamp_dirt"}, 0.02, {"swamp"}, 1, 100, ethereal.gnarltree, 1)
+
+-- bush
+add_schem({"ethereal:grass_dirt"}, 0.08, {"grassy"}, 1, 100, ethereal.bush, 1)
 
 -- water pools in swamp areas
 minetest.register_decoration({
@@ -357,26 +360,6 @@ minetest.register_decoration({
 	place_offset_y = -1,
 	flags = "force_placement",
 })
-
--- bush
---minetest.register_decoration({
---	deco_type = "schematic",
---	place_on = {"default:dirt_with_grass", "default:dirt_with_snow"},
---	sidelen = 16,
---	noise_params = {
---		offset = -0.004,
---		scale = 0.01,
---		spread = {x = 100, y = 100, z = 100},
---		seed = 137,
---		octaves = 3,
---		persist = 0.7,
---	},
---	biomes = {"grassy", "grassytwo", "jumble"},
---	y_min = 1,
---	y_max = 31000,
---	schematic = dpath .. "bush.mts",
---	flags = "place_center_x, place_center_z",
---})
 
 --= simple decorations
 
