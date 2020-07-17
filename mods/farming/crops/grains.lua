@@ -1,20 +1,18 @@
 
 local S = farming.intllib
 
---= A nice addition from Ademant's grain mod :)
+-- Toz
 
--- Rye
-
-farming.register_plant("farming:rye", {
-	description = S("Rye seed"),
+farming.register_plant("farming:toz", {
+	description = S("Toz seed"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_rye_seed.png",
+	inventory_image = "farming_toz_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
 
-minetest.override_item("farming:rye", {
-	description = S("Rye"),
+minetest.override_item("farming:toz", {
+	description = S("toz"),
 	groups = {food_rye = 1, flammable = 4}
 })
 
@@ -22,7 +20,7 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:flour",
 	recipe = {
-		"farming:rye", "farming:rye", "farming:rye", "farming:rye",
+		"farming:toz", "farming:toz", "farming:toz", "farming:toz",
 		"farming:mortar_pestle"
 	},
 	replacements = {{"group:food_mortar_pestle", "farming:mortar_pestle"}}
@@ -30,16 +28,16 @@ minetest.register_craft({
 
 -- Oats
 
-farming.register_plant("farming:oat", {
-	description = S("Oat seed"),
+farming.register_plant("farming:shorn", {
+	description = S("Shorn seed"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_oat_seed.png",
+	inventory_image = "farming_shorn_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
 
-minetest.override_item("farming:oat", {
-	description = S("Oats"),
+minetest.override_item("farming:shorn", {
+	description = S("Shorn"),
 	groups = {food_oats = 1, flammable = 4}
 })
 
@@ -47,45 +45,45 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:flour",
 	recipe = {
-		"farming:oat", "farming:oat", "farming:oat", "farming:oat",
+		"farming:shorn", "farming:shorn", "farming:shorn", "farming:shorn",
 		"farming:mortar_pestle"
 	},
 	replacements = {{"group:food_mortar_pestle", "farming:mortar_pestle"}}
 })
 
--- Rice
+-- Ghoba Rice
 
-farming.register_plant("farming:rice", {
-	description = S("Rice grains"),
+farming.register_plant("farming:ghoba_rice", {
+	description = S("Ghoba Rice grains"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_rice_seed.png",
+	inventory_image = "farming_ghoba_rice_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
 
-minetest.override_item("farming:rice", {
-	description = S("Rice"),
+minetest.override_item("farming:ghoba_rice", {
+	description = S("Ghoba Rice"),
 	groups = {food_rice = 1, flammable = 4}
 })
 
-minetest.register_craftitem("farming:rice_bread", {
-	description = S("Rice Bread"),
-	inventory_image = "farming_rice_bread.png",
+minetest.register_craftitem("farming:ghoba_rice_bread", {
+	description = S("Ghoba Rice Bread"),
+	inventory_image = "farming_ghoba_rice_bread.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_rice_bread = 1, flammable = 2}
 })
 
-minetest.register_craftitem("farming:rice_flour", {
-	description = S("Rice Flour"),
-	inventory_image = "farming_rice_flour.png",
+minetest.register_craftitem("farming:ghoba_rice_flour", {
+	description = S("Ghoba Rice Flour"),
+	inventory_image = "farming_ghoba_rice_flour.png",
 	groups = {food_rice_flour = 1, flammable = 1}
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:rice_flour",
+	output = "farming:ghoba_rice_flour",
 	recipe = {
-		"farming:rice", "farming:rice", "farming:rice", "farming:rice",
+		"farming:ghoba_rice", "farming:ghoba_rice", "farming:ghoba_rice", "farming:ghoba_rice",
 		"farming:mortar_pestle"
 	},
 	replacements = {{"group:food_mortar_pestle", "farming:mortar_pestle"}}
@@ -94,8 +92,8 @@ minetest.register_craft({
 minetest.register_craft({
 	type = "cooking",
 	cooktime = 15,
-	output = "farming:rice_bread",
-	recipe = "farming:rice_flour"
+	output = "farming:ghoba_rice_bread",
+	recipe = "farming:ghoba_rice_flour"
 })
 
 -- Multigrain flour
@@ -110,8 +108,8 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:flour_multigrain",
 	recipe = {
-		"farming:wheat", "farming:barley", "farming:oat",
-		"farming:rye", "farming:mortar_pestle"
+		"farming:lothal_wheat", "farming:roti", "farming:shorn",
+		"farming:toz", "farming:mortar_pestle"
 	},
 	replacements = {{"group:food_mortar_pestle", "farming:mortar_pestle"}}
 })
@@ -136,7 +134,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "farming:rice_bread",
+	recipe = "farming:ghoba_rice_bread",
 	burntime = 1
 })
 
@@ -148,18 +146,18 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "farming:rye",
+	recipe = "farming:toz",
 	burntime = 1
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "farming:oat",
+	recipe = "farming:shorn",
 	burntime = 1
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "farming:rice",
+	recipe = "farming:ghoba_rice",
 	burntime = 1
 })
