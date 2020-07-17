@@ -6,7 +6,7 @@ minetest.register_node("ethereal:dry_dirt", {
 	description = S("Dried Dirt"),
 	tiles = {"ethereal_dry_dirt.png"},
 	is_ground_content = ethereal.cavedirt,
-	groups = {crumbly = 3},
+	groups = {crumbly = 3, soil = 1},
 	soil = {
 		base = "ethereal:dry_dirt",
 		dry = "farming:dry_soil",
