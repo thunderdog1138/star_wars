@@ -1,22 +1,6 @@
 
 local S = ethereal.intllib
 
--- Etherium Dust
-minetest.register_craftitem("ethereal:etherium_dust", {
-	description = S("Etherium Dust"),
-	inventory_image = "ethereal_etherium_dust.png",
-	wield_image = "ethereal_etherium_dust.png",
-})
-
--- Ethereium Ore
-minetest.register_node("ethereal:etherium_ore", {
-	description = S("Etherium Ore"),
-	tiles = {"default_desert_stone.png^ethereal_etherium_ore.png"},
-	groups = {cracky = 3},
-	drop = "ethereal:etherium_dust",
-	sounds = default.node_sound_stone_defaults(),
-})
-
 -- Bamboo Flooring
 minetest.register_node("ethereal:bamboo_floor", {
 	description = S("Bamboo Floor"),
@@ -254,22 +238,6 @@ minetest.register_craft({
 	}
 })
 
--- Glostone (A little bit of light decoration)
-minetest.register_node("ethereal:glostone", {
-	description = S("Glo Stone"),
-	tiles = {"glostone.png"},
-	groups = {cracky = 3},
-	light_source = 13,
-	drop = "ethereal:glostone",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "ethereal:glostone",
-	recipe = {"default:torch", "default:stone", "dye:yellow"}
-})
-
 -- Charcoal Lump
 minetest.register_craftitem("ethereal:charcoal_lump", {
 	description = S("Lump of Charcoal"),
@@ -302,52 +270,5 @@ minetest.register_craft({
 	recipe = {
 		{"ethereal:charcoal_lump"},
 		{"default:stick"},
-	}
-})
-
--- Staff of Light (by Xanthin)
-minetest.register_tool("ethereal:light_staff", {
-	description = S("Staff of Light"),
-	inventory_image = "light_staff.png",
-	wield_image = "light_staff.png",
-	sound = {breaks = "default_tool_breaks"},
-	stack_max = 1,
-	on_use = function(itemstack, user, pointed_thing)
-
-		if pointed_thing.type ~= "node" then
-			return
-		end
-
-		local pos = pointed_thing.under
-		local pname = user:get_player_name()
-
-		if minetest.is_protected(pos, pname) then
-			minetest.record_protection_violation(pos, pname)
-			return
-		end
-
-		local node = minetest.get_node(pos).name
-
-		if node == "default:stone"
-		or node == "default:desert_stone" then
-
-			minetest.swap_node(pos, {name = "ethereal:glostone"})
-
-			if not ethereal.check_creative(user:get_player_name()) then
-				itemstack:add_wear(65535 / 149) -- 150 uses
-			end
-
-			return itemstack
-		end
-
-	end,
-})
-
-minetest.register_craft({
-	output = "ethereal:light_staff",
-	recipe = {
-		{"ethereal:illumishroom", "default:mese_crystal", "ethereal:illumishroom"},
-		{"ethereal:illumishroom2", "default:steel_ingot", "ethereal:illumishroom2"},
-		{"ethereal:illumishroom3", "default:steel_ingot", "ethereal:illumishroom3"}
 	}
 })
