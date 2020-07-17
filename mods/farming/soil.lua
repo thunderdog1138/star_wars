@@ -10,14 +10,6 @@ minetest.override_item("default:dirt", {
 	}
 })
 
-minetest.override_item("ethereal:dry_dirt", {
-	soil = {
-		base = "default:dry_dirt",
-		dry = "farming:dry_soil",
-		wet = "farming:dry_soil_wet"
-	}
-})
-
 -- normal soil
 minetest.register_node("farming:soil", {
 	description = S("Soil"),
