@@ -86,7 +86,6 @@ end
 dofile(path .. "/plantlife.lua")
 dofile(path .. "/mushroom.lua")
 dofile(path .. "/onion.lua")
-dofile(path .. "/crystal.lua")
 dofile(path .. "/water.lua")
 dofile(path .. "/dirt.lua")
 dofile(path .. "/food.lua")
