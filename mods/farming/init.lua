@@ -601,31 +601,12 @@ end
 
 
 -- default settings
-farming.carrot = 0.001
-farming.potato = 0.001
-farming.tomato = 0.001
-farming.cucumber = 0.001
-farming.corn = 0.001
-farming.coffee = 0.001
-farming.melon = 0.001
-farming.pumpkin = 0.001
-farming.cocoa = true
-farming.raspberry = 0.001
-farming.blueberry = 0.001
-farming.rhubarb = 0.001
-farming.beans = 0.001
+farming.rishi_corn = 0.001
+farming.calarantrum = 0.001
 farming.grapes = 0.001
-farming.barley = true
-farming.chili = 0.003
-farming.hemp = 0.003
-farming.garlic = 0.001
-farming.onion = 0.001
-farming.pepper = 0.002
-farming.pineapple = 0.001
-farming.peas = 0.001
-farming.beetroot = 0.001
-farming.mint = 0.005
-farming.cabbage = 0.001
+farming.roti = true
+farming.doll_gourd = 0.001
+farming.groundapple = 0.001
 farming.grains = true
 farming.rarety = 0.002
 
@@ -653,8 +634,7 @@ dofile(farming.path.."/grass.lua")
 dofile(farming.path.."/utensils.lua")
 
 -- default crops
-dofile(farming.path.."/crops/wheat.lua")
-dofile(farming.path.."/crops/cotton.lua")
+dofile(farming.path.."/crops/lothal_wheat.lua")
 
 
 -- helper function
@@ -666,32 +646,13 @@ local function ddoo(file, check)
 end
 
 -- add additional crops and food (if enabled)
-ddoo("carrot.lua", farming.carrot)
-ddoo("potato.lua", farming.potato)
-ddoo("tomato.lua", farming.tomato)
-ddoo("cucumber.lua", farming.cucumber)
-ddoo("corn.lua", farming.corn)
-ddoo("coffee.lua", farming.coffee)
-ddoo("melon.lua", farming.melon)
-ddoo("pumpkin.lua", farming.pumpkin)
-ddoo("cocoa.lua", farming.cocoa)
-ddoo("raspberry.lua", farming.raspberry)
-ddoo("blueberry.lua", farming.blueberry)
-ddoo("rhubarb.lua", farming.rhubarb)
-ddoo("beans.lua", farming.beans)
+ddoo("calarantrum.lua", farming.calarantrum)
+ddoo("doll_gourd.lua", farming.doll_gourd)
+ddoo("grains.lua", farming.grains)
 ddoo("grapes.lua", farming.grapes)
-ddoo("barley.lua", farming.barley)
-ddoo("hemp.lua", farming.hemp)
-ddoo("garlic.lua", farming.garlic)
-ddoo("onion.lua", farming.onion)
-ddoo("pepper.lua", farming.pepper)
-ddoo("pineapple.lua", farming.pineapple)
-ddoo("peas.lua", farming.peas)
-ddoo("beetroot.lua", farming.beetroot)
-ddoo("chili.lua", farming.chili)
-ddoo("ryeoatrice.lua", farming.grains)
-ddoo("mint.lua", farming.mint)
-ddoo("cabbage.lua", farming.cabbage)
+ddoo("groundapple.lua", farming.groundapple)
+ddoo("rishi_corn.lua", farming.rishi_corn)
+ddoo("roti.lua", farming.roti)
 
 dofile(farming.path .. "/food.lua")
 dofile(farming.path .. "/mapgen.lua")
