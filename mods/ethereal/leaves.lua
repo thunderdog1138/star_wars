@@ -23,7 +23,7 @@ minetest.register_node("ethereal:jogan_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:jogan_sapling"}, rarity = 15},
+			{items = {"ethereal:jogan_sapling"}, rarity = 15},
 			{items = {"ethereal:jogan_leaves"}}
 		}
 	},
@@ -70,7 +70,7 @@ minetest.register_node("ethereal:pine_needles", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:pine_sapling"}, rarity = 20},
+			{items = {"ethereal:pine_sapling"}, rarity = 20},
 			{items = {"ethereal:pine_needles"}}
 		}
 	},
@@ -93,7 +93,7 @@ minetest.register_node("ethereal:palm_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:palm_sapling"}, rarity = 10},
+			{items = {"ethereal:palm_sapling"}, rarity = 10},
 			{items = {"ethereal:palm_leaves"}}
 		}
 	},
@@ -116,7 +116,7 @@ minetest.register_node("ethereal:wroshyr_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:wroshyr_sapling"}, rarity = 50},
+			{items = {"ethereal:wroshyr_sapling"}, rarity = 50},
 			{items = {"ethereal:wroshyr_leaves"}}
 		}
 	},
@@ -139,7 +139,7 @@ minetest.register_node("ethereal:gnarltree_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:gnarltree_sapling"}, rarity = 20},
+			{items = {"ethereal:gnarltree_sapling"}, rarity = 20},
 			{items = {"ethereal:gnarltree_leaves"}}
 		}
 	},
@@ -162,7 +162,7 @@ minetest.register_node("ethereal:uneti_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:uneti_sapling"}, rarity = 50},
+			{items = {"ethereal:uneti_sapling"}, rarity = 50},
 			{items = {"ethereal:uneti_leaves"}}
 		}
 	},
@@ -185,7 +185,7 @@ minetest.register_node("ethereal:brylark_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:brylark_sapling"}, rarity = 50},
+			{items = {"ethereal:brylark_sapling"}, rarity = 50},
 			{items = {"ethereal:brylark_leaves"}}
 		}
 	},
@@ -208,7 +208,7 @@ minetest.register_node("ethereal:bamboo_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:bamboo_sprout"}, rarity = 10},
+			{items = {"ethereal:bamboo_sprout"}, rarity = 10},
 			{items = {"ethereal:bamboo_leaves"}}
 		}
 	},
@@ -244,7 +244,7 @@ minetest.register_node("ethereal:mushroom_cap", {
 	drop = {
 		max_items = 1,
 		items = {
---			{items = {"ethereal:mushroom_sapling"}, rarity = 20},
+			{items = {"ethereal:mushroom_sapling"}, rarity = 20},
 			{items = {"ethereal:mushroom_cap"}}
 		}
 	},
