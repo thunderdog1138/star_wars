@@ -226,13 +226,6 @@ stairsplus:register_all("ethereal", "sakura_wood", "ethereal:sakura_wood", {
 -- Default Stairs
 else
 
-stairs.register_stair_and_slab("crystal_block", "ethereal:crystal_block",
-	{cracky = 1, level = 2, puts_out_fire = 1, cools_lava = 1},
-	{"crystal_block.png"},
-	S("Crystal Block Stair"),
-	S("Crystal Block Slab"),
-	default.node_sound_glass_defaults())
-
 stairs.register_stair_and_slab("icebrick", "ethereal:icebrick",
 	{cracky = 3, puts_out_fire = 1, cools_lava = 1},
 	{"brick_ice.png"},
@@ -258,6 +251,13 @@ stairs.register_stair_and_slab("dry_dirt", "ethereal:dry_dirt",
 	S("Dried Dirt Slab"),
 	default.node_sound_dirt_defaults())
 
+stairs.register_stair_and_slab("charred_dirt", "ethereal:charred_dirt",
+	{crumbly = 3},
+	{"ethereal_charred_dirt.png"},
+	S("Charred Dirt Stair"),
+	S("Charred Dirt Slab"),
+	default.node_sound_dirt_defaults())
+
 stairs.register_stair_and_slab("mushroom_trunk", "ethereal:mushroom_trunk",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	{"mushroom_trunk.png"},
@@ -265,74 +265,60 @@ stairs.register_stair_and_slab("mushroom_trunk", "ethereal:mushroom_trunk",
 	S("Mushroom Trunk Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("mushroom", "ethereal:mushroom",
+stairs.register_stair_and_slab("mushroom_cap", "ethereal:mushroom_cap",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	{"mushroom_block.png"},
-	S("Mushroom Top Stair"),
-	S("Mushroom Top Slab"),
+	{"mushroom_cap.png"},
+	S("Mushroom Cap Stair"),
+	S("Mushroom Cap Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("frost_wood", "ethereal:frost_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	{"frost_wood.png"},
-	S("Frost Wood Stair"),
-	S("Frost Wood Slab"),
+stairs.register_stair_and_slab("jogan_wood", "ethereal:jogan_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"ethereal_jogan_wood.png"},
+	S("Jogan Wood Stair"),
+	S("Jogan Wood Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("yellow_wood", "ethereal:yellow_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	{"yellow_wood.png"},
-	S("Healing Wood Stair"),
-	S("Healing Wood Slab"),
+stairs.register_stair_and_slab("pine_wood", "ethereal:pine_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"ethereal_pine_wood.png"},
+	S("Pine Wood Stair"),
+	S("Pine Wood Slab"),
 	default.node_sound_wood_defaults())
 
 stairs.register_stair_and_slab("palm_wood", "ethereal:palm_wood",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"moretrees_palm_wood.png"},
+	{"ethereal_palm_wood.png"},
 	S("Palm Wood Stair"),
 	S("Palm Wood Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("birch_wood", "ethereal:birch_wood",
+stairs.register_stair_and_slab("wroshyr_wood", "ethereal:wroshyr_wood",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"moretrees_birch_wood.png"},
-	"Birch Wood Stair",
-	"Birch Wood Slab",
+	{"ethereal_wroshyr_wood.png"},
+	S("Wroshyr Wood Stair"),
+	S("Wroshyr Wood Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("banana_wood", "ethereal:banana_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"banana_wood.png"},
-	S("Banana Wood Stair"),
-	S("Banana Wood Slab"),
+stairs.register_stair_and_slab("brylark_wood", "ethereal:brylark_wood",
+	{cracky = 2},
+	{"ethereal_brylark_wood.png"},
+	S("Brylark Wood Stair"),
+	S("Brylark Wood Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("willow_wood", "ethereal:willow_wood",
+stairs.register_stair_and_slab("uneti_wood", "ethereal:uneti_wood",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"willow_wood.png"},
-	S("Willow Wood Stair"),
-	S("Willow Wood Slab"),
+	{"ethereal_uneti_wood.png"},
+	S("Uneti Wood Stair"),
+	S("Uneti Wood Slab"),
 	default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("redwood_wood", "ethereal:redwood_wood",
+stairs.register_stair_and_slab("gnarltree_wood", "ethereal:gnarltree_wood",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"redwood_wood.png"},
-	S("Redwood stair"),
-	S("Redwood Slab"),
-	default.node_sound_wood_defaults())
-
-stairs.register_stair_and_slab("bamboo_wood", "ethereal:bamboo_block",
-	{snappy = 3, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"bamboo_floor.png"},
-	S("Bamboo stair"),
-	S("Bamboo Slab"),
-	default.node_sound_wood_defaults())
-
-stairs.register_stair_and_slab("sakura_wood", "ethereal:sakura_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"ethereal_sakura_wood.png"},
-	S("Sakura Wood Stair"),
-	S("Sakura Wood Slab"),
+	{"ethereal_gnarltree_wood.png"},
+	S("Gnarltree Wood Stair"),
+	S("Gnarltree Wood Slab"),
 	default.node_sound_wood_defaults())
 
 end
