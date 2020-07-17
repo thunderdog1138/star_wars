@@ -1,6 +1,6 @@
 local S = farming.intllib
 
--- calarantrum
+-- celonslay
 minetest.register_craftitem("farming:celonslay", {
 	description = S("Celonslay"),
 	inventory_image = "farming_celonslay.png",
@@ -11,7 +11,7 @@ minetest.register_craftitem("farming:celonslay", {
 	on_use = minetest.item_eat(1)
 })
 
--- calarantrum definition
+-- celonslay definition
 local def = {
 	drawtype = "plantlike",
 	tiles = {"farming_celonslay_1.png"},
