@@ -1,7 +1,7 @@
 --Stormtrooper
 mobs:register_mob("mobs_monster:stormtrooper", {
 	type = "npc",
-	passive = true,
+	passive = false,
     group_attack = true,
 	attack_type = "dogfight",
 	pathfinding = true,
