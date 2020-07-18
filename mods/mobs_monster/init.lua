@@ -19,6 +19,7 @@ mobs.intllib = S
 -- Monsters
 
 dofile(path .. "/tusken_raider.lua")
+dofile(path .. "/stormtrooper+variants.lua")
 
 dofile(path .. "/lucky_block.lua")
 
