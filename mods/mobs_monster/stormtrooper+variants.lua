@@ -68,3 +68,15 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	end,
 ]]
 })
+
+mobs:spawn({
+	name = "mobs_monster:stormtrooper",
+	nodes = {"default:desert_sand"},
+	chance = 7000,
+	active_object_count = 2,
+	min_height = 0,
+})
+
+mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "default_desert_sand.png", 1)
+
+mobs:alias_mob("mobs:stormtrooper", "mobs_monster:stormtrooper") -- compatibility
