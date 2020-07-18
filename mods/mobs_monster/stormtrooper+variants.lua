@@ -2,7 +2,7 @@
 mobs:register_mob("mobs_monster:stormtrooper", {
 	type = "animal",
 	passive = true,
-    group_attack = true,
+    group_attack = false,
 	attack_type = "dogfight",
 	pathfinding = true,
 	--specific_attack = {"player", "mobs_npc:npc"},
@@ -24,7 +24,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	},
 	walk_velocity = 1.5,
 	run_velocity = 4,
-	view_range = 15,
+	view_range = 8,
 	jump = true,
 	floats = 0,
 	drops = {
