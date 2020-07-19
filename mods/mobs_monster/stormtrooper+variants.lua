@@ -1,7 +1,7 @@
 --Stormtrooper
 mobs:register_mob("mobs_monster:stormtrooper", {
 	type = "npc",
-	passive = false,
+	passive = true,
 	attack_monsters = false,
 	attack_npcs = false,
 	attack_players = true,
