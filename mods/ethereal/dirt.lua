@@ -129,17 +129,8 @@ for _, ab in pairs(minetest.registered_abms) do
 	local node2 = ab.nodenames and ab.nodenames[2] or ""
 	local neigh = ab.neighbors and ab.neighbors[1] or ""
 
-	if label == "Flower spread"
-	or node1 == "group:flora" then
-
-		--ab.interval = 1
-		--ab.chance = 1
-		ab.nodenames = {"group:flora"}
-		ab.neighbors = {"group:soil"}
-		ab.action = flower_spread
-
 	-- find grow reeds abm and change to grow_papyrus function
-	elseif label == "Grow reeds"
+	if label == "Grow reeds"
 	or node1 == "default:reeds" then
 
 		--ab.interval = 2
