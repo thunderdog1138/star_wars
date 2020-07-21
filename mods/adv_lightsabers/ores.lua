@@ -5,7 +5,7 @@
 
 minetest.register_node("adv_lightsabers:kyber_ore", {
 	description = "Kyber Ore",
-	tiles = {"default_stone.png^adv_lightsabers_kyber_ore.png"},
+	tiles = {"stone.png^kyber_ore.png"},
 	paramtype = "light",
 	groups = {cracky = 1,level = 2},
 	drop = "adv_lightsabers:kyber_crystal",
@@ -26,7 +26,7 @@ minetest.register_ore({
 
 minetest.register_node("adv_lightsabers:kyber_ore_black", {
 	description = "Dark Kyber Ore",
-	tiles = {"default_stone.png^adv_lightsabers_kyber_ore_black.png"},
+	tiles = {"stone.png^kyber_ore_black.png"},
 	paramtype = "light",
 	groups = {cracky = 1,level = 2},
 	drop = "adv_lightsabers:kyber_crystal_black",
