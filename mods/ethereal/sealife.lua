@@ -31,110 +31,6 @@ minetest.register_craft( {
 	recipe = {"ethereal:seaweed",},
 })
 
--- Blue Coral
-minetest.register_node("ethereal:coral2", {
-	description = S("Blue Coral"),
-	drawtype = "plantlike",
-	tiles = {"coral2.png"},
-	inventory_image = "coral2.png",
-	wield_image = "coral2.png",
-	paramtype = "light",
-	selection_box = {
-		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 1 / 4, 6 / 16},
-	},
-	light_source = 3,
-	groups = {snappy = 3},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:cyan 3",
-	recipe = {"ethereal:coral2",},
-})
-
--- Orange Coral
-minetest.register_node("ethereal:coral3", {
-	description = S("Orange Coral"),
-	drawtype = "plantlike",
-	tiles = {"coral3.png"},
-	inventory_image = "coral3.png",
-	wield_image = "coral3.png",
-	paramtype = "light",
-	selection_box = {
-		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 1 / 4, 6 / 16},
-	},
-	light_source = 3,
-	groups = {snappy = 3},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:orange 3",
-	recipe = {"ethereal:coral3",},
-})
-
--- Pink Coral
-minetest.register_node("ethereal:coral4", {
-	description = S("Pink Coral"),
-	drawtype = "plantlike",
-	tiles = {"coral4.png"},
-	inventory_image = "coral4.png",
-	wield_image = "coral4.png",
-	paramtype = "light",
-	selection_box = {
-		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 8 / 16, 6 / 16},
-	},
-	light_source = 3,
-	groups = {snappy = 3},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:pink 3",
-	recipe = {"ethereal:coral4",},
-})
-
--- Green Coral
-minetest.register_node("ethereal:coral5", {
-	description = S("Green Coral"),
-	drawtype = "plantlike",
-	tiles = {"coral5.png"},
-	inventory_image = "coral5.png",
-	wield_image = "coral5.png",
-	paramtype = "light",
-	selection_box = {
-		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 3 / 16, 6 / 16},
-	},
-	light_source = 3,
-	groups = {snappy = 3},
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:green 3",
-	recipe = {"ethereal:coral5",},
-})
-
--- Undersea Sand
-minetest.register_node("ethereal:sandy", {
-	description = S("Sandy"),
-	tiles = {"default_sand.png"},
-	is_ground_content = true,
-	groups = {
-		crumbly = 3, falling_node = 1, sand = 1, not_in_creative_inventory = 1
-	},
-	drop = "default:sand",
-	sounds = default.node_sound_sand_defaults(),
-})
-
 -- randomly generate coral or seaweed and have seaweed grow up to 14 high
 if ethereal.sealife == 1 then
 minetest.register_abm({
@@ -156,14 +52,6 @@ minetest.register_abm({
 		and sel == 6 then
 
 			minetest.swap_node(pos, {name = "ethereal:sponge_wet"})
-
-			return
-		end
-
-		if nod == "default:water_source"
-		and sel > 1 then
-
-			minetest.swap_node(pos, {name = "ethereal:coral" .. sel})
 
 			return
 		end
@@ -209,7 +97,7 @@ minetest.register_node("ethereal:sponge_air", {
 
 minetest.register_node("ethereal:sponge", {
 	description = S("Sponge"),
-	tiles = {"ethereal_sponge.png"},
+	tiles = {"sponge.png"},
 	groups = {crumbly = 3},
 	sounds = default.node_sound_sand_defaults(),
 
@@ -248,7 +136,7 @@ minetest.register_node("ethereal:sponge", {
 
 minetest.register_node("ethereal:sponge_wet", {
 	description = S("Wet sponge"),
-	tiles = {"ethereal_sponge_wet.png"},
+	tiles = {"sponge_wet.png"},
 	groups = {crumbly = 3},
 	sounds = default.node_sound_sand_defaults(),
 })
