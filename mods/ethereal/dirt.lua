@@ -4,7 +4,7 @@ local S = ethereal.intllib
 -- dry dirt
 minetest.register_node("ethereal:dry_dirt", {
 	description = S("Dried Dirt"),
-	tiles = {"ethereal_dry_dirt.png"},
+	tiles = {"dry_dirt.png"},
 	is_ground_content = ethereal.cavedirt,
 	groups = {crumbly = 3, soil = 1},
 	soil = {
@@ -25,7 +25,7 @@ minetest.register_craft({
 -- charred dirt
 minetest.register_node("ethereal:charred_dirt", {
 	description = S("Charred Dirt"),
-	tiles = {"ethereal_charred_dirt.png"},
+	tiles = {"charred_dirt.png"},
 	is_ground_content = ethereal.cavedirt,
 	groups = {crumbly = 3},
 	sounds = default.node_sound_dirt_defaults()
@@ -51,10 +51,10 @@ for n = 1, #dirts do
 	minetest.register_node("ethereal:"..name.."_dirt", {
 		description = S(desc.." Dirt"),
 		tiles = {
-			"ethereal_grass_"..name.."_top.png",
-			"default_dirt.png",
+			"dirt_"..name.."_top.png",
+			"dirt.png",
 			{
-				name = "default_dirt.png^ethereal_grass_"
+				name = "dirt.png^dirt_"
 				.. name .."_side.png",
 				tileable_vertical = false
 			}
@@ -173,7 +173,7 @@ end
 -- Quicksand
 minetest.register_node("ethereal:quicksand", {
 	description = S("Quicksand"),
-	tiles = {"default_sand.png"},
+	tiles = {"sand.png"},
 	drawtype = "glasslike",
 	paramtype = "light",
 	drop = "default:sand",
