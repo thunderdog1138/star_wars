@@ -7,8 +7,8 @@ for i = 4, 5 do
 		drop = {
 			max_items = 1,
 			items = {
-				{items = {"farming:seed_wheat"}, rarity = 5},
-				{items = {"farming:seed_oat"},rarity = 5},
+				{items = {"farming:seed_shorn"}, rarity = 5},
+				{items = {"farming:seed_roti"},rarity = 5},
 				{items = {"default:grass_1"}}
 			}
 		}
@@ -22,8 +22,8 @@ for i = 4, 5 do
 			drop = {
 				max_items = 1,
 				items = {
-					{items = {"farming:seed_barley"}, rarity = 5},
-					{items = {"farming:seed_rye"},rarity = 5},
+					{items = {"farming:seed_lothal_wheat"}, rarity = 5},
+					{items = {"farming:seed_toz"},rarity = 5},
 					{items = {"default:dry_grass_1"}}
 				}
 			}
@@ -38,7 +38,6 @@ minetest.override_item("default:junglegrass", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"farming:seed_cotton"}, rarity = 8},
 			{items = {"farming:seed_rice"},rarity = 8},
 			{items = {"default:junglegrass"}}
 		}
