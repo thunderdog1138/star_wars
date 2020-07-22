@@ -5,9 +5,9 @@ local S = ethereal.intllib
 minetest.register_node("ethereal:jogan_trunk", {
 	description = S("Jogan Trunk"),
 	tiles = {
-		"ethereal_jogan_trunk_top.png",
-		"ethereal_jogan_trunk_top.png",
-		"ethereal_jogan_trunk.png"
+		"jogan_trunk_top.png",
+		"jogan_trunk_top.png",
+		"jogan_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -18,7 +18,7 @@ minetest.register_node("ethereal:jogan_trunk", {
 -- jogan wood
 minetest.register_node("ethereal:jogan_wood", {
 	description = S("Jogan Wood"),
-	tiles = {"ethereal_jogan_wood.png"},
+	tiles = {"jogan_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
@@ -61,9 +61,9 @@ minetest.register_craft({
 minetest.register_node("ethereal:palm_trunk", {
 	description = S("Palm Trunk"),
 	tiles = {
-		"moretrees_palm_trunk_top.png",
-		"moretrees_palm_trunk_top.png",
-		"moretrees_palm_trunk.png"
+		"palm_trunk_top.png",
+		"palm_trunk_top.png",
+		"palm_trunk.png"
 	},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -74,7 +74,7 @@ minetest.register_node("ethereal:palm_trunk", {
 -- palm wood
 minetest.register_node("ethereal:palm_wood", {
 	description = S("Palm Wood"),
-	tiles = {"moretrees_palm_wood.png"},
+	tiles = {"palm_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
@@ -117,9 +117,9 @@ minetest.register_craft({
 minetest.register_node("ethereal:brylark_trunk", {
 	description = S("Brylark Trunk"),
 	tiles = {
-		"ethereal_brylark_trunk_top.png",
-		"ethereal_brylark_trunk_top.png",
-		"ethereal_brylark_trunk.png"
+		"brylark_trunk_top.png",
+		"brylark_trunk_top.png",
+		"brylark_trunk.png"
 	},
 	groups = {cracky = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -267,9 +267,9 @@ minetest.register_node("ethereal:bush_stem", {
 	description = S("Bush Stem"),
 	drawtype = "plantlike",
 	visual_scale = 1.41,
-	tiles = {"ethereal_bush_stem.png"},
-	inventory_image = "ethereal_bush_stem.png",
-	wield_image = "ethereal_bush_stem.png",
+	tiles = {"bush_stem.png"},
+	inventory_image = "bush_stem.png",
+	wield_image = "bush_stem.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
