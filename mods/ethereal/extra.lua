@@ -177,9 +177,9 @@ end
 minetest.register_node("ethereal:stone_ladder", {
 	description = S("Stone Ladder"),
 	drawtype = "signlike",
-	tiles = {"stone_ladder.png"},
-	inventory_image = "stone_ladder.png",
-	wield_image = "stone_ladder.png",
+	tiles = {"ladder_stone.png"},
+	inventory_image = "ladder_stone.png",
+	wield_image = "ladder_stone.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	paramtype2 = "wallmounted",
