@@ -17,9 +17,9 @@ minetest.register_node("ethereal:coconut", {
 	walkable = false,
 	paramtype = "light",
 	sunlight_propagates = true,
-	tiles = {"moretrees_coconut.png"},
-	inventory_image = "moretrees_coconut.png",
-	wield_image = "moretrees_coconut.png",
+	tiles = {"coconut.png"},
+	inventory_image = "coconut.png",
+	wield_image = "coconut.png",
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.31, -0.43, -0.31, 0.31, 0.44, 0.31}
@@ -35,8 +35,8 @@ minetest.register_node("ethereal:coconut", {
 -- Coconut Slice (Heals half heart when eaten)
 minetest.register_craftitem("ethereal:coconut_slice", {
 	description = S("Coconut Slice"),
-	inventory_image = "moretrees_coconut_slice.png",
-	wield_image = "moretrees_coconut_slice.png",
+	inventory_image = "coconut_slice.png",
+	wield_image = "coconut_slice.png",
 	groups = {food_coconut_slice = 1, flammable = 1},
 	on_use = minetest.item_eat(1),
 })
