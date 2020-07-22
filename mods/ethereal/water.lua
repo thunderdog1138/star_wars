@@ -4,7 +4,7 @@ local S = ethereal.intllib
 -- Ice Brick
 minetest.register_node("ethereal:ice_brick", {
 	description = S("Ice Brick"),
-	tiles = {"brick_ice.png"},
+	tiles = {"ice_brick.png"},
 	paramtype = "light",
 	freezemelt = "default:water_source",
 	is_ground_content = false,
@@ -23,7 +23,7 @@ minetest.register_craft({
 -- Snow Brick
 minetest.register_node("ethereal:snow_brick", {
 	description = S("Snow Brick"),
-	tiles = {"brick_snow.png"},
+	tiles = {"snow_brick.png"},
 	paramtype = "light",
 	freezemelt = "default:water_source",
 	is_ground_content = false,
