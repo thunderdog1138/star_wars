@@ -52,12 +52,12 @@ end
 
 register_sapling("ethereal:jogan_tree", "Jogan Tree", "jogan_tree_sapling", 6)
 register_sapling("ethereal:uneti_tree", "Uneti Tree", "uneti_tree_sapling", 7)
-register_sapling("ethereal:brylark_tree", "Brylark Tree", "frost_tree_sapling", 19)
+register_sapling("ethereal:brylark_tree", "Brylark Tree", "brylark_tree_sapling", 19)
 register_sapling("ethereal:mushroom", "Giant Mushroom", "mushroom_sapling", 11)
 register_sapling("ethereal:palm_tree", "Palm Tree", "palm_tree_sapling", 9)
 register_sapling("ethereal:wroshyr_tree", "Wroshyr Tree", "wroshyr_tree_sapling", 31)
 register_sapling("ethereal:gnarltree", "Gnarltree", "gnarltree_sapling", 7)
-register_sapling("ethereal:pine_tree", "Pine_tree", "sakura_sapling", 14)
+register_sapling("ethereal:pine_tree", "Pine_tree", "pine_tree_sapling", 14)
 register_sapling("ethereal:bush", "Bush", "bush_sapling", 3)
 
 local add_tree = function (pos, ofx, ofy, ofz, schem, replace)
