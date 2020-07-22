@@ -26,11 +26,11 @@ minetest.register_craft({
 	cooktime = 2,
 })
 
--- Sashi (Thanks to Natalia Grosner for letting me use the sashi image)
-minetest.register_craftitem("ethereal:sashi", {
-	description = S("Sashi"),
-	inventory_image = "sashi.png",
-	wield_image = "sashi.png",
+-- Sushi (Thanks to Natalia Grosner for letting me use the sushi image)
+minetest.register_craftitem("ethereal:sushi", {
+	description = S("Sushi"),
+	inventory_image = "sushi.png",
+	wield_image = "sushi.png",
 	on_use = minetest.item_eat(4),
 })
 
@@ -93,12 +93,6 @@ minetest.register_craft({
 ethereal.fish = {
 	{"ethereal:fish_raw"},
 }
-
--- xanadu server additional fish
-if minetest.get_modpath("xanadu") then
-	ethereal.fish[2] = {"mobs:clownfish_raw"}
-	ethereal.fish[3] = {"mobs:bluefish_raw"}
-end
 
 -- Fishing Rod (Baited)
 minetest.register_craftitem("ethereal:fishing_rod_baited", {
