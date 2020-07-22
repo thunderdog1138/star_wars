@@ -38,7 +38,7 @@ minetest.override_item("default:junglegrass", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"farming:seed_rice"},rarity = 8},
+			{items = {"farming:seed_ghoba_rice"},rarity = 8},
 			{items = {"default:junglegrass"}}
 		}
 	}
