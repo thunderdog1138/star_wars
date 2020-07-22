@@ -16,7 +16,7 @@ minetest.register_craftitem("ethereal:wild_onion_plant", {
 -- Define Onion growth stages
 local crop_def = {
 	drawtype = "plantlike",
-	tiles = {"ethereal_wild_onion_1.png"},
+	tiles = {"wild_onion_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -37,15 +37,15 @@ local crop_def = {
 minetest.register_node("ethereal:onion_1", table.copy(crop_def))
 
 --stage 2
-crop_def.tiles = {"ethereal_wild_onion_2.png"}
+crop_def.tiles = {"wild_onion_2.png"}
 minetest.register_node("ethereal:onion_2", table.copy(crop_def))
 
 --stage 3
-crop_def.tiles = {"ethereal_wild_onion_3.png"}
+crop_def.tiles = {"wild_onion_3.png"}
 minetest.register_node("ethereal:onion_3", table.copy(crop_def))
 
 --stage 4
-crop_def.tiles = {"ethereal_wild_onion_4.png"}
+crop_def.tiles = {"wild_onion_4.png"}
 crop_def.drop = {
 	items = {
 		{items = {"ethereal:wild_onion_plant"}, rarity = 1},
@@ -55,7 +55,7 @@ crop_def.drop = {
 minetest.register_node("ethereal:onion_4", table.copy(crop_def))
 
 --stage 5
-crop_def.tiles = {"ethereal_wild_onion_5.png"}
+crop_def.tiles = {"wild_onion_5.png"}
 crop_def.groups.growing = 0
 crop_def.drop = {
 	items = {
