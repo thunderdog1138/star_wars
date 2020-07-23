@@ -3,7 +3,7 @@ local S = farming.intllib
 -- celto
 minetest.register_craftitem("farming:celto", {
 	description = S("Celto"),
-	inventory_image = "farming_celto.png",
+	inventory_image = "celto.png",
 	groups = {seed = 2, food_celto = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:celonslay_1")
@@ -14,7 +14,7 @@ minetest.register_craftitem("farming:celto", {
 -- celto
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_celto_1.png"},
+	tiles = {"celto_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -32,15 +32,15 @@ local def = {
 minetest.register_node("farming:celto_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_celto_2.png"}
+def.tiles = {"celto_2.png"}
 minetest.register_node("farming:celto_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_celto_3.png"}
+def.tiles = {"celto_3.png"}
 minetest.register_node("farming:celto_3", table.copy(def))
 
 -- stage 4 (final)
-def.tiles = {"farming_celto_4.png"}
+def.tiles = {"celto_4.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
