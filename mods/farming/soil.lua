@@ -13,7 +13,7 @@ minetest.override_item("default:dirt", {
 -- normal soil
 minetest.register_node("farming:soil", {
 	description = S("Soil"),
-	tiles = {"default_dirt.png^farming_soil.png", "default_dirt.png"},
+	tiles = {"dirt.png^soil.png", "dirt.png"},
 	drop = "default:dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 2, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -28,8 +28,8 @@ minetest.register_node("farming:soil", {
 minetest.register_node("farming:soil_wet", {
 	description = S("Wet Soil"),
 	tiles = {
-		"default_dirt.png^farming_soil_wet.png",
-		"default_dirt.png^farming_soil_wet_side.png"},
+		"dirt.png^soil_wet.png",
+		"dirt.png^soil_wet_side.png"},
 	drop = "default:dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 3, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -44,8 +44,8 @@ minetest.register_node("farming:soil_wet", {
 minetest.register_node("farming:dry_soil", {
 	description = S("Savanna Soil"),
 	tiles = {
-		"default_dry_dirt.png^farming_soil.png",
-		"default_dry_dirt.png"},
+		"dry_dirt.png^soil.png",
+		"dry_dirt.png"},
 	drop = "ethereal:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 2, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -59,8 +59,8 @@ minetest.register_node("farming:dry_soil", {
 minetest.register_node("farming:dry_soil_wet", {
 	description = S("Wet Savanna Soil"),
 	tiles = {
-		"default_dry_dirt.png^farming_soil_wet.png",
-		"default_dry_dirt.png^farming_soil_wet_side.png"},
+		"dry_dirt.png^soil_wet.png",
+		"dry_dirt.png^soil_wet_side.png"},
 	drop = "ethereal:dry_dirt",
 	groups = {crumbly = 3, not_in_creative_inventory = 1, soil = 3, field = 1},
 	sounds = default.node_sound_dirt_defaults(),
