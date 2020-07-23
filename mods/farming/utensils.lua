@@ -1,33 +1,11 @@
 
 local S = farming.intllib
 
--- wooden bowl
-
-minetest.register_craftitem("farming:bowl", {
-	description = S("Wooden Bowl"),
-	inventory_image = "farming_bowl.png",
-	groups = {food_bowl = 1, flammable = 2}
-})
-
-minetest.register_craft({
-	output = "farming:bowl 4",
-	recipe = {
-		{"group:wood", "", "group:wood"},
-		{"", "group:wood", ""}
-	}
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "farming:bowl",
-	burntime = 10,
-})
-
 -- saucepan
 
 minetest.register_craftitem("farming:saucepan", {
 	description = S("Saucepan"),
-	inventory_image = "farming_saucepan.png",
+	inventory_image = "saucepan.png",
 	groups = {food_saucepan = 1, flammable = 2}
 })
 
@@ -43,7 +21,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:pot", {
 	description = S("Cooking Pot"),
-	inventory_image = "farming_pot.png",
+	inventory_image = "pot.png",
 	groups = {food_pot = 1, flammable = 2}
 })
 
@@ -59,7 +37,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:baking_tray", {
 	description = S("Baking Tray"),
-	inventory_image = "farming_baking_tray.png",
+	inventory_image = "baking_tray.png",
 	groups = {food_baking_tray = 1, flammable = 2}
 })
 
@@ -76,7 +54,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:skillet", {
 	description = S("Skillet"),
-	inventory_image = "farming_skillet.png",
+	inventory_image = "skillet.png",
 	groups = {food_skillet = 1, flammable = 2}
 })
 
@@ -93,7 +71,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:mortar_pestle", {
 	description = S("Mortar and Pestle"),
-	inventory_image = "farming_mortar_pestle.png",
+	inventory_image = "mortar_pestle.png",
 	groups = {food_mortar_pestle = 1, flammable = 2}
 })
 
@@ -109,7 +87,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:cutting_board", {
 	description = S("Cutting Board"),
-	inventory_image = "farming_cutting_board.png",
+	inventory_image = "cutting_board.png",
 	groups = {food_cutting_board = 1, flammable = 2}
 })
 
@@ -126,7 +104,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:juicer", {
 	description = S("Juicer"),
-	inventory_image = "farming_juicer.png",
+	inventory_image = "juicer.png",
 	groups = {food_juicer = 1, flammable = 2}
 })
 
@@ -142,7 +120,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:mixing_bowl", {
 	description = S("Glass Mixing Bowl"),
-	inventory_image = "farming_mixing_bowl.png",
+	inventory_image = "mixing_bowl.png",
 	groups = {food_mixing_bowl = 1, flammable = 2}
 })
 
