@@ -3,10 +3,10 @@ local S = farming.intllib
 -- taba
 minetest.register_craftitem("farming:taba", {
 	description = S("Taba"),
-	inventory_image = "farming_taba.png",
+	inventory_image = "taba.png",
 	groups = {seed = 2, food_taba = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
-		return farming.place_seed(itemstack, placer, pointed_thing, "farming:celonslay_1")
+		return farming.place_seed(itemstack, placer, pointed_thing, "farming:taba_1")
 	end,
 	on_use = minetest.item_eat(1)
 })
@@ -14,7 +14,7 @@ minetest.register_craftitem("farming:taba", {
 -- taba
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_taba_1.png"},
+	tiles = {"taba_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -32,15 +32,15 @@ local def = {
 minetest.register_node("farming:taba_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_taba_2.png"}
+def.tiles = {"taba_2.png"}
 minetest.register_node("farming:taba_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_taba_3.png"}
+def.tiles = {"taba_3.png"}
 minetest.register_node("farming:taba_3", table.copy(def))
 
 -- stage 4 (final)
-def.tiles = {"farming_taba_4.png"}
+def.tiles = {"taba_4.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
