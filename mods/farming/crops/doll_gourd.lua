@@ -10,7 +10,7 @@ local S = farming.intllib
 -- doll gourd
 minetest.register_craftitem("farming:doll_gourd", {
 	description = S("Doll Gourd"),
-	inventory_image = "crops_doll_gourd.png",
+	inventory_image = "doll_gourd.png",
 	groups = {seed = 2, food_gourd = 1, flammable = 3},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:doll_gourd_1")
@@ -21,7 +21,7 @@ minetest.register_craftitem("farming:doll_gourd", {
 -- crop definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"crops_doll_gourd_plant_1.png"},
+	tiles = {"doll_gourd_1.png"},
 	paramtype = "light",
 	paramtype2 = "meshoptions",
 	place_param2 = 3,
@@ -42,19 +42,19 @@ local def = {
 minetest.register_node("farming:doll_gourd_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"crops_doll_gourd_plant_2.png"}
+def.tiles = {"doll_gourd_2.png"}
 minetest.register_node("farming:doll_gourd_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"crops_doll_gourd_plant_3.png"}
+def.tiles = {"doll_gourd_3.png"}
 minetest.register_node("farming:doll_gourd_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"crops_doll_gourd_plant_4.png"}
+def.tiles = {"doll_gourd_4.png"}
 minetest.register_node("farming:doll_gourd_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"crops_doll_gourd_plant_5.png"}
+def.tiles = {"doll_gourd_5.png"}
 def.groups.growing = nil
 def.drop = {
 	max_items = 5, items = {
