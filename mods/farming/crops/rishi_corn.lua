@@ -9,7 +9,7 @@ local S = farming.intllib
 -- rishi corn
 minetest.register_craftitem("farming:rishi_corn", {
 	description = S("Rishi Corn"),
-	inventory_image = "farming_rishi_corn.png",
+	inventory_image = "rishi_corn.png",
 	groups = {seed = 2, food_corn = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:rishi_corn_1")
@@ -20,7 +20,7 @@ minetest.register_craftitem("farming:rishi_corn", {
 -- rishi corn on the cob (texture by TenPlus1)
 minetest.register_craftitem("farming:rishi_corn_cob", {
 	description = S("Rishi Corn on the Cob"),
-	inventory_image = "farming_rishi_corn_cob.png",
+	inventory_image = "rishi_corn_cob.png",
 	groups = {food_corn_cooked = 1, flammable = 2},
 	on_use = minetest.item_eat(5)
 })
@@ -35,7 +35,7 @@ minetest.register_craft({
 -- cornstarch
 minetest.register_craftitem("farming:cornstarch", {
 	description = S("Cornstarch"),
-	inventory_image = "farming_cornstarch.png",
+	inventory_image = "cornstarch.png",
 	groups = {food_cornstarch = 1, flammable = 2}
 })
 
@@ -51,44 +51,10 @@ minetest.register_craft({
 	}
 })
 
--- ethanol (thanks to JKMurray for this idea)
-minetest.register_node("farming:bottle_ethanol", {
-	description = S("Bottle of Ethanol"),
-	drawtype = "plantlike",
-	tiles = {"farming_bottle_ethanol.png"},
-	inventory_image = "farming_bottle_ethanol.png",
-	wield_image = "farming_bottle_ethanol.png",
-	paramtype = "light",
-	is_ground_content = false,
-	walkable = false,
-	selection_box = {
-		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
-	},
-	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
-	sounds = default.node_sound_glass_defaults()
-})
-
-minetest.register_craft( {
-	output = "farming:bottle_ethanol",
-	recipe = {
-		{ "vessels:glass_bottle", "group:food_corn", "group:food_corn"},
-		{ "group:food_corn", "group:food_corn", "group:food_corn"},
-		{ "group:food_corn", "group:food_corn", "group:food_corn"}
-	}
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "farming:bottle_ethanol",
-	burntime = 80,
-	replacements = {{ "farming:bottle_ethanol", "vessels:glass_bottle"}}
-})
-
 -- rishi corn definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_rishi_corn_1.png"},
+	tiles = {"rishi_corn_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -106,28 +72,28 @@ local def = {
 minetest.register_node("farming:rishi_corn_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_rishi_corn_2.png"}
+def.tiles = {"rishi_corn_2.png"}
 minetest.register_node("farming:rishi_corn_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_rishi_corn_3.png"}
+def.tiles = {"rishi_corn_3.png"}
 minetest.register_node("farming:rishi_corn_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_rishi_corn_4.png"}
+def.tiles = {"rishi_corn_4.png"}
 minetest.register_node("farming:rishi_corn_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_rishi_corn_5.png"}
+def.tiles = {"rishi_corn_5.png"}
 minetest.register_node("farming:rishi_corn_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_rishi_corn_6.png"}
+def.tiles = {"rishi_corn_6.png"}
 def.visual_scale = 1.9
 minetest.register_node("farming:rishi_corn_6", table.copy(def))
 
 -- stage 7
-def.tiles = {"farming_rishi_corn_7.png"}
+def.tiles = {"rishi_corn_7.png"}
 def.drop = {
 	items = {
 		{items = {"farming:rishi_corn"}, rarity = 1},
@@ -138,7 +104,7 @@ def.drop = {
 minetest.register_node("farming:rishi_corn_7", table.copy(def))
 
 -- stage 8 (final)
-def.tiles = {"farming_rishi_corn_8.png"}
+def.tiles = {"rishi_corn_8.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
