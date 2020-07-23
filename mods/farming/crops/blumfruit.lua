@@ -4,7 +4,7 @@ local S = farming.intllib
 -- blumfruit
 minetest.register_craftitem("farming:blumfruit", {
 	description = S("Blumfruit"),
-	inventory_image = "farming_blumfruit.png",
+	inventory_image = "blumfruit.png",
 	groups = {seed = 2, food_blumfruit = 1, food_blueberry = 1,
 			food_berry = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
@@ -16,7 +16,7 @@ minetest.register_craftitem("farming:blumfruit", {
 -- blumfruit muffin (thanks to sosogirl123 @ deviantart.com for muffin image)
 minetest.register_craftitem("farming:muffin_blumfruit", {
 	description = S("Blumfruit Muffin"),
-	inventory_image = "farming_blumfruit_muffin.png",
+	inventory_image = "blumfruit_muffin.png",
 	on_use = minetest.item_eat(2)
 })
 
@@ -30,7 +30,7 @@ minetest.register_craft({
 -- Blumfruit Pie
 minetest.register_craftitem("farming:blumfruit_pie", {
 	description = S("Blumfruit Pie"),
-	inventory_image = "farming_blumfruit_pie.png",
+	inventory_image = "blumfruit_pie.png",
 	on_use = minetest.item_eat(6)
 })
 
@@ -47,7 +47,7 @@ minetest.register_craft({
 -- blumfruit definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_blumfruit_1.png"},
+	tiles = {"blumfruit_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -65,15 +65,15 @@ local def = {
 minetest.register_node("farming:blumfruit_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_blumfruit_2.png"}
+def.tiles = {"blumfruit_2.png"}
 minetest.register_node("farming:blumfruit_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_blumfruit_3.png"}
+def.tiles = {"blumfruit_3.png"}
 minetest.register_node("farming:blumfruit_3", table.copy(def))
 
 -- stage 4 (final)
-def.tiles = {"farming_blumfruit_4.png"}
+def.tiles = {"blumfruit_4.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
