@@ -4,9 +4,9 @@ local S = farming.intllib
 -- roti seeds
 minetest.register_node("farming:seed_roti", {
 	description = S("Roti Seed"),
-	tiles = {"farming_roti_seed.png"},
-	inventory_image = "farming_roti_seed.png",
-	wield_image = "farming_roti_seed.png",
+	tiles = {"roti_seed.png"},
+	inventory_image = "roti_seed.png",
+	wield_image = "roti_seed.png",
 	drawtype = "signlike",
 	groups = {seed = 1, snappy = 3, attached_node = 1},
 	paramtype = "light",
@@ -22,7 +22,7 @@ minetest.register_node("farming:seed_roti", {
 -- harvested roti
 minetest.register_craftitem("farming:roti", {
 	description = S("Roti"),
-	inventory_image = "farming_roti.png",
+	inventory_image = "roti.png",
 	groups = {food_barley = 1, flammable = 2}
 })
 
@@ -40,7 +40,7 @@ minetest.register_craft({
 -- roti definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_roti_1.png"},
+	tiles = {"roti_1.png"},
 	paramtype = "light",
 	paramtype2 = "meshoptions",
 	place_param2 = 3,
@@ -60,19 +60,19 @@ local def = {
 minetest.register_node("farming:roti_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_roti_2.png"}
+def.tiles = {"roti_2.png"}
 minetest.register_node("farming:roti_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_roti_3.png"}
+def.tiles = {"roti_3.png"}
 minetest.register_node("farming:roti_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_roti_4.png"}
+def.tiles = {"roti_4.png"}
 minetest.register_node("farming:roti_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_roti_5.png"}
+def.tiles = {"roti_5.png"}
 def.drop = {
 	items = {
 		{items = {"farming:roti"}, rarity = 2},
@@ -82,7 +82,7 @@ def.drop = {
 minetest.register_node("farming:roti_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_roti_6.png"}
+def.tiles = {"roti_6.png"}
 def.drop = {
 	items = {
 		{items = {"farming:roti"}, rarity = 2},
@@ -92,7 +92,7 @@ def.drop = {
 minetest.register_node("farming:roti_6", table.copy(def))
 
 -- stage 7 (final)
-def.tiles = {"farming_roti_7.png"}
+def.tiles = {"roti_7.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
