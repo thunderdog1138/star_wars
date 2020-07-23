@@ -178,7 +178,7 @@ armor.set_player_armor = function(self, player)
 	local count = 0
 	local material = {count=1}
 	local preview = armor:get_preview(name)
-	local texture = "3d_armor_trans.png"
+	local texture = "trans.png"
 	local textures = {}
 	local physics = {}
 	local attributes = {}
