@@ -6,7 +6,7 @@ local S = farming.intllib
 farming.register_plant("farming:toz", {
 	description = S("Toz seed"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_toz_seed.png",
+	inventory_image = "toz_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
@@ -31,7 +31,7 @@ minetest.register_craft({
 farming.register_plant("farming:shorn", {
 	description = S("Shorn seed"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_shorn_seed.png",
+	inventory_image = "shorn_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
@@ -56,7 +56,7 @@ minetest.register_craft({
 farming.register_plant("farming:ghoba_rice", {
 	description = S("Ghoba Rice grains"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_ghoba_rice_seed.png",
+	inventory_image = "ghoba_rice_seed.png",
 	steps = 8,
 	place_param2 = 3
 })
@@ -68,14 +68,14 @@ minetest.override_item("farming:ghoba_rice", {
 
 minetest.register_craftitem("farming:ghoba_rice_bread", {
 	description = S("Ghoba Rice Bread"),
-	inventory_image = "farming_ghoba_rice_bread.png",
+	inventory_image = "ghoba_rice_bread.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_rice_bread = 1, flammable = 2}
 })
 
 minetest.register_craftitem("farming:ghoba_rice_flour", {
 	description = S("Ghoba Rice Flour"),
-	inventory_image = "farming_ghoba_rice_flour.png",
+	inventory_image = "ghoba_rice_flour.png",
 	groups = {food_rice_flour = 1, flammable = 1}
 })
 
@@ -100,7 +100,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:flour_multigrain", {
 	description = S("Multigrain Flour"),
-	inventory_image = "farming_flour_multigrain.png",
+	inventory_image = "flour_multigrain.png",
 	groups = {food_flour = 1, flammable = 1},
 })
 
@@ -118,7 +118,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("farming:bread_multigrain", {
 	description = S("Multigrain Bread"),
-	inventory_image = "farming_bread_multigrain.png",
+	inventory_image = "bread_multigrain.png",
 	on_use = minetest.item_eat(7),
 	groups = {food_bread = 1, flammable = 2}
 })
