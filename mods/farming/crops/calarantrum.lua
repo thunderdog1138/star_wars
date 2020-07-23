@@ -4,7 +4,7 @@ local S = farming.intllib
 -- calarantrum
 minetest.register_craftitem("farming:calarantrum", {
 	description = S("Calarantrum"),
-	inventory_image = "farming_calarantrum.png",
+	inventory_image = "calarantrum.png",
 	groups = {seed = 2, food_calarantrum = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:calarantrum_1")
@@ -15,7 +15,7 @@ minetest.register_craftitem("farming:calarantrum", {
 -- calarantrum definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_calarantrum_1.png"},
+	tiles = {"calarantrum_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -33,15 +33,15 @@ local def = {
 minetest.register_node("farming:calarantrum_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_calarantrum_2.png"}
+def.tiles = {"calarantrum_2.png"}
 minetest.register_node("farming:calarantrum_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_calarantrum_3.png"}
+def.tiles = {"calarantrum_3.png"}
 minetest.register_node("farming:calarantrum_3", table.copy(def))
 
 -- stage 4 (final)
-def.tiles = {"farming_calarantrum_4.png"}
+def.tiles = {"calarantrum_4.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
