@@ -4,7 +4,7 @@ local S = farming.intllib
 -- groundapple
 minetest.register_craftitem("farming:groundapple", {
 	description = S("Groundapple"),
-	inventory_image = "farming_groundapple.png",
+	inventory_image = "groundapple.png",
 	groups = {seed = 2, food_groundapple = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:groundapple_1")
@@ -14,7 +14,7 @@ minetest.register_craftitem("farming:groundapple", {
 
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_groundapple_1.png"},
+	tiles = {"groundapple_1.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	waving = 1,
@@ -33,23 +33,23 @@ local def = {
 minetest.register_node("farming:groundapple_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_groundapple_2.png"}
+def.tiles = {"groundapple_2.png"}
 minetest.register_node("farming:groundapple_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_groundapple_3.png"}
+def.tiles = {"groundapple_3.png"}
 minetest.register_node("farming:groundapple_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_groundapple_4.png"}
+def.tiles = {"groundapple_4.png"}
 minetest.register_node("farming:groundapple_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_groundapple_5.png"}
+def.tiles = {"groundapple_5.png"}
 minetest.register_node("farming:groundapple_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_groundapple_6.png"}
+def.tiles = {"groundapple_6.png"}
 def.groups.growing = nil
 def.drop = {
 	max_items = 2, items = {
