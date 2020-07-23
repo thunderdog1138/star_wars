@@ -4,9 +4,9 @@ local S = farming.intllib
 -- lothal wheat seeds
 minetest.register_node("farming:seed_lothal_wheat", {
 	description = S("Lothal Wheat Seed"),
-	tiles = {"farming_lothal_wheat_seed.png"},
-	inventory_image = "farming_lothal_wheat_seed.png",
-	wield_image = "farming_lothal_wheat_seed.png",
+	tiles = {"lothal_wheat_seed.png"},
+	inventory_image = "lothal_wheat_seed.png",
+	wield_image = "lothal_wheat_seed.png",
 	drawtype = "signlike",
 	groups = {seed = 1, snappy = 3, attached_node = 1, flammable = 4},
 	paramtype = "light",
@@ -22,14 +22,14 @@ minetest.register_node("farming:seed_lothal_wheat", {
 -- harvested wheat
 minetest.register_craftitem("farming:lothal_wheat", {
 	description = S("Lothal Wheat"),
-	inventory_image = "farming_lothal_wheat.png",
+	inventory_image = "lothal_wheat.png",
 	groups = {food_wheat = 1, flammable = 4}
 })
 
 -- straw
 minetest.register_node("farming:straw", {
 	description = S("Straw"),
-	tiles = {"farming_straw.png"},
+	tiles = {"straw.png"},
 	is_ground_content = false,
 	groups = {snappy = 3, flammable = 4, fall_damage_add_percent = -30},
 	sounds = default.node_sound_leaves_defaults()
@@ -58,14 +58,14 @@ if minetest.global_exists("stairs") then
 
 		stairs.register_all("straw", "farming:straw",
 			{snappy = 3, flammable = 4},
-			{"farming_straw.png"},
+			{"straw.png"},
 			"Straw",
 			default.node_sound_leaves_defaults())
 	else
 
 		stairs.register_stair_and_slab("straw", "farming:straw",
 			{snappy = 3, flammable = 4},
-			{"farming_straw.png"},
+			{"straw.png"},
 			"Straw Stair",
 			"Straw Slab",
 			default.node_sound_leaves_defaults())
@@ -75,7 +75,7 @@ end
 -- flour
 minetest.register_craftitem("farming:flour", {
 	description = S("Flour"),
-	inventory_image = "farming_flour.png",
+	inventory_image = "flour.png",
 	groups = {food_flour = 1, flammable = 1}
 })
 
@@ -92,7 +92,7 @@ minetest.register_craft({
 -- bread
 minetest.register_craftitem("farming:bread", {
 	description = S("Bread"),
-	inventory_image = "farming_bread.png",
+	inventory_image = "bread.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_bread = 1, flammable = 2}
 })
@@ -107,7 +107,7 @@ minetest.register_craft({
 -- sliced bread
 minetest.register_craftitem("farming:bread_slice", {
 	description = S("Sliced Bread"),
-	inventory_image = "farming_bread_slice.png",
+	inventory_image = "bread_slice.png",
 	on_use = minetest.item_eat(1),
 	groups = {food_bread_slice = 1, flammable = 2}
 })
@@ -122,7 +122,7 @@ minetest.register_craft({
 -- toast
 minetest.register_craftitem("farming:toast", {
 	description = S("Toast"),
-	inventory_image = "farming_toast.png",
+	inventory_image = "toast.png",
 	on_use = minetest.item_eat(1),
 	groups = {food_toast = 1, flammable = 2}
 })
@@ -137,7 +137,7 @@ minetest.register_craft({
 -- toast sandwich
 minetest.register_craftitem("farming:toast_sandwich", {
 	description = S("Toast Sandwich"),
-	inventory_image = "farming_toast_sandwich.png",
+	inventory_image = "toast_sandwich.png",
 	on_use = minetest.item_eat(4),
 	groups = {flammable = 2}
 })
@@ -154,7 +154,7 @@ minetest.register_craft({
 -- lothal wheat definition
 local def = {
 	drawtype = "plantlike",
-	tiles = {"farming_lothal_wheat_1.png"},
+	tiles = {"lothal_wheat_1.png"},
 	paramtype = "light",
 	paramtype2 = "meshoptions",
 	place_param2 = 3,
@@ -174,19 +174,19 @@ local def = {
 minetest.register_node("farming:lothal_wheat_1", table.copy(def))
 
 -- stage 2
-def.tiles = {"farming_lothal_wheat_2.png"}
+def.tiles = {"lothal_wheat_2.png"}
 minetest.register_node("farming:lothal_wheat_2", table.copy(def))
 
 -- stage 3
-def.tiles = {"farming_lothal_wheat_3.png"}
+def.tiles = {"lothal_wheat_3.png"}
 minetest.register_node("farming:lothal_wheat_3", table.copy(def))
 
 -- stage 4
-def.tiles = {"farming_lothal_wheat_4.png"}
+def.tiles = {"lothal_wheat_4.png"}
 minetest.register_node("farming:lothal_wheat_4", table.copy(def))
 
 -- stage 5
-def.tiles = {"farming_lothal_wheat_5.png"}
+def.tiles = {"lothal_wheat_5.png"}
 def.drop = {
 	items = {
 		{items = {"farming:lothal_wheat"}, rarity = 2},
@@ -196,7 +196,7 @@ def.drop = {
 minetest.register_node("farming:lothal_wheat_5", table.copy(def))
 
 -- stage 6
-def.tiles = {"farming_lothal_wheat_6.png"}
+def.tiles = {"lothal_wheat_6.png"}
 def.drop = {
 	items = {
 		{items = {"farming:lothal_wheat"}, rarity = 2},
@@ -206,7 +206,7 @@ def.drop = {
 minetest.register_node("farming:lothal_wheat_6", table.copy(def))
 
 -- stage 7
-def.tiles = {"farming_lothal_wheat_7.png"}
+def.tiles = {"lothal_wheat_7.png"}
 def.drop = {
 	items = {
 		{items = {"farming:lothal_wheat"}, rarity = 1},
@@ -218,7 +218,7 @@ def.drop = {
 minetest.register_node("farming:lothal_wheat_7", table.copy(def))
 
 -- stage 8 (final)
-def.tiles = {"farming_lothal_wheat_8.png"}
+def.tiles = {"lothal_wheat_8.png"}
 def.groups.growing = nil
 def.drop = {
 	items = {
