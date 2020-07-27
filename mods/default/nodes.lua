@@ -1330,11 +1330,7 @@ minetest.register_node("default:ladder_durasteel", {
 
 default.register_fence("default:fence_jogan_wood", {
 	description = S("Jogan Wood Fence"),
-	texture = "fence_jogan_wood.png",
-	inventory_image = "fence_overlay.png^jogan_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^jogan_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "jogan_wood.png",
 	material = "ethereal:jogan_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1342,11 +1338,7 @@ default.register_fence("default:fence_jogan_wood", {
 
 default.register_fence("default:fence_pine_wood", {
 	description = S("Pine Wood Fence"),
-	texture = "fence_pine_wood.png",
-	inventory_image = "fence_overlay.png^pine_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^pine_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "pine_wood.png",
 	material = "ethereal:pine_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1354,11 +1346,7 @@ default.register_fence("default:fence_pine_wood", {
 
 default.register_fence("default:fence_palm_wood", {
 	description = S("Palm Wood Fence"),
-	texture = "fence_palm_wood.png",
-	inventory_image = "fence_overlay.png^palm_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^palm_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "palm_wood.png",
 	material = "ethereal:palm_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1366,11 +1354,7 @@ default.register_fence("default:fence_palm_wood", {
 
 default.register_fence("default:fence_wroshyr_wood", {
 	description = S("Wroshyr Wood Fence"),
-	texture = "fence_wroshyr_wood.png",
-	inventory_image = "fence_overlay.png^wroshyr_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^wroshyr_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "wroshyr_wood.png",
 	material = "ethereal:wroshyr_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1378,11 +1362,7 @@ default.register_fence("default:fence_wroshyr_wood", {
 
 default.register_fence("default:fence_brylark_wood", {
 	description = S("Brylark Wood Fence"),
-	texture = "fence_brylark_wood.png",
-	inventory_image = "fence_overlay.png^brylark_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^brylark_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "brylark_wood.png",
 	material = "ethereal:brylark_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1390,11 +1370,7 @@ default.register_fence("default:fence_brylark_wood", {
 
 default.register_fence("default:fence_uneti_wood", {
 	description = S("Uneti Wood Fence"),
-	texture = "fence_uneti_wood.png",
-	inventory_image = "fence_overlay.png^uneti_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^uneti_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "uneti_wood.png",
 	material = "ethereal:uneti_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1402,11 +1378,7 @@ default.register_fence("default:fence_uneti_wood", {
 
 default.register_fence("default:fence_gnarltree_wood", {
 	description = S("Gnarltree Wood Fence"),
-	texture = "fence_gnarltree_wood.png",
-	inventory_image = "fence_overlay.png^gnarltree_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_overlay.png^gnarltree_wood.png^" ..
-				"fence_overlay.png^[makealpha:255,126,126",
+	texture = "gnarltree_wood.png",
 	material = "ethereal:gnarltree_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1414,11 +1386,7 @@ default.register_fence("default:fence_gnarltree_wood", {
 
 default.register_fence_rail("default:fence_rail_jogan_wood", {
 	description = S("Jogan Wood Fence Rail"),
-	texture = "fence_rail_jogan_wood.png",
-	inventory_image = "fence_rail_overlay.png^jogan_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^jogan_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "jogan_wood.png",
 	material = "ethereal:jogan_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults()
@@ -1426,11 +1394,7 @@ default.register_fence_rail("default:fence_rail_jogan_wood", {
 
 default.register_fence_rail("default:fence_rail_pine_wood", {
 	description = S("Pine Wood Fence Rail"),
-	texture = "fence_rail_pine_wood.png",
-	inventory_image = "fence_rail_overlay.png^pine_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^pine_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "pine_wood.png",
 	material = "ethereal:pine_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
@@ -1438,11 +1402,7 @@ default.register_fence_rail("default:fence_rail_pine_wood", {
 
 default.register_fence_rail("default:fence_rail_palm_wood", {
 	description = S("Palm Wood Fence Rail"),
-	texture = "fence_rail_palm_wood.png",
-	inventory_image = "fence_rail_overlay.png^palm_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^palm_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "palm_wood.png",
 	material = "ethereal:palm_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
@@ -1450,11 +1410,7 @@ default.register_fence_rail("default:fence_rail_palm_wood", {
 
 default.register_fence_rail("default:fence_rail_wroshyr_wood", {
 	description = S("Wroshyr Wood Fence Rail"),
-	texture = "fence_rail_wroshyr_wood.png",
-	inventory_image = "fence_rail_overlay.png^wroshyr_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^wroshyr_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "wroshyr_wood.png",
 	material = "ethereal:wroshyr_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
@@ -1462,11 +1418,7 @@ default.register_fence_rail("default:fence_rail_wroshyr_wood", {
 
 default.register_fence_rail("default:fence_rail_brylark_wood", {
 	description = S("Brylark Wood Fence Rail"),
-	texture = "fence_rail_brylark_wood.png",
-	inventory_image = "fence_rail_overlay.png^brylark_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^brylark_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "brylark_wood.png",
 	material = "ethereal:brylark_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
@@ -1474,11 +1426,7 @@ default.register_fence_rail("default:fence_rail_brylark_wood", {
 
 default.register_fence_rail("default:fence_rail_uneti_wood", {
 	description = S("Uneti Wood Fence Rail"),
-	texture = "fence_rail_uneti_wood.png",
-	inventory_image = "fence_rail_overlay.png^uneti_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^uneti_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "uneti_wood.png",
 	material = "ethereal:uneti_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
@@ -1486,11 +1434,7 @@ default.register_fence_rail("default:fence_rail_uneti_wood", {
 
 default.register_fence_rail("default:fence_rail_gnarltree_wood", {
 	description = S("Gnarltree Wood Fence Rail"),
-	texture = "fence_rail_gnarltree_wood.png",
-	inventory_image = "fence_rail_overlay.png^gnarltree_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
-	wield_image = "fence_rail_overlay.png^gnarltree_wood.png^" ..
-				"fence_rail_overlay.png^[makealpha:255,126,126",
+	texture = "gnarltree_wood.png",
 	material = "ethereal:gnarltree_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = default.node_sound_wood_defaults()
