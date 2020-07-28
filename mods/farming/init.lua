@@ -528,7 +528,7 @@ farming.register_plant = function(name, def)
 	-- Register harvest
 	minetest.register_craftitem(":" .. mname .. ":" .. pname, {
 		description = pname:gsub("^%l", string.upper),
-		inventory_image = mname .. "_" .. pname .. ".png",
+		inventory_image = pname .. ".png",
 		groups = def.groups or {flammable = 2},
 	})
 
@@ -569,7 +569,7 @@ farming.register_plant = function(name, def)
 		minetest.register_node(node_name, {
 			drawtype = "plantlike",
 			waving = 1,
-			tiles = {mname .. "_" .. pname .. "_" .. i .. ".png"},
+			tiles = {pname .. "_" .. i .. ".png"},
 			paramtype = "light",
 			paramtype2 = def.paramtype2,
 			place_param2 = def.place_param2,
