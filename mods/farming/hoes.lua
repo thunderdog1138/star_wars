@@ -159,11 +159,11 @@ farming.register_hoe(":farming:hoe_stone", {
 	material = "group:stone"
 })
 
-farming.register_hoe(":farming:hoe_steel", {
-	description = S("Steel Hoe"),
-	inventory_image = "hoe_steel.png",
+farming.register_hoe(":farming:hoe_durasteel", {
+	description = S("Durasteel Hoe"),
+	inventory_image = "hoe_durasteel.png",
 	max_uses = 200,
-	material = "default:steel_ingot"
+	material = "default:durasteel_ingot"
 })
 
 -- Toolranks support
