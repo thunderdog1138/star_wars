@@ -62,7 +62,7 @@ local function update_entity(pos)
 		object = minetest.add_entity(pos, "3d_armor_stand:armor_entity")
 	end
 	if object then
-		local texture = "3d_armor_trans.png"
+		local texture = "trans.png"
 		local textures = {}
 		local meta = minetest.get_meta(pos)
 		local inv = meta:get_inventory()
@@ -145,14 +145,14 @@ minetest.register_node("3d_armor_stand:top", {
 	drop = "",
 	groups = {not_in_creative_inventory = 1},
 	on_blast = function() end,
-	tiles = {"3d_armor_trans.png"},
+	tiles = {"trans.png"},
 })
 
 minetest.register_node("3d_armor_stand:armor_stand", {
 	description = S("Armor stand"),
 	drawtype = "mesh",
 	mesh = "3d_armor_stand.obj",
-	tiles = {"3d_armor_stand.png"},
+	tiles = {"armor_stand.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = false,
@@ -220,7 +220,7 @@ minetest.register_node("3d_armor_stand:locked_armor_stand", {
 	description = S("Locked Armor stand"),
 	drawtype = "mesh",
 	mesh = "3d_armor_stand.obj",
-	tiles = {"3d_armor_stand_locked.png"},
+	tiles = {"armor_stand_locked.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = false,
@@ -303,7 +303,7 @@ minetest.register_entity("3d_armor_stand:armor_entity", {
 	mesh = "3d_armor_entity.obj",
 	visual_size = {x=1, y=1},
 	collisionbox = {0,0,0,0,0,0},
-	textures = {"3d_armor_trans.png"},
+	textures = {"trans.png"},
 	pos = nil,
 	timer = 0,
 	on_activate = function(self)
