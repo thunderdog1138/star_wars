@@ -118,7 +118,7 @@ local mob_class = {
 	attack_chance = 5,
 	passive = false,
 	blood_amount = 5,
-	blood_texture = "mobs_blood.png",
+	blood_texture = "blood.png",
 	shoot_offset = 0,
 	floats = 1, -- floats in water by default
 	replace_offset = 0,
@@ -914,7 +914,7 @@ function mob_class:check_for_death(cmi_cause)
 		remove_mob(self, true)
 	end
 
-	effect(pos, 20, "tnt_smoke.png")
+	effect(pos, 20, "smoke.png")
 
 	return true
 end
@@ -1038,7 +1038,7 @@ function mob_class:do_env_damage()
 
 			self.health = self.health - self.light_damage
 
-			effect(pos, 5, "tnt_smoke.png")
+			effect(pos, 5, "smoke.png")
 
 			if self:check_for_death({type = "light"}) then
 				return true
@@ -1070,7 +1070,7 @@ function mob_class:do_env_damage()
 
 			self.health = self.health - self.lava_damage
 
-			effect(pos, 15, "fire_basic_flame.png", 1, 5, 1, 0.2, 15, true)
+			effect(pos, 15, "basic_flame.png", 1, 5, 1, 0.2, 15, true)
 
 			if self:check_for_death({type = "environment", pos = pos,
 					node = self.standing_in, hot = true}) then
@@ -1083,7 +1083,7 @@ function mob_class:do_env_damage()
 
 		self.health = self.health - nodef.damage_per_second
 
-		effect(pos, 5, "tnt_smoke.png")
+		effect(pos, 5, "smoke.png")
 
 		if self:check_for_death({type = "environment",
 				pos = pos, node = self.standing_in}) then
@@ -1406,7 +1406,7 @@ function mob_class:breed()
 								return
 						end
 					else
-						effect(pos, 15, "tnt_smoke.png", 1, 2, 2, 15, 5)
+						effect(pos, 15, "smoke.png", 1, 2, 2, 15, 5)
 					end
 
 					local mob = minetest.add_entity(pos, self.name)
@@ -2415,7 +2415,7 @@ function mob_class:do_states(dtime)
 
 						entity_physics(pos, entity_damage_radius)
 
-						effect(pos, 32, "tnt_smoke.png", nil, nil,
+						effect(pos, 32, "smoke.png", nil, nil,
 								node_break_radius, 1, 0)
 					end
 
@@ -2683,7 +2683,7 @@ function mob_class:falling(pos)
 
 				self.health = self.health - floor(d - 5)
 
-				effect(pos, 5, "tnt_smoke.png", 1, 2, 2, nil)
+				effect(pos, 5, "smoke.png", 1, 2, 2, nil)
 
 				if self:check_for_death({type = "fall"}) then
 					return true
@@ -3257,7 +3257,7 @@ function mob_class:mob_expire(pos, dtime)
 --			minetest.log("action",
 --				S("lifetimer expired, removed @1", self.name))
 
-			effect(pos, 15, "tnt_smoke.png", 2, 4, 2, 0)
+			effect(pos, 15, "smoke.png", 2, 4, 2, 0)
 
 			remove_mob(self, true)
 
@@ -4116,7 +4116,7 @@ function mobs:safe_boom(self, pos, radius)
 
 	entity_physics(pos, radius)
 
-	effect(pos, 32, "tnt_smoke.png", radius * 3, radius * 5, radius, 1, 0)
+	effect(pos, 32, "smoke.png", radius * 3, radius * 5, radius, 1, 0)
 end
 
 
@@ -4156,8 +4156,8 @@ function mobs:register_egg(mob, desc, background, addegg, no_creative)
 	local invimg = background
 
 	if addegg == 1 then
-		invimg = "mobs_chicken_egg.png^(" .. invimg ..
-			"^[mask:mobs_chicken_egg_overlay.png)"
+		invimg = "porg_egg.png^(" .. invimg ..
+			"^[mask:porg_egg_overlay.png)"
 	end
 
 	-- register new spawn egg containing mob information
