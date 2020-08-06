@@ -43,9 +43,9 @@ mobs:register_mob("mobs_monster:tusken_raider", {
 	visual = "mesh",
 	mesh = "mobs_character.b3d",
 	textures = {
-		{"mobs_tusken_raider.png"},
+		{"tusken_raider.png"},
 	},
-	blood_texture = "default_desert_sand.png",
+	blood_texture = "blood.png",
 	makes_footstep_sound = true,
 	sounds = {
 		random = "mobs_sandmonster",
@@ -113,7 +113,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:tusken_raider", "Tusken Raider", "default_desert_sand.png", 1)
+mobs:register_egg("mobs_monster:tusken_raider", "Tusken Raider", "desert_sand.png", 1)
 
 
 mobs:alias_mob("mobs:tusken_raider", "mobs_monster:tusken_raider") -- compatibility
