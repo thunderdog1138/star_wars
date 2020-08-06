@@ -15,9 +15,9 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	visual = "mesh",
 	mesh = "mobs_character.b3d",
 	textures = {
-		{"mobs_stormtrooper.png"},
+		{"stormtrooper.png"},
 	},
-	blood_texture = "default_desert_sand.png",
+	blood_texture = "blood.png",
 	makes_footstep_sound = true,
 	sounds = {
 		war_cry = "mobs_blast_em",
@@ -77,6 +77,6 @@ mobs:spawn({
 	min_height = 0,
 })
 
-mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "default_desert_sand.png", 1)
+mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "desert_sand.png", 1)
 
 mobs:alias_mob("mobs:stormtrooper", "mobs_monster:stormtrooper") -- compatibility
