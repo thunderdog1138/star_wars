@@ -6,7 +6,7 @@ local S = mobs.intllib
 local spawner_default = "mobs_animal:pumba 10 15 0 0 0"
 
 minetest.register_node("mobs:spawner", {
-	tiles = {"mob_spawner.png"},
+	tiles = {"spawner.png"},
 	drawtype = "glasslike",
 	paramtype = "light",
 	walkable = true,
