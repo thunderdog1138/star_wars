@@ -141,7 +141,7 @@ stairs.register_all("desert_sandstone_block", "default:desert_sandstone_block",
 
 stairs.register_all("silver_sandstone", "default:silver_sandstone",
 	{crumbly = 1, cracky = 3},
-	{"default_silver_sandstone.png"},
+	{"silver_sandstone.png"},
 	"Silver Sandstone",
 	stairs.stone, true)
 
