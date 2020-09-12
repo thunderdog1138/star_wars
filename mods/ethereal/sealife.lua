@@ -35,7 +35,7 @@ minetest.register_craft( {
 if ethereal.sealife == 1 then
 minetest.register_abm({
 	label = "Grow coral/seaweed",
-	nodenames = {"ethereal:sandy"},
+	nodenames = {"default:sand"},
 	neighbors = {"group:water"},
 	interval = 15,
 	chance = 10,
