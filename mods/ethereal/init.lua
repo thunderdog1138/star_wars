@@ -99,7 +99,6 @@ dofile(path .. "/fences.lua")
 dofile(path .. "/gates.lua")
 dofile(path .. "/mapgen.lua")
 dofile(path .. "/compatibility.lua")
-dofile(path .. "/stairs.lua")
 dofile(path .. "/lucky_block.lua")
 
 -- Set bonemeal aliases
