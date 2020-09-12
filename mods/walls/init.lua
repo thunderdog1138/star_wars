@@ -59,8 +59,8 @@ end
 walls.register("walls:cobble", S("Cobblestone Wall"), {"cobble.png"},
 		"default:cobble", default.node_sound_stone_defaults())
 
-walls.register("walls:mossycobble", S("Mossy Cobblestone Wall"), {"mossycobble.png"},
-		"default:mossycobble", default.node_sound_stone_defaults())
+walls.register("walls:cobble_mossy", S("Mossy Cobblestone Wall"), {"cobble_mossy.png"},
+		"default:cobble_mossy", default.node_sound_stone_defaults())
 
 walls.register("walls:desertcobble", S("Desert Cobblestone Wall"), {"desert_cobble.png"},
 		"default:desert_cobble", default.node_sound_stone_defaults())
