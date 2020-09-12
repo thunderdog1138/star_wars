@@ -233,7 +233,7 @@ minetest.register_node("ethereal:bush_leaves", {
 	},
 	sounds = default.node_sound_leaves_defaults(),
 
-	after_place_node = after_place_leaves,
+	after_place_node = default.after_place_leaves,
 })
 
 -- mushroom cap
