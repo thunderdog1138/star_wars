@@ -1,97 +1,103 @@
 
 local grp = {} -- Helper
 
---= Default Minetest
-
 -- Wood types
 
-stairs.register_all("wood", "default:wood",
-	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"default_wood.png"},
-	"Wooden",
+stairs.register_all("jogan_wood", "ethereal:jogan_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"jogan_wood.png"},
+	"Jogan Wood",
 	stairs.wood, false)
 
-stairs.register_all("junglewood", "default:junglewood",
-	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"default_junglewood.png"},
-	"Jungle Wood",
-	stairs.wood, false)
-
-stairs.register_all("pine_wood", "default:pinewood",
-	{choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
-	{"default_pine_wood.png"},
+stairs.register_all("pine_wood", "ethereal:pine_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"pine_wood.png"},
 	"Pine Wood",
 	stairs.wood, false)
 
--- Register aliases for new pine node names
-minetest.register_alias("stairs:stair_pinewood", "stairs:stair_pine_wood")
-minetest.register_alias("stairs:slab_pinewood", "stairs:slab_pine_wood")
-
-stairs.register_all("acacia_wood", "default:acacia_wood",
-	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	{"default_acacia_wood.png"},
-	"Acacia Wood",
+stairs.register_all("palm_wood", "ethereal:palm_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"palm_wood.png"},
+	"Palm Wood",
 	stairs.wood, false)
 
-stairs.register_all("aspen_wood", "default:aspen_wood",
-	{choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	{"default_aspen_wood.png"},
-	"Aspen Wood",
+stairs.register_all("wroshyr_wood", "ethereal:wroshyr_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"wroshyr_wood.png"},
+	"Wroshyr Wood",
+	stairs.wood, false)
+
+stairs.register_all("brylark_wood", "ethereal:brylark_wood",
+	{cracky = 1, level = 2},
+	{"brylark_wood.png"},
+	"Brylark Wood",
+	stairs.wood, false)
+
+stairs.register_all("uneti_wood", "ethereal:uneti_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
+	{"uneti_wood.png"},
+	"Uneti Wood",
+	stairs.wood, false)
+
+stairs.register_all("gnarltree_wood", "ethereal:gnarltree_wood",
+	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+	{"gnarltree_wood.png"},
+	"Gnarltree Wood",
 	stairs.wood, false)
 
 -- Stone types
 
 stairs.register_all("stone", "default:stone",
 	{cracky = 3},
-	{"default_stone.png"},
+	{"stone.png"},
 	"Stone",
 	stairs.stone, true)
 
-stairs.register_all("stonebrick", "default:stonebrick",
+stairs.register_all("stone_brick", "default:stone_brick",
 	{cracky = 2},
-	{"default_stone_brick.png"},
+	{"stone_brick.png"},
 	"Stone Brick",
 	stairs.stone, false)
 
 stairs.register_all("stone_block", "default:stone_block",
 	{cracky = 2},
-	{"default_stone_block.png"},
+	{"stone_block.png"},
 	"Stone Block",
 	stairs.stone, true)
 
 stairs.register_all("cobble", "default:cobble",
 	{cracky = 3},
-	{"default_cobble.png"},
+	{"cobble.png"},
 	"Cobble",
 	stairs.stone, true)
 
-stairs.register_all("mossycobble", "default:mossycobble",
+stairs.register_all("cobble_mossy", "default:cobble_mossy",
 	{cracky = 3},
-	{"default_mossycobble.png"},
+	{"cobble_mossy.png"},
 	"Mossy Cobble",
 	stairs.stone, true)
 
 stairs.register_all("desert_stone", "default:desert_stone",
 	{cracky = 3},
-	{"default_desert_stone.png"},
+	{"desert_stone.png"},
 	"Desert Stone",
 	stairs.stone, true)
 
-stairs.register_all("desert_stonebrick", "default:desert_stonebrick",
+stairs.register_all("desert_stone_brick", "default:desert_stone_brick",
 	{cracky = 2},
-	{"default_desert_stone_brick.png"},
+	{"desert_stone_brick.png"},
 	"Desert Stone Brick",
 	stairs.stone, false)
 
 stairs.register_all("desert_stone_block", "default:desert_stone_block",
 	{cracky = 2},
-	{"default_desert_stone_block.png"},
+	{"desert_stone_block.png"},
 	"Desert Stone Block",
 	stairs.stone, true)
 
 stairs.register_all("desert_cobble", "default:desert_cobble",
 	{cracky = 3},
-	{"default_desert_cobble.png"},
+	{"desert_cobble.png"},
 	"Desert Cobble",
 	stairs.stone, true)
 
@@ -99,37 +105,37 @@ stairs.register_all("desert_cobble", "default:desert_cobble",
 
 stairs.register_all("sandstone", "default:sandstone",
 	{crumbly = 1, cracky = 3},
-	{"default_sandstone.png"},
+	{"sandstone.png"},
 	"Sandstone",
 	stairs.stone, true)
 
-stairs.register_all("sandstonebrick", "default:sandstonebrick",
+stairs.register_all("sandstone_brick", "default:sandstone_brick",
 	{cracky = 2},
-	{"default_sandstone_brick.png"},
+	{"sandstone_brick.png"},
 	"Sandstone Brick",
 	stairs.stone, false)
 
 stairs.register_all("sandstone_block", "default:sandstone_block",
 	{cracky = 2},
-	{"default_sandstone_block.png"},
+	{"sandstone_block.png"},
 	"Sandstone Block",
 	stairs.stone, true)
 
 stairs.register_all("desert_sandstone", "default:desert_sandstone",
 	{crumbly = 1, cracky = 3},
-	{"default_desert_sandstone.png"},
+	{"desert_sandstone.png"},
 	"Desert Sandstone",
 	stairs.stone, true)
 
 stairs.register_all("desert_sandstone_brick", "default:desert_sandstone_brick",
 	{cracky = 2},
-	{"default_desert_sandstone_brick.png"},
+	{"desert_sandstone_brick.png"},
 	"Desert Sandstone Brick",
 	stairs.stone, false)
 
 stairs.register_all("desert_sandstone_block", "default:desert_sandstone_block",
 	{cracky = 2},
-	{"default_desert_sandstone_block.png"},
+	{"desert_sandstone_block.png"},
 	"Desert Sandstone Block",
 	stairs.stone, true)
 
@@ -141,13 +147,13 @@ stairs.register_all("silver_sandstone", "default:silver_sandstone",
 
 stairs.register_all("silver_sandstone_brick", "default:silver_sandstone_brick",
 	{cracky = 2},
-	{"default_silver_sandstone_brick.png"},
+	{"silver_sandstone_brick.png"},
 	"Silver Sandstone Brick",
 	stairs.stone, false)
 
 stairs.register_all("silver_sandstone_block", "default:silver_sandstone_block",
 	{cracky = 2},
-	{"default_silver_sandstone_block.png"},
+	{"silver_sandstone_block.png"},
 	"Silver Sandstone Block",
 	stairs.stone, true)
 
@@ -155,19 +161,19 @@ stairs.register_all("silver_sandstone_block", "default:silver_sandstone_block",
 
 stairs.register_all("obsidian", "default:obsidian",
 	{cracky = 1, level = 2},
-	{"default_obsidian.png"},
+	{"obsidian.png"},
 	"Obsidian",
 	stairs.stone, true)
 
-stairs.register_all("obsidianbrick", "default:obsidianbrick",
+stairs.register_all("obsidian_brick", "default:obsidian_brick",
 	{cracky = 1, level = 2},
-	{"default_obsidian_brick.png"},
+	{"obsidian_brick.png"},
 	"Obsidian Brick",
 	stairs.stone, false)
 
 stairs.register_all("obsidian_block", "default:obsidian_block",
 	{cracky = 1, level = 2},
-	{"default_obsidian_block.png"},
+	{"obsidian_block.png"},
 	"Obsidian block",
 	stairs.stone, true)
 
@@ -199,65 +205,59 @@ minetest.override_item("stairs:slab_cloud", {
 
 -- Ores
 
-stairs.register_all("coal", "default:coalblock",
+stairs.register_all("coal_block", "default:coal_block",
 	{cracky = 3},
-	{"default_coal_block.png"},
+	{"coal_block.png"},
 	"Coal",
 	stairs.stone, true)
 
-stairs.register_all("steelblock", "default:steelblock",
+stairs.register_all("durasteel_block", "default:durasteel_block",
 	{cracky = 1, level = 2},
-	{"default_steel_block.png"},
-	"Steel",
+	{"durasteel_block.png"},
+	"Durasteel",
 	stairs.metal, true)
 
-stairs.register_all("copperblock", "default:copperblock",
+stairs.register_all("copper_block", "default:copper_block",
 	{cracky = 1, level = 2},
-	{"default_copper_block.png"},
+	{"copper_block.png"},
 	"Copper",
 	stairs.metal, true)
 
-stairs.register_all("bronzeblock", "default:bronzeblock",
+stairs.register_all("bronze_block", "default:bronze_block",
 	{cracky = 1, level = 2},
-	{"default_bronze_block.png"},
+	{"bronze_block.png"},
 	"Bronze",
 	stairs.metal, true)
 
-stairs.register_all("tinblock", "default:tinblock",
+stairs.register_all("tin_block", "default:tin_block",
 	{cracky = 1, level = 2},
-	{"default_tin_block.png"},
+	{"tin_block.png"},
 	"Tin",
 	stairs.metal, true)
 
-stairs.register_all("mese", "default:mese",
-	{cracky = 1, level = 2},
-	{"default_mese_block.png"},
-	"Mese",
-	stairs.stone)
-
-stairs.register_all("goldblock", "default:goldblock",
+stairs.register_all("gold_block", "default:gold_block",
 	{cracky = 1},
-	{"default_gold_block.png"},
+	{"gold_block.png"},
 	"Gold",
 	stairs.metal)
 
-stairs.register_all("diamondblock", "default:diamondblock",
+stairs.register_all("beskar_block", "default:beskar_block",
 	{cracky = 1, level = 3},
-	{"default_diamond_block.png"},
-	"Diamond",
+	{"beskar_block.png"},
+	"Beskar",
 	stairs.stone)
 
 -- Glass types
 
 stairs.register_all("glass", "default:glass",
 	{cracky = 3, oddly_breakable_by_hand = 3},
-	{"default_glass.png"},
+	{"glass.png"},
 	"Glass",
 	stairs.glass)
 
 stairs.register_all("obsidian_glass", "default:obsidian_glass",
 	{cracky = 2},
-	{"default_obsidian_glass.png"},
+	{"obsidian_glass.png"},
 	"Obsidian Glass",
 	stairs.glass)
 
@@ -265,259 +265,21 @@ stairs.register_all("obsidian_glass", "default:obsidian_glass",
 
 stairs.register_all("brick", "default:brick",
 	{cracky = 3},
-	{"default_brick.png"},
+	{"brick.png"},
 	"Brick",
 	stairs.stone, false)
 
-stairs.register_all("snowblock", "default:snowblock",
+stairs.register_all("snow_block", "default:snow_block",
 	{crumbly = 3, cools_lava = 1, snowy = 1},
-	{"default_snow.png"},
-	"Snow Block",
+	{"snow.png"},
+	"Snow",
 	default.node_sound_snow_defaults(), true)
 
 stairs.register_all("ice", "default:ice",
 	{cracky = 3, cools_lava = 1},
-	{"default_ice.png"},
+	{"ice.png"},
 	"Ice",
 	default.node_sound_glass_defaults(), true)
-
---= More Ores Mod
-
-if minetest.get_modpath("moreores") then
-
-grp = {cracky = 1, level = 2}
-
-stairs.register_all("silver_block", "moreores:silver_block",
-	grp,
-	{"moreores_silver_block.png"},
-	"Silver",
-	stairs.metal, true)
-
-stairs.register_all("mithril_block", "moreores:mithril_block",
-	grp,
-	{"moreores_mithril_block.png"},
-	"Mithril",
-	stairs.metal, true)
-
-end
-
---= Mobs Mod
-
-if minetest.registered_nodes["mobs:cheeseblock"] then
-
-grp = {crumbly = 3, flammable = 2}
-
-stairs.register_all("cheeseblock", "mobs:cheeseblock",
-	grp,
-	{"mobs_cheeseblock.png"},
-	"Cheese Block",
-	stairs.dirt)
-
-stairs.register_all("honey_block", "mobs:honey_block",
-	grp,
-	{"mobs_honey_block.png"},
-	"Honey Block",
-	stairs.dirt)
-
-end
-
---= Lapis Mod
-
-if minetest.get_modpath("lapis") then
-
-grp = {cracky = 3}
-
-stairs.register_all("lapis_block", "lapis:lapis_block",
-	grp,
-	{"lapis_block_side.png"},
-	"Lapis",
-	stairs.stone)
-
-stairs.register_all("lapis_brick", "lapis:lapis_brick",
-	grp,
-	{"lapis_brick.png"},
-	"Lapis Brick",
-	stairs.stone)
-
-stairs.register_all("lapis_cobble", "lapis:lapis_cobble",
-	grp,
-	{"lapis_cobble.png"},
-	"Lapis Cobble",
-	stairs.stone)
-
-end
-
---= Homedecor Mod
-
-if minetest.get_modpath("homedecor") then
-
-local grp = {snappy = 3}
-
-stairs.register_all("shingles_asphalt", "homedecor:shingles_asphalt",
-	grp,
-	{"homedecor_shingles_asphalt.png"},
-	"Asphalt Shingle",
-	stairs.leaves)
-
-stairs.register_all("shingles_terracotta", "homedecor:roof_tile_terracotta",
-	grp,
-	{"homedecor_shingles_terracotta.png"},
-	"Terracotta Shingle",
-	stairs.leaves)
-
-stairs.register_all("shingles_wood", "homedecor:shingles_wood",
-	grp,
-	{"homedecor_shingles_wood.png"},
-	"Wooden Shingle",
-	stairs.leaves)
-
-end
-
---= Xanadu Mod
-
-if minetest.get_modpath("xanadu") then
-
-grp = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3}
-
-stairs.register_all("stained_wood_white", "xanadu:stained_wood_white",
-	grp,
-	{"stained_wood_white.png"},
-	"White Wooden",
-	stairs.wood, false)
-
-stairs.register_all("stained_wood_red", "xanadu:stained_wood_red",
-	grp,
-	{"stained_wood_red.png"},
-	"Red Wooden",
-	stairs.wood, false)
-
--- Decorative blocks
-
-grp = {cracky = 3}
-
-stairs.register_all("stone1", "xanadu:stone1",
-	grp,
-	{"stone1.png"},
-	"Decorative Stone 1",
-	stairs.stone)
-
-stairs.register_all("stone2", "xanadu:stone2",
-	grp,
-	{"stone2.png"},
-	"Decorative Stone 2",
-	stairs.stone)
-
-stairs.register_all("stone3", "xanadu:stone3",
-	grp,
-	{"stone3.png"},
-	"Decorative Stone 3",
-	stairs.stone)
-
-stairs.register_all("stone4", "xanadu:stone4",
-	grp,
-	{"stone4.png"},
-	"Decorative Stone 4",
-	stairs.stone)
-
-stairs.register_all("stone5", "xanadu:stone5",
-	grp,
-	{"stone5.png"},
-	"Decorative Stone 5",
-	stairs.stone)
-
-stairs.register_all("stone6", "xanadu:stone6",
-	grp,
-	{"stone6.png"},
-	"Decorative Stone 6",
-	stairs.stone)
-
-stairs.register_all("sandstonebrick1", "xanadu:sandstonebrick1",
-	grp,
-	{"sandstonebrick1.png"},
-	"Decorative Sandstone 1",
-	stairs.stone)
-
-stairs.register_all("sandstonebrick4", "xanadu:sandstonebrick4",
-	grp,
-	{"sandstonebrick4.png"},
-	"Decorative Sandstone 4",
-	stairs.stone)
-
-stairs.register_slab("desert_cobble1", "xanadu:desert_cobble1",
-	grp,
-	{"desert_cobble1.png"},
-	"Decorative desert cobble 1 slab",
-	stairs.stone)
-
-stairs.register_slab("desert_cobble5", "xanadu:desert_cobble5",
-	grp,
-	{"desert_cobble5.png"},
-	"Decorative desert cobble 5 slab",
-	stairs.stone)
-
-stairs.register_slab("desert_stone1", "xanadu:desert_stone1",
-	grp,
-	{"desert_stone1.png"},
-	"Decorative desert stone 1 slab",
-	stairs.stone)
-
-stairs.register_slab("desert_stone3", "xanadu:desert_stone3",
-	grp,
-	{"desert_stone3.png"},
-	"Decorative desert stone 3 slab",
-	stairs.stone)
-
-stairs.register_slab("desert_stone4", "xanadu:desert_stone4",
-	grp,
-	{"desert_stone4.png"},
-	"Decorative desert stone 4 slab",
-	stairs.stone)
-
-stairs.register_stair("desert_stone4", "xanadu:desert_stone4",
-	grp,
-	{"desert_stone4.png"},
-	"Decorative desert stone 4 stair",
-	stairs.stone)
-
-stairs.register_slab("desert_stone5", "xanadu:desert_stone5",
-	grp,
-	{"desert_stone5.png"},
-	"Decorative desert stone 5 slab",
-	stairs.stone)
-
-stairs.register_slab("red1", "xanadu:red1",
-	grp,
-	{"baked_clay_red1.png"},
-	"Decorative baked red clay 1 slab",
-	stairs.stone)
-
-stairs.register_all("bred2", "xanadu:red2",
-	grp,
-	{"baked_clay_red2.png"},
-	"Decorative baked red clay 2",
-	stairs.stone)
-
-end
-
---= Castle Mod
-
-if minetest.get_modpath("castle") then
-
-grp = {cracky = 2}
-
-stairs.register_all("dungeon_stone", "castle:dungeon_stone",
-	grp,
-	{"castle_dungeon_stone.png"},
-	"Dungeon",
-	stairs.stone)
-
-stairs.register_all("stonewall", "castle:stonewall",
-	grp,
-	{"castle_stonewall.png"},
-	"Castle Wall",
-	stairs.stone)
-
-end
 
 --= Wool Mod
 
