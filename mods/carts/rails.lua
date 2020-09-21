@@ -9,8 +9,8 @@ carts:register_rail("carts:rail", {
 		"rail_straight.png", "rail_curved.png",
 		"rail_t_junction.png", "rail_crossing.png"
 	},
-	inventory_image = "carts_rail_straight.png",
-	wield_image = "carts_rail_straight.png",
+	inventory_image = "rail_straight.png",
+	wield_image = "rail_straight.png",
 	groups = carts:get_rail_groups(),
 }, {})
 
