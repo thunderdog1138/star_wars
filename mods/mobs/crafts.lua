@@ -102,7 +102,7 @@ minetest.register_craft({
 -- protection rune
 minetest.register_craftitem("mobs:protector", {
 	description = S("Mob Protection Rune"),
-	inventory_image = "protector.png",
+	inventory_image = "mob_protector.png",
 	groups = {flammable = 2}
 })
 
