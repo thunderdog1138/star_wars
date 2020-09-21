@@ -717,23 +717,4 @@ minetest.clear_registered_ores()
 minetest.clear_registered_decorations()
 
 local mg_name = minetest.get_mapgen_setting("mg_name")
-
-if mg_name == "v6" then
-	default.register_mgv6_ores()
-	default.register_mgv6_decorations()
--- Need to check for 'nofloatlands' because that contains
--- 'floatlands' which makes the second condition true.
-elseif mg_name == "v7" and
-		captures_float == "floatlands" and
-		captures_nofloat ~= "nofloatlands" then
-	-- Mgv7 with floatlands and floatland biomes
-	default.register_biomes(default.mgv7_shadow_limit - 1)
-	default.register_floatland_biomes(
-		default.mgv7_floatland_level, default.mgv7_shadow_limit)
-	default.register_ores()
-	default.register_decorations()
-else
-	default.register_biomes(31000)
-	default.register_ores()
-	default.register_decorations()
 end
