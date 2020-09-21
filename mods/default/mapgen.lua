@@ -1844,7 +1844,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_grass",
@@ -1872,8 +1872,7 @@ function default.register_decorations()
 			biomes = {"rainforest"},
 			y_max = 32,
 			y_min = 1,
-			schematic = minetest.get_modpath("default") ..
-					"/schematics/emergent_jungle_tree.mts",
+			schematic = nil,
 			flags = "place_center_x, place_center_z",
 			rotation = "random",
 			place_offset_y = -4,
@@ -1891,7 +1890,7 @@ function default.register_decorations()
 		biomes = {"rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -1915,7 +1914,7 @@ function default.register_decorations()
 		biomes = {"rainforest_swamp"},
 		y_max = 0,
 		y_min = -1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -1930,7 +1929,7 @@ function default.register_decorations()
 		biomes = {"rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_rainforest_litter",
@@ -1955,7 +1954,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -1975,7 +1974,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -1989,7 +1988,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
@@ -2014,7 +2013,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -2036,7 +2035,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dry_dirt_with_dry_grass",
@@ -2061,7 +2060,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2082,7 +2081,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_grass",
@@ -2107,7 +2106,7 @@ function default.register_decorations()
 		biomes = {"desert"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/large_cactus.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -2153,7 +2152,7 @@ function default.register_decorations()
 		biomes = {"savanna_shore", "rainforest_swamp"},
 		y_max = 0,
 		y_min = 0,
-		schematic = minetest.get_modpath("default") .. "/schematics/papyrus.mts",
+		schematic = nil,
 	})
 
 	-- Bush
@@ -2175,7 +2174,7 @@ function default.register_decorations()
 			"floatland_grassland"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2198,7 +2197,7 @@ function default.register_decorations()
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2220,7 +2219,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2242,7 +2241,7 @@ function default.register_decorations()
 		biomes = {"taiga", "snowy_grassland"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
