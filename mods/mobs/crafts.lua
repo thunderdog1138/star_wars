@@ -41,8 +41,8 @@ minetest.register_craftitem("mobs:bantha_meat", {
 
 minetest.register_craft({
 	type = "cooking",
-	output = "mobs:meat",
-	recipe = "mobs:meat_raw",
+	output = "mobs:bantha_meat",
+	recipe = "mobs:bantha_meat_raw",
 	cooktime = 5
 })
 
