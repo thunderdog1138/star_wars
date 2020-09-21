@@ -698,11 +698,6 @@ function default.register_floatland_biomes(floatland_level, shadow_limit)
 
 -- Mgv6
 
-function default.register_mgv6_decorations()
-
-
-function default.register_decorations()
-
 
 --
 -- Detect mapgen, flags and parameters to select functions
