@@ -2,7 +2,7 @@
 local _ = {name = "air", prob = 0}
 local l = {name = "default:lava_source", prob = 225}
 local s = {name = "default:stone", prob = 255}
-local d = {name = "ethereal:fiery_dirt", prob = 255}
+local d = {name = "ethereal:charred_dirt", prob = 255}
 
 ethereal.volcanom = {
 
