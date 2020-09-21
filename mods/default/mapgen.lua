@@ -135,7 +135,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
@@ -146,7 +146,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 7 * 7 * 7,
 		clust_num_ores = 5,
@@ -157,7 +157,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 24 * 24 * 24,
 		clust_num_ores = 27,
@@ -271,40 +271,6 @@ function default.register_mgv6_ores()
 		y_min          = -31000,
 	})
 
-	-- Mese crystal
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -64,
-		y_min          = -255,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -256,
-		y_min          = -31000,
-	})
 
 	-- Diamond
 
@@ -648,7 +614,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
@@ -659,7 +625,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 7 * 7 * 7,
 		clust_num_ores = 5,
@@ -670,7 +636,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 12 * 12 * 12,
 		clust_num_ores = 29,
@@ -714,40 +680,6 @@ function default.register_ores()
 		y_min          = -31000,
 	})
 
-	-- Mese crystal
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -512,
-		y_min          = -1023,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -1024,
-		y_min          = -31000,
-	})
 
 	-- Diamond
 
@@ -798,10 +730,10 @@ function default.register_biomes(upper_limit)
 
 	minetest.register_biome({
 		name = "icesheet",
-		node_dust = "default:snowblock",
-		node_top = "default:snowblock",
+		node_dust = "default:snow_block",
+		node_top = "default:snow_block",
 		depth_top = 1,
-		node_filler = "default:snowblock",
+		node_filler = "default:snow_block",
 		depth_filler = 3,
 		node_stone = "default:cave_ice",
 		node_water_top = "default:ice",
@@ -819,7 +751,7 @@ function default.register_biomes(upper_limit)
 
 	minetest.register_biome({
 		name = "icesheet_ocean",
-		node_dust = "default:snowblock",
+		node_dust = "default:snow_block",
 		node_top = "default:sand",
 		depth_top = 1,
 		node_filler = "default:sand",
@@ -828,7 +760,7 @@ function default.register_biomes(upper_limit)
 		depth_water_top = 10,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -9,
 		y_min = -255,
@@ -840,7 +772,7 @@ function default.register_biomes(upper_limit)
 		name = "icesheet_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -856,7 +788,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 47,
@@ -873,7 +805,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 4,
 		y_max = 46,
@@ -891,7 +823,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 1,
@@ -910,7 +842,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = -4,
@@ -923,7 +855,7 @@ function default.register_biomes(upper_limit)
 		name = "tundra_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -943,7 +875,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 4,
@@ -962,7 +894,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 3,
@@ -975,7 +907,7 @@ function default.register_biomes(upper_limit)
 		name = "taiga_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -995,7 +927,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 4,
@@ -1014,7 +946,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 3,
@@ -1027,7 +959,7 @@ function default.register_biomes(upper_limit)
 		name = "snowy_grassland_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1046,7 +978,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 6,
@@ -1063,7 +995,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 5,
@@ -1082,7 +1014,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 3,
 		y_min = -255,
@@ -1094,7 +1026,7 @@ function default.register_biomes(upper_limit)
 		name = "grassland_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1113,7 +1045,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 6,
@@ -1130,7 +1062,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 5,
@@ -1149,7 +1081,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 3,
 		y_min = -255,
@@ -1161,7 +1093,7 @@ function default.register_biomes(upper_limit)
 		name = "coniferous_forest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1180,7 +1112,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 1,
@@ -1197,7 +1129,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 0,
 		y_min = -1,
@@ -1215,7 +1147,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = -2,
@@ -1228,7 +1160,7 @@ function default.register_biomes(upper_limit)
 		name = "deciduous_forest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1278,7 +1210,7 @@ function default.register_biomes(upper_limit)
 		name = "desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1327,7 +1259,7 @@ function default.register_biomes(upper_limit)
 		name = "sandstone_desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1346,7 +1278,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 4,
@@ -1364,7 +1296,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = 3,
@@ -1377,7 +1309,7 @@ function default.register_biomes(upper_limit)
 		name = "cold_desert_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1396,7 +1328,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 1,
@@ -1413,7 +1345,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 0,
 		y_min = -1,
@@ -1431,7 +1363,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = -2,
@@ -1444,7 +1376,7 @@ function default.register_biomes(upper_limit)
 		name = "savanna_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1463,7 +1395,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = upper_limit,
 		y_min = 1,
@@ -1480,7 +1412,7 @@ function default.register_biomes(upper_limit)
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 0,
 		y_min = -1,
@@ -1498,7 +1430,7 @@ function default.register_biomes(upper_limit)
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		vertical_blend = 1,
 		y_max = -2,
@@ -1511,7 +1443,7 @@ function default.register_biomes(upper_limit)
 		name = "rainforest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
 		y_min = -31000,
@@ -1534,7 +1466,7 @@ function default.register_floatland_biomes(floatland_level, shadow_limit)
 		node_filler = "default:dirt",
 		depth_filler = 1,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
 		y_min = floatland_level + 2,
@@ -1549,7 +1481,7 @@ function default.register_floatland_biomes(floatland_level, shadow_limit)
 		node_filler = "default:dirt",
 		depth_filler = 3,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
 		y_min = floatland_level + 2,
@@ -1564,7 +1496,7 @@ function default.register_floatland_biomes(floatland_level, shadow_limit)
 		node_filler = "default:sand",
 		depth_filler = 3,
 		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_alt = "default:cobble_mossy",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = floatland_level + 1,
 		y_min = shadow_limit,
@@ -1585,9 +1517,9 @@ function default.register_mgv6_decorations()
 	-- Papyrus
 
 	minetest.register_decoration({
-		name = "default:papyrus",
+		name = "default:reeds",
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"ethereal:grass_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.3,
@@ -1599,7 +1531,7 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 1,
 		y_min = 1,
-		decoration = "default:papyrus",
+		decoration = "default:reeds",
 		height = 2,
 		height_max = 4,
 		spawn_by = "default:water_source",
@@ -1634,7 +1566,7 @@ function default.register_mgv6_decorations()
 		minetest.register_decoration({
 			name = "default:grass_"..length,
 			deco_type = "simple",
-			place_on = {"default:dirt_with_grass"},
+			place_on = {"ethereal:grass_dirt"},
 			sidelen = 16,
 			noise_params = {
 				offset = 0,
@@ -1679,7 +1611,7 @@ local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		name = "default:grass_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"ethereal:grass_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = offset,
@@ -1700,7 +1632,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		name = "default:dry_grass_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dry_dirt_with_dry_grass"},
+		place_on = {"ethereal:savanna_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = offset,
@@ -1721,7 +1653,7 @@ local function register_fern_decoration(seed, length)
 	minetest.register_decoration({
 		name = "default:fern_" .. length,
 		deco_type = "simple",
-		place_on = {"default:dirt_with_coniferous_litter"},
+		place_on = {"ethereal:jungle_dirt"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -1763,53 +1695,6 @@ function default.register_decorations()
 		decoration = "default:dry_dirt",
 		place_offset_y = -1,
 		flags = "force_placement",
-	})
-
-	-- Jogan tree and log
-
-	minetest.register_decoration({
-		name = "default:jogan_tree",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.024,
-			scale = 0.015,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_tree.mts",
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
-	})
-
-	minetest.register_decoration({
-		name = "default:jogan_log",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-			offset = 0.0012,
-			scale = 0.0007,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = "default:dirt_with_grass",
-		num_spawn_by = 8,
 	})
 
 	-- Emergent jungle tree
