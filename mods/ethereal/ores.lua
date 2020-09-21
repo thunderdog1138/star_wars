@@ -73,6 +73,3 @@ add_ore("default:stone_with_beskar", "default:desert_stone", 15*15*15, 4, 3, -31
 
 -- Copper
 add_ore("default:stone_with_copper", "default:desert_stone", 9*9*9, 5, 3, -31000, -64)
-
--- Coral Sand
-add_ore("ethereal:sandy", "default:sand", 10*10*10, 24, 4, -100, -10)
