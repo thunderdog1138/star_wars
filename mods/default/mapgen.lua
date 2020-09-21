@@ -681,14 +681,10 @@ end
 
 -- All mapgens except mgv6
 
-function default.register_biomes(upper_limit)
-
 
 -- Biomes for floatlands
 
 -- TODO Temporary simple biomes to be replaced by special floatland biomes later.
-
-function default.register_floatland_biomes(floatland_level, shadow_limit)
 
 
 
