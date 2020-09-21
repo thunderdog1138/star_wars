@@ -1822,7 +1822,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_tree.mts",
+		schematic = ,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
