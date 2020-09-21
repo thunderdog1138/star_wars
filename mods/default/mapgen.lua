@@ -53,7 +53,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type        = "blob",
-		ore             = "default:clay",
+		ore             = "default:clay_block",
 		wherein         = {"default:sand"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
@@ -457,7 +457,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type        = "blob",
-		ore             = "default:clay",
+		ore             = "default:clay_block",
 		wherein         = {"default:sand"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
