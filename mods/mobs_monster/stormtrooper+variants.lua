@@ -28,7 +28,10 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	jump = true,
 	floats = 0,
 	drops = {
-		{name = "default:desert_sand", chance = 1, min = 3, max = 5},
+		{name = "3d_armor:helmet_tk421", chance = 1, min = 0, max = 1},
+		{name = "3d_armor:chestplate_tk421", chance = 1, min = 0, max = 1},
+		{name = "3d_armor:leggings_tk421", chance = 1, min = 0, max = 1},
+		{name = "3d_armor:boots_tk421", chance = 1, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
