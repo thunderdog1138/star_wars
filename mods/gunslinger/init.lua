@@ -4,15 +4,15 @@ local modpath = minetest.get_modpath("gunslinger") .. "/"
 dofile(modpath .. "api.lua")
 
 -- Register default ammo
-gunslinger.register_ammo("gunslinger:default_ammo", {
+gunslinger.register_ammo("gunslinger:blaster_cartrage", {
 	itemdef = {
-		description = "Generic ammo",
-		inventory_image = "gunslinger_ammo.png",
-		stack_max = 300
+		description = "Blaster Cartrage",
+		inventory_image = "blaster_cartrage.png",
+		stack_max = 500
 	}
 })
 
-minetest.register_alias("ammo", "gunslinger:default_ammo")
+minetest.register_alias("ammo", "gunslinger:blaster_cartrage")
 
 -- If builtin guns not disabled, import builtin guns from guns.lua
 if not minetest.settings:get_bool("gunslinger.disable_builtin", false) then
