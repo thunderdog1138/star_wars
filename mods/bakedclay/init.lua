@@ -85,7 +85,7 @@ end
 minetest.register_craft({
 	type = "cooking",
 	output = "bakedclay:white",
-	recipe = "default:clay",
+	recipe = "default:clay_block",
 })
 
 -- register a few extra dye colour options
