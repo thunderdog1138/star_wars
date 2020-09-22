@@ -15,11 +15,3 @@ gunslinger.register_gun("gunslinger:e11", {
 	clip_size = 100,
 	range = 50
 })
-
-gunslinger.register_ammo("gunslinger:blaster_cartrage", {
-	itemdef = {
-		description = "Blaster Cartrage",
-		inventory_image = "blaster_cartrage.png",
-		stack_max = 500
-	}
-})
