@@ -404,7 +404,7 @@ add_node({"default:desert_stone"}, 0.005, {"caves"}, 5, 40, {"default:dry_grass_
 -- flowers
 add_node({"ethereal:grass_dirt"}, 0.025, {"grassy"}, 1, 100, {"flowers:jade_rose",
 	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
-	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, ethereal.grassy)
+	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, 1)
 add_node({"ethereal:grass_dirt"}, 0.025, {"grassytwo"}, 1, 100, {"flowers:jade_rose",
 	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
 	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, 1)
