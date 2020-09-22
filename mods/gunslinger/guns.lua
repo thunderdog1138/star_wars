@@ -1,17 +1,24 @@
-gunslinger.register_gun("gunslinger:cheetah", {
+gunslinger.register_gun("gunslinger:e11", {
 	itemdef = {
-		description = "Cheetah (Assault Rifle)",
-		inventory_image = "gunslinger_cheetah.png",
-		wield_image = "gunslinger_cheetah.png^[transformFXR300",
+		description = "E-11 Trooper Rifle",
+		inventory_image = "e11.png",
+		wield_image = "e11.png^[transformFXR300",
+		textures = {projectile = "blaster_red.png"},
 		wield_scale = {x = 3, y = 3, z = 1}
 	},
 
-	mode = "automatic",
+	mode = "semi-automatic",
 	dmg_mult = 2,
-	recoil_mult = 5,
-	fire_rate = 8,
-	clip_size = 30,
-	range = 80
+	recoil_mult = 0,
+	fire_rate = 2,
+	clip_size = 100,
+	range = 50
 })
 
-minetest.register_alias("cheetah", "gunslinger:cheetah")
+gunslinger.register_ammo("gunslinger:blaster_cartrage", {
+	itemdef = {
+		description = "Blaster Cartrage",
+		inventory_image = "blaster_cartrage.png",
+		stack_max = 500
+	}
+})
