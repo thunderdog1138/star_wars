@@ -51,7 +51,7 @@ armor:register_armor("3d_armor:boots_admin", {
 
 armor:register_armor("3d_armor:helmet_tk421", {
 	description = S("Stormtrooper Helmet"),
-	inventory_image = "helmet_stormtrooper_inv.png",
+	inventory_image = "helmet_tk421_inv.png",
 	groups = {armor_head=1, armor_heal=0, armor_use=800,
 		physics_speed=-0.01, physics_gravity=0.01},
 	armor_groups = {fleshy=10},
@@ -59,7 +59,7 @@ armor:register_armor("3d_armor:helmet_tk421", {
 })
 armor:register_armor("3d_armor:chestplate_tk421", {
 	description = S("Stormtrooper Chestplate"),
-	inventory_image = "chestplate_stormtrooper_inv.png",
+	inventory_image = "chestplate_tk421_inv.png",
 	groups = {armor_torso=1, armor_heal=0, armor_use=800,
 		physics_speed=-0.04, physics_gravity=0.04},
 	armor_groups = {fleshy=15},
@@ -67,7 +67,7 @@ armor:register_armor("3d_armor:chestplate_tk421", {
 })
 armor:register_armor("3d_armor:leggings_tk421", {
 	description = S("Stormtrooper Leggings"),
-	inventory_image = "leggings_stormtrooper_inv.png",
+	inventory_image = "leggings_tk421_inv.png",
 	groups = {armor_legs=1, armor_heal=0, armor_use=800,
 		physics_speed=-0.03, physics_gravity=0.03},
 	armor_groups = {fleshy=15},
@@ -75,7 +75,7 @@ armor:register_armor("3d_armor:leggings_tk421", {
 })
 armor:register_armor("3d_armor:boots_tk421", {
 	description = S("Stormtrooper Boots"),
-	inventory_image = "boots_stormtrooper_inv.png",
+	inventory_image = "boots_tk421_inv.png",
 	groups = {armor_feet=1, armor_heal=0, armor_use=800,
 		physics_speed=-0.01, physics_gravity=0.01},
 	armor_groups = {fleshy=10},
