@@ -189,9 +189,9 @@ minetest.register_abm({
 
 minetest.register_node("flowers:mushroom_red", {
 	description = S("Red Mushroom"),
-	tiles = {"flowers_mushroom_red.png"},
-	inventory_image = "flowers_mushroom_red.png",
-	wield_image = "flowers_mushroom_red.png",
+	tiles = {"mushroom_red.png"},
+	inventory_image = "mushroom_red.png",
+	wield_image = "mushroom_red.png",
 	drawtype = "plantlike",
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -208,9 +208,9 @@ minetest.register_node("flowers:mushroom_red", {
 
 minetest.register_node("flowers:mushroom_brown", {
 	description = S("Brown Mushroom"),
-	tiles = {"flowers_mushroom_brown.png"},
-	inventory_image = "flowers_mushroom_brown.png",
-	wield_image = "flowers_mushroom_brown.png",
+	tiles = {"mushroom_brown.png"},
+	inventory_image = "mushroom_brown.png",
+	wield_image = "mushroom_brown.png",
 	drawtype = "plantlike",
 	paramtype = "light",
 	sunlight_propagates = true,
