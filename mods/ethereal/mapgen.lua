@@ -401,21 +401,24 @@ add_node({"ethereal:savanna_dirt"}, 0.10, {"mesa"}, 1, 100, {"default:dry_grass_
 add_node({"default:desert_stone"}, 0.005, {"caves"}, 5, 40, {"default:dry_grass_2",
 	"default:dry_grass_3", "default:dry_shrub"}, nil, nil, nil, 1)
 
--- flowers & strawberry
---add_node({"default:dirt_with_grass"}, 0.025, {"grassy"}, 1, 100, {"flowers:dandelion_white",
---	"flowers:dandelion_yellow", "flowers:geranium", "flowers:rose", "flowers:tulip",
---	"flowers:viola", "ethereal:strawberry_7"}, nil, nil, nil, ethereal.grassy)
---add_node({"default:dirt_with_grass"}, 0.025, {"grassytwo"}, 1, 100, {"flowers:dandelion_white",
---	"flowers:dandelion_yellow", "flowers:geranium", "flowers:rose", "flowers:tulip",
---	"flowers:viola", "ethereal:strawberry_7"}, nil, nil, nil, ethereal.grassytwo)
+-- flowers
+add_node({"ethereal:grass_dirt"}, 0.025, {"grassy"}, 1, 100, {"flowers:jade_rose",
+	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
+	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, ethereal.grassy)
+add_node({"ethereal:grass_dirt"}, 0.025, {"grassytwo"}, 1, 100, {"flowers:jade_rose",
+	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
+	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, ethereal.grassytwo)
 
--- prairie flowers & strawberry
---add_node({"ethereal:prairie_dirt"}, 0.035, {"prairie"}, 1, 100, {"flowers:dandelion_white",
---	"flowers:dandelion_yellow", "flowers:geranium", "flowers:rose", "flowers:tulip",
---	"flowers:viola", "ethereal:strawberry_7", "flowers:chrysanthemum_green", "flowers:tulip_black"}, nil, nil, nil, ethereal.prairie)
+-- prairie flowers
+add_node({"ethereal:prairie_dirt"}, 0.035, {"prairie"}, 1, 100, {"flowers:jade_rose",
+	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
+	"flowers:palomella", "ethereal:damsel_flower", "flowers:blueblossom", "flowers:black_lily"}, nil, nil, nil, ethereal.prairie)
 
 -- snowy grass
 add_node({"ethereal:cold_dirt"}, 0.05, {"snowy"}, 1, 100, {"ethereal:snowygrass"}, nil, nil, nil, 1)
+
+-- spinebarrel
+add_node({"default:desert_sand"}, 0.05, {"desert"}, 1, 100, {"flowers:spinebarrel"}, nil, nil, nil, 1)
 
 -- cactus
 add_node({"default:sandstone"}, 0.0025, {"sandstone"}, 1, 100, {"default:cactus"}, 3, nil, nil, 1)
