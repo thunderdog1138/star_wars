@@ -21,15 +21,6 @@ dofile(minetest.get_modpath("flowers") .. "/mapgen.lua")
 -- Flowers
 --
 
--- Aliases for original flowers mod
-
-minetest.register_alias("flowers:flower_rose", "flowers:rose")
-minetest.register_alias("flowers:flower_tulip", "flowers:tulip")
-minetest.register_alias("flowers:flower_dandelion_yellow", "flowers:dandelion_yellow")
-minetest.register_alias("flowers:flower_geranium", "flowers:geranium")
-minetest.register_alias("flowers:flower_viola", "flowers:viola")
-minetest.register_alias("flowers:flower_dandelion_white", "flowers:dandelion_white")
-
 
 -- Flower registration
 
@@ -44,9 +35,9 @@ local function add_simple_flower(name, desc, box, f_groups)
 		description = desc,
 		drawtype = "plantlike",
 		waving = 1,
-		tiles = {"flowers_" .. name .. ".png"},
-		inventory_image = "flowers_" .. name .. ".png",
-		wield_image = "flowers_" .. name .. ".png",
+		tiles = { name .. ".png"},
+		inventory_image = name .. ".png",
+		wield_image = name .. ".png",
 		sunlight_propagates = true,
 		paramtype = "light",
 		walkable = false,
@@ -62,50 +53,62 @@ end
 
 flowers.datas = {
 	{
-		"rose",
-		S("Red Rose"),
+		"jade_rose",
+		S("Jade Rose"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
+		{color_green = 1, flammable = 1}
+	},
+	{
+		"plom_bloom",
+		S("Plom Bloom"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
 		{color_red = 1, flammable = 1}
 	},
 	{
-		"tulip",
-		S("Orange Tulip"),
+		"purple_passion",
+		S("Purple Passion"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
+		{color_violet = 1, flammable = 1}
+	},
+	{
+		"snow-flower",
+		S("Snow-Flower"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+		{color_white = 1, flammable = 1}
+	},
+	{
+		"sachi_blossom",
+		S("Sachi Blossom"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+		{color_pink = 1, flammable = 1}
+	},
+	{
+		"palomella",
+		S("Palomella"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+		{color_cyan = 1, flammable = 1}
+	},
+	{
+		"spinebarrel",
+		S("Spinebarrel"),
+		{-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
+		{color_brown = 1, flammable = 1}
+	},
+	{
+		"damsel_flower",
+		S("Damsel Flower"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
 		{color_orange = 1, flammable = 1}
 	},
 	{
-		"dandelion_yellow",
-		S("Yellow Dandelion"),
-		{-4 / 16, -0.5, -4 / 16, 4 / 16, -2 / 16, 4 / 16},
-		{color_yellow = 1, flammable = 1}
-	},
-	{
-		"chrysanthemum_green",
-		S("Green Chrysanthemum"),
-		{-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
-		{color_green = 1, flammable = 1}
-	},
-	{
-		"geranium",
-		S("Blue Geranium"),
+		"blueblossom",
+		S("Blueblossom"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
 		{color_blue = 1, flammable = 1}
 	},
 	{
-		"viola",
-		S("Viola"),
-		{-5 / 16, -0.5, -5 / 16, 5 / 16, -1 / 16, 5 / 16},
-		{color_violet = 1, flammable = 1}
-	},
-	{
-		"dandelion_white",
-		S("White Dandelion"),
-		{-5 / 16, -0.5, -5 / 16, 5 / 16, -2 / 16, 5 / 16},
-		{color_white = 1, flammable = 1}
-	},
-	{
-		"tulip_black",
-		S("Black Tulip"),
+		"black_lily",
+		S("Black Lily"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 		{color_black = 1, flammable = 1}
 	},
@@ -276,9 +279,9 @@ local waterlily_def = {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"flowers_waterlily.png", "flowers_waterlily_bottom.png"},
-	inventory_image = "flowers_waterlily.png",
-	wield_image = "flowers_waterlily.png",
+	tiles = {"waterlily.png", "waterlily_bottom.png"},
+	inventory_image = "waterlily.png",
+	wield_image = "waterlily.png",
 	liquids_pointable = true,
 	walkable = false,
 	buildable_to = true,
