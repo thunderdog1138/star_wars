@@ -8,6 +8,7 @@ gunslinger.register_gun("gunslinger:e11", {
 	},
 
 	mode = "semi-automatic",
+	ammo = "gunslinger:blaster_cartrage",
 	dmg_mult = 2,
 	recoil_mult = 0,
 	fire_rate = 2,
