@@ -1,6 +1,8 @@
 -- support for i18n
 local S = armor_i18n.gettext
 
+-- Admin armor
+
 armor:register_armor("3d_armor:helmet_admin", {
 	description = S("Admin Helmet"),
 	inventory_image = "helmet_admin_inv.png",
@@ -43,6 +45,41 @@ armor:register_armor("3d_armor:boots_admin", {
 	on_drop = function(itemstack, dropper, pos)
 		return
 	end,
+})
+
+-- Stormtrooper armor
+
+armor:register_armor("3d_armor:helmet_tk421", {
+	description = S("Stormtrooper Helmet"),
+	inventory_image = "helmet_stormtrooper_inv.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=800,
+		physics_speed=-0.01, physics_gravity=0.01},
+	armor_groups = {fleshy=10},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:chestplate_tk421", {
+	description = S("Stormtrooper Chestplate"),
+	inventory_image = "chestplate_stormtrooper_inv.png",
+	groups = {armor_torso=1, armor_heal=0, armor_use=800,
+		physics_speed=-0.04, physics_gravity=0.04},
+	armor_groups = {fleshy=15},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:leggings_tk421", {
+	description = S("Stormtrooper Leggings"),
+	inventory_image = "leggings_stormtrooper_inv.png",
+	groups = {armor_legs=1, armor_heal=0, armor_use=800,
+		physics_speed=-0.03, physics_gravity=0.03},
+	armor_groups = {fleshy=15},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:boots_tk421", {
+	description = S("Stormtrooper Boots"),
+	inventory_image = "boots_stormtrooper_inv.png",
+	groups = {armor_feet=1, armor_heal=0, armor_use=800,
+		physics_speed=-0.01, physics_gravity=0.01},
+	armor_groups = {fleshy=10},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
 minetest.register_alias("adminboots", "3d_armor:boots_admin")
