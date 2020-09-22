@@ -71,7 +71,7 @@ flowers.datas = {
 		{color_violet = 1, flammable = 1}
 	},
 	{
-		"snow-flower",
+		"snow_flower",
 		S("Snow-Flower"),
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 		{color_white = 1, flammable = 1}
