@@ -407,12 +407,12 @@ add_node({"ethereal:grass_dirt"}, 0.025, {"grassy"}, 1, 100, {"flowers:jade_rose
 	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, ethereal.grassy)
 add_node({"ethereal:grass_dirt"}, 0.025, {"grassytwo"}, 1, 100, {"flowers:jade_rose",
 	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
-	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, ethereal.grassytwo)
+	"flowers:palomella", "ethereal:damsel_flower"}, nil, nil, nil, 1)
 
 -- prairie flowers
 add_node({"ethereal:prairie_dirt"}, 0.035, {"prairie"}, 1, 100, {"flowers:jade_rose",
 	"flowers:plom_bloom", "flowers:purple_passion", "flowers:snow_flower", "flowers:sachi_blossom",
-	"flowers:palomella", "ethereal:damsel_flower", "flowers:blueblossom", "flowers:black_lily"}, nil, nil, nil, ethereal.prairie)
+	"flowers:palomella", "ethereal:damsel_flower", "flowers:blueblossom", "flowers:black_lily"}, nil, nil, nil, 1)
 
 -- snowy grass
 add_node({"ethereal:cold_dirt"}, 0.05, {"snowy"}, 1, 100, {"ethereal:snowygrass"}, nil, nil, nil, 1)
