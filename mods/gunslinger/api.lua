@@ -115,7 +115,7 @@ local function sanitize_def(def)
 	def.sounds.ooa    = def.sounds.ooa or "gunslinger_ooa"
 
 	def.textures = def.textures or {}
-	def.textures.projectile = def.projectile
+	def.projectile = def.projectile
 
 	-- Limit zoom to 8x; default to no zoom
 	def.zoom = def.zoom and rangelim(1, def.zoom, 8)
@@ -275,7 +275,7 @@ local function fire(stack, player)
 			velocity = vector.multiply(dir, config.projectile_speed * def.speed_mult),
 			expirationtime = def.range / (config.projectile_speed * def.speed_mult),
 			size = 3,
-			texture = def.textures.projectile,
+			texture = def.projectile,
 			collisiondetection = true,
 			collision_removal = true,
 			object_collision = true,
