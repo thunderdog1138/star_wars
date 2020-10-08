@@ -115,7 +115,7 @@ local function sanitize_def(def)
 	def.sounds.ooa    = def.sounds.ooa or "gunslinger_ooa"
 
 	def.textures = def.textures or {}
-	def.textures.projectile = def.textures.projectile
+	def.textures.projectile = def.projectile
 
 	-- Limit zoom to 8x; default to no zoom
 	def.zoom = def.zoom and rangelim(1, def.zoom, 8)
