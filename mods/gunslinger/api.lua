@@ -14,7 +14,7 @@ local config = {
 	debug    = minetest.settings:get_bool("gunslinger.debug", false),
 	max_wear = 65534,
 	base_dmg = 1,
-	projectile_speed = 500,
+	projectile_speed = 1,
 	base_spread = 0.001,
 	base_recoil = 0.001,
 	lite = minetest.settings:get_bool("gunslinger.lite"),
@@ -105,6 +105,7 @@ local function sanitize_def(def)
 	def.dmg_mult    = rangelim(1, def.dmg_mult, 100, 1)
 	def.reload_time = rangelim(1, def.reload_time, 10, 2.5)
 	def.spread_mult = rangelim(0, def.spread_mult, 500, 0)
+	def.speed_mult = rangelim(1, def.speed_mult, 500, 500)
 	def.recoil_mult = rangelim(0, def.recoil_mult, 500, 0)
 	def.pellets     = rangelim(1, def.pellets, 20, 1)
 
@@ -265,14 +266,14 @@ local function fire(stack, player)
 			pos   = pos,
 			dir   = dir,
 			range = def.range,
-			speed = config.projectile_speed
+			speed = config.projectile_speed * def.speed_mult
 		}
 
 		-- Projectile particle
 		minetest.add_particle({
 			pos = pos,
-			velocity = vector.multiply(dir, config.projectile_speed),
-			expirationtime = def.range / config.projectile_speed,
+			velocity = vector.multiply(dir, config.projectile_speed * def.speed_mult),
+			expirationtime = def.range / (config.projectile_speed * def.speed_mult),
 			size = 3,
 			texture = def.textures.projectile,
 			collisiondetection = true,
