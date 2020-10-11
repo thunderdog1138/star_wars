@@ -6,15 +6,15 @@ gunkit.register_firearm("gunkit:e11", {
     inventory_image = "e11.png",
     mag_type = "blaster",
     sounds = {
-        mag_load = "gunkit:blaster_reload",
-        mag_drop = "gunkit:blaster_drop",
-        fire_empty = "gunkit:blaster_empty",
+        mag_load = "gunkit:blaster-reload",
+        mag_drop = "gunkit:blaster-drop",
+        fire_empty = "gunkit:blaster-empty",
     },
     {
         bullet_texture = "blaster_red.png",
         -- Texture to be used for bullet projectiles.
         sounds = {
-            fire = "gunkit:blaster_1",
+            fire = "gunkit:blaster-1",
             -- Sound to be played when firing the gun.
             shell_drop = nil,
             -- Sound to be played when firing the gun.
