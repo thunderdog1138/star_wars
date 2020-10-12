@@ -39,3 +39,14 @@ gunkit.register_firearm("gunkit:e11", {
         -- Time in seconds till fov hits fov*zoom
     }
 })
+
+gunkit.register_mag("gunkit:cartrage", {
+    description = "Blaster Cartrage",
+    inventory_image = "blaster_cartrage.png",
+    mag_type = "blaster",
+    -- Set this magazine as loadable by all guns with corresponding mag type.
+    ammo = "gunkit:bullet",
+    -- Ammo used by this magazine (Itemstring).
+    max_ammo = 100,
+    -- Amount of ammo this magazine can hold.
+})
