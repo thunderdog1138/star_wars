@@ -10,7 +10,7 @@ gunkit.register_firearm("gunkit:e11", {
         mag_drop = "gunkit:blaster-drop",
         fire_empty = "gunkit:blaster-empty",
     },
-    {
+    fire = {
         bullet_texture = "blaster_red.png",
         -- Texture to be used for bullet projectiles.
         sounds = {
