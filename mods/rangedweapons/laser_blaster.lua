@@ -1,5 +1,5 @@
 minetest.register_craft({
-	output = 'rangedweapons:laser_blaster',
+	output = 'rangedweapons:e11',
 	recipe = {
 		{'default:steel_ingot', 'rangedweapons:gun_power_core', 'default:steel_ingot'},
 		{'rangedweapons:gunsteel_ingot', 'rangedweapons:gunsteel_ingot', 'rangedweapons:gunsteel_ingot'},
@@ -7,12 +7,12 @@ minetest.register_craft({
 	}
 })
 
-	minetest.register_craftitem("rangedweapons:laser_blaster", {
+	minetest.register_craftitem("rangedweapons:e11", {
 	stack_max= 1,
 	wield_scale = {x=1.15,y=1.15,z=1.15},
 		description = "" ..core.colorize("#35cdff","Laser blaster\n") ..core.colorize("#FFFFFF", "Ranged damage: 12-18\n") ..core.colorize("#FFFFFF", "accuracy: 100%\n") ..core.colorize("#FFFFFF", "Mob knockback: 0\n")  ..core.colorize("#FFFFFF", "Critical chance: 10%\n") ..core.colorize("#FFFFFF", "Critical damage: 28-40\n")  ..core.colorize("#FFFFFF", "Power usage: 1\n") ..core.colorize("#FFFFFF", "Rate of fire: 0.35\n") ..core.colorize("#FFFFFF", "Gun type: power pistol\n") ..core.colorize("#FFFFFF", "Bullet velocity: 15"),
 	range = 0,
-	inventory_image = "rangedweapons_laser_blaster.png",
+	inventory_image = "e11.png",
 })
 
 local timer = 0
@@ -25,18 +25,18 @@ minetest.register_globalstep(function(dtime, player)
 			if controls.LMB then
 			timer = 0
 	local wielded_item = player:get_wielded_item():get_name()
-		if wielded_item == "rangedweapons:laser_blaster" then
+		if wielded_item == "rangedweapons:e11" then
 			if not inv:contains_item("main", "rangedweapons:power_particle") then
 minetest.sound_play("rangedweapons_empty", {object=player})
 		else
-		if wielded_item == "rangedweapons:laser_blaster" then
+		if wielded_item == "rangedweapons:e11" then
 		inv:remove_item("main", "rangedweapons:power_particle")
 		local pos = player:getpos()
 		local dir = player:get_look_dir()
 		local yaw = player:get_look_yaw()
 		if pos and dir and yaw then
 			pos.y = pos.y + 1.6
-			local obj = minetest.add_entity(pos, "rangedweapons:laser_blastershot")
+			local obj = minetest.add_entity(pos, "rangedweapons:e11_shot")
 			if obj then
 				minetest.sound_play("rangedweapons_laser", {object=obj})
 				obj:setvelocity({x=dir.x * 15, y=dir.y * 15, z=dir.z * 15})
@@ -58,7 +58,7 @@ end
 			end
 				end)
 
-local rangedweapons_laser_blastershot = {
+local rangedweapons_e11_shot = {
 	physical = false,
 	timer = 0,
 	visual = "sprite",
@@ -67,7 +67,7 @@ local rangedweapons_laser_blastershot = {
 	lastpos= {},
 	collisionbox = {0, 0, 0, 0, 0, 0},
 }
-rangedweapons_laser_blastershot.on_step = function(self, dtime, node, pos)
+rangedweapons_e11_shot.on_step = function(self, dtime, node, pos)
 	self.timer = self.timer + dtime
 	local tiem = 0.002
 	local pos = self.object:getpos()
@@ -77,7 +77,7 @@ rangedweapons_laser_blastershot.on_step = function(self, dtime, node, pos)
 		local objs = minetest.get_objects_inside_radius({x = pos.x, y = pos.y, z = pos.z}, 1)
 		for k, obj in pairs(objs) do
 			if obj:get_luaentity() ~= nil then
-				if obj:get_luaentity().name ~= "rangedweapons:laser_blastershot" and obj:get_luaentity().name ~= "__builtin:item" then
+				if obj:get_luaentity().name ~= "rangedweapons:e11_shot" and obj:get_luaentity().name ~= "__builtin:item" then
 					if math.random(1, 100) <= 10 then
 					local damage = math.random(28,40)
 					obj:punch(self.object, 1.0, {
@@ -124,7 +124,7 @@ rangedweapons_laser_blastershot.on_step = function(self, dtime, node, pos)
 		size = 7,
 		collisiondetection = false,
 		vertical = false,
-		texture = "rangedweapons_ray_blue.png",
+		texture = "blaster_red.png",
 		glow = 30,
 	})
 		tiem = tiem + 0.002 
@@ -150,4 +150,4 @@ end
 
 
 
-minetest.register_entity("rangedweapons:laser_blastershot", rangedweapons_laser_blastershot )
+minetest.register_entity("rangedweapons:e11_shot", rangedweapons_e11_shot )
