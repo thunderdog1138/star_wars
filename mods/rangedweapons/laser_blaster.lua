@@ -13,7 +13,7 @@ minetest.register_craft({
 		description = "" ..core.colorize("#35cdff","Laser blaster\n") ..core.colorize("#FFFFFF", "Ranged damage: 12-18\n") ..core.colorize("#FFFFFF", "accuracy: 100%\n") ..core.colorize("#FFFFFF", "Mob knockback: 0\n")  ..core.colorize("#FFFFFF", "Critical chance: 10%\n") ..core.colorize("#FFFFFF", "Critical damage: 28-40\n")  ..core.colorize("#FFFFFF", "Power usage: 1\n") ..core.colorize("#FFFFFF", "Rate of fire: 0.35\n") ..core.colorize("#FFFFFF", "Gun type: power pistol\n") ..core.colorize("#FFFFFF", "Bullet velocity: 15"),
 	range = 0,
 	inventory_image = "e11.png",
-	wield_image = "shovel_stone.png^[transformFX",
+	wield_image = "e11.png^[transformFX",
 })
 
 local timer = 0
