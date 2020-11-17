@@ -1,12 +1,3 @@
-minetest.register_craft({
-	output = 'rangedweapons:e11',
-	recipe = {
-		{'default:steel_ingot', 'rangedweapons:gun_power_core', 'default:steel_ingot'},
-		{'rangedweapons:gunsteel_ingot', 'rangedweapons:gunsteel_ingot', 'rangedweapons:gunsteel_ingot'},
-		{'', 'default:mese_crystal_fragment', 'default:steel_ingot'},
-	}
-})
-
 	minetest.register_craftitem("rangedweapons:e11", {
 	stack_max= 1,
 	wield_scale = {x=1.15,y=1.15,z=1.15},
