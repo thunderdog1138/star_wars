@@ -701,7 +701,7 @@ minetest.register_craft({
 minetest.register_craft({
 	type = "cooking",
 	output = "default:stone",
-	recipe = "default:mossycobble",
+	recipe = "default:cobble_mossy",
 })
 
 minetest.register_craft({
