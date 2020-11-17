@@ -64,7 +64,7 @@ local rangedweapons_e11_shot = {
 	timer = 0,
 	visual = "sprite",
 	visual_size = {x=0.3, y=0.3},
-	textures = {"rangedweapons_invisible.png"},
+	textures = {"blaster_red.png"},
 	lastpos= {},
 	collisionbox = {0, 0, 0, 0, 0, 0},
 }
