@@ -2,99 +2,11 @@ local modpath = minetest.get_modpath(minetest.get_current_modname())
 
 dofile(modpath.."/settings.lua")
 dofile(modpath.."/misc.lua")
-dofile(modpath.."/ammo.lua")
-dofile(modpath.."/bullet_stuff.lua")
-
-if shurikens == true then
-	dofile(modpath.."/shurikens.lua")
-end
-
-if handguns == true then
-	dofile(modpath.."/makarov.lua")
-	dofile(modpath.."/luger.lua")
-	dofile(modpath.."/beretta.lua")
-	dofile(modpath.."/glock17.lua")
-end
-
-if javelins == true then
-	dofile(modpath.."/javelin.lua")
-end
-
-if power_weapons == true then
-	dofile(modpath.."/generator.lua")
-	dofile(modpath.."/e11.lua")
-	dofile(modpath.."/laser_rifle.lua")
-	dofile(modpath.."/laser_shotgun.lua")
-end
-
-if machine_pistols == true then
-	dofile(modpath.."/tmp.lua")
-	dofile(modpath.."/tec9.lua")
-	dofile(modpath.."/uzi.lua")
-	dofile(modpath.."/kriss_sv.lua")
-end
-if shotguns == true then
-	dofile(modpath.."/remington.lua")
-	dofile(modpath.."/spas12.lua")
-	dofile(modpath.."/benelli.lua")
-	dofile(modpath.."/jackhammer.lua")
-	dofile(modpath.."/aa12.lua")
-end
-if sub_machineguns == true then
-	dofile(modpath.."/mp5.lua")
-	dofile(modpath.."/ump.lua")
-	dofile(modpath.."/mp40.lua")
-end
-if rifles == true then
-	dofile(modpath.."/awp.lua")
-	dofile(modpath.."/svd.lua")
-	dofile(modpath.."/m200.lua")
-end
-if heavy_machineguns == true then
-	dofile(modpath.."/m60.lua")
-	dofile(modpath.."/rpk.lua")
-	dofile(modpath.."/minigun.lua")
-end
-if magnums_and_revolvers == true then
-	dofile(modpath.."/deagle.lua")
-	dofile(modpath.."/python.lua")
-	dofile(modpath.."/taurus.lua")
-end
-if assault_rifles == true then
-	dofile(modpath.."/m16.lua")
-	dofile(modpath.."/g36.lua")
-	dofile(modpath.."/ak47.lua")
-	dofile(modpath.."/scar.lua")
-end
-
-if explosives == true then
-	dofile(modpath.."/explosives.lua")
-	dofile(modpath.."/m79.lua")
-	dofile(modpath.."/milkor.lua")
-	dofile(modpath.."/rpg.lua")
-	dofile(modpath.."/hand_grenade.lua")
-end
-
-if door_breaking == true then
-	dofile(modpath.."/door_breaking.lua")
-end
-
-if glass_breaking == true then
-	dofile(modpath.."/glass_breaking.lua")
-end
-if glass_breaking == false then
-minetest.register_abm({
-	nodenames = {"rangedweapons:broken_glass"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node)
-		if minetest.get_node(pos).name == "rangedweapons:broken_glass" then
-			node.name = "air"
-			minetest.set_node(pos, node)
-		end
-	end
-})
-end
+dofile(modpath.."/e11.lua")
+dofile(modpath.."/explosives.lua")
+dofile(modpath.."/hand_grenade.lua")
+dofile(modpath.."/door_breaking.lua")
+dofile(modpath.."/glass_breaking.lua")
 
 local rangedweapons_empty_shell = {
 	physical = false,
