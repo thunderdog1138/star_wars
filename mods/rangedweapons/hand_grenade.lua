@@ -9,7 +9,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("rangedweapons:pin", {
 	wield_scale = {x=2.5,y=2.5,z=1.0},
-	inventory_image = "rangedweapons_pin.png",
+	inventory_image = "blank.png",
 })
 local rangedweapons_grenade_pin = {
 	physical = false,
@@ -42,19 +42,19 @@ local grenade_boom = {
 	--description = "DuN mInD mEh...",
 	radius = 3,
 	tiles = {
-		side = "rangedweapons_invisible.png",
-		top = "rangedweapons_invisible.png",
-		bottom = "rangedweapons_invisible.png",
-		burning = "rangedweapons_invisible.png"
+		side = "blank.png",
+		top = "blank.png",
+		bottom = "blank.png",
+		burning = "blank.png"
 	},
 }
 
 minetest.register_craftitem("rangedweapons:hand_grenade", {
 	stack_max= 1,
 	wield_scale = {x=1.1,y=1.1,z=1.05},
-		description = "" ..core.colorize("#35cdff","Hand grenade\n") ..core.colorize("#FFFFFF", "Explosion radius: 3\n")..core.colorize("#FFFFFF", "Throw force: 12\n")  ..core.colorize("#FFFFFF", "Grenade gravitational pull: 6\n") ..core.colorize("#ffc000", "Right-click to unpin, Left click to throw after unpinning\n") ..core.colorize("#ffc000", "Thrown or not, it will explode after 3 secons from unpinning, be careful!"),
+		description = "" ..core.colorize("#35cdff","Thermal Detonator\n") ..core.colorize("#FFFFFF", "Explosion radius: 3\n")..core.colorize("#FFFFFF", "Throw force: 12\n")  ..core.colorize("#FFFFFF", "Gravitational pull: 6\n") ..core.colorize("#ffc000", "Right-click to arm, Left click to throw after arming\n") ..core.colorize("#ffc000", "Thrown or not, it will explode after 3 seconds from arming, be careful!"),
 	range = 0,
-	inventory_image = "rangedweapons_hand_grenade.png",
+	inventory_image = "thermal_detonator.png",
 	on_secondary_use = function(itemstack, player, pointed_thing)
 	   minetest.sound_play("rangedweapons_reload_a", {player})
 	   minetest.after(3.0,
@@ -75,7 +75,7 @@ minetest.register_craftitem("rangedweapons:hand_grenade_nopin", {
 	wield_scale = {x=1.1,y=1.1,z=1.05},
 	description = "***HURRY UP AND THROW IT!!!***",
 	range = 0,
-	inventory_image = "rangedweapons_hand_grenade_nopin.png",
+	inventory_image = "thermal_detonator_armed.png",
 	groups = {not_in_creative_inventory = 1},
 	on_use = function(itemstack, user, pointed_thing)
 		local pos = user:getpos()
@@ -106,7 +106,7 @@ local rangedweapons_grenade = {
 	timer = 0,
 	visual = "sprite",
 	visual_size = {x=0.5, y=0.5},
-	textures = {"rangedweapons_hand_grenade_nopin.png"},
+	textures = {"thermal_detonator_armed.png"},
 	lastpos= {},
 	collisionbox = {0, 0, 0, 0, 0, 0},
 }
