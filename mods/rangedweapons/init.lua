@@ -22,7 +22,7 @@ end
 
 if power_weapons == true then
 	dofile(modpath.."/generator.lua")
-	dofile(modpath.."/laser_blaster.lua")
+	dofile(modpath.."/e11.lua")
 	dofile(modpath.."/laser_rifle.lua")
 	dofile(modpath.."/laser_shotgun.lua")
 end
