@@ -71,7 +71,7 @@ rangedweapons_e11_shot.on_step = function(self, dtime, node, pos)
 			if obj:get_luaentity() ~= nil then
 				if obj:get_luaentity().name ~= "rangedweapons:e11_shot" and obj:get_luaentity().name ~= "__builtin:item" then
 					if math.random(1, 100) <= 10 then
-					local damage = math.random(28,40)
+					local damage = math.random(20,30)
 					obj:punch(self.object, 1.0, {
 						full_punch_interval = 1.0,
 						damage_groups= {fleshy = damage, knockback=0},
@@ -79,7 +79,7 @@ rangedweapons_e11_shot.on_step = function(self, dtime, node, pos)
 					minetest.sound_play("crit", {pos = self.lastpos, gain = 0.8})
 					self.object:remove()
 					else
-					local damage = math.random(12,18)
+					local damage = math.random(5,15)
 					obj:punch(self.object, 1.0, {
 						full_punch_interval = 1.0,
 						damage_groups= {fleshy = damage, knockback = 0},
