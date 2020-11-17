@@ -10,7 +10,7 @@ minetest.register_craft({
 	minetest.register_craftitem("rangedweapons:e11", {
 	stack_max= 1,
 	wield_scale = {x=1.15,y=1.15,z=1.15},
-		description = "" ..core.colorize("#35cdff","Laser blaster\n") ..core.colorize("#FFFFFF", "Ranged damage: 12-18\n") ..core.colorize("#FFFFFF", "accuracy: 100%\n") ..core.colorize("#FFFFFF", "Mob knockback: 0\n")  ..core.colorize("#FFFFFF", "Critical chance: 10%\n") ..core.colorize("#FFFFFF", "Critical damage: 28-40\n")  ..core.colorize("#FFFFFF", "Power usage: 1\n") ..core.colorize("#FFFFFF", "Rate of fire: 0.35\n") ..core.colorize("#FFFFFF", "Gun type: power pistol\n") ..core.colorize("#FFFFFF", "Bullet velocity: 15"),
+		description = "" ..core.colorize("#35cdff","Laser blaster\n") ..core.colorize("#FFFFFF", "Ranged damage: 12-18\n") ..core.colorize("#FFFFFF", "accuracy: 100%\n") ..core.colorize("#FFFFFF", "Mob knockback: 0\n")  ..core.colorize("#FFFFFF", "Critical chance: 10%\n") ..core.colorize("#FFFFFF", "Critical damage: 28-40\n")  ..core.colorize("#FFFFFF", "Power usage: 1\n") ..core.colorize("#FFFFFF", "Rate of fire: 0.35\n") ..core.colorize("#FFFFFF", "Gun type: power pistol\n") ..core.colorize("#FFFFFF", "Bullet velocity: 30"),
 	range = 0,
 	inventory_image = "e11.png",
 	wield_image = "e11.png^[transformFX",
@@ -40,7 +40,7 @@ minetest.sound_play("rangedweapons_empty", {object=player})
 			local obj = minetest.add_entity(pos, "rangedweapons:e11_shot")
 			if obj then
 				minetest.sound_play("rangedweapons_laser", {object=obj})
-				obj:setvelocity({x=dir.x * 15, y=dir.y * 15, z=dir.z * 15})
+				obj:setvelocity({x=dir.x * 30, y=dir.y * 30, z=dir.z * 30})
 				obj:setacceleration({x=dir.x * math.random(0,0), y=math.random(0,0), z=dir.z * math.random(0,0)})
 				obj:setyaw(yaw + math.pi)
 				local ent = obj:get_luaentity()
@@ -64,7 +64,7 @@ local rangedweapons_e11_shot = {
 	timer = 0,
 	visual = "sprite",
 	visual_size = {x=0.3, y=0.3},
-	textures = {"rangedweapons_invisible.png"},
+	textures = {"blaster_red.png"},
 	lastpos= {},
 	collisionbox = {0, 0, 0, 0, 0, 0},
 }
