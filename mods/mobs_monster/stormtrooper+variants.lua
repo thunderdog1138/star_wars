@@ -3,11 +3,11 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	type = "npc",
 	passive = false,
     group_attack = false,
-	attack_type = "dogfight",
+	attack_type = "shoot",
 	pathfinding = true,
 	--specific_attack = {"player", "mobs_npc:npc"},
-	reach = 2,
-	damage = 1,
+	arrow = "mobs_monster:blaster_red",
+	shoot_interval = 1.5,
 	hp_min = 4,
 	hp_max = 20,
 	armor = 100,
@@ -32,6 +32,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 		{name = "3d_armor:chestplate_tk421", chance = 1, min = 0, max = 1},
 		{name = "3d_armor:leggings_tk421", chance = 1, min = 0, max = 1},
 		{name = "3d_armor:boots_tk421", chance = 1, min = 0, max = 1},
+		{name = "rangedweapons:e11", chance = 1, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -83,3 +84,30 @@ mobs:spawn({
 mobs:register_egg("mobs_monster:stormtrooper", "Stormtrooper", "desert_sand.png", 1)
 
 mobs:alias_mob("mobs:stormtrooper", "mobs_monster:stormtrooper") -- compatibility
+
+mobs:register_arrow("mobs_monster:blaster_red", {
+	visual = "sprite",
+	visual_size = {x = 1, y = 1},
+	textures = {"blaster_red.png"},
+	velocity = 30,
+
+	hit_player = function(self, player)
+		player:punch(self.object, 1.0, {
+			full_punch_interval = 1.0,
+			damage_groups = {fleshy = 6},
+		}, nil)
+		mobs:boom(self, self.object:get_pos(), 1, true)
+	end,
+
+	hit_mob = function(self, mob)
+		mob:punch(self.object, 1.0, {
+			full_punch_interval = 1.0,
+			damage_groups = {fleshy = 6},
+		}, nil)
+		mobs:boom(self, self.object:get_pos(), 1, true)
+	end,
+
+	hit_node = function(self, pos, node)
+		mobs:boom(self, pos, 1, true)
+	end
+})
