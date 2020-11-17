@@ -68,9 +68,9 @@ minetest.register_craft({
 	}
 })
 minetest.register_craftitem("rangedweapons:power_particle", {
-		description = "" ..core.colorize("#35cdff","Power Particle\n")..core.colorize("#FFFFFF", "A power unit, that strangelly can be carryed arround with no vessel, used by power guns"),
+		description = "Blaster Cartrage",
 	stack_max = 10000,
-	inventory_image = "rangedweapons_power_particle.png",
+	inventory_image = "blaster_cartrage.png",
 })
 
 local rangedweapons_smoke = {
