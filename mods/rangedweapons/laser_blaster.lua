@@ -39,7 +39,7 @@ minetest.sound_play("rangedweapons_empty", {object=player})
 			pos.y = pos.y + 1.6
 			local obj = minetest.add_entity(pos, "rangedweapons:e11_shot")
 			if obj then
-				minetest.sound_play("rangedweapons_laser", {object=obj})
+				minetest.sound_play("blaster-1", {object=obj})
 				obj:setvelocity({x=dir.x * 30, y=dir.y * 30, z=dir.z * 30})
 				obj:setacceleration({x=dir.x * math.random(0,0), y=math.random(0,0), z=dir.z * math.random(0,0)})
 				obj:setyaw(yaw + math.pi)
