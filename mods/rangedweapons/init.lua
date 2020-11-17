@@ -4,7 +4,6 @@ dofile(modpath.."/settings.lua")
 dofile(modpath.."/misc.lua")
 dofile(modpath.."/e11.lua")
 dofile(modpath.."/explosives.lua")
-dofile(modpath.."/hand_grenade.lua")
 dofile(modpath.."/door_breaking.lua")
 dofile(modpath.."/glass_breaking.lua")
 
