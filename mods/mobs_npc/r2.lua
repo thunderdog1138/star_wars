@@ -103,4 +103,4 @@ mobs:register_mob("mobs_npc:r2", {
 	end,
 })
 
-mobs:register_egg("mobs_npc:r2", S("R2 Astromech"), "default_brick.png", 1)
+mobs:register_egg("mobs_npc:r2", "R2 Astromech", "default_brick.png", 1)
