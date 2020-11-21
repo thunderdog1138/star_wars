@@ -10,7 +10,7 @@ mobs:register_mob("mobs_npc:r2", {
 	hp_min = 22,
 	hp_max = 32,
 	armor = 80,
-	collisionbox = {-0.4, -0.4, -0.4, 0.4, 0.8, 0.4},
+	collisionbox = {-0.4, -0.4, -0.4, 0.4, 0.4, 0.4},
 	visual = "mesh",
 	visual_size = {x=1.3, y=1.3},
 	mesh = "r2.b3d",
