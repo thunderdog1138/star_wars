@@ -12,7 +12,7 @@ mobs:register_mob("mobs_npc:r2", {
 	armor = 80,
 	collisionbox = {-0.4, -0.4, -0.4, 0.4, 1.2, 0.4},
 	visual = "mesh",
-	visual_size = {x=2, y=2},
+	visual_size = {x=1.3, y=1.3},
 	mesh = "r2.b3d",
 	drawtype = "front",
 	rotate = 180,
