@@ -71,11 +71,11 @@ mobs:register_mob("mobs_npc:r2", {
 				self:set_animation("stand")
 				self:set_velocity(0)
 
-				minetest.chat_send_player(name, S("NPC stands still."))
+				minetest.chat_send_player(name, "R2 Unit stands still.")
 			else
 				self.order = "follow"
 
-				minetest.chat_send_player(name, S("NPC will follow you."))
+				minetest.chat_send_player(name, "R2 Unit will follow you.")
 			end
 		end
 	end,
