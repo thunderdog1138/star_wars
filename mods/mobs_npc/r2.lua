@@ -3,25 +3,27 @@ mobs:register_mob("mobs_npc:r2", {
 	passive = false,
 	damage = 3,
 	attack_type = "dogfight",
-	attacks_monsters = true,
+	attacks_monsters = false,
 	attack_npcs = false,
 	owner_loyal = true,
 	pathfinding = true,
-	hp_min = 10,
-	hp_max = 20,
-	armor = 100,
-	collisionbox = {-0.35,-1.0,-0.35, 0.35,0.8,0.35},
+	hp_min = 22,
+	hp_max = 32,
+	armor = 80,
+	collisionbox = {-0.4, -0.4, -0.4, 0.4, 0.6, 0.4},
 	visual = "mesh",
+	visual_size = {x=2, y=2}
 	mesh = "r2.b3d",
 	drawtype = "front",
+	rotate = 180,
 	textures = {
 		{"r2-blue.png"},
 	},
 	makes_footstep_sound = false,
 	sounds = {},
-	walk_velocity = 2,
-	run_velocity = 3,
-	jump = true,
+	walk_velocity = 0.5,
+	run_velocity = 1,
+	jump = false,
 	drops = {
 		{name = "default:axe_stone", chance = 5, min = 1, max = 1},
 	},
@@ -56,31 +58,7 @@ mobs:register_mob("mobs_npc:r2", {
 		-- protect npc with mobs:protector
 		if mobs:protect(self, clicker) then return end
 
-		local item = clicker:get_wielded_item()
 		local name = clicker:get_player_name()
-
-		-- right clicking with gold lump drops random item from mobs.npc_drops
-		if item:get_name() == "default:gold_lump" then
-
-			if not mobs.is_creative(name) then
-				item:take_item()
-				clicker:set_wielded_item(item)
-			end
-
-			local pos = self.object:get_pos()
-
-			pos.y = pos.y + 0.5
-
-			local drops = self.npc_drops or mobs.npc_drops
-
-			minetest.add_item(pos, {
-				name = drops[math.random(1, #drops)]
-			})
-
-			minetest.chat_send_player(name, S("NPC dropped you an item for gold!"))
-
-			return
-		end
 
 		-- by right-clicking owner can switch npc between follow and stand
 		if self.owner and self.owner == name then
