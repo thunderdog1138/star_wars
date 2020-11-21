@@ -4,11 +4,28 @@ local S = mobs.intllib
 -- Npc by TenPlus1
 
 mobs.npc_drops = {
-	"default:pick_steel", "mobs:meat", "default:sword_steel",
-	"default:shovel_steel", "farming:bread", "bucket:bucket_water"
+	"default:pick_durasteel", "mobs:bantha_meat", "default:durasword_steel",
+	"default:shovel_durasteel", "bucket:durabucket_water"
 }
 
-mobs:register_mob("mobs_npc:npc", {
+normal = {
+   skins = {}
+}
+
+--Human skin gen
+local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png'}
+local human_male_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
+local human_male_face = {'face-1.png', 'face-2.png'}
+local normal_male_shirt = {'shirt_normal-blue.png', 'shirt_normal-red.png'}
+local normal_male_shoes = {'shoes_normal-black.png', 'shoes_normal-yellow.png'}
+local normal_male_pants = {'pants_normal-green.png', 'pants_normal-purple.png'}
+
+for i = 1, 16 do
+   table.insert(normal.skins, {normal_skin[math.random(5)]..'^'..normal_face[math.random(2)]..'^'..normal_shirt[math.random(2)]..'^'..normal_shoes[math.random(2)]..'^'..normal_pants[math.random(2)]..'^'..normal_hair[math.random(2)]})
+end
+
+
+mobs:register_mob("mobs_npc:villager", {
 	type = "npc",
 	passive = false,
 	damage = 3,
