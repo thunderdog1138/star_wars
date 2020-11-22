@@ -15,13 +15,13 @@ normal = {
 --Human skin gen
 local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png', 'human_skin-6.png'}
 
-local human_male_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
+local human_male_hair = {'hair_male1-brown.png', 'hair_male1-blonde.png', 'hair_male1-red.png', 'hair_male1-black.png'}
 local human_male_eyes = {'human_eyes_male-1.png', 'human_eyes_male-2.png', 'human_eyes_male-3.png'}
 local male_shirt = {'shirt1-blue.png', 'shirt1-red.png', 'shirt1-orange.png', 'shirt1-green.png'}
 local male_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
 local male_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
-local human_female_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
+local human_female_hair = {'hair_female1-brown.png', 'hair_female1-blonde.png', 'hair_female1-red.png', 'hair_female1-black.png'}
 local human_female_eyes = {'human_eyes_female-1.png', 'human_eyes_female-2.png', 'human_eyes_female-3.png'}
 local female_shirt = {'shirt2-yellow.png', 'shirt2-teal.png', 'shirt2-purple.png', 'shirt2-grey.png'}
 local female_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
