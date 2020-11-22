@@ -28,11 +28,11 @@ local female_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
 local female_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
 for i = 1, 16 do
-   table.insert(human_male.skins, {normal_skin[math.random(5)]..'^'..normal_face[math.random(2)]..'^'..normal_shirt[math.random(2)]..'^'..normal_shoes[math.random(2)]..'^'..normal_pants[math.random(2)]..'^'..normal_hair[math.random(2)]})
+   table.insert(human_male.skins, {human_skin[math.random(2)]..'^'..human_male_eyes[math.random(3)]..'^'..local male_shirt[math.random(4)]..'^'..male_shoes[math.random(2)]..'^'..male_pants[math.random(2)]..'^'..human_male_hair[math.random(4)]})
 end
 
 for i = 1, 16 do
-   table.insert(human_female.skins, {normal_skin[math.random(5)]..'^'..normal_face[math.random(2)]..'^'..normal_shirt[math.random(2)]..'^'..normal_shoes[math.random(2)]..'^'..normal_pants[math.random(2)]..'^'..normal_hair[math.random(2)]})
+   table.insert(human_female.skins, {human_skin[math.random(2)]..'^'..human_female_eyes[math.random(3)]..'^'..local female_shirt[math.random(4)]..'^'..female_shoes[math.random(2)]..'^'..female_pants[math.random(2)]..'^'..human_female_hair[math.random(4)]})
 end
 
 
