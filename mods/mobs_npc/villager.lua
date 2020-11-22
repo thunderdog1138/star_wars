@@ -15,19 +15,17 @@ normal = {
 --Human skin gen
 local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png', 'human_skin-6.png'}
 
---Human male
 local human_male_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
 local human_male_eyes = {'human_eyes_male-1.png', 'human_eyes_male-2.png', 'human_eyes_male-3.png'}
-local normal_male_shirt = {'shirt_normal-blue.png', 'shirt_normal-red.png'}
-local normal_male_shoes = {'shoes_normal-black.png', 'shoes_normal-yellow.png'}
-local normal_male_pants = {'pants_normal-green.png', 'pants_normal-purple.png'}
+local male_shirt = {'shirt1-blue.png', 'shirt1-red.png', 'shirt1-orange.png', 'shirt1-green.png'}
+local male_shoes = {'shoes_normal-black.png', 'shoes_normal-yellow.png'}
+local male_pants = {'pants_normal-green.png', 'pants_normal-purple.png'}
 
---Human female
 local human_female_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
 local human_female_eyes = {'human_eyes_female-1.png', 'human_eyes_female-2.png', 'human_eyes_female-3.png'}
-local normal_female_shirt = {'shirt_normal-blue.png', 'shirt_normal-red.png'}
-local normal_female_shoes = {'shoes_normal-black.png', 'shoes_normal-yellow.png'}
-local normal_female_pants = {'pants_normal-green.png', 'pants_normal-purple.png'}
+local female_shirt = {'shirt2-yellow.png', 'shirt2-teal.png', 'shirt2-purple.png', 'shirt2-grey.png'}
+local female_shoes = {'shoes_normal-black.png', 'shoes_normal-yellow.png'}
+local female_pants = {'pants_normal-green.png', 'pants_normal-purple.png'}
 
 for i = 1, 16 do
    table.insert(human_male.skins, {normal_skin[math.random(5)]..'^'..normal_face[math.random(2)]..'^'..normal_shirt[math.random(2)]..'^'..normal_shoes[math.random(2)]..'^'..normal_pants[math.random(2)]..'^'..normal_hair[math.random(2)]})
