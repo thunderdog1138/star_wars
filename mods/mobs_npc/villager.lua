@@ -13,7 +13,7 @@ normal = {
 }
 
 --Human skin gen
-local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png'}
+local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png', 'human_skin-6.png'}
 local human_male_hair = {'hair_short-brown.png', 'hair_short-grey.png'}
 local human_male_face = {'face-1.png', 'face-2.png'}
 local normal_male_shirt = {'shirt_normal-blue.png', 'shirt_normal-red.png'}
