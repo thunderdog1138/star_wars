@@ -8,8 +8,9 @@ mobs.npc_drops = {
 	"default:shovel_durasteel", "bucket:durabucket_water"
 }
 
-normal = {
-   skins = {}
+human = {
+   male_skins = {},
+   female_skins = {}
 }
 
 --Human skin gen
@@ -28,11 +29,11 @@ local female_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
 local female_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
 for i = 1, 16 do
-   table.insert(human_male.skins, {human_skin[math.random(2)]..'^'..human_male_eyes[math.random(3)]..'^'..local male_shirt[math.random(4)]..'^'..male_shoes[math.random(2)]..'^'..male_pants[math.random(2)]..'^'..human_male_hair[math.random(4)]})
+   table.insert(human.male_skins, {human_skin[math.random(2)]..'^'..human_male_eyes[math.random(3)]..'^'..local male_shirt[math.random(4)]..'^'..male_shoes[math.random(2)]..'^'..male_pants[math.random(2)]..'^'..human_male_hair[math.random(4)]})
 end
 
 for i = 1, 16 do
-   table.insert(human_female.skins, {human_skin[math.random(2)]..'^'..human_female_eyes[math.random(3)]..'^'..local female_shirt[math.random(4)]..'^'..female_shoes[math.random(2)]..'^'..female_pants[math.random(2)]..'^'..human_female_hair[math.random(4)]})
+   table.insert(human.female_skins, {human_skin[math.random(2)]..'^'..human_female_eyes[math.random(3)]..'^'..local female_shirt[math.random(4)]..'^'..female_shoes[math.random(2)]..'^'..female_pants[math.random(2)]..'^'..human_female_hair[math.random(4)]})
 end
 
 
@@ -53,11 +54,12 @@ mobs:register_mob("mobs_npc:villager", {
 	mesh = "mobs_character.b3d",
 	drawtype = "front",
 	textures = {
-		{"mobs_npc.png"},
-		{"mobs_npc2.png"}, -- female by nuttmeg20
+		human.male_skins,
+		human.female_skins,
 	},
 	child_texture = {
-		{"mobs_npc_baby.png"}, -- derpy baby by AmirDerAssassine
+		human.male_skins,
+		human.female_skins,
 	},
 	makes_footstep_sound = true,
 	sounds = {},
