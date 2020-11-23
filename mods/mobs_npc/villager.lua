@@ -163,7 +163,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("mobs_npc:npc", S("Npc"), "default_brick.png", 1)
-
--- compatibility
-mobs:alias_mob("mobs:npc", "mobs_npc:npc")
+mobs:register_egg("mobs_npc:villager", S("Villager"), "default_brick.png", 1)
