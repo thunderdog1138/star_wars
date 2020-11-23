@@ -54,7 +54,7 @@ local female_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
 local female_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
 
-for i = 1, 16 do
+for i = 1, 100 do
 
 	table.insert(human.male_skins, {
 		human_skin[math.random(2)] .. '^'
