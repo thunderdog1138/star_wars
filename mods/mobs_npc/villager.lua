@@ -1,4 +1,3 @@
-
 local S = mobs.intllib
 
 -- Npc by TenPlus1
@@ -9,32 +8,76 @@ mobs.npc_drops = {
 }
 
 human = {
-   male_skins = {},
-   female_skins = {}
+	male_skins = {},
+	female_skins = {}
 }
 
 --Human skin gen
-local human_skin = {'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png', 'human_skin-4.png', 'human_skin-5.png', 'human_skin-6.png'}
+local human_skin = {
+	'human_skin-1.png', 'human_skin-2.png', 'human_skin-3.png',
+	'human_skin-4.png', 'human_skin-5.png', 'human_skin-6.png'
+}
 
-local human_male_hair = {'hair_male1-brown.png', 'hair_male1-blonde.png', 'hair_male1-red.png', 'hair_male1-black.png'}
-local human_male_eyes = {'human_eyes_male-1.png', 'human_eyes_male-2.png', 'human_eyes_male-3.png'}
-local male_shirt = {'shirt1-blue.png', 'shirt1-red.png', 'shirt1-orange.png', 'shirt1-green.png'}
+local human_male_hair = {
+	'hair_male1-brown.png', 'hair_male1-blonde.png', 'hair_male1-red.png',
+	'hair_male1-black.png'
+}
+
+local human_male_eyes = {
+	'human_eyes_male-1.png', 'human_eyes_male-2.png', 'human_eyes_male-3.png'
+}
+
+local male_shirt = {
+	'shirt1-blue.png', 'shirt1-red.png', 'shirt1-orange.png',
+	'shirt1-green.png'
+}
+
 local male_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
+
 local male_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
-local human_female_hair = {'hair_female1-brown.png', 'hair_female1-blonde.png', 'hair_female1-red.png', 'hair_female1-black.png'}
-local human_female_eyes = {'human_eyes_female-1.png', 'human_eyes_female-2.png', 'human_eyes_female-3.png'}
-local female_shirt = {'shirt2-yellow.png', 'shirt2-teal.png', 'shirt2-purple.png', 'shirt2-grey.png'}
+local human_female_hair = {
+	'hair_female1-brown.png', 'hair_female1-blonde.png', 'hair_female1-red.png',
+	'hair_female1-black.png'
+}
+
+local human_female_eyes = {
+	'human_eyes_female-1.png', 'human_eyes_female-2.png', 'human_eyes_female-3.png'
+}
+
+local female_shirt = {
+	'shirt2-yellow.png', 'shirt2-teal.png', 'shirt2-purple.png', 'shirt2-grey.png'
+}
+
 local female_shoes = {'shoes1-black.png', 'shoes1-brown.png'}
+
 local female_pants = {'pants1-blue.png', 'pants1-grey.png'}
 
+
 for i = 1, 16 do
-   table.insert(human.male_skins, {human_skin[math.random(2)]..'^'..human_male_eyes[math.random(3)]..'^'..local male_shirt[math.random(4)]..'^'..male_shoes[math.random(2)]..'^'..male_pants[math.random(2)]..'^'..human_male_hair[math.random(4)]})
+
+	table.insert(human.male_skins, {
+		human_skin[math.random(2)] .. '^'
+		.. human_male_eyes[math.random(3)] .. '^'
+		.. male_shirt[math.random(4)] .. '^'
+		.. male_shoes[math.random(2)] .. '^'
+		.. male_pants[math.random(2)] .. '^'
+		.. human_male_hair[math.random(4)]
+	})
 end
 
 for i = 1, 16 do
-   table.insert(human.female_skins, {human_skin[math.random(2)]..'^'..human_female_eyes[math.random(3)]..'^'..local female_shirt[math.random(4)]..'^'..female_shoes[math.random(2)]..'^'..female_pants[math.random(2)]..'^'..human_female_hair[math.random(4)]})
+
+	table.insert(human.female_skins, {
+		human_skin[math.random(2)] .. '^'
+		.. human_female_eyes[math.random(3)] .. '^'
+		.. female_shirt[math.random(4)] .. '^'
+		.. female_shoes[math.random(2)] .. '^'
+		.. female_pants[math.random(2)] .. '^'
+		.. human_female_hair[math.random(4)]
+	})
 end
+
 
 
 mobs:register_mob("mobs_npc:villager", {
@@ -151,16 +194,17 @@ mobs:register_mob("mobs_npc:villager", {
 })
 
 if not mobs.custom_spawn_npc then
-mobs:spawn({
-	name = "mobs_npc:npc",
-	nodes = {"default:brick"},
-	neighbors = {"default:grass_3"},
-	min_light = 10,
-	chance = 10000,
-	active_object_count = 1,
-	min_height = 0,
-	day_toggle = true,
-})
+
+	mobs:spawn({
+		name = "mobs_npc:npc",
+		nodes = {"default:brick"},
+		neighbors = {"default:grass_3"},
+		min_light = 10,
+		chance = 10000,
+		active_object_count = 1,
+		min_height = 0,
+		day_toggle = true,
+	})
 end
 
 mobs:register_egg("mobs_npc:villager", S("Villager"), "default_brick.png", 1)
