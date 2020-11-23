@@ -9,7 +9,7 @@ mobs.npc_drops = {
 
 human = {
 	male_skins = {},
-	female_skins = {}
+--	female_skins = {}
 }
 
 --Human skin gen
@@ -66,16 +66,16 @@ for i = 1, 16 do
 	})
 end
 
-for i = 1, 16 do
+--for i = 1, 16 do
 
-	table.insert(human.female_skins, {
-		human_skin[math.random(2)] .. '^'
-		.. human_female_eyes[math.random(3)] .. '^'
-		.. female_shirt[math.random(4)] .. '^'
-		.. female_shoes[math.random(2)] .. '^'
-		.. female_pants[math.random(2)] .. '^'
-		.. human_female_hair[math.random(4)]
-	})
+--	table.insert(human.female_skins, {
+--		human_skin[math.random(2)] .. '^'
+--		.. human_female_eyes[math.random(3)] .. '^'
+--		.. female_shirt[math.random(4)] .. '^'
+--		.. female_shoes[math.random(2)] .. '^'
+--		.. female_pants[math.random(2)] .. '^'
+--		.. human_female_hair[math.random(4)]
+--	})
 end
 
 
@@ -98,11 +98,11 @@ mobs:register_mob("mobs_npc:villager", {
 	drawtype = "front",
 	textures = {
 		human.male_skins,
-		human.female_skins,
+--		human.female_skins,
 	},
 	child_texture = {
 		human.male_skins,
-		human.female_skins,
+--		human.female_skins,
 	},
 	makes_footstep_sound = true,
 	sounds = {},
