@@ -97,12 +97,12 @@ mobs:register_mob("mobs_npc:villager", {
 	mesh = "mobs_character.b3d",
 	drawtype = "front",
 	textures = {
-		human.male_skins,
---		human.female_skins,
+		{human.male_skins},
+		{human.female_skins},
 	},
 	child_texture = {
-		human.male_skins,
---		human.female_skins,
+		{human.male_skins},
+		{human.female_skins},
 	},
 	makes_footstep_sound = true,
 	sounds = {},
