@@ -61,7 +61,7 @@ local female_pants = {'pants1-blue.png', 'pants1-grey.png'}
 for i = 1, 100 do
 
 	table.insert(human.male_skins, {
-		human_skin[math.random(2)] .. '^'
+		human_skin[math.random(6)] .. '^'
 		.. human_male_eyes[math.random(3)] .. '^'
 		.. male_shirt[math.random(4)] .. '^'
 		.. male_shoes[math.random(2)] .. '^'
@@ -73,7 +73,7 @@ end
 for i = 1, 100 do
 
 	table.insert(human.female_skins, {
-		human_skin[math.random(2)] .. '^'
+		human_skin[math.random(6)] .. '^'
 		.. human_female_eyes[math.random(3)] .. '^'
 		.. female_shirt[math.random(4)] .. '^'
 		.. female_shoes[math.random(2)] .. '^'
