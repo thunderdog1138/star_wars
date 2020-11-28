@@ -17,6 +17,27 @@ minetest.register_craft({
 })
 
 
+--= Bantha Rump
+minetest.register_craftitem("farming:bantha_rump", {
+	description = S("Bantha Rump"),
+	inventory_image = "bantha_rump.png",
+	on_use = minetest.item_eat(8),
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:bantha_rump",
+	recipe = {
+		"mobs:bantha_meat", "farming:calarantrum", "farming:celonslay",
+		"farming:celto", "farming:taba", "bucket:bucket_water"
+	},
+	replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
+
+
 --= Salt
 
 minetest.register_node("farming:salt", {
