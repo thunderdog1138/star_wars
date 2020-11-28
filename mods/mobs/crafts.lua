@@ -46,6 +46,53 @@ minetest.register_craft({
 	cooktime = 5
 })
 
+-- ration pack
+minetest.register_craftitem("mobs:ration_pack", {
+	description = S("Ration Pack"),
+	inventory_image = "ration_pack.png"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "mobs:polystarch",
+	recipe = {
+		"mobs:ration_pack"
+	},
+	replacements = {
+		{"mobs:ration_pack", "mobs:veg_meat"}
+	}
+})
+
+-- polystarch and polystarch bread
+minetest.register_craftitem("mobs:polystarch", {
+	description = S("Polystarch"),
+	inventory_image = "polystarch.png"
+})
+
+minetest.register_craftitem("mobs:polystarch_bread", {
+	description = S("Polystarch Bread"),
+	inventory_image = "polystarch_bread.png",
+	on_use = minetest.item_eat(5),
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "mobs:polystarch_bread 3",
+	recipe = {
+		"mobs:polystarch", "bucket:bucket_water"
+	},
+	replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
+-- veg-meat
+minetest.register_craftitem("mobs:veg_meat", {
+	description = S("Veg-meat"),
+	inventory_image = "veg-meat.png",
+	on_use = minetest.item_eat(3),
+})
+
 -- lasso
 minetest.register_tool("mobs:lasso", {
 	description = S("Lasso (right-click animal to put in inventory)"),
