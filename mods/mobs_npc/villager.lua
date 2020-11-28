@@ -312,5 +312,5 @@ if not mobs.custom_spawn_npc then
 	})
 end
 
-mobs:register_egg("mobs_npc:human_male", S("Human male"), "default_brick.png", 1)
-mobs:register_egg("mobs_npc:human_female", S("Human female"), "default_brick.png", 1)
+mobs:register_egg("mobs_npc:human_male", S("Human male"), "sand.png", 1)
+mobs:register_egg("mobs_npc:human_female", S("Human female"), "sand.png", 1)
