@@ -89,7 +89,7 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 	visual = "sprite",
 	visual_size = {x = 1, y = 1},
 	textures = {"blaster_red.png"},
-	velocity = 30,
+	velocity = 50,
 
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {
@@ -109,5 +109,9 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 
 	hit_node = function(self, pos, node)
 		mobs:boom(self, pos, 1, true)
-	end
+	end,
+
+	tail = 1,
+	tail_texture = {"blaster_red.png"},
+	tail_size = 7
 })
