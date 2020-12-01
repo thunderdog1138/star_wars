@@ -8,6 +8,7 @@ mobs:register_mob("mobs_monster:stormtrooper", {
 	--specific_attack = {"player", "mobs_npc:npc"},
 	arrow = "mobs_monster:blaster_red",
 	shoot_interval = 1.5,
+	shoot_offset = 1.5,
 	hp_min = 4,
 	hp_max = 20,
 	armor = 100,
