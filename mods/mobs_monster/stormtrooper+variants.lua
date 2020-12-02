@@ -113,6 +113,6 @@ mobs:register_arrow("mobs_monster:blaster_red", {
 	end,
 
 	tail = 1,
-	tail_texture = {"blaster_red.png"},
+	tail_texture = "blaster_red.png",
 	tail_size = 7
 })
