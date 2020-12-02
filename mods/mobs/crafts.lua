@@ -4,7 +4,7 @@ local S = mobs.intllib
 -- name tag
 minetest.register_craftitem("mobs:nametag", {
 	description = S("Name Tag"),
-	inventory_image = "mobs_nametag.png",
+	inventory_image = "nametag.png",
 	groups = {flammable = 2}
 })
 
@@ -19,37 +19,37 @@ end
 -- leather
 minetest.register_craftitem("mobs:leather", {
 	description = S("Leather"),
-	inventory_image = "mobs_leather.png",
+	inventory_image = "leather.png",
 	groups = {flammable = 2}
 })
 
 -- raw meat
-minetest.register_craftitem("mobs:meat_raw", {
-	description = S("Raw Meat"),
-	inventory_image = "mobs_meat_raw.png",
+minetest.register_craftitem("mobs:bantha_meat_raw", {
+	description = S("Raw Bantha Meat"),
+	inventory_image = "bantha_meat_raw.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2}
 })
 
 -- cooked meat
-minetest.register_craftitem("mobs:meat", {
-	description = S("Meat"),
-	inventory_image = "mobs_meat.png",
+minetest.register_craftitem("mobs:bantha_meat", {
+	description = S("Bantha Meat"),
+	inventory_image = "bantha_meat.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, flammable = 2}
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "mobs:meat",
-	recipe = "mobs:meat_raw",
+	output = "mobs:bantha_meat",
+	recipe = "mobs:bantha_meat_raw",
 	cooktime = 5
 })
 
 -- lasso
 minetest.register_tool("mobs:lasso", {
 	description = S("Lasso (right-click animal to put in inventory)"),
-	inventory_image = "mobs_magic_lasso.png",
+	inventory_image = "lasso.png",
 	groups = {flammable = 2}
 })
 
@@ -58,7 +58,7 @@ if minetest.get_modpath("farming") then
 		output = "mobs:lasso",
 		recipe = {
 			{"farming:string", "", "farming:string"},
-			{"", "default:diamond", ""},
+			{"", "farming:string", ""},
 			{"farming:string", "", "farming:string"}
 		}
 	})
@@ -69,7 +69,7 @@ minetest.register_alias("mobs:magic_lasso", "mobs:lasso")
 -- net
 minetest.register_tool("mobs:net", {
 	description = S("Net (right-click animal to put in inventory)"),
-	inventory_image = "mobs_net.png",
+	inventory_image = "net.png",
 	groups = {flammable = 2}
 })
 
@@ -87,22 +87,22 @@ end
 -- shears (right click to shear animal)
 minetest.register_tool("mobs:shears", {
 	description = S("Steel Shears (right-click to shear)"),
-	inventory_image = "mobs_shears.png",
+	inventory_image = "shears.png",
 	groups = {flammable = 2}
 })
 
 minetest.register_craft({
 	output = "mobs:shears",
 	recipe = {
-		{"", "default:steel_ingot", ""},
-		{"", "group:stick", "default:steel_ingot"}
+		{"", "default:durasteel_ingot", ""},
+		{"", "group:stick", "default:durasteel_ingot"}
 	}
 })
 
 -- protection rune
 minetest.register_craftitem("mobs:protector", {
 	description = S("Mob Protection Rune"),
-	inventory_image = "mobs_protector.png",
+	inventory_image = "mob_protector.png",
 	groups = {flammable = 2}
 })
 
@@ -110,7 +110,7 @@ minetest.register_craft({
 	output = "mobs:protector",
 	recipe = {
 		{"default:stone", "default:stone", "default:stone"},
-		{"default:stone", "default:goldblock", "default:stone"},
+		{"default:stone", "default:gold_block", "default:stone"},
 		{"default:stone", "default:stone", "default:stone"}
 	}
 })
@@ -118,7 +118,7 @@ minetest.register_craft({
 -- saddle
 minetest.register_craftitem("mobs:saddle", {
 	description = S("Saddle"),
-	inventory_image = "mobs_saddle.png",
+	inventory_image = "saddle.png",
 	groups = {flammable = 2}
 })
 
@@ -126,8 +126,8 @@ minetest.register_craft({
 	output = "mobs:saddle",
 	recipe = {
 		{"mobs:leather", "mobs:leather", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"}
+		{"mobs:leather", "default:durasteel_ingot", "mobs:leather"},
+		{"mobs:leather", "default:durasteel_ingot", "mobs:leather"}
 	}
 })
 
@@ -136,10 +136,10 @@ minetest.register_craft({
 if default.register_fence then
 
 -- mob fence (looks like normal fence but collision is 2 high)
-default.register_fence("mobs:fence_wood", {
+default.register_fence("mobs:fence_jogan_wood", {
 	description = S("Mob Fence"),
-	texture = "default_wood.png",
-	material = "default:fence_wood",
+	texture = "jogan_wood.png",
+	material = "default:fence_jogan_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
 	collision_box = {
@@ -154,7 +154,7 @@ default.register_fence("mobs:fence_wood", {
 minetest.register_node("mobs:fence_top", {
 	description = S("Mob Fence Top"),
 	drawtype = "nodebox",
-	tiles = {"default_wood.png"},
+	tiles = {"jogan_wood.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
@@ -177,7 +177,7 @@ minetest.register_craft({
 	output = "mobs:fence_top 12",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
-		{"", "default:fence_wood", ""}
+		{"", "default:fence_jogan_wood", ""}
 	}
 })
 
@@ -217,7 +217,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "mobs:fence_wood",
+	recipe = "mobs:fence_jogan_wood",
 	burntime = 7
 })
 
@@ -235,7 +235,7 @@ local tex_obj
 
 minetest.register_tool(":mobs:mob_reset_stick", {
 	description = S("Mob Reset Stick"),
-	inventory_image = "default_stick.png^[colorize:#ff000050",
+	inventory_image = "stick.png^[colorize:#ff000050",
 	stack_max = 1,
 	groups = {not_in_creative_inventory = 1},
 
@@ -331,25 +331,3 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		tex_obj = nil
 	end
 end)
-
-
--- Meat Block (thanks to painterlypack.net for allowing me to use these textures)
-minetest.register_node("mobs:meatblock", {
-	description = S("Meat Block"),
-	tiles = {"mobs_meat_top.png", "mobs_meat_bottom.png", "mobs_meat_side.png"},
-	paramtype2 = "facedir",
-	groups = {choppy = 1, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_leaves_defaults(),
-	on_place = minetest.rotate_node,
-	on_use = minetest.item_eat(20),
-})
-
-minetest.register_craft({
-	output = "mobs:meatblock",
-	type = "shapeless",
-	recipe = {
-		"group:food_meat", "group:food_meat", "group:food_meat",
-		"group:food_meat", "group:food_meat", "group:food_meat",
-		"group:food_meat", "group:food_meat", "group:food_meat"
-	}
-})
