@@ -29,7 +29,7 @@ minetest.register_craftitem("farming:roti", {
 -- flour
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:roti",
+	output = "farming:flour",
 	recipe = {
 		"farming:roti", "farming:roti", "farming:roti",
 		"farming:roti", "farming:mortar_pestle"
