@@ -12,7 +12,7 @@ minetest.register_craftitem("farming:saucepan", {
 minetest.register_craft({
 	output = "farming:saucepan",
 	recipe = {
-		{"default:steel_ingot", "", ""},
+		{"default:durasteel_ingot", "", ""},
 		{"", "group:stick", ""}
 	}
 })
@@ -28,8 +28,8 @@ minetest.register_craftitem("farming:pot", {
 minetest.register_craft({
 	output = "farming:pot",
 	recipe = {
-		{"group:stick", "default:steel_ingot", "default:steel_ingot"},
-		{"", "default:steel_ingot", "default:steel_ingot"}
+		{"group:stick", "default:durasteel_ingot", "default:durasteel_ingot"},
+		{"", "default:durasteel_ingot", "default:durasteel_ingot"}
 	}
 })
 
@@ -61,8 +61,8 @@ minetest.register_craftitem("farming:skillet", {
 minetest.register_craft({
 	output = "farming:skillet",
 	recipe = {
-		{"default:steel_ingot", "", ""},
-		{"", "default:steel_ingot", ""},
+		{"default:durasteel_ingot", "", ""},
+		{"", "default:durasteel_ingot", ""},
 		{"", "", "group:stick"}
 	}
 })
@@ -94,7 +94,7 @@ minetest.register_craftitem("farming:cutting_board", {
 minetest.register_craft({
 	output = "farming:cutting_board",
 	recipe = {
-		{"default:steel_ingot", "", ""},
+		{"default:durasteel_ingot", "", ""},
 		{"", "group:stick", ""},
 		{"", "", "group:wood"}
 	}
