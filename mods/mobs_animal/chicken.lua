@@ -15,12 +15,10 @@ stepheight = 0.6,
 	visual = "mesh",
 	mesh = "mobs_chicken.b3d",
 	textures = {
-		{"mobs_chicken.png"}, -- white
-		{"mobs_chicken_brown.png"},
-		{"mobs_chicken_black.png"},
+		{"chicken.png"},
 	},
 	child_texture = {
-		{"mobs_chick.png"},
+		{"chick.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -29,7 +27,7 @@ stepheight = 0.6,
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-	runaway_from = {"player", "mobs_animal:pumba"},
+	runaway_from = {"player"},
 	drops = {
 		{name = "mobs:chicken_raw", chance = 1, min = 1, max = 1},
 		{name = "mobs:chicken_feather", chance = 1, min = 0, max = 2},
@@ -56,8 +54,8 @@ stepheight = 0.6,
 		run_speed = 24,
 	},
 	follow = {
-		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley",
-		"farming:seed_oat", "farming:seed_rye"
+		"farming:toz", "farming:shorn", "farming:ghoba_rice",
+		"farming:seed_roti"
 	},
 	view_range = 5,
 
@@ -94,7 +92,7 @@ stepheight = 0.6,
 })
 
 
-local spawn_on = {"default:dirt_with_grass"}
+local spawn_on = {"ethereal:grass_dirt"}
 
 if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
@@ -116,7 +114,7 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
+mobs:register_egg("mobs_animal:chicken", S("Tip-yip Chicken"), "chicken_inv.png", 0)
 
 
 mobs:alias_mob("mobs:chicken", "mobs_animal:chicken") -- compatibility
@@ -127,7 +125,7 @@ mobs:alias_mob("mobs:chicken", "mobs_animal:chicken") -- compatibility
 mobs:register_arrow("mobs_animal:egg_entity", {
 	visual = "sprite",
 	visual_size = {x=.5, y=.5},
-	textures = {"mobs_chicken_egg.png"},
+	textures = {"porg_egg.png"},
 	velocity = 6,
 
 	hit_player = function(self, player)
@@ -239,11 +237,11 @@ end
 -- egg
 minetest.register_node(":mobs:egg", {
 	description = S("Chicken Egg"),
-	tiles = {"mobs_chicken_egg.png"},
-	inventory_image  = "mobs_chicken_egg.png",
+	tiles = {"porg_egg.png"},
+	inventory_image  = "porg_egg.png",
 	visual_scale = 0.7,
 	drawtype = "plantlike",
-	wield_image = "mobs_chicken_egg.png",
+	wield_image = "porg_egg.png",
 	paramtype = "light",
 	walkable = false,
 	is_ground_content = true,
@@ -265,7 +263,7 @@ minetest.register_node(":mobs:egg", {
 -- fried egg
 minetest.register_craftitem(":mobs:chicken_egg_fried", {
 	description = S("Fried Egg"),
-	inventory_image = "mobs_chicken_egg_fried.png",
+	inventory_image = "porg_egg_fried.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_egg_fried = 1, flammable = 2},
 })
@@ -279,7 +277,7 @@ minetest.register_craft({
 -- raw chicken
 minetest.register_craftitem(":mobs:chicken_raw", {
 description = S("Raw Chicken"),
-	inventory_image = "mobs_chicken_raw.png",
+	inventory_image = "chicken_raw.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, food_chicken_raw = 1, flammable = 2},
 })
@@ -287,7 +285,7 @@ description = S("Raw Chicken"),
 -- cooked chicken
 minetest.register_craftitem(":mobs:chicken_cooked", {
 description = S("Cooked Chicken"),
-	inventory_image = "mobs_chicken_cooked.png",
+	inventory_image = "chicken_cooked.png",
 	on_use = minetest.item_eat(6),
 	groups = {food_meat = 1, food_chicken = 1, flammable = 2},
 })
@@ -301,7 +299,7 @@ minetest.register_craft({
 -- feather
 minetest.register_craftitem(":mobs:chicken_feather", {
 	description = S("Feather"),
-	inventory_image = "mobs_chicken_feather.png",
+	inventory_image = "chicken_feather.png",
 	groups = {flammable = 2},
 })
 
