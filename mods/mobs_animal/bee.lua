@@ -13,9 +13,9 @@ mobs:register_mob("mobs_animal:bee", {
 	visual = "mesh",
 	mesh = "mobs_bee.b3d",
 	textures = {
-		{"mobs_bee.png"},
+		{"bee.png"},
 	},
-	blood_texture = "mobs_bee_inv.png",
+	blood_texture = "bee_inv.png",
 	blood_amount = 1,
 	makes_footstep_sound = false,
 	sounds = {
@@ -59,7 +59,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png")
+mobs:register_egg("mobs_animal:bee", S("Bee"), "bee_inv.png")
 
 -- compatibility
 mobs:alias_mob("mobs:bee", "mobs_animal:bee")
@@ -67,7 +67,7 @@ mobs:alias_mob("mobs:bee", "mobs_animal:bee")
 -- honey
 minetest.register_craftitem(":mobs:honey", {
 	description = S("Honey"),
-	inventory_image = "mobs_honey_inv.png",
+	inventory_image = "honey_inv.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_honey = 1, food_sugar = 1, flammable = 1},
 })
@@ -76,8 +76,8 @@ minetest.register_craftitem(":mobs:honey", {
 minetest.register_node(":mobs:beehive", {
 	description = S("Beehive"),
 	drawtype = "plantlike",
-	tiles = {"mobs_beehive.png"},
-	inventory_image = "mobs_beehive.png",
+	tiles = {"beehive.png"},
+	inventory_image = "beehive.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = true,
@@ -145,7 +145,7 @@ minetest.register_craft({
 -- honey block
 minetest.register_node(":mobs:honey_block", {
 	description = S("Honey Block"),
-	tiles = {"mobs_honey_block.png"},
+	tiles = {"honey_block.png"},
 	groups = {snappy = 3, flammable = 2},
 	sounds = default.node_sound_dirt_defaults(),
 })
