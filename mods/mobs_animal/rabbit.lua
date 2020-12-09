@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Bunny by ExeterDad
 
-mobs:register_mob("mobs_animal:bunny", {
+mobs:register_mob("mobs_animal:rabbit", {
 stepheight = 0.6,
 	type = "animal",
 	passive = true,
@@ -16,11 +16,7 @@ stepheight = 0.6,
 	visual = "mesh",
 	mesh = "mobs_bunny.b3d",
 	drawtype = "front",
-	textures = {
-		{"mobs_bunny_grey.png"},
-		{"mobs_bunny_brown.png"},
-		{"mobs_bunny_white.png"},
-	},
+	textures = "rabbit.png",
 	sounds = {},
 	makes_footstep_sound = false,
 	walk_velocity = 1,
@@ -46,10 +42,10 @@ stepheight = 0.6,
 		punch_start = 16,
 		punch_end = 24,
 	},
-	follow = {"farming:carrot", "farming_plus:carrot_item", "default:grass_1"},
+	follow = {"farming:calarantrum", "default:grass_1"},
 	view_range = 8,
 	replace_rate = 10,
-	replace_what = {"farming:carrot_7", "farming:carrot_8", "farming_plus:carrot"},
+	replace_what = {"farming:calarantrum_4", "farming_plus:carrot"},
 	replace_with = "air",
 	on_rightclick = function(self, clicker)
 
@@ -69,7 +65,7 @@ stepheight = 0.6,
 			end
 
 			self.object:set_properties({
-				textures = {"mobs_bunny_evil.png"},
+				textures = {"rabbit_evil.png"},
 			})
 
 			self.type = "monster"
@@ -83,23 +79,6 @@ stepheight = 0.6,
 
 		local pos = self.object:get_pos() ; pos.y = pos.y - 1
 
-		-- white snowy bunny
-		if minetest.find_node_near(pos, 1,
-				{"default:snow", "default:snowblock", "default:dirt_with_snow"}) then
-			self.base_texture = {"mobs_bunny_white.png"}
-			self.object:set_properties({textures = self.base_texture})
-		-- brown desert bunny
-		elseif minetest.find_node_near(pos, 1,
-				{"default:desert_sand", "default:desert_stone"}) then
-			self.base_texture = {"mobs_bunny_brown.png"}
-			self.object:set_properties({textures = self.base_texture})
-		-- grey stone bunny
-		elseif minetest.find_node_near(pos, 1,
-				{"default:stone", "default:gravel"}) then
-			self.base_texture = {"mobs_bunny_grey.png"}
-			self.object:set_properties({textures = self.base_texture})
-		end
-
 		return true -- run only once, false/nil runs every activation
 	end,
 	attack_type = "dogfight",
@@ -107,7 +86,7 @@ stepheight = 0.6,
 })
 
 
-local spawn_on = "default:dirt_with_grass"
+local spawn_on = "ethereal:grass_dirt"
 
 if minetest.get_modpath("ethereal") then
 	spawn_on = "ethereal:prairie_dirt"
@@ -115,7 +94,7 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "mobs_animal:bunny",
+	name = "mobs_animal:rabbit",
 	nodes = {spawn_on},
 	neighbors = {"group:grass"},
 	min_light = 14,
@@ -128,16 +107,16 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("mobs_animal:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
+mobs:register_egg("mobs_animal:rabbit", S("Rabbit"), "rabbit_inv.png", 0)
 
 
-mobs:alias_mob("mobs:bunny", "mobs_animal:bunny") -- compatibility
+mobs:alias_mob("mobs:rabbit", "mobs_animal:rabbit") -- compatibility
 
 
 -- raw rabbit
 minetest.register_craftitem(":mobs:rabbit_raw", {
 	description = S("Raw Rabbit"),
-	inventory_image = "mobs_rabbit_raw.png",
+	inventory_image = "rabbit_raw.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, food_rabbit_raw = 1, flammable = 2},
 })
@@ -145,7 +124,7 @@ minetest.register_craftitem(":mobs:rabbit_raw", {
 -- cooked rabbit
 minetest.register_craftitem(":mobs:rabbit_cooked", {
 	description = S("Cooked Rabbit"),
-	inventory_image = "mobs_rabbit_cooked.png",
+	inventory_image = "rabbit_cooked.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, food_rabbit = 1, flammable = 2},
 })
@@ -160,7 +139,7 @@ minetest.register_craft({
 -- rabbit hide
 minetest.register_craftitem(":mobs:rabbit_hide", {
 	description = S("Rabbit Hide"),
-	inventory_image = "mobs_rabbit_hide.png",
+	inventory_image = "rabbit_hide.png",
 	groups = {flammable = 2},
 })
 
