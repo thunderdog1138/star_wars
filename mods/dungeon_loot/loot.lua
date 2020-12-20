@@ -17,9 +17,9 @@ dungeon_loot.registered_loot = {
 
 	-- farming / consumable
 	{name = "farming:string", chance = 0.5, count = {1, 8}},
-	{name = "farming:wheat", chance = 0.5, count = {2, 5}},
+	{name = "farming:lothal_wheat", chance = 0.5, count = {2, 5}},
 	{name = "ethereal:jogan_fruit", chance = 0.4, count = {1, 4}},
-	{name = "farming:seed_cotton", chance = 0.4, count = {1, 4},
+	{name = "farming:seed_roti", chance = 0.4, count = {1, 4},
 		types = {"normal"}},
 	{name = "default:cactus", chance = 0.4, count = {1, 4},
 		types = {"sandstone", "desert"}},
