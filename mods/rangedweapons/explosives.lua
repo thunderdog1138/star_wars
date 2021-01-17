@@ -3,10 +3,10 @@ local he_boom = {
 	--description = "DuN mInD mEh...",
 	radius = 2,
 	tiles = {
-		side = "rangedweapons_invisible.png",
-		top = "rangedweapons_invisible.png",
-		bottom = "rangedweapons_invisible.png",
-		burning = "rangedweapons_invisible.png"
+		side = "blank.png",
+		top = "blank.png",
+		bottom = "blank.png",
+		burning = "blank.png"
 	},
 }
 tnt.register_tnt(he_boom)
@@ -16,10 +16,10 @@ local rocket_boom = {
 	--description = "DuN mInD mEh...",
 	radius = 3,
 	tiles = {
-		side = "rangedweapons_invisible.png",
-		top = "rangedweapons_invisible.png",
-		bottom = "rangedweapons_invisible.png",
-		burning = "rangedweapons_invisible.png"
+		side = "blank.png",
+		top = "blank.png",
+		bottom = "blank.png",
+		burning = "blank.png"
 	},
 }
 tnt.register_tnt(rocket_boom)
