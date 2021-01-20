@@ -5,13 +5,13 @@ local S = default.get_translator
 
 minetest.register_craftitem("default:stick", {
 	description = S("Stick"),
-	inventory_image = "default_stick.png",
+	inventory_image = "stick.png",
 	groups = {stick = 1, flammable = 2},
 })
 
 minetest.register_craftitem("default:paper", {
 	description = S("Paper"),
-	inventory_image = "default_paper.png",
+	inventory_image = "paper.png",
 	groups = {flammable = 3},
 })
 
@@ -160,14 +160,14 @@ end)
 
 minetest.register_craftitem("default:book", {
 	description = S("Book"),
-	inventory_image = "default_book.png",
+	inventory_image = "book.png",
 	groups = {book = 1, flammable = 3},
 	on_use = book_on_use,
 })
 
 minetest.register_craftitem("default:book_written", {
 	description = S("Book with Text"),
-	inventory_image = "default_book_written.png",
+	inventory_image = "book_written.png",
 	groups = {book = 1, not_in_creative_inventory = 1, flammable = 3},
 	stack_max = 1,
 	on_use = book_on_use,
@@ -204,7 +204,7 @@ end)
 
 minetest.register_craftitem("default:skeleton_keycard", {
 	description = S("Skeleton Keycard"),
-	inventory_image = "default_keycard_skeleton.png",
+	inventory_image = "keycard_skeleton.png",
 	groups = {key = 1},
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
@@ -260,98 +260,81 @@ minetest.register_craftitem("default:skeleton_keycard", {
 
 minetest.register_craftitem("default:coal_lump", {
 	description = S("Coal Lump"),
-	inventory_image = "default_coal_lump.png",
+	inventory_image = "coal_lump.png",
 	groups = {coal = 1, flammable = 1}
 })
 
-minetest.register_craftitem("default:iron_lump", {
-	description = S("Iron Lump"),
-	inventory_image = "default_iron_lump.png"
+minetest.register_craftitem("default:zersium_lump", {
+	description = S("Zersium Lump"),
+	inventory_image = "zersium_lump.png"
 })
 
 minetest.register_craftitem("default:copper_lump", {
 	description = S("Copper Lump"),
-	inventory_image = "default_copper_lump.png"
+	inventory_image = "copper_lump.png"
 })
 
 minetest.register_craftitem("default:tin_lump", {
 	description = S("Tin Lump"),
-	inventory_image = "default_tin_lump.png"
-})
-
-minetest.register_craftitem("default:mese_crystal", {
-	description = S("Mese Crystal"),
-	inventory_image = "default_mese_crystal.png",
+	inventory_image = "tin_lump.png"
 })
 
 minetest.register_craftitem("default:gold_lump", {
 	description = S("Gold Lump"),
-	inventory_image = "default_gold_lump.png"
+	inventory_image = "gold_lump.png"
 })
 
 minetest.register_craftitem("default:beskar_lump", {
 	description = S("Beskar Lump"),
-	inventory_image = "default_beskar_lump.png",
+	inventory_image = "beskar_lump.png",
 })
 
 minetest.register_craftitem("default:clay_lump", {
 	description = S("Clay Lump"),
-	inventory_image = "default_clay_lump.png",
+	inventory_image = "clay_lump.png",
 })
 
 minetest.register_craftitem("default:durasteel_ingot", {
 	description = S("Durasteel Ingot"),
-	inventory_image = "default_durasteel_ingot.png"
+	inventory_image = "durasteel_ingot.png"
 })
 
 minetest.register_craftitem("default:copper_ingot", {
 	description = S("Copper Ingot"),
-	inventory_image = "default_copper_ingot.png"
+	inventory_image = "copper_ingot.png"
 })
 
 minetest.register_craftitem("default:tin_ingot", {
 	description = S("Tin Ingot"),
-	inventory_image = "default_tin_ingot.png"
+	inventory_image = "tin_ingot.png"
 })
 
 minetest.register_craftitem("default:bronze_ingot", {
 	description = S("Bronze Ingot"),
-	inventory_image = "default_bronze_ingot.png"
+	inventory_image = "bronze_ingot.png"
 })
 
 minetest.register_craftitem("default:gold_ingot", {
 	description = S("Gold Ingot"),
-	inventory_image = "default_gold_ingot.png"
+	inventory_image = "gold_ingot.png"
 })
 
 minetest.register_craftitem("default:beskar_ingot", {
 	description = S("Beskar Ingot"),
-	inventory_image = "default_beskar_ingot.png"
-})
-
-minetest.register_craftitem("default:mese_crystal_fragment", {
-	description = S("Mese Crystal Fragment"),
-	inventory_image = "default_mese_crystal_fragment.png",
+	inventory_image = "beskar_ingot.png"
 })
 
 minetest.register_craftitem("default:clay_brick", {
 	description = S("Clay Brick"),
-	inventory_image = "default_clay_brick.png",
+	inventory_image = "clay_brick.png",
 })
 
 minetest.register_craftitem("default:obsidian_shard", {
 	description = S("Obsidian Shard"),
-	inventory_image = "default_obsidian_shard.png",
+	inventory_image = "obsidian_shard.png",
 })
 
 minetest.register_craftitem("default:flint", {
 	description = S("Flint"),
-	inventory_image = "default_flint.png"
-})
-
-minetest.register_craftitem("default:blueberries", {
-	description = S("Blueberries"),
-	inventory_image = "default_blueberries.png",
-	groups = {food_blueberries = 1, food_berry = 1},
-	on_use = minetest.item_eat(2),
+	inventory_image = "flint.png"
 })

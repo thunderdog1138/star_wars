@@ -46,7 +46,7 @@ minetest.register_node("fire:basic_flame", {
 	drawtype = "firelike",
 	tiles = {
 		{
-			name = "fire_basic_flame_animated.png",
+			name = "fire_basic_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -55,7 +55,7 @@ minetest.register_node("fire:basic_flame", {
 			},
 		},
 	},
-	inventory_image = "fire_basic_flame.png",
+	inventory_image = "fire_basic.png",
 	paramtype = "light",
 	light_source = 13,
 	walkable = false,
@@ -92,7 +92,7 @@ minetest.register_node("fire:permanent_flame", {
 	drawtype = "firelike",
 	tiles = {
 		{
-			name = "fire_basic_flame_animated.png",
+			name = "fire_basic_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -101,7 +101,7 @@ minetest.register_node("fire:permanent_flame", {
 			},
 		},
 	},
-	inventory_image = "fire_basic_flame.png",
+	inventory_image = "fire_basic.png",
 	paramtype = "light",
 	light_source = 13,
 	walkable = false,
@@ -120,7 +120,7 @@ minetest.register_node("fire:permanent_flame", {
 
 minetest.register_tool("fire:lighter", {
 	description = S("Lighter"),
-	inventory_image = "fire_lighter.png",
+	inventory_image = "lighter.png",
 	sound = {breaks = "default_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -169,11 +169,19 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "fire:lighter",
+	recipe = {
+		{"tnt:gunpowder", "default:durasteel_ingot"},
+		{"default:durasteel_ingot", "default:durasteel_ingot"},
+	}
+})
 
--- Override coalblock to enable permanent flame above
+
+-- Override coal_block to enable permanent flame above
 -- Coalblock is non-flammable to avoid unwanted basic_flame nodes
 
-minetest.override_item("default:coalblock", {
+minetest.override_item("default:coal_block", {
 	after_destruct = function(pos, oldnode)
 		pos.y = pos.y + 1
 		if minetest.get_node(pos).name == "fire:permanent_flame" then

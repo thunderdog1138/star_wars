@@ -53,7 +53,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type        = "blob",
-		ore             = "default:clay",
+		ore             = "default:clay_block",
 		wherein         = {"default:sand"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
@@ -174,7 +174,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
@@ -185,7 +185,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 7 * 7 * 7,
 		clust_num_ores = 5,
@@ -196,7 +196,7 @@ function default.register_mgv6_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 24 * 24 * 24,
 		clust_num_ores = 27,
@@ -304,41 +304,6 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -256,
-		y_min          = -31000,
-	})
-
-	-- Mese crystal
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -64,
-		y_min          = -255,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -256,
@@ -492,7 +457,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type        = "blob",
-		ore             = "default:clay",
+		ore             = "default:clay_block",
 		wherein         = {"default:sand"},
 		clust_scarcity  = 16 * 16 * 16,
 		clust_size      = 5,
@@ -687,7 +652,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 9 * 9 * 9,
 		clust_num_ores = 12,
@@ -698,7 +663,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 7 * 7 * 7,
 		clust_num_ores = 5,
@@ -709,7 +674,7 @@ function default.register_ores()
 
 	minetest.register_ore({
 		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
+		ore            = "default:stone_with_zersium",
 		wherein        = "default:stone",
 		clust_scarcity = 12 * 12 * 12,
 		clust_num_ores = 29,
@@ -750,41 +715,6 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = -512,
-		y_min          = -31000,
-	})
-
-	-- Mese crystal
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -512,
-		y_min          = -1023,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_mese",
-		wherein        = "default:stone",
-		clust_scarcity = 14 * 14 * 14,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -1024,
 		y_min          = -31000,
 	})
 
@@ -1822,7 +1752,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -1844,7 +1774,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jogan_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_grass",
@@ -1872,8 +1802,7 @@ function default.register_decorations()
 			biomes = {"rainforest"},
 			y_max = 32,
 			y_min = 1,
-			schematic = minetest.get_modpath("default") ..
-					"/schematics/emergent_jungle_tree.mts",
+			schematic = nil,
 			flags = "place_center_x, place_center_z",
 			rotation = "random",
 			place_offset_y = -4,
@@ -1891,7 +1820,7 @@ function default.register_decorations()
 		biomes = {"rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -1915,7 +1844,7 @@ function default.register_decorations()
 		biomes = {"rainforest_swamp"},
 		y_max = 0,
 		y_min = -1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -1930,7 +1859,7 @@ function default.register_decorations()
 		biomes = {"rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_rainforest_litter",
@@ -1955,7 +1884,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -1975,7 +1904,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -1989,7 +1918,7 @@ function default.register_decorations()
 		biomes = {"taiga", "coniferous_forest", "floatland_coniferous_forest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
@@ -2014,7 +1943,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -2036,7 +1965,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dry_dirt_with_dry_grass",
@@ -2061,7 +1990,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2082,7 +2011,7 @@ function default.register_decorations()
 		biomes = {"deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_log.mts",
+		schematic = nil,
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dirt_with_grass",
@@ -2107,7 +2036,7 @@ function default.register_decorations()
 		biomes = {"desert"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/large_cactus.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -2153,7 +2082,7 @@ function default.register_decorations()
 		biomes = {"savanna_shore", "rainforest_swamp"},
 		y_max = 0,
 		y_min = 0,
-		schematic = minetest.get_modpath("default") .. "/schematics/papyrus.mts",
+		schematic = nil,
 	})
 
 	-- Bush
@@ -2175,7 +2104,7 @@ function default.register_decorations()
 			"floatland_grassland"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2198,7 +2127,7 @@ function default.register_decorations()
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2220,7 +2149,7 @@ function default.register_decorations()
 		biomes = {"savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -2242,7 +2171,7 @@ function default.register_decorations()
 		biomes = {"taiga", "snowy_grassland"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		schematic = nil,
 		flags = "place_center_x, place_center_z",
 	})
 

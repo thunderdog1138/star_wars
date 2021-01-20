@@ -428,7 +428,7 @@ minetest.register_node("tnt:boom", {
 })
 
 minetest.register_node("tnt:gunpowder", {
-	description = S("Gun Powder"),
+	description = S("Thermite"),
 	drawtype = "raillike",
 	paramtype = "light",
 	is_ground_content = false,

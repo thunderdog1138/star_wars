@@ -275,9 +275,9 @@ end
 minetest.register_node("default:furnace", {
 	description = S("Furnace"),
 	tiles = {
-		"default_furnace_top.png", "default_furnace_bottom.png",
-		"default_furnace_side.png", "default_furnace_side.png",
-		"default_furnace_side.png", "default_furnace_front.png"
+		"furnace_top.png", "furnace_bottom.png",
+		"furnace_side.png", "furnace_side.png",
+		"furnace_side.png", "furnace_front.png"
 	},
 	paramtype2 = "facedir",
 	groups = {cracky=2},
@@ -323,11 +323,11 @@ minetest.register_node("default:furnace", {
 minetest.register_node("default:furnace_active", {
 	description = S("Furnace"),
 	tiles = {
-		"default_furnace_top.png", "default_furnace_bottom.png",
-		"default_furnace_side.png", "default_furnace_side.png",
-		"default_furnace_side.png",
+		"furnace_top.png", "furnace_bottom.png",
+		"furnace_side.png", "furnace_side.png",
+		"furnace_side.png",
 		{
-			image = "default_furnace_front_active.png",
+			image = "furnace_front_active.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
