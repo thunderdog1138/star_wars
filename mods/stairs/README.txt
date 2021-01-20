@@ -1,5 +1,6 @@
-Based on Minetest Game mod: stairs
-==================================
+Minetest Game mod: stairs
+=========================
+See license.txt for license information.
 
 Authors of source code
 ----------------------
@@ -7,14 +8,20 @@ Originally by Kahrl <kahrl@gmx.net> (LGPLv2.1+) and
 celeron55, Perttu Ahola <celeron55@gmail.com> (LGPLv2.1+)
 Various Minetest developers and contributors (LGPLv2.1+)
 
-http://www.gnu.org/licenses/lgpl-2.1.html
+Authors of media (textures)
+---------------------------
 
-License of media (textures and sounds)
---------------------------------------
-Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
-http://creativecommons.org/licenses/by-sa/3.0/
+Textures
+--------
+Copyright (c) 2018 Shara RedCat (CC BY-SA 3.0):
+  Derived from a texture by PilzAdam (CC BY-SA 3.0):
+    stairs_obsidian_glass_outer_stairside.png
+    stairs_obsidian_glass_stairside.png
 
-Note: This mod has been amended to add new features like transparent and glowing
-stairs, sloped stairs, recipes to return stairs back into blocks and also to be
-used as fuel for furnaces, and alternative placement functions that use
-on_rotate and sneak key.
+Copyright (c) 2018 TumeniNodes (CC BY-SA 3.0):
+  Derived from a texture by celeron55 (CC BY-SA 3.0) and
+      converted to bright white by Krock (CC BY-SA 3.0):
+    stairs_glass_stairside.png
+    stairs_glass_split.png
+  Derived from a texture by PilzAdam (CC BY-SA 3.0):
+    stairs_obsidian_glass_split.png

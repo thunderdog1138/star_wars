@@ -56,11 +56,12 @@ walls.register = function(wall_name, wall_desc, wall_texture_table, wall_mat, wa
 
 end
 
-walls.register("walls:cobble", S("Cobblestone Wall"), {"cobble.png"},
+walls.register("walls:cobble", S("Cobblestone Wall"), {"default_cobble.png"},
 		"default:cobble", default.node_sound_stone_defaults())
 
-walls.register("walls:cobble_mossy", S("Mossy Cobblestone Wall"), {"cobble_mossy.png"},
-		"default:cobble_mossy", default.node_sound_stone_defaults())
+walls.register("walls:mossycobble", S("Mossy Cobblestone Wall"), {"default_mossycobble.png"},
+		"default:mossycobble", default.node_sound_stone_defaults())
 
-walls.register("walls:desertcobble", S("Desert Cobblestone Wall"), {"desert_cobble.png"},
+walls.register("walls:desertcobble", S("Desert Cobblestone Wall"), {"default_desert_cobble.png"},
 		"default:desert_cobble", default.node_sound_stone_defaults())
+

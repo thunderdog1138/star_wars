@@ -51,8 +51,8 @@ end
 
 minetest.register_node("vessels:shelf", {
 	description = S("Vessels Shelf"),
-	tiles = {"jogan_wood.png", "jogan_wood.png", "jogan_wood.png",
-		"jogan_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
+	tiles = {"default_wood.png", "default_wood.png", "default_wood.png",
+		"default_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -110,9 +110,9 @@ minetest.register_craft({
 minetest.register_node("vessels:glass_bottle", {
 	description = S("Empty Glass Bottle"),
 	drawtype = "plantlike",
-	tiles = {"glass_bottle.png"},
-	inventory_image = "glass_bottle.png",
-	wield_image = "glass_bottle.png",
+	tiles = {"vessels_glass_bottle.png"},
+	inventory_image = "vessels_glass_bottle.png",
+	wield_image = "vessels_glass_bottle.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -136,9 +136,9 @@ minetest.register_craft( {
 minetest.register_node("vessels:drinking_glass", {
 	description = S("Empty Drinking Glass"),
 	drawtype = "plantlike",
-	tiles = {"drinking_glass.png"},
-	inventory_image = "drinking_glass_inv.png",
-	wield_image = "drinking_glass.png",
+	tiles = {"vessels_drinking_glass.png"},
+	inventory_image = "vessels_drinking_glass_inv.png",
+	wield_image = "vessels_drinking_glass.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -162,9 +162,9 @@ minetest.register_craft( {
 minetest.register_node("vessels:durasteel_bottle", {
 	description = S("Empty Canteen"),
 	drawtype = "plantlike",
-	tiles = {"durasteel_bottle.png"},
-	inventory_image = "durasteel_bottle.png",
-	wield_image = "durasteel_bottle.png",
+	tiles = {"vessels_durasteel_bottle.png"},
+	inventory_image = "vessels_durasteel_bottle.png",
+	wield_image = "vessels_durasteel_bottle.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -190,7 +190,7 @@ minetest.register_craft( {
 
 minetest.register_craftitem("vessels:glass_fragments", {
 	description = S("Glass Fragments"),
-	inventory_image = "glass_fragments.png",
+	inventory_image = "vessels_glass_fragments.png",
 })
 
 minetest.register_craft( {

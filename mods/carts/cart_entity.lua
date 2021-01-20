@@ -10,7 +10,7 @@ local cart_entity = {
 		visual = "mesh",
 		mesh = "carts_cart.b3d",
 		visual_size = {x=1, y=1},
-		textures = {"cart.png"},
+		textures = {"carts_cart.png"},
 	},
 
 	driver = nil,
@@ -389,8 +389,8 @@ minetest.register_entity("carts:cart", cart_entity)
 
 minetest.register_craftitem("carts:cart", {
 	description = S("Cart") .. "\n" .. S("(Sneak+Click to pick up)"),
-	inventory_image = minetest.inventorycube("cart_top.png", "cart_side.png", "cart_side.png"),
-	wield_image = "cart_side.png",
+	inventory_image = minetest.inventorycube("carts_cart_top.png", "carts_cart_side.png", "carts_cart_side.png"),
+	wield_image = "carts_cart_side.png",
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = pointed_thing.under
 		local node = minetest.get_node(under)
