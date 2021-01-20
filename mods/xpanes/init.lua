@@ -159,11 +159,11 @@ function xpanes.register_pane(name, def)
 	})
 end
 
-xpanes.register_pane("glass_pane", {
+xpanes.register_pane("pane", {
 	description = S("Glass Pane"),
-	textures = {"glass.png","glass_pane_half.png","glass_pane_edge.png"},
-	inventory_image = "glass.png",
-	wield_image = "glass.png",
+	textures = {"default_glass.png","xpanes_pane_half.png","xpanes_edge.png"},
+	inventory_image = "default_glass.png",
+	wield_image = "default_glass.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	recipe = {
@@ -174,9 +174,9 @@ xpanes.register_pane("glass_pane", {
 
 xpanes.register_pane("obsidian_pane", {
 	description = S("Obsidian Glass Pane"),
-	textures = {"obsidian_glass.png","glass_pane_half.png","obsidian_glass_pane_edge.png"},
-	inventory_image = "obsidian_glass.png",
-	wield_image = "obsidian_glass.png",
+	textures = {"default_obsidian_glass.png","xpanes_pane_half.png","xpanes_edge_obsidian.png"},
+	inventory_image = "default_obsidian_glass.png",
+	wield_image = "default_obsidian_glass.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3},
 	recipe = {
@@ -187,9 +187,9 @@ xpanes.register_pane("obsidian_pane", {
 
 xpanes.register_pane("bar", {
 	description = S("Durasteel Bars"),
-	textures = {"bars.png","bars.png","bars_top.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	textures = {"xpanes_bar.png","xpanes_bar.png","xpanes_bar_top.png"},
+	inventory_image = "xpanes_bar.png",
+	wield_image = "xpanes_bar.png",
 	groups = {cracky=2},
 	sounds = default.node_sound_metal_defaults(),
 	recipe = {
@@ -215,9 +215,9 @@ minetest.register_lbm({
 if minetest.get_modpath("doors") then
 
 	doors.register("xpanes:door_durasteel_bar", {
-		tiles = {{name = "door_durasteel_bar.png", backface_culling = true}},
+		tiles = {{name = "xpanes_door_durasteel_bar.png", backface_culling = true}},
 		description = S("Durasteel Bar Door"),
-		inventory_image = "door_durasteel_bar_inv.png",
+		inventory_image = "xpanes_item_durasteel_bar.png",
 		protected = true,
 		groups = {cracky = 1, level = 2},
 		sounds = default.node_sound_metal_defaults(),
@@ -232,10 +232,10 @@ if minetest.get_modpath("doors") then
 
 	doors.register_trapdoor("xpanes:trapdoor_durasteel_bar", {
 		description = S("Durasteel Bar Trapdoor"),
-		inventory_image = "trapdoor_durasteel_bar.png",
-		wield_image = "trapdoor_durasteel_bar.png",
-		tile_front = "trapdoor_durasteel_bar.png",
-		tile_side = "trapdoor_durasteel_bar_side.png",
+		inventory_image = "xpanes_trapdoor_durasteel_bar.png",
+		wield_image = "xpanes_trapdoor_durasteel_bar.png",
+		tile_front = "xpanes_trapdoor_durasteel_bar.png",
+		tile_side = "xpanes_trapdoor_durasteel_bar_side.png",
 		protected = true,
 		groups = {cracky = 1, level = 2, door = 1},
 		sounds = default.node_sound_metal_defaults(),

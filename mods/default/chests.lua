@@ -289,12 +289,12 @@ end
 default.chest.register_chest("chest", {
 	description = S("Chest"),
 	tiles = {
-		"chest_top.png",
-		"chest_top.png",
-		"chest_side.png",
-		"chest_side.png",
-		"chest_front.png",
-		"chest_inside.png"
+		"default_chest_top.png",
+		"default_chest_top.png",
+		"default_chest_side.png",
+		"default_chest_side.png",
+		"default_chest_front.png",
+		"default_chest_inside.png"
 	},
 	sounds = default.node_sound_wood_defaults(),
 	sound_open = "default_chest_open",
@@ -305,12 +305,12 @@ default.chest.register_chest("chest", {
 default.chest.register_chest("chest_locked", {
 	description = S("Locked Chest"),
 	tiles = {
-		"chest_top.png",
-		"chest_top.png",
-		"chest_side.png",
-		"chest_side.png",
-		"chest_lock.png",
-		"chest_inside.png"
+		"default_chest_top.png",
+		"default_chest_top.png",
+		"default_chest_side.png",
+		"default_chest_side.png",
+		"default_chest_lock.png",
+		"default_chest_inside.png"
 	},
 	sounds = default.node_sound_wood_defaults(),
 	sound_open = "default_chest_open",

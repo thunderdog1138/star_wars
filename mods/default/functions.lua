@@ -557,12 +557,12 @@ minetest.register_abm({
 --
 
 local moss_correspondences = {
-	["default:cobble"] = "default:cobble_mossy",
-	["stairs:slab_cobble"] = "stairs:slab_cobble_mossy",
-	["stairs:stair_cobble"] = "stairs:stair_cobble_mossy",
-	["stairs:stair_inner_cobble"] = "stairs:stair_inner_cobble_mossy",
-	["stairs:stair_outer_cobble"] = "stairs:stair_outer_cobble_mossy",
-	["walls:cobble"] = "walls:cobble_mossy",
+	["default:cobble"] = "default:mossycobble",
+	["stairs:slab_cobble"] = "stairs:slab_mossycobble",
+	["stairs:stair_cobble"] = "stairs:stair_mossycobble",
+	["stairs:stair_inner_cobble"] = "stairs:stair_inner_mossycobble",
+	["stairs:stair_outer_cobble"] = "stairs:stair_outer_mossycobble",
+	["walls:cobble"] = "walls:mossycobble",
 }
 minetest.register_abm({
 	label = "Moss growth",

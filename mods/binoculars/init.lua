@@ -24,7 +24,7 @@ function binoculars.update_player_property(player)
 	local new_zoom_fov = 0
 
 	if player:get_inventory():contains_item(
-			"main", "binoculars:macrobinoculars") then
+			"main", "binoculars:binoculars") then
 		new_zoom_fov = 10
 	elseif creative_enabled then
 		new_zoom_fov = 15
@@ -58,9 +58,9 @@ minetest.after(4.7, cyclic_update)
 
 -- Binoculars item
 
-minetest.register_craftitem("binoculars:macrobinoculars", {
-	description = S("Macrobinoculars") .. "\n" .. S("Use with 'Zoom' key"),
-	inventory_image = "macrobinoculars.png",
+minetest.register_craftitem("binoculars:binoculars", {
+	description = S("Binoculars") .. "\n" .. S("Use with 'Zoom' key"),
+	inventory_image = "binoculars_binoculars.png",
 	stack_max = 1,
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -72,7 +72,7 @@ minetest.register_craftitem("binoculars:macrobinoculars", {
 -- Crafting
 
 minetest.register_craft({
-	output = "binoculars:macrobinoculars",
+	output = "binoculars:binoculars",
 	recipe = {
 		{"default:obsidian_glass", "", "default:obsidian_glass"},
 		{"default:bronze_ingot", "default:bronze_ingot", "default:bronze_ingot"},
